@@ -1,0 +1,66 @@
+ul.h{
+	list-style-type: none;
+	margin: 0px 0px 10px 0px;
+	padding: 5px;
+	text-align: center;
+	overflow: hidden;
+	background-color: #9c2626;
+	border-radius: 100px;
+}
+
+li.h{
+	float: center;
+	font-family:  "Comic Sans MS", "Comic Sans", cursive;
+	vertical-align: middle;
+	text-decoration: none;
+	display: inline;
+	color: white;
+	font-size: 20px;
+}
+
+li.h a{
+	color: #E0FFFF;
+	text-align: center;
+	padding: 20px;
+	text-decoration: none;
+}
+
+li.h a:visited{
+	text-decoration: none;
+	display: inline;
+	color: #E0FFFF;
+}
+
+li.h a:hover{
+	text-decoration: none;
+	display: inline;
+	color: #E0FFFF;
+	background-color: rgb(140, 140, 215);
+}
+
+li.h a:active{
+	text-decoration: none;
+	display: inline;
+	color: #E0FFFF;
+}
+
+hr{
+	display: block;
+	height: 0px;
+	border: 10px solid #642d2d;
+	border-color: navy;
+	margin: 20px;
+	padding: 0px;
+	border-radius: 20px;
+	width: 600px;
+}
+
+.right{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.center{
+	margin-left: auto;
+	margin-right: auto;
+}
