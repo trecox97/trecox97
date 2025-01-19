@@ -1,6 +1,6 @@
 ul.h{
 	list-style-type: none;
-	margin: 0px 0px 10px 0px;
+	margin: -50px 0px -50px 0px;
 	padding: 5px;
 	text-align: center;
 	overflow: hidden;
@@ -32,10 +32,10 @@ li.h a:visited{
 }
 
 li.h a:hover{
-	text-decoration: none;
+	text-decoration:none;
 	display: inline;
-	color: #E0FFFF;
-	background-color: rgb(140, 140, 215);
+	color: #ff0d0d;
+	background-color: rgb(0, 0, 0);
 }
 
 li.h a:active{
