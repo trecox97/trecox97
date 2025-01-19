@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,700italic);
 
 svg {
-	color: white;
+	color: rgb(190, 190, 190);
 	display: block;
 	margin: 0 auto;
 	max-width: 1000px;
@@ -17,6 +17,88 @@ a {
 }
 
 a:hover {
-	color: #a00;
+	color: rgb(108, 30, 30);
 	transition: color 0s;
+}
+
+#UT,
+#CA,
+#NV,
+#AZ,
+#ID,
+#MT,
+#WY,
+#ND,
+#SD,
+#MN,
+#WI,
+#MI,
+#IL,
+#TX,
+#MO,
+#IN,
+#OH,
+#NY,
+#PA,
+#VT,
+#NH,
+#MA,
+#ME,
+#NJ,
+#CT,
+#RI,
+#DE,
+#MD,
+#VA,
+#NC,
+#SC,
+#GA,
+#FL,
+#TN,
+#WV,
+#KY{
+	color: rgb(80, 130, 46);
+}
+
+#UT:hover,
+#CA:hover,
+#NV:hover,
+#AZ:hover,
+#ID:hover,
+#MT:hover,
+#WY:hover,
+#ND:hover,
+#SD:hover,
+#MN:hover,
+#WI:hover,
+#MI:hover,
+#IL:hover,
+#TX:hover,
+#MO:hover,
+#IN:hover,
+#OH:hover,
+#NY:hover,
+#PA:hover,
+#VT:hover,
+#NH:hover,
+#MA:hover,
+#ME:hover,
+#NJ:hover,
+#CT:hover,
+#RI:hover,
+#DE:hover,
+#MD:hover,
+#VA:hover,
+#NC:hover,
+#SC:hover,
+#GA:hover,
+#FL:hover,
+#TN:hover,
+#WV:hover,
+#KY:hover{
+	color: rgb(126, 255, 39);
+}
+
+h1 {
+    text-align:  center;
 }

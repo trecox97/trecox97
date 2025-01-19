@@ -1,0 +1,14 @@
+Result Skip Results Iframe
+EDIT ON
+body{
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+    height: 400px;
+    margin-left: 20px;
+    margin-right: 20px;
+    position: relative; 
+    outline-style: none;
+}
