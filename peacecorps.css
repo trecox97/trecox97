@@ -1,0 +1,8 @@
+a {
+    color: inherit; /* Inherit the color from the parent element */
+    text-decoration: none; /* Optional: Remove underline */
+}
+
+p {
+    font-size: 3vw;
+}
