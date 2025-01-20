@@ -38,8 +38,6 @@ body{
 	float: right;
   margin-left: 5px;
   text-align: center;
-
-
 }
 
 .active:after {
@@ -74,3 +72,8 @@ ul{
   text-align: center;
 }
   
+.ween {
+	width: 150px;  /* Resize the image */
+	height: auto;  /* Maintain aspect ratio */
+	border-radius: 50%;
+}
