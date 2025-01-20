@@ -20,7 +20,7 @@
    </head>
    <body>
       <header>
-         <br><br><br>
+         <br><br>
          <ul class="h">
             <li class="h"><a href="./index.html">Who?</a></td></tr>
             <li class="h"><a href="./peacecorps.html">🕊️Peace Corps🕊️</a></td></tr>
@@ -28,7 +28,7 @@
             <li class="h"><a href="./skiing.html">Skiing</a></td></tr>
             <li class="h"><a href="./books.html">Books</a></td></tr>
          </ul>
-         <br><br><br>
+         <br><br>
       </header>
       <h1>Mountains Skied: 26</h1>
         <button class="collapsible" style="border-radius: 20px 20px 0px 0px">🇺🇸Northeast🇺🇸</button>
@@ -79,14 +79,16 @@
 					</p></td></tr>
 				</table>
 			</div>
-         <button class="collapsible"  style="border-radius: 0px 0px 20px 20px">🇯🇵Japan🇯🇵</button>
-			<div class="content">
+         <button class="collapsible" style="border-radius: 0px 0px 20px 20px;">🇯🇵Japan🇯🇵
+
+         </button>
+			<div class="content" style="border-radius: 0px 0px 20px 20px;">
 				<table class="table no-border" style="width: 500px;">
 					<tr><td><p class="v">
                   TBA <br>
 					</p></td></tr>
 				</table>
-			</div>
+         </div>
          <br>
          <script>
             var coll = document.getElementsByClassName("collapsible");
@@ -94,18 +96,38 @@
    
             for (i = 0; i < coll.length; i++) {
                coll[i].addEventListener("click", function() {
+                  // Toggle content visibility
                   this.classList.toggle("active");
                   var content = this.nextElementSibling;
-                  if (content.style.maxHeight){
+                  if (content.style.maxHeight) {
                      content.style.maxHeight = null;
                   } else {
                      content.style.maxHeight = content.scrollHeight + "px";
                   }
+
+                  // Check if this is the last element
+                  if (this === coll[coll.length - 1]) {
+                  // Change the border-radius on the last element
+                     if (this.style.borderRadius === "0px 0px 20px 20px") {
+                        this.style.transition = ".1s";
+                        this.style.borderRadius = "0px 0px 0px 0px";  // Change the radius for the last element
+                     } else {
+                       this.style.borderRadius = "0px 0px 20px 20px";  // Revert the border-radius
+                     }
+                  }
                });
             }
          </script>
-         <div id="map" style="border-radius: 20px 20px 20px 20px">
-            <script src="skiing.js"></script>
-           </div>
+      <br>
+      <div id="map" style="border-radius: 20px 20px 20px 20px">
+         <script src="skiing.js"></script>
+      </div>
+      <br>
+      <footer>
+         <div style="width:700px; height:2px; border-top:1px solid black; margin: auto;"></div>
+         <div id="footer">
+            <p class="copy"> &copy; 2025 &reg Trevor Cox &trade;</p>
+         </div>
+         </footer>
    </body>
 </html>
