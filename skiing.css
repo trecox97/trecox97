@@ -22,7 +22,9 @@ body{
 	border: none;
 	text-align: center;
 	outline: none;
-  font-family:  "papyrus";
+    font-size: 30px;
+	font-family: "papyrus";
+
 }
 
 .active, .collapsible:hover {
@@ -35,6 +37,8 @@ body{
 	font-weight: bold;
 	float: right;
   margin-left: 5px;
+  text-align: center;
+
 
 }
 
@@ -43,14 +47,15 @@ body{
 }
 
 .content {
-	margin: 0px;
-	padding: 0 18px;
+	margin: auto;
 	max-height: 0;
 	overflow: hidden;
 	transition: max-height 0.2s ease-out;
 	background-color: #E0FFFF;
   text-align: center;
   width: 500px;
+  font-size: 2vw;
+
 }
 
 ul{
@@ -68,3 +73,4 @@ ul{
   font-size: 20px;
   text-align: center;
 }
+  
