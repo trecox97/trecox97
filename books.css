@@ -1,6 +1,6 @@
  /* Geocities Background GIF */
  body {
-    /*background-image: url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcm02c2JrbGVraXo4NmJ1aTg2a2llbmNuYjBkbnRoM3o1NW40aXY3eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/31TsJOgYOvIWWYMEaR/giphy.gif');*/
+    background-image: url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcm02c2JrbGVraXo4NmJ1aTg2a2llbmNuYjBkbnRoM3o1NW40aXY3eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/31TsJOgYOvIWWYMEaR/giphy.gif');
     background-repeat: repeat;
     background-position: top left;
     background-attachment: fixed;
@@ -12,7 +12,6 @@
 h1 {
     color: #FF0000;
     text-align: center;
-    font-size: 36px;
 }
 
 p {
@@ -22,13 +21,13 @@ p {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     text-align: center;
 
 }
 
 .cover {
-    object-fit: cover;
+    margin: auto;
     padding: 4px;
     display: block;
     max-width:600px;

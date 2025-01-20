@@ -3,7 +3,7 @@
 svg {
 	color: rgb(190, 190, 190);
 	display: block;
-	margin: 0 auto;
+	margin: auto;
 	max-width: 1000px;
 }
 path {

@@ -26,8 +26,81 @@
          <br><br><br>
       </header>
       <h1>Mountains Skied: 26</h1>
+        <button class="collapsible" style="border-radius: 20px 20px 0px 0px">🇺🇸Northeast🇺🇸</button>
+			<div class="content">
+				<table class="table no-border" style="width: 500px;">
+					<tr><td><p class="v">
+					Shawnee Mountain, PA <br>
+               Camelback, PA <br>
+               Catamount, NY <br>
+               Butternut, MA <br>
+               Jiminy Peak, MA <br>
+               Okemo, VT <br>
+               Mt Snow, VT <br>
+               Smugglers' Notch, VT <br>
+               Jay Peak, VT <br>
+               Crotched, NH <br>
+               Sunapee, NH <br>
+					</p></td></tr>
+				</table>
+			</div>
+
+			<button class="collapsible">🇺🇸West🇺🇸</button>
+			<div class="content">
+				<table class="table no-border" style="width: 500px;">
+					<tr><td><p class="v">
+                  Sun Valley, ID <br>
+                  Jackson Hole, WY <br>
+                  Deer Valley, UT <br>
+                  Park City, UT <br>
+                  Brighton, UT <br>
+                  Solitude, UT <br>
+                  Alta, UT <br>
+                  Snowbird, UT <br>
+                  Mammoth, CA <br>
+                  Palisades Tahoe, CA <br>
+                  Alpine Meadows, CA <br>
+                  Sugar Bowl, CA <br>
+                  Diamond Peak, CA <br>
+					</p></td></tr>
+				</table>
+			</div>
+         <button class="collapsible">🇨🇦Canada🇨🇦</button>
+			<div class="content">
+				<table class="table no-border" style="width: 500px;">
+					<tr><td><p class="v">
+                  Bromont, Québec <br>
+                  Le Massif de Charlevoix, Québec <br>
+					</p></td></tr>
+				</table>
+			</div>
+         <button class="collapsible"  style="border-radius: 0px 0px 20px 20px">🇯🇵Japan🇯🇵</button>
+			<div class="content">
+				<table class="table no-border" style="width: 500px;">
+					<tr><td><p class="v">
+                  TBA <br>
+					</p></td></tr>
+				</table>
+			</div>
+         <br>
+         <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+   
+            for (i = 0; i < coll.length; i++) {
+               coll[i].addEventListener("click", function() {
+                  this.classList.toggle("active");
+                  var content = this.nextElementSibling;
+                  if (content.style.maxHeight){
+                     content.style.maxHeight = null;
+                  } else {
+                     content.style.maxHeight = content.scrollHeight + "px";
+                  }
+               });
+            }
+         </script>
          <div id="map">
-         <script src="skiing.js"></script>
-        </div>
+            <script src="skiing.js"></script>
+           </div>
    </body>
 </html>
