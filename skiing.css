@@ -22,7 +22,6 @@ body{
 	border: none;
 	text-align: center;
 	outline: none;
-	font-size: 4vh;
   font-family:  "papyrus";
 }
 
@@ -35,7 +34,8 @@ body{
 	color: #E0FFFF;
 	font-weight: bold;
 	float: right;
-	margin-left: 5px;
+  margin-left: 5px;
+
 }
 
 .active:after {
@@ -49,9 +49,22 @@ body{
 	overflow: hidden;
 	transition: max-height 0.2s ease-out;
 	background-color: #E0FFFF;
+  text-align: center;
+  width: 500px;
 }
 
 ul{
-	text-align: left;
+	text-align: center;
  	font-size: 20px;
+}
+
+.collapsible.active + .content {
+  display: block;
+}
+
+.content p {
+  margin: auto;
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
 }
