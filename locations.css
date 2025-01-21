@@ -19,6 +19,7 @@ a {
 a:hover {
 	color: rgb(108, 30, 30);
 	transition: color 0s;
+	cursor: default;
 }
 
 #UT,
@@ -61,10 +62,8 @@ a:hover {
 }
 
 #UT:hover,
-#CA:hover,
 #NV:hover,
 #AZ:hover,
-#ID:hover,
 #MT:hover,
 #WY:hover,
 #ND:hover,
@@ -77,7 +76,6 @@ a:hover {
 #MO:hover,
 #IN:hover,
 #OH:hover,
-#NY:hover,
 #PA:hover,
 #VT:hover,
 #NH:hover,
@@ -97,8 +95,38 @@ a:hover {
 #WV:hover,
 #KY:hover{
 	color: rgb(126, 255, 39);
+	cursor: default;
 }
 
 h1 {
     text-align:  center;
+}
+
+#NY:hover,
+#CA:hover,
+#ID:hover {
+	color: rgb(126, 255, 39);
+    display: block;
+    margin: 20px auto;
+    cursor: pointer; /* Change the cursor to indicate it's interactive */
+}
+
+.popup {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 1px;
+    border-radius: 20px;
+    pointer-events: none;
+    display: none;  /* Initially hidden */
+    z-index: 1000;
+}
+
+.popup-trigger {
+    cursor: pointer;
+}
+
+
+p {
+	font-size: 16px;
 }

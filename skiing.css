@@ -11,6 +11,9 @@ body{
     margin-right: 20px;
     position: relative; 
     outline-style: none;
+	width: 700px;
+	margin: auto;
+	border-radius: 20px 20px 20px 20px;
 }
 
 .collapsible {
