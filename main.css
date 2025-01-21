@@ -3,17 +3,20 @@ body{
 	font-family:  "Comic Sans MS", "Comic Sans", cursive;
 	/*font-family:  "papyrus";*/
 	text-align: center;
-	color:aliceblue;
+	color: aliceblue;
 
 }
 
 h1 {
 	text-align:  center;
 	font-size: 6vw;
+	color: #25303B;
 }
 
 h2 {
 	font-size: 3vw;
+	color: #25303B;
+
 }
 
 hr{
@@ -34,7 +37,7 @@ p{
 }
 
 .bio {
-	background-color: #9c2626;
+	background-color: rgb(156, 38, 38, 0.85);
 	border-radius: 20px;
 	font-size: 2.5;
 	text-align: left;

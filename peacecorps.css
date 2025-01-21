@@ -1,8 +1,20 @@
 a {
-    color: inherit; /* Inherit the color from the parent element */
-    text-decoration: none; /* Optional: Remove underline */
+    color: #0064B0; /* Inherit the color from the parent element */
 }
 
 p {
     font-size: 3vw;
+}
+
+.content {
+    background-color: rgb(130, 196, 144, .8);
+    border-radius: 20px;
+    margin: auto;
+	color: #E0FFFF;
+	padding: 1px;
+	width: 400px;
+	border: none;
+	text-align: center;
+	outline: none;
+    font-size: 2vw;
 }
