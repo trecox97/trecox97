@@ -4,7 +4,36 @@ p {
     padding-left: 6vw;
     padding-right: 6vw;
     font-size: 18px;
+    line-height: 1.6; /* Improved line spacing for readability */
 }
+
 .copy {
-text-align: center;
+    text-align: center;
+}
+
+/* Mobile-specific Styles */
+@media (max-width: 768px) {
+    p {
+        font-size: 16px; /* Adjust font size for smaller screens */
+        padding-left: 5vw; /* Adjust padding for smaller screens */
+        padding-right: 5vw;
+    }
+
+    .copy {
+        font-size: 16px; /* Adjust text size for centered text on mobile */
+        padding: 10px; /* Add padding to prevent text from touching edges */
+    }
+}
+
+@media (max-width: 480px) {
+    p {
+        font-size: 14px; /* Further adjust font size for very small screens */
+        padding-left: 4vw; /* Adjust padding more for ultra-small screens */
+        padding-right: 4vw;
+    }
+
+    .copy {
+        font-size: 14px; /* Adjust text size for smaller screens */
+        padding: 8px; /* Add more padding for comfort */
+    }
 }

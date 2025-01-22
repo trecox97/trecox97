@@ -50,22 +50,24 @@ p {
     margin-right: auto;
 }
 
-ul {
+ul.newsletters {
     list-style-type: none;
     padding-left: 0;
     margin: auto;
 }
 
-li:hover {
+.item:hover {
     background-color: rgb(37, 48, 59, .8);
 }
 
 .top:hover {
 border-radius: 20px 20px 0 0;
+background-color: rgb(37, 48, 59, .8);
 }
 
 .bottom:hover {
     border-radius: 0 0 20px 20px;
+    background-color: rgb(37, 48, 59, .8);
 }
 
 #playPauseBtn {

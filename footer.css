@@ -1,14 +1,32 @@
+/* Base Footer Styles */
 footer {
-    left: 0;
+    position: relative; /* Relative positioning for mobile-friendly layout */
     bottom: 0;
     width: 100%;
     background-color: rgb(156, 38, 38, 0.85);
     color: white;
     text-align: center;
     border-radius: 20px;
-    margin-top: auto;
-
+    margin-top: auto; /* Ensures footer stays at the bottom of content */
 }
+
+/* Footer Copy Text Styles */
 .copy {
-    font-size: 1.5vw;
+    font-size: 1.5vw; /* Default for larger screens */
+}
+
+/* Mobile-specific Styles */
+@media (max-width: 768px) {
+    .copy {
+        font-size: 4vw; /* Reduce font size for smaller screens */
+        padding: 0 10px; /* Add padding to ensure text doesn’t touch screen edges */
+    }
+}
+
+/* Extra Small Screens (Optional) */
+@media (max-width: 480px) {
+    .copy {
+        font-size: 5vw; /* Further reduce font size for very small screens */
+        padding: 0 15px; /* More padding for extra small screens */
+    }
 }
