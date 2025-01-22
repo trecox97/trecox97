@@ -32,6 +32,7 @@ li.h a:visited {
 li.h a:hover {
     color: #0064B0;
     background-color: #25303B;
+    transition: color 0s;
 }
 
 li.h a:active {
@@ -45,32 +46,46 @@ li.h a:active {
 }
 
 /* Mobile-specific Styles */
-@media (max-width: 768px) {
+@media (max-width: 740px) {
     ul.h {
+        display: flex;
         flex-direction: column; /* Stack items vertically on small screens */
         border-radius: 20px; /* Adjust border radius for better appearance */
-        margin: 5px; /* Remove any existing margin */
+        margin: 0px; /* Remove any existing margin */
         padding: 0px; /* Remove padding to reduce space */
         position: relative; /* Allow positioning adjustments */
         top: 0; /* Ensure it's aligned with the top of the window */
+        width: 75%;
+        margin: auto;
     }
 
     li.h {
-        margin: 5px 0; /* Reduce horizontal margin on mobile */
+        margin: 0; /* Reduce horizontal margin on mobile */
         width: 100%; /* Make items full-width to stack vertically */
         text-align: center; /* Center the text on smaller screens */
+        position: relative; /* Ensure positioning works correctly */
     }
 
+    /* Ensure the <a> tag fills the full width of the <li> */
     li.h a {
+        display: block; /* Make the <a> tag take up the full space of the <li> */
+        width: 100%; /* Full width of the parent <li> */
         font-size: 16px; /* Reduce font size on smaller screens */
-        padding: 15px 20px; /* Adjust padding for touch targets */
+        padding: 5px; /* Adjust padding for touch targets */
+        color: inherit; /* Inherit text color from <li> */
+        text-decoration: none; /* Remove underline for clean look */
+		transition: color 1s, background-color 1s ease-out;
+
+
+    }
+
+    /* Add hover effect on the entire <li>, not just <a> */
+    li.h:hover {
+		background-color: #25303B;
+    }
+
+    li.h a:hover {
+		color: #0064B0;
     }
 }
 
-/* Extra Small Screens */
-@media (max-width: 480px) {
-    li.h a {
-        font-size: 14px; /* Further reduce font size on very small screens */
-        padding: 12px 15px; /* Reduce padding for small screens */
-    }
-}

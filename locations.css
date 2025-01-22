@@ -17,15 +17,16 @@ path {
     stroke-width: 1;
 }
 
-/* Link Styles */
 a {
-    transition: color 1s;
+    transition: color 1s ease-out;
 }
 
 /* Hover Effects for Links */
 a:hover {
     color: #B90845;
     cursor: pointer; /* Ensure cursor changes on hover */
+    transition: color 0s;
+
 }
 
 /* List Item Styles */
@@ -150,7 +151,7 @@ p {
     /* Adjust hover effects on smaller screens */
     a:hover {
         color: #B90845;
-        cursor: pointer;
+        cursor: default;
     }
 
     /* Adjust the visibility and layout of the popup */

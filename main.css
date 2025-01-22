@@ -1,11 +1,9 @@
 /* Global Styles */
 body {
     background-color: #F3A4B4;
-    font-family: "Comic Sans MS", "Comic Sans", "Papyrus", "Futura";
+    font-family: "Comic Sans MS", "Comic Sans", "Futura";
     text-align: center;
     color: aliceblue;
-    margin: 0;
-    padding: 0;
 }
 
 h1 {
@@ -96,7 +94,7 @@ img {
     }
 
     .bio {
-        font-size: 4vw;
+        font-size: 2.5vw;
         width: 90%; /* Full-width on mobile with padding */
     }
 
@@ -129,7 +127,7 @@ img {
     }
 
     .bio {
-        font-size: 5vw;
+        font-size: 3.5vw;
         padding: 5%;
     }
 
