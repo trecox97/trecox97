@@ -8,6 +8,12 @@
    <link rel="stylesheet" type="text/css" href="./footer.css">
    <link rel="stylesheet" type="text/css" href="./peacecorps.css">
    <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+   <audio id="my_audio" src="Songs/CobraVerde.mp3" loop="loop"></audio>
+   <script>
+      window.onload = function () {
+         document.getElementById("my_audio").play();
+      }
+   </script>
 
 </head>
 
@@ -15,16 +21,12 @@
    <header>
       <br><br><br>
       <ul class="h">
-         <li class="h"><a href="./index.html">Who?</a></td>
-            </tr>
-         <li class="h"><a href="./peacecorps.html">🕊️Peace Corps🕊️</a></td>
-            </tr>
-         <li class="h"><a href="./locations.html">Locations</a></td>
-            </tr>
-         <li class="h"><a href="./skiing.html">Skiing</a></td>
-            </tr>
-         <li class="h"><a href="./books.html">Books</a></td>
-            </tr>
+         <li class="h"><a href="./index.html">Who?</a></li>
+         <li class="h"><a href="./peacecorps.html">🕊️Peace Corps🕊️</a></li>
+         <li class="h"><a href="./locations.html">Locations</a></li>
+         <li class="h"><a href="./skiing.html">Skiing</a></li>
+         <li class="h"><a href="./books.html">Books</a></li>
+         <li class="h"><a href="./larry.html">Larry</a></li>
       </ul>
       <br><br>
    </header>
@@ -35,16 +37,21 @@
       <h1>My Peace Corps Newsletters</h1>
       <h2>Click the newsletter below to download a pdf</h2>
       <div class="content">
-         <p><a href="Newsletters/Newsletterno.9.pdf" download="Newsletterno.9.pdf">Newsletter no.9</a></p>
-         <p><a href="Newsletters/Newsletterno.8.pdf" download="Newsletterno.8.pdf">Newsletter no.8</a></p>
-         <p><a href="Newsletters/Newsletterno.7.pdf" download="Newsletterno.7.pdf">Newsletter no.7</a></p>
-         <p><a href="Newsletters/Newsletterno.6.pdf" download="Newsletterno.6.pdf">Newsletter no.6</a></p>
-         <p><a href="Newsletters/Newsletterno.5.pdf" download="Newsletterno.5.pdf">Newsletter no.5</a></p>
-         <p><a href="Newsletters/Newsletterno.4.pdf" download="Newsletterno.4.pdf">Newsletter no.4</a></p>
-         <p><a href="Newsletters/Newsletterno.3.pdf" download="Newsletterno.3.pdf">Newsletter no.3</a></p>
-         <p><a href="Newsletters/Newsletterno.2.pdf" download="Newsletterno.2.pdf">Newsletter no.2</a></p>
-         <p><a href="Newsletters/Newsletterno.1.pdf" download="Newsletterno.1.pdf">Newsletter no.1</a></p>
+         <ul>
+            <li class="top"><a href="Newsletters/Newsletterno.9.pdf" download="Newsletterno.9.pdf">Newsletter no.9</a></li>
+            <li class="item"><a href="Newsletters/Newsletterno.8.pdf" download="Newsletterno.8.pdf">Newsletter no.8</a></li>
+            <li class="item"><a href="Newsletters/Newsletterno.7.pdf" download="Newsletterno.7.pdf">Newsletter no.7</a></li>
+            <li class="item"><a href="Newsletters/Newsletterno.6.pdf" download="Newsletterno.6.pdf">Newsletter no.6</a></li>
+            <li class="item"><a href="Newsletters/Newsletterno.5.pdf" download="Newsletterno.5.pdf">Newsletter no.5</a></li>
+            <li class="item"><a href="Newsletters/Newsletterno.4.pdf" download="Newsletterno.4.pdf">Newsletter no.4</a></li>
+            <li class="item"><a href="Newsletters/Newsletterno.3.pdf" download="Newsletterno.3.pdf">Newsletter no.3</a></li>
+            <li class="item"><a href="Newsletters/Newsletterno.2.pdf" download="Newsletterno.2.pdf">Newsletter no.2</a></li>
+            <li class="bottom"><a href="Newsletters/Newsletterno.1.pdf" download="Newsletterno.1.pdf">Newsletter no.1</a></li>
+         </ul>
       </div>
+      <br>
+      <button id="playPauseBtn">Play</button>
+      <script src="PlayPause.js"></script>
       <br>
    </div>
    <footer>

@@ -59,11 +59,6 @@ body{
 
 }
 
-ul{
-	text-align: center;
- 	font-size: 20px;
-}
-
 .collapsible.active + .content {
   display: block;
 }
@@ -80,4 +75,5 @@ ul{
 	width: 150px;  /* Resize the image */
 	height: auto;  /* Maintain aspect ratio */
 	border-radius: 50%;
+	display: inline;
 }

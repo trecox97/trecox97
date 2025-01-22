@@ -47,7 +47,7 @@ function hidePopup(popup) {
 document.addEventListener('DOMContentLoaded', function () {
     // Select all elements with the class 'popup-trigger' (e.g., your SVG elements)
     const svgElements = document.querySelectorAll('.popup-trigger');
-    
+
     // For each SVG element, find the corresponding popup and add event listeners
     svgElements.forEach(function (svgElement) {
         const popupId = svgElement.getAttribute('data-popup'); // Use a data attribute to link each svg to a popup
@@ -55,11 +55,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (popup) {
             // Event listeners for showing and hiding the popup
-            svgElement.addEventListener('mousemove', function(event) {
+            svgElement.addEventListener('mousemove', function (event) {
                 showPopup(event, popup); // Show and move the corresponding popup
             });
 
-            svgElement.addEventListener('mouseleave', function() {
+            svgElement.addEventListener('mouseleave', function () {
                 hidePopup(popup); // Hide the corresponding popup when the mouse leaves
             });
         }

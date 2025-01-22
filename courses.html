@@ -8,22 +8,24 @@
     <link rel="stylesheet" type="text/css" href="./footer.css">
     <link rel="stylesheet" type="text/css" href="./courses.css">
     <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+    <audio id="my_audio" src="Songs/faye-wong-dreams.mp3" loop="loop"></audio>
+    <script>
+       window.onload = function () {
+          document.getElementById("my_audio").play();
+       }
+    </script>
 </head>
 
 <body>
     <header>
         <br><br><br>
         <ul class="h">
-            <li class="h"><a href="./index.html">Who?</a></td>
-                </tr>
-            <li class="h"><a href="./peacecorps.html">🕊️Peace Corps🕊️</a></td>
-                </tr>
-            <li class="h"><a href="./locations.html">Locations</a></td>
-                </tr>
-            <li class="h"><a href="./skiing.html">Skiing</a></td>
-                </tr>
-            <li class="h"><a href="./books.html">Books</a></td>
-                </tr>
+            <li class="h"><a href="./index.html">Who?</a></li>
+            <li class="h"><a href="./peacecorps.html">🕊️Peace Corps🕊️</a></li>
+            <li class="h"><a href="./locations.html">Locations</a></li>
+            <li class="h"><a href="./skiing.html">Skiing</a></li>
+            <li class="h"><a href="./books.html">Books</a></li>
+            <li class="h"><a href="./larry.html">Larry</a></li>
         </ul>
         <br><br>
     </header>
@@ -31,6 +33,9 @@
 <div id="main">
     <div class="section">
         <h1>Cox's College Courses:</h1>
+        <button id="playPauseBtn">Play</button>
+
+        <script src="PlayPause.js"></script>
         <div class="chunk">
 
             <div style="width:700px; border:2px solid #9c2626; margin: auto; border-radius: 10px;"></div>
