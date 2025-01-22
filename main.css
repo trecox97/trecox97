@@ -23,7 +23,6 @@ hr {
     border: 10px solid #0c0000;
     border-color: #9c2626;
     margin: 20px;
-    padding: 0px;
     border-radius: 20px;
     width: 80%; /* Responsive width */
     max-width: 600px;
@@ -39,7 +38,7 @@ p {
 .bio {
     background-color: rgb(156, 38, 38, 0.85);
     border-radius: 20px;
-    font-size: 1.5vw;
+    font-size: 16px;
     text-align: left;
     padding: 8px;
     width: 90%; /* Make width responsive */
@@ -76,6 +75,13 @@ img {
     border-radius: 10px;
     cursor: pointer;
     margin-bottom: 6px;
+}
+
+.line {
+    width: 80%; 
+    border:2px solid #9c2626; 
+    margin: auto; 
+    border-radius: 10px;
 }
 
 /* Mobile-specific Styles */
@@ -127,7 +133,7 @@ img {
     }
 
     .bio {
-        font-size: 3.5vw;
+        font-size: 12px;
         padding: 5%;
     }
 
