@@ -77,3 +77,11 @@ body{
 	border-radius: 50%;
 	display: inline;
 }
+
+#playPauseBtn {
+	background-color: #83C491;
+}
+
+#playPauseBtn:hover {
+	background-color: #0064B0;
+}

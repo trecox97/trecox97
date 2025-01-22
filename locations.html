@@ -8,7 +8,7 @@
    <link rel="stylesheet" type="text/css" href="./locations.css">
    <link rel="stylesheet" type="text/css" href="./footer.css">
    <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
-   <audio id="my_audio" src="Songs/PlanetEarth.mp3"></audio>
+   <audio id="my_audio" src="Songs/PlanetEarth.mp3" loop="loop"></audio>
    <script>
       window.onload = function () {
          document.getElementById("my_audio").play();
@@ -330,11 +330,13 @@
          <span class="flag" data-country="Hong Kong">🇭🇰</span>
          <span class="flag" data-country="Japan">🇯🇵</span>
       </h1>
-   
+      <button id="playPauseBtn">Play</button>
+
+      <script src="PlayPause.js"></script>
+
       <div id="tooltip" class="tooltip"></div>
-   
-      <script src="flagpopup.js"></script>      
       <div style="width:700px; height:2px; border-top:1px solid black; margin: auto;"></div>
+      <script src="flagpopup.js"></script>
    </div>
    <footer>
       <div id="footer">

@@ -1,5 +1,3 @@
-console.log("popup.js script loaded");
-
 // Function to update popup position
 function updatePopupPosition(event, popup) {
     const mouseX = event.pageX + 10;  // Offset the popup to the right of the mouse
