@@ -8,23 +8,24 @@
    <link rel="stylesheet" type="text/css" href="./locations.css">
    <link rel="stylesheet" type="text/css" href="./footer.css">
    <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
-
+   <audio id="my_audio" src="Songs/PlanetEarth.mp3"></audio>
+   <script>
+      window.onload = function () {
+         document.getElementById("my_audio").play();
+      }
+   </script>
 </head>
 
 <body>
    <header>
       <br><br><br>
       <ul class="h">
-         <li class="h"><a href="./index.html">Who?</a></td>
-            </tr>
-         <li class="h"><a href="./peacecorps.html">🕊️Peace Corps🕊️</a></td>
-            </tr>
-         <li class="h"><a href="./locations.html">Locations</a></td>
-            </tr>
-         <li class="h"><a href="./skiing.html">Skiing</a></td>
-            </tr>
-         <li class="h"><a href="./books.html">Books</a></td>
-            </tr>
+         <li class="h"><a href="./index.html">Who?</a></li>
+         <li class="h"><a href="./peacecorps.html">🕊️Peace Corps🕊️</a></li>
+         <li class="h"><a href="./locations.html">Locations</a></li>
+         <li class="h"><a href="./skiing.html">Skiing</a></li>
+         <li class="h"><a href="./books.html">Books</a></li>
+         <li class="h"><a href="./larry.html">Larry</a></li>
       </ul>
       <br><br>
    </header>
@@ -306,7 +307,33 @@
 
       <div style="width:700px; height:2px; border-top:1px solid black; margin: auto;"></div>
       <h1>Countries Unlocked: 21/195</h1>
-      <h1> 🇺🇸 🇨🇦 🇲🇽 🇮🇹 🇻🇦 🇪🇸 🇫🇷 🇬🇧 🇨🇭 🇮🇪 🇳🇱 🇧🇪 🇩🇪 🇱🇺 🇩🇰 🇹🇿 🇰🇪 🇪🇹 🇹🇭 🇭🇰 🇯🇵</h1>
+      <h1 class="flags">
+         <span class="flag" data-country="United States">🇺🇸</span>
+         <span class="flag" data-country="Canada">🇨🇦</span>
+         <span class="flag" data-country="Mexico">🇲🇽</span>
+         <span class="flag" data-country="Italy">🇮🇹</span>
+         <span class="flag" data-country="Vatican City">🇻🇦</span>
+         <span class="flag" data-country="Spain">🇪🇸</span>
+         <span class="flag" data-country="France">🇫🇷</span>
+         <span class="flag" data-country="United Kingdom">🇬🇧</span>
+         <span class="flag" data-country="Switzerland">🇨🇭</span>
+         <span class="flag" data-country="Ireland">🇮🇪</span>
+         <span class="flag" data-country="Netherlands">🇳🇱</span>
+         <span class="flag" data-country="Belgium">🇧🇪</span>
+         <span class="flag" data-country="Germany">🇩🇪</span>
+         <span class="flag" data-country="Luxembourg">🇱🇺</span>
+         <span class="flag" data-country="Denmark">🇩🇰</span>
+         <span class="flag" data-country="Tanzania">🇹🇿</span>
+         <span class="flag" data-country="Kenya">🇰🇪</span>
+         <span class="flag" data-country="Ethiopia">🇪🇹</span>
+         <span class="flag" data-country="Thailand">🇹🇭</span>
+         <span class="flag" data-country="Hong Kong">🇭🇰</span>
+         <span class="flag" data-country="Japan">🇯🇵</span>
+      </h1>
+   
+      <div id="tooltip" class="tooltip"></div>
+   
+      <script src="flagpopup.js"></script>      
       <div style="width:700px; height:2px; border-top:1px solid black; margin: auto;"></div>
    </div>
    <footer>

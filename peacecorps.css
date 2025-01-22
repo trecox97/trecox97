@@ -2,6 +2,10 @@ a {
     color: #0064B0; /* Inherit the color from the parent element */
 }
 
+a:hover {
+    color: rgb(156, 38, 38, 0.8);
+}
+
 p {
     font-size: 3vw;
 }
@@ -9,12 +13,67 @@ p {
 .content {
     background-color: rgb(130, 196, 144, .8);
     border-radius: 20px;
+    justify-content: center;
     margin: auto;
 	color: #E0FFFF;
-	padding: 1px;
 	width: 400px;
 	border: none;
 	text-align: center;
 	outline: none;
-    font-size: 2vw;
+    align-items: center;
+}
+
+.item {
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.top {
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bottom {
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: auto;
+}
+
+li:hover {
+    background-color: rgb(37, 48, 59, .8);
+}
+
+.top:hover {
+border-radius: 20px 20px 0 0;
+}
+
+.bottom:hover {
+    border-radius: 0 0 20px 20px;
+}
+
+#playPauseBtn {
+    background-color: rgb(130, 196, 144, .8);
+    color: #0064B0;
+}
+
+#playPauseBtn:hover {
+    background-color: rgb(37, 48, 59, .8);
+    color: rgb(156, 38, 38, 0.8);
 }

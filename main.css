@@ -1,7 +1,6 @@
 body{
 	background-color: #F3A4B4;
-	font-family:  "Comic Sans MS", "Comic Sans", cursive;
-	/*font-family:  "papyrus";*/
+	font-family:  "Comic Sans MS", "Comic Sans", "Papyrus", "Futura";
 	text-align: center;
 	color: aliceblue;
 
@@ -9,7 +8,7 @@ body{
 
 h1 {
 	text-align:  center;
-	font-size: 6vw;
+	font-size: 5vw;
 	color: #25303B;
 }
 
@@ -57,3 +56,21 @@ p{
 	bottom: 0;
 	z-index: -1;
   }
+
+  img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+
+#playPauseBtn {
+	background-color: rgb(156, 38, 38, 0.7);
+	color: aliceblue;
+	font-family:  "Comic Sans MS", "Comic Sans";
+padding: 10px;
+font-size: 15px;
+border-radius: 10px;
+cursor: pointer;
+margin-bottom: 6px;
+}
