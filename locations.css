@@ -151,6 +151,7 @@ p {
  .flag {
 	position: relative;
 	cursor: pointer;
+	padding: 10px;
  }
  
  .tooltip {
@@ -170,4 +171,3 @@ p {
 	opacity: 1;
 	transition: opacity 0.3s ease-in-out;
  }
- 
