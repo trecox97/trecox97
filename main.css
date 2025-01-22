@@ -21,7 +21,7 @@ h2 {
 hr{
 	display: block;
 	height: 0px;
-	border: 10px solid #642d2d;
+	border: 10px solid #0c0000;
 	border-color: #9c2626;
 	margin: 20px;
 	padding: 0px;
@@ -38,7 +38,7 @@ p{
 .bio {
 	background-color: rgb(156, 38, 38, 0.85);
 	border-radius: 20px;
-	font-size: 2.5;
+	font-size: 2.5vw;
 	text-align: left;
 	padding: 8px;
 	width: 600px;
@@ -57,7 +57,7 @@ p{
 	z-index: -1;
   }
 
-  img {
+img {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
