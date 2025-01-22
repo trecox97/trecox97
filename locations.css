@@ -1,127 +1,72 @@
+/* Import Google Fonts */
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,700italic);
 
+/* SVG Styles */
 svg {
-	color: rgb(190, 190, 190);
-	display: block;
-	margin: auto;
-	max-width: 1000px;
+    color: rgb(190, 190, 190);
+    display: block;
+    margin: auto;
+    max-width: 100%; /* Adjust to make the SVG responsive */
+    height: auto; /* Ensure the aspect ratio is maintained */
 }
+
+/* Path Styling for SVG */
 path {
-	fill: currentColor;
-	stroke: #000;
-	stroke-width: 1;
+    fill: currentColor;
+    stroke: #000;
+    stroke-width: 1;
 }
 
+/* Link Styles */
 a {
-	transition: color 1s;
+    transition: color 1s;
 }
 
+/* Hover Effects for Links */
+a:hover {
+    color: #B90845;
+    cursor: pointer; /* Ensure cursor changes on hover */
+}
+
+/* List Item Styles */
 li.h a {
-	cursor: pointer;
-	transition: color 1s;
-	transition: background-color 1s;
+    cursor: pointer;
+    transition: color 1s, background-color 1s;
 }
 
 li.h a:hover {
-	transition: background-color 1s;
-	transition: color 0s;
+    background-color: #25303B;
+    color: #0064B0;
+    transition: color 0s;
 }
 
-a:hover {
-	color: #B90845;
-	transition: color 0s;
-	cursor: default;
+/* States for Specific Elements */
+#UT, #CA, #NV, #AZ, #ID, #MT, #WY, #ND, #SD, #MN, #WI, #MI, #IL, #TX, #MO, #IN, #OH, #NY, #PA, #VT, #NH, #MA, #ME, #NJ, #CT, #RI, #DE, #MD, #VA, #NC, #SC, #GA, #FL, #TN, #WV, #KY {
+    color: #00814F;
 }
 
-#UT,
-#CA,
-#NV,
-#AZ,
-#ID,
-#MT,
-#WY,
-#ND,
-#SD,
-#MN,
-#WI,
-#MI,
-#IL,
-#TX,
-#MO,
-#IN,
-#OH,
-#NY,
-#PA,
-#VT,
-#NH,
-#MA,
-#ME,
-#NJ,
-#CT,
-#RI,
-#DE,
-#MD,
-#VA,
-#NC,
-#SC,
-#GA,
-#FL,
-#TN,
-#WV,
-#KY{
-	color: #00814F;
+#UT:hover, #NV:hover, #AZ:hover, #MT:hover, #WY:hover, #ND:hover, #SD:hover, #MN:hover, #WI:hover, #MI:hover, #IL:hover, #TX:hover, #MO:hover, #IN:hover, #OH:hover, #PA:hover, #VT:hover, #NH:hover, #MA:hover, #ME:hover, #NJ:hover, #CT:hover, #RI:hover, #DE:hover, #MD:hover, #VA:hover, #NC:hover, #SC:hover, #GA:hover, #FL:hover, #TN:hover, #WV:hover, #KY:hover {
+    color: rgb(0, 198, 79);
+    cursor: default;
 }
 
-#UT:hover,
-#NV:hover,
-#AZ:hover,
-#MT:hover,
-#WY:hover,
-#ND:hover,
-#SD:hover,
-#MN:hover,
-#WI:hover,
-#MI:hover,
-#IL:hover,
-#TX:hover,
-#MO:hover,
-#IN:hover,
-#OH:hover,
-#PA:hover,
-#VT:hover,
-#NH:hover,
-#MA:hover,
-#ME:hover,
-#NJ:hover,
-#CT:hover,
-#RI:hover,
-#DE:hover,
-#MD:hover,
-#VA:hover,
-#NC:hover,
-#SC:hover,
-#GA:hover,
-#FL:hover,
-#TN:hover,
-#WV:hover,
-#KY:hover{
-	color: rgb(0, 198, 79);
-	cursor: default;
-}
-
+/* Header Styles */
 h1 {
-	color: aliceblue;
+    color: aliceblue;
+    font-size: 6vw; /* Use viewport-based units for responsive sizing */
+    text-align: center;
+    margin-top: 20px;
 }
 
-#NY:hover,
-#CA:hover,
-#ID:hover {
-	color: rgb(126, 255, 39);
+/* Hover for Specific States */
+#NY:hover, #CA:hover, #ID:hover {
+    color: rgb(126, 255, 39);
     display: block;
     margin: 20px auto;
     cursor: pointer; /* Change the cursor to indicate it's interactive */
 }
 
+/* Popup Styling */
 .popup {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.7);
@@ -137,37 +82,111 @@ h1 {
     cursor: pointer;
 }
 
-
+/* Paragraph Styling */
 p {
-	font-size: 16px;
+    font-size: 1.5vw; /* Use viewport width for responsive font sizing */
+    text-align: center;
 }
- 
- h1 {
-	font-size: 50px;
-	justify-content: center;
-	gap: 10px;
- }
- 
- .flag {
-	position: relative;
-	cursor: pointer;
-	padding: 10px;
- }
- 
- .tooltip {
-	position: absolute;
-	background-color: rgba(0, 0, 0, 0.7);
-	color: aliceblue;
-	padding: 5px 10px;
-	border-radius: 5px;
-	visibility: hidden;
-	opacity: 0;
-	pointer-events: none;
-	transition: opacity 0.3s ease-in-out;
- }
- 
- .tooltip.visible {
-	visibility: visible;
-	opacity: 1;
-	transition: opacity 0.3s ease-in-out;
- }
+
+/* Flag Styling */
+.flag {
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Tooltip Styling */
+.tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: aliceblue;
+    padding: 5px 10px;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.tooltip.visible {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Media Query for Mobile Devices (up to 768px) */
+@media (max-width: 768px) {
+
+    /* Adjusting SVG size for smaller screens */
+    svg {
+        max-width: 100%; /* Ensure it fills container width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Adjust Font Sizes for h1 and Paragraph */
+    h1 {
+        font-size: 7vw; /* Larger font size for smaller screens */
+    }
+
+    p {
+        font-size: 2vw; /* Adjust text size to make it more readable */
+    }
+
+    /* Adjust Tooltip for smaller screens */
+    .tooltip {
+        padding: 3px 6px; /* Smaller padding for mobile */
+    }
+
+    /* Flag adjustments */
+    .flag {
+        padding: 8px; /* Slightly smaller padding */
+    }
+
+    /* Popup Styling on Mobile */
+    .popup {
+        font-size: 4vw; /* Adjust the font size of the popup */
+    }
+
+    /* Adjust hover effects on smaller screens */
+    a:hover {
+        color: #B90845;
+        cursor: pointer;
+    }
+
+    /* Adjust the visibility and layout of the popup */
+    .popup-trigger {
+        font-size: 5vw; /* Make trigger font size more mobile-friendly */
+    }
+}
+
+/* Extra Small Screen Adjustments (up to 480px) */
+@media (max-width: 480px) {
+    
+    /* Further adjust font sizes */
+    h1 {
+        font-size: 8vw; /* Large enough for small screens */
+    }
+
+    p {
+        font-size: 3vw; /* Adjust text for readability */
+    }
+
+    /* Adjust tooltip and flags further */
+    .tooltip {
+        padding: 2px 4px;
+    }
+
+    .flag {
+        padding: 6px; /* Reduce padding for small screens */
+    }
+
+    /* Popup and trigger font sizes */
+    .popup {
+        font-size: 5vw;
+        padding: 2px 4px;
+    }
+
+    .popup-trigger {
+        font-size: 6vw; /* Larger font for easy interaction */
+    }
+}

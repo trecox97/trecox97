@@ -1,58 +1,76 @@
-ul.h{
-	list-style-type: none;
-	margin: -50px 0px -50px 0px;
-	padding: 5px;
-	text-align: center;
-	overflow: hidden;
-	background-color: rgb(156, 38, 38, 0.8);
-	border-radius: 100px;
+/* Base Styles for Desktop */
+ul.h {
+    list-style-type: none;
+    padding: 5px;
+    text-align: center;
+    overflow: hidden;
+    background-color: rgb(156, 38, 38, 0.8);
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-li.h{
-	float: center;
-	vertical-align: middle;
-	text-decoration: none;
-	display: inline;
-	color: white;
-	font-size: 20px;
+li.h {
+    text-decoration: none;
+    display: inline-block;
+    margin: 0; /* Add spacing between items */
+    vertical-align: middle;
 }
 
-li.h a{
-	color: #E0FFFF;
-	text-align: center;
-	padding: 20px;
-	text-decoration: none;
-	transition: color 1s;
-	transition: background-color 1s;
+li.h a {
+    color: #E0FFFF;
+    padding: 20px 30px; /* Added padding for better touch targets */
+    text-decoration: none;
+    transition: color 1s, background-color 1s;
 }
 
-li.h a:visited{
-	text-decoration: none;
-	display: inline;
-	color: #E0FFFF;
+li.h a:visited {
+    color: #E0FFFF;
 }
 
-li.h a:hover{
-	text-decoration:none;
-	display: inline;
-	color: #0064B0;
-	background-color: #25303B;
-	transition: color 0s;
-
+li.h a:hover {
+    color: #0064B0;
+    background-color: #25303B;
 }
 
-li.h a:active{
-	text-decoration: none;
-	display: inline;
-	color: #E0FFFF;
+li.h a:active {
+    color: #E0FFFF;
 }
 
-.right{
-	margin-left: auto;
-	margin-right: auto;
+/* Center alignment */
+.right, .center {
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.center{
-	margin-left: auto;
-	margin-right: auto;
+/* Mobile-specific Styles */
+@media (max-width: 768px) {
+    ul.h {
+        flex-direction: column; /* Stack items vertically on small screens */
+        border-radius: 20px; /* Adjust border radius for better appearance */
+        margin: 5px; /* Remove any existing margin */
+        padding: 0px; /* Remove padding to reduce space */
+        position: relative; /* Allow positioning adjustments */
+        top: 0; /* Ensure it's aligned with the top of the window */
+    }
+
+    li.h {
+        margin: 5px 0; /* Reduce horizontal margin on mobile */
+        width: 100%; /* Make items full-width to stack vertically */
+        text-align: center; /* Center the text on smaller screens */
+    }
+
+    li.h a {
+        font-size: 16px; /* Reduce font size on smaller screens */
+        padding: 15px 20px; /* Adjust padding for touch targets */
+    }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+    li.h a {
+        font-size: 14px; /* Further reduce font size on very small screens */
+        padding: 12px 15px; /* Reduce padding for small screens */
+    }
 }
