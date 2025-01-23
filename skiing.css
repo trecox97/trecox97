@@ -1,77 +1,23 @@
 /* Map Styles */
 #map {
-    height: 300px; /* Reduced height for mobile screens */
-    width: 90%; /* Set width as a percentage to make it responsive */
-    max-width: 700px; /* Ensure it doesn't grow too wide on large screens */
+    height: 300px;
+    /* Reduced height for mobile screens */
+    width: 90%;
+    /* Set width as a percentage to make it responsive */
+    max-width: 700px;
+    /* Ensure it doesn't grow too wide on large screens */
     margin: 20px auto;
     position: relative;
     outline-style: none;
     border-radius: 20px;
 }
 
-/* Collapsible Button Styles */
-.collapsible {
-    background-color: #83C491;
-    color: #E0FFFF;
-    cursor: pointer;
-    padding: 18px;
-    width: 90%; /* Use percentage width for better mobile responsiveness */
-    max-width: 500px; /* Limit max width for larger screens */
-    border: none;
-    text-align: center;
-    outline: none;
-    font-size: 3vw; /* Use viewport width for responsive font size */
-    font-family: "Papyrus", sans-serif;
-    margin: auto;
-}
-
-/* Active and Hover States for Collapsible */
-.active, .collapsible:hover {
-    background-color: #0064B0;
-}
-
-.collapsible:after {
-    content: '\002B';
-    color: aliceblue;
-    font-weight: bold;
-    float: right;
-    margin-left: 5px;
-    text-align: center;
-}
-
-.active:after {
-    content: "\2212"; /* Change "+" to "-" when active */
-}
-
-/* Collapsible Content Styles */
-.content {
-    margin: auto;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    background-color: #98D4E2;
-    text-align: center;
-    width: 90%; /* Use percentage for responsiveness */
-    max-width: 500px; /* Limit the width for large screens */
-    font-size: 4vw; /* Adjust font size for mobile */
-}
-
-.collapsible.active + .content {
-    display: block;
-}
-
-.content p {
-    margin: auto;
-    padding: 10px;
-    font-size: 16px; /* Reduced font size for better readability on mobile */
-    text-align: center;
-    color: black;
-}
-
 /* Image Styles */
 .ween {
-    width: 150px; /* Resize image to be more mobile-friendly */
-    height: auto; /* Maintain aspect ratio */
+    width: 150px;
+    /* Resize image to be more mobile-friendly */
+    height: auto;
+    /* Maintain aspect ratio */
     border-radius: 50%;
     display: inline-block;
     margin: 10px;
@@ -80,74 +26,119 @@
 /* Button Styles */
 #playPauseBtn {
     background-color: #83C491;
-    color: white;
-    padding: 10px 20px; /* Increase padding for easier touch interaction */
+    color: aliceblue;
+    padding: 10px 20px;
+    /* Increase padding for easier touch interaction */
     border-radius: 10px;
     cursor: pointer;
-    font-size: 2vw; /* Use viewport width for button text size */
+    font-size: 2vw;
+    /* Use viewport width for button text size */
 }
 
 #playPauseBtn:hover {
     background-color: #0064B0;
+    color: aliceblue;
+}
+
+.collapsible {
+    background-color: #83C491;
+    color: #E0FFFF;
+    cursor: pointer;
+    width: 500px; /* Default width for larger screens */
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 4vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: "papyrus";
+}
+
+/* Active and Hover State for Collapsible */
+.active, .collapsible:hover {
+    background-color: #0064B0;
+}
+
+.collapsible:after {
+    content: '\002B';
+    color: #E0FFFF;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+/* Content Style */
+.content {
+    margin: auto;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #98D4E2;
+    color: #25303B;
+    width: 500px; /* Default width */
+    text-align: right;
+    display: flex;              /* Enables Flexbox */
+    justify-content: center;    /* Centers content horizontally */
+    height: auto;               /* Allow content height to grow with content */
+}
+
+/* Paragraph Style */
+.content p {
+    font-size: 15px;
+    margin: 0;
+    line-height: 1.5;
 }
 
 /* Mobile Specific Adjustments (For screens less than 768px) */
 @media (max-width: 768px) {
-
-    /* Adjust Map Height for Smaller Screens */
-    #map {
-        height: 250px; /* Reduce height on smaller screens */
-        width: 90%; /* Make the map responsive */
-    }
-
-    /* Adjust Collapsible Button Font Size */
     .collapsible {
-        font-size: 6vw; /* Larger text for smaller screens */
-        width: 90%; /* Full width on small screens */
-        padding: 15px; /* Adjust padding */
+        width: 90%;               /* Use full width on small screens */
+        font-size: 6vw;          /* Slightly smaller text */
+        padding: 15px;            /* Adjust padding for mobile */
     }
 
-    /* Adjust Content Width */
     .content {
-        font-size: 5vw; /* Adjust font size for mobile */
-        width: 90%; /* Make content box responsive */
-        max-width: 100%; /* Ensure content box doesn't overflow */
+        width: 90%;               /* Make content width responsive */
+        text-align: center;       /* Center text inside content */
     }
 
-    /* Adjust Play/Pause Button */
-    #playPauseBtn {
-        font-size: 4vw; /* Increase font size for touch screens */
-        padding: 12px 25px; /* Increase padding for easier interaction */
+    .content p {
+        font-size: 14px;          /* Slightly smaller font on mobile */
+        text-align: center;       /* Center text inside paragraph */
     }
 
-    /* Resize Image for Smaller Screens */
     .ween {
-        width: 100px; /* Resize image to fit mobile */
+        width: 100px;
+    }
+
+    #playPauseBtn {
+        width: 30%;
+        font-size: 4vw;
     }
 }
 
 /* Extra Mobile Adjustments for very small screens (max-width: 480px) */
 @media (max-width: 480px) {
-
-    /* Collapsible Button Font Size */
     .collapsible {
-        font-size: 8vw; /* Further increase font size for very small screens */
-        padding: 12px; /* Adjust padding for small screens */
+        font-size: 9vw;          /* Smaller text size */
+        padding: 12px;            /* Less padding for very small screens */
     }
 
-    /* Content Box Font Size */
-    .content {
-        font-size: 6vw; /* Make text larger for very small screens */
+    .content p {
+        font-size: 12px;          /* Further decrease font size */
+        line-height: 1.4;         /* Adjust line height for readability */
     }
 
-    /* Play/Pause Button Font Size */
-    #playPauseBtn {
-        font-size: 4vw; /* Increase font size for tiny screens */
-        padding: 15px 30px; /* More padding for larger touch areas */
-    }
-
-    /* Image Size */
     .ween {
-        width: 80px; /* Resize image for very small screens */
+        width: 80px;
+    }
+
+    #playPauseBtn {
+        width: 30%;
+        font-size: 6vw;
     }
 }

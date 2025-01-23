@@ -4,6 +4,7 @@ body {
     font-family: "Comic Sans MS", "Comic Sans", "Futura";
     text-align: center;
     color: aliceblue;
+    cursor: default;
 }
 
 h1 {
@@ -19,7 +20,7 @@ h2 {
 
 hr {
     width: 80%; 
-    border:2px solid #9c2626; 
+    border:2px solid rgb(156, 38, 38, 0.8); 
     margin: auto; 
     border-radius: 10px;
 }
@@ -69,6 +70,11 @@ img {
     border-radius: 10px;
     cursor: pointer;
     margin-bottom: 6px;
+}
+
+#playPauseBtn:hover {
+    color: #0064B0;
+    background-color: #25303B;
 }
 
 /* Mobile-specific Styles */

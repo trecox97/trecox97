@@ -3,7 +3,7 @@ svg {
     color: rgb(190, 190, 190);
     display: block;
     margin: auto;
-    max-width: 100%; /* Adjust to make the SVG responsive */
+    max-width: 900px; /* Adjust to make the SVG responsive */
     height: auto; /* Ensure the aspect ratio is maintained */
 }
 
