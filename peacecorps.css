@@ -95,7 +95,7 @@ background-color: rgb(37, 48, 59, .8);
 
     /* Button Styling */
     #playPauseBtn {
-        width: 80%; /* Make the button full-width on mobile */
+        width: 50%; /* Make the button full-width on mobile */
         font-size: 18px;
     }
 
