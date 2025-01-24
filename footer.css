@@ -18,7 +18,7 @@ footer {
 /* Mobile-specific Styles */
 @media (max-width: 768px) {
     .copy {
-        font-size: 4vw; /* Reduce font size for smaller screens */
+        font-size: 3vw; /* Reduce font size for smaller screens */
         padding: 0 10px; /* Add padding to ensure text doesn’t touch screen edges */
     }
 }
@@ -26,7 +26,7 @@ footer {
 /* Extra Small Screens (Optional) */
 @media (max-width: 480px) {
     .copy {
-        font-size: 5vw; /* Further reduce font size for very small screens */
+        font-size: 4vw; /* Further reduce font size for very small screens */
         padding: 0 15px; /* More padding for extra small screens */
     }
 }
