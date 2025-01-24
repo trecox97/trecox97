@@ -1,0 +1,16 @@
+
+.art {   
+    border-radius: 20px;
+    font-size: 16px;
+    text-align: left;
+    padding: 8px;
+    width: 90%; /* Make width responsive */
+    height: 600px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.gun-hole {
+    opacity: 0; /* Make the image invisible initially */
+    transition: opacity 1s; /* Smooth transition for opacity */
+}

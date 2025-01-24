@@ -6,12 +6,8 @@ a:hover {
     color: rgb(156, 38, 38, 0.8);
 }
 
-p {
-    font-size: 3vw;
-}
-
 .content {
-    background-color: rgb(130, 196, 144, .8);
+    background-color: #82c490cc;
     border-radius: 20px;
     justify-content: center;
     margin: auto;
@@ -23,25 +19,7 @@ p {
     align-items: center;
 }
 
-.item {
-    margin: auto;
-    text-align: center;
-    padding: 10px;
-    font-size: 20px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.top {
-    margin: auto;
-    text-align: center;
-    padding: 10px;
-    font-size: 20px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.bottom {
+.item, .top, .bottom {
     margin: auto;
     text-align: center;
     padding: 10px;
@@ -75,11 +53,6 @@ background-color: rgb(37, 48, 59, .8);
     color: #0064B0;
 }
 
-#playPauseBtn:hover {
-    background-color: rgb(37, 48, 59, .8);
-    color: rgb(156, 38, 38, 0.8);
-}
-
 /* Mobile-specific Styles */
 @media (max-width: 740px) {
     /* Content Styling */
@@ -92,13 +65,7 @@ background-color: rgb(37, 48, 59, .8);
     .item, .top, .bottom {
         font-size: 5vw; /* Use a relative font size for mobile devices */
     }
-
-    /* Button Styling */
-    #playPauseBtn {
-        width: 50%; /* Make the button full-width on mobile */
-        font-size: 18px;
-    }
-
+    
     /* Responsive hover effects for items */
     .item:hover, .top:hover, .bottom:hover {
         background-color: rgb(37, 48, 59, .8);

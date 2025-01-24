@@ -11,13 +11,6 @@
     <link rel="stylesheet" type="text/css" href="./larry.css">
 
     <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
-
-    <audio id="my_audio" src="Songs/Curb.mp3" loop="loop"></audio>
-    <script>
-        window.onload = function () {
-            document.getElementById("my_audio").play();
-        }
-    </script>
 </head>
 
 <body>
@@ -28,9 +21,32 @@
             <li class="h"><a href="./locations.html">Locations</a></li>
             <li class="h"><a href="./skiing.html">Skiing</a></li>
             <li class="h"><a href="./books.html">Books</a></li>
-            <li class="h"><a href="./larry.html">Larry</a></li>
+            <li class="h"><a href="./random.html">Larry</a></li>
         </ul>
     </header>
+
+    <div id="content">
+        <button onclick="playGunshot()">Play Gunshot</button>
+        <img id="gunshotImage" src="Images/gunshot.png" alt="Gunshot" style="display:none;" />
+        <audio id="gunshotAudio" src="Songs/single-pistol-gunshot-3.mp3" preload="auto"></audio>
+      </div>
+
+      <script src="GunshotPlay.js"></script>
+
+
+    <div class="art" style="background-color: rgb(156, 38, 38);">
+        <div class="art" style="background-color: #F28E42">
+            <div class="art" style="background-color: #0064B0">
+                <div class="art" style="background-color: #82c490">
+                    <div class="art" style="background-color: #25303B">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
+
+
+#82c490

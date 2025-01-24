@@ -27,28 +27,17 @@
 #playPauseBtn {
     background-color: #83C491;
     color: aliceblue;
-    padding: 10px 20px;
-    /* Increase padding for easier touch interaction */
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 2vw;
-    /* Use viewport width for button text size */
-}
-
-#playPauseBtn:hover {
-    background-color: #0064B0;
-    color: aliceblue;
 }
 
 .collapsible {
     background-color: #83C491;
     color: #E0FFFF;
     cursor: pointer;
-    width: 500px; /* Default width for larger screens */
+    width: 400px; /* Default width for larger screens */
     border: none;
     text-align: center;
     outline: none;
-    font-size: 4vw;
+    font-size: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
     font-family: "papyrus";
@@ -79,7 +68,7 @@
     transition: max-height 0.2s ease-out;
     background-color: #98D4E2;
     color: #25303B;
-    width: 500px; /* Default width */
+    width: 400px; /* Default width */
     text-align: right;
     display: flex;              /* Enables Flexbox */
     justify-content: center;    /* Centers content horizontally */
@@ -96,28 +85,23 @@
 /* Mobile Specific Adjustments (For screens less than 768px) */
 @media (max-width: 768px) {
     .collapsible {
-        width: 90%;               /* Use full width on small screens */
+        width: 80%;               /* Use full width on small screens */
         font-size: 6vw;          /* Slightly smaller text */
         padding: 15px;            /* Adjust padding for mobile */
     }
 
     .content {
-        width: 90%;               /* Make content width responsive */
+        width: 80%;               /* Make content width responsive */
         text-align: center;       /* Center text inside content */
     }
 
     .content p {
-        font-size: 14px;          /* Slightly smaller font on mobile */
+        font-size: 17px;          /* Slightly smaller font on mobile */
         text-align: center;       /* Center text inside paragraph */
     }
 
     .ween {
         width: 100px;
-    }
-
-    #playPauseBtn {
-        width: 30%;
-        font-size: 4vw;
     }
 }
 
@@ -129,16 +113,11 @@
     }
 
     .content p {
-        font-size: 12px;          /* Further decrease font size */
+        font-size: 16px;          /* Further decrease font size */
         line-height: 1.4;         /* Adjust line height for readability */
     }
 
     .ween {
         width: 80px;
-    }
-
-    #playPauseBtn {
-        width: 30%;
-        font-size: 6vw;
     }
 }
