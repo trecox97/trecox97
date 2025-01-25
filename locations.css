@@ -21,7 +21,6 @@ path {
 
 a.state {
     transition: color 1s ease-out;
-    cursor: default;
 }
 
 /* Hover Effects for Links */
@@ -47,7 +46,6 @@ a.state:hover {
 a.flag {
     position: relative;
     text-decoration: none;
-    cursor: default;
 }
 
 .flags-container, .states-container {

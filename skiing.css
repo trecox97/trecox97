@@ -1,11 +1,13 @@
 /* Map Styles */
 #map {
-    height: 300px;
-    /* Reduced height for mobile screens */
     width: 90%;
     /* Set width as a percentage to make it responsive */
-    max-width: 700px;
+    max-height: 400px;
     /* Ensure it doesn't grow too wide on large screens */
+    max-width: 700px;
+
+    aspect-ratio: 1.618 / 1;
+    /* Reduced height for mobile screens */
     margin: 20px auto;
     position: relative;
     outline-style: none;
