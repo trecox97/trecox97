@@ -54,7 +54,7 @@ canvas {
 }
 
 #logo {
-    animation: spin-right 4s linear infinite;
+    animation: spin-right 7s linear infinite;
     border-radius: 200px;
   }
   
@@ -69,7 +69,7 @@ canvas {
   
 
 #logo2 {
-  animation: spin-left 1.45s linear infinite;
+  animation: spin-left 6s linear infinite;
   border-radius: 200px;
 
 }
