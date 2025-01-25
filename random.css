@@ -1,11 +1,9 @@
 
 .art {   
-    border-radius: 20px;
+    border-radius: 140px;
     font-size: 16px;
-    text-align: left;
     padding: 8px;
     width: 90%; /* Make width responsive */
-    height: 600px;
     margin: 20px auto;
 }
 
@@ -47,3 +45,17 @@ canvas {
     left: 0;
     z-index: -1; /* Ensure canvas stays in the background */
 }
+
+#logo {
+    animation: spin 5s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
