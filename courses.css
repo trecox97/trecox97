@@ -1,14 +1,23 @@
 p {
- color:#25303B;
- text-align: left;
- padding-left: 10%;
- padding-right: 10%;
- max-width: 800px;
+    color: #25303B;
+    text-align: left;
+    padding-left: 10%;
+    padding-right: 10%;
+    max-width: 800px;
+}
+
+h2 {
+    text-align: left;
+    padding-left: 10%;
 }
 
 @media (max-width: 768px) {
     p {
         padding-left: 5%;
         padding-right: 5%;
+    }
+
+    h2 {
+        text-align: center;
     }
 }
