@@ -83,7 +83,7 @@
               console.error('Error loading content:', error);
             });
         };
-    
+  
         // Load the header and footer
         Promise.all([
           loadContent('header.html', 'header-container'),
@@ -92,28 +92,9 @@
         .then(() => {
           // Once content is loaded, make the page visible
           document.body.style.visibility = 'visible';
-    
-          // Add scroll event listener after content is loaded
-          const header = document.querySelector('ul.h'); // Ensure the header is loaded into the DOM
-          if (header) {
-            window.addEventListener('scroll', () => {
-              const scrollPosition = window.scrollY;
-      
-              // If the scroll position is greater than 50px, change the color
-              if (scrollPosition > 50) {
-                header.classList.add('scrolled'); // Add 'scrolled' class when scrolled
-                header.classList.remove('default'); // Remove default red background
-              } else {
-                header.classList.add('default'); // Revert back to red when not scrolled
-                header.classList.remove('scrolled');
-              }
-            });
-          }
         });
       });
     </script>
-    
-      
 
 </body>
 

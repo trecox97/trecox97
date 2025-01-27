@@ -11,7 +11,7 @@ ul.h {
     top: 0;
     position: sticky; /* Make it sticky */
     border-radius: 100px;
-    transition: background-color 0.5s, color 0.5s, border-radius 0.5s, margin 0.1s, opacity 0.3s;
+    transition: background-color 0.5s, color 0.5s, border-radius 0.5s, margin 0.1s;
     z-index: 10; /* Keep the header above other elements */
 }
 
