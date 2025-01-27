@@ -4,24 +4,35 @@ ul.h {
     padding: 5px;
     text-align: center;
     overflow: hidden;
-    background-color: rgba(156, 38, 38, 0.8);
+    background-color: rgba(156, 38, 38, 0.8); /* Default red background */
     display: flex;
     justify-content: center;
     align-items: center;
     top: 0;
-    position: sticky;
+    position: sticky; /* Make it sticky */
     border-radius: 100px;
     transition: background-color 0.5s, color 0.5s, border-radius 0.5s, margin 0.1s, opacity 0.3s;
-    z-index: 10; /* Add a z-index to keep the header above other elements */
+    z-index: 10; /* Keep the header above other elements */
+}
 
-  }
-  
+/* Sticky header's default state (Red) */
+ul.h.default {
+    background-color: rgba(156, 38, 38, 0.8); /* Red */
+}
 
+/* Sticky header's scrolled state (White) */
+ul.h.scrolled {
+    background-color: white; /* White background when scrolled */
+    color: black; /* Text color changes to black for readability */
+}
+
+/* Styling list items */
 li.h {
-    margin: 0; /* Add spacing between items */
+    margin: 0;
     vertical-align: middle;
 }
 
+/* Styling links inside the list items */
 li.h a {
     color: #E0FFFF;
     padding: 25px; /* Added padding for better touch targets */
@@ -29,10 +40,12 @@ li.h a {
     transition: color 1s, background-color 1s;
 }
 
+/* Visited links */
 li.h a:visited {
     color: #E0FFFF;
 }
 
+/* Hover effect for links */
 li.h a:hover {
     color: #0064B0;
     background-color: #25303B;
@@ -60,7 +73,6 @@ li.h a:hover {
         position: relative; /* Ensure positioning works correctly */
     }
 
-    /* Ensure the <a> tag fills the full width of the <li> */
     li.h a {
         display: block; /* Make the <a> tag take up the full space of the <li> */
         width: 100%; /* Full width of the parent <li> */
@@ -68,7 +80,6 @@ li.h a:hover {
         padding: 5px; /* Adjust padding for touch targets */
         color: inherit; /* Inherit text color from <li> */
         text-decoration: none; /* Remove underline for clean look */
-		transition: color 1s, background-color 1s ease-out;
+        transition: color 1s, background-color 1s ease-out;
     }
 }
-
