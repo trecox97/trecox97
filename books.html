@@ -13,16 +13,8 @@
 </head>
 
 <body>
-   <header>
-      <ul class="h">
-         <li class="h"><a href="./index.html">Who?</a></li>
-         <li class="h"><a href="./peacecorps.html">🕊️Peace Corps🕊️</a></li>
-         <li class="h"><a href="./locations.html">Locations</a></li>
-         <li class="h"><a href="./skiing.html">Skiing</a></li>
-         <li class="h"><a href="./books.html">Books</a></li>
-         <li class="h"><a href="./random.html">Random</a></li>
-      </ul>
-   </header>
+   <div id="header-container"></div>
+
    <div class="main">
       <h1>Some of My Favorite Books</h1>
       <div class="container">
@@ -117,11 +109,36 @@
          <img src="BookCovers/troutfishing.jpg" class="cover">
       </div>
    </div>
-   <footer>
-      <div id="footer">
-         <p class="copy">&copy; 2025 &reg Trevor Cox &trade;</p>
-      </div>
-   </footer>
+
+   <div id="footer-container"></div>
+
+   <script>
+    // Wait for the DOM to be fully loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      // Function to load external HTML content into a specific container
+      const loadContent = (url, containerId) => {
+        return fetch(url)
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById(containerId).innerHTML = data;
+          })
+          .catch(error => {
+            console.error('Error loading content:', error);
+          });
+      };
+
+      // Load the header and footer
+      Promise.all([
+        loadContent('header.html', 'header-container'),
+        loadContent('footer.html', 'footer-container')
+      ])
+      .then(() => {
+        // Once content is loaded, make the page visible
+        document.body.style.visibility = 'visible';
+      });
+    });
+  </script>
+
 </body>
 
 </html>

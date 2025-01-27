@@ -14,17 +14,7 @@
 </head>
 
 <body>
-    <header>
-        <ul class="h">
-            <li class="h"><a href="./index.html">Who?</a></li>
-            <li class="h"><a href="./peacecorps.html">🕊️Peace Corps🕊️</a></li>
-            <li class="h"><a href="./locations.html">Locations</a></li>
-            <li class="h"><a href="./skiing.html">Skiing</a></li>
-            <li class="h"><a href="./books.html">Books</a></li>
-            <li class="h"><a href="./random.html">Random</a></li>
-        </ul>
-    </header>
-    <br>
+    <div id="header-container"></div>
 
     <div class="matrix"></div>
     <script src="matrix.js"></script>
@@ -95,14 +85,75 @@
         </div>
     </div>
 
-    <div class="art" style="background-color: #98D4E2">
-        <img id="logo2" src="Images/maya2.png">
+    <div class="art" style="background-color: #8A4B9F;">
+        <div class="art" style="background-color: #0061A8">
+            <div class="art" style="background-color: #00A9E0">
+                <div class="art" style="background-color: #009639">
+                    <div class="art" style="background-color: #F9E400">
+                        <div class="art" style="background-color: #E60012">
+                            <div class="art" style="background-color: #FF6A13">
+                                <div class="art" style="background-color: #6A4E23">
+                                    <div class="art" style="background-color: #D1D3D4">
+                                        <img id="logo2" src="Images/maya2.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="art" style="background-color: #F28E42">
-        <img id="logo" src="Images/ChineseYears.png">
+    <div class="art" style="background-color: #FF6A00;">
+        <div class="art" style="background-color: #D30000">
+            <div class="art" style="background-color: #B4B7B4">
+                <div class="art" style="background-color: #00A9E0">
+                    <div class="art" style="background-color: #009F3D">
+                        <div class="art" style="background-color: #F1C400">
+                            <div class="art" style="background-color: #9B4D96">
+                                <div class="art" style="background-color: #006B3F">
+                                    <div class="art" style="background-color: #6D3A2F">
+                                        <img id="logo" src="Images/ChineseYears.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
+    <div id="footer-container"></div>
+
+    <script>
+        // Wait for the DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+          // Function to load external HTML content into a specific container
+          const loadContent = (url, containerId) => {
+            return fetch(url)
+              .then(response => response.text())
+              .then(data => {
+                document.getElementById(containerId).innerHTML = data;
+              })
+              .catch(error => {
+                console.error('Error loading content:', error);
+              });
+          };
+    
+          // Load the header and footer
+          Promise.all([
+            loadContent('header.html', 'header-container'),
+            loadContent('footer.html', 'footer-container')
+          ])
+          .then(() => {
+            // Once content is loaded, make the page visible
+            document.body.style.visibility = 'visible';
+          });
+        });
+      </script>
+     
 </body>
 
 </html>
