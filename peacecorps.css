@@ -19,7 +19,7 @@ a:hover {
     align-items: center;
 }
 
-.item, .top, .bottom {
+.item, .bottom {
     margin: auto;
     text-align: center;
     padding: 10px;
@@ -38,9 +38,18 @@ ul.newsletters {
     background-color: rgb(37, 48, 59, .8);
 }
 
-.top:hover {
+.top {
 border-radius: 20px 20px 0 0;
-background-color: rgb(37, 48, 59, .8);
+padding-top: 4px;
+margin: auto;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+}
+
+h3 {
+    font-size: 20px;
+    color: #25303B;
 }
 
 .bottom:hover {
@@ -65,9 +74,14 @@ background-color: rgb(37, 48, 59, .8);
     .item, .top, .bottom {
         font-size: 5vw; /* Use a relative font size for mobile devices */
     }
+
+    h3 {
+        font-size: 5vw; /* Use a relative font size for mobile devices */
+
+    }
     
     /* Responsive hover effects for items */
-    .item:hover, .top:hover, .bottom:hover {
+    .item:hover, .bottom:hover {
         background-color: rgb(37, 48, 59, .8);
     }
 
