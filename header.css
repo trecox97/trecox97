@@ -4,14 +4,18 @@ ul.h {
     padding: 5px;
     text-align: center;
     overflow: hidden;
-    background-color: rgb(156, 38, 38, 0.8);
+    background-color: rgba(156, 38, 38, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 0px;
+    top: 0;
     position: sticky;
     border-radius: 100px;
-}
+    transition: background-color 0.5s, color 0.5s, border-radius 0.5s, margin 0.1s, opacity 0.3s;
+    z-index: 10; /* Add a z-index to keep the header above other elements */
+
+  }
+  
 
 li.h {
     margin: 0; /* Add spacing between items */
