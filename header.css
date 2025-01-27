@@ -5,22 +5,22 @@ ul.h {
     text-align: center;
     overflow: hidden;
     background-color: rgb(156, 38, 38, 0.8);
-    border-radius: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 0px;
+    position: sticky;
+    border-radius: 100px;
 }
 
 li.h {
-    text-decoration: none;
-    display: inline-block;
     margin: 0; /* Add spacing between items */
     vertical-align: middle;
 }
 
 li.h a {
     color: #E0FFFF;
-    padding: 20px 30px; /* Added padding for better touch targets */
+    padding: 25px; /* Added padding for better touch targets */
     text-decoration: none;
     transition: color 1s, background-color 1s;
 }
@@ -33,16 +33,6 @@ li.h a:hover {
     color: #0064B0;
     background-color: #25303B;
     transition: color 0s;
-}
-
-li.h a:active {
-    color: #E0FFFF;
-}
-
-/* Center alignment */
-.right, .center {
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* Mobile-specific Styles */
@@ -75,17 +65,6 @@ li.h a:active {
         color: inherit; /* Inherit text color from <li> */
         text-decoration: none; /* Remove underline for clean look */
 		transition: color 1s, background-color 1s ease-out;
-
-
-    }
-
-    /* Add hover effect on the entire <li>, not just <a> */
-    li.h:hover {
-		background-color: #25303B;
-    }
-
-    li.h a:hover {
-		color: #0064B0;
     }
 }
 
