@@ -1,80 +1,92 @@
-/* Base Styles for Desktop */
-ul.h {
-    list-style-type: none;
-    padding: 5px;
-    text-align: center;
-    overflow: hidden;
+ /* Header styling */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     background-color: rgba(156, 38, 38, 0.8); /* Default red background */
-    display: flex;
-    justify-content: center;
-    position: sticky; /* Make it sticky */
-    top: 0px;
-    border-radius: 100px;
-    transition: background-color 0.5s, color 0.5s, border-radius 0.5s, margin 0.1s;
-}
+    padding: 10px 0; /* Spacing around the <ul> */
+    text-align: center;
+    transition: border-radius 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 20px; /* Default border-radius */
+    box-shadow: none;
+    margin: 5px;
 
-/* Sticky header's default state (Red) */
-ul.h.default {
-    background-color: rgba(156, 38, 38, 0.8); /* Red */
-}
-
-/* Sticky header's scrolled state (White) */
-ul.h.scrolled {
-    background-color: white; /* White background when scrolled */
-    color: black; /* Text color changes to black for readability */
-}
-
-/* Styling list items */
-li.h {
+  }
+  
+  /* Header styling when scrolled */
+  header.scrolled {
+    border-radius: 0; /* Remove border-radius when scrolled */
+    background-color: rgba(139, 0, 0, 1); /* Darker red background when scrolled */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow when scrolled */
     margin: 0;
-    vertical-align: middle;
-    transition: padding 0.3s ease; /* Smooth transition effect */
-
-}
-
-/* Styling links inside the list items */
-li.h a {
-    color: #E0FFFF;
-    padding: 25px; /* Added padding for better touch targets */
+    border-radius: 0px 0px 20px 20px;
+  }
+  
+  /* Unordered list (navigation) styles */
+  ul.h {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;    
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* List item styles */
+  li.h {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Link styles */
+  li.h a {
     text-decoration: none;
-    transition: color 1s, background-color 1s;
-}
-
-/* Hover effect for links */
-li.h a:hover {
-    color: #0064B0;
-    background-color: #25303B;
+    display: block;
+    color: #E0FFFF; /* Light cyan text */
+    padding: 0px 20px 0px 20px;
+    transition: color 1s ease, background-color 1s ease;
+    box-sizing: border-box; /* Include padding and borders in the element's size */
+  }
+  
+  li.h a:hover {
+    background-color: #25303b; /* Blue background on hover */
+    color: white; /* White text on hover */
     transition: color 0s;
-}
-
-/* Mobile-specific Styles */
-@media (max-width: 740px) {
+  }
+  
+  /* --- Mobile-Specific Styles --- */
+  @media (max-width: 740px) {
+    /* Remove sticky behavior for mobile */
+    header {
+      position: static; /* No sticky behavior on mobile */
+      border-radius: 0; /* Flatten header for better alignment */
+      margin: 0; /* Remove extra margin */
+      padding: 10px; /* Maintain padding */
+      text-align: center; /* Ensure text stays centered */
+    }
+  
+    /* Make navigation vertical for better fit */
     ul.h {
-        display: flex;
-        flex-direction: column; /* Stack items vertically on small screens */
-        border-radius: 20px; /* Adjust border radius for better appearance */
-        margin: 0px; /* Remove any existing margin */
-        padding: 0px; /* Remove padding to reduce space */
-        position: relative; /* Allow positioning adjustments */
-        top: 0; /* Ensure it's aligned with the top of the window */
-        width: 75%;
-        margin: auto;
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center-align items */
+      gap: 10px; /* Reduce space between items */
     }
-
+  
+    /* List item adjustments */
     li.h {
-        margin: 0; /* Reduce horizontal margin on mobile */
-        width: 100%; /* Make items full-width to stack vertically */
-        text-align: center; /* Center the text on smaller screens */
-        position: relative; /* Ensure positioning works correctly */
+      display: block; /* Make items full-width */
+      width: 100%; /* Full width for touch-friendly navigation */
     }
-
+  
+    /* Link adjustments for mobile */
     li.h a {
-        display: block; /* Make the <a> tag take up the full space of the <li> */
-        width: 100%; /* Full width of the parent <li> */
-        font-size: 16px; /* Reduce font size on smaller screens */
-        padding: 5px; /* Adjust padding for touch targets */
-        color: inherit; /* Inherit text color from <li> */
-        text-decoration: none; /* Remove underline for clean look */
-        transition: color 1s, background-color 1s ease-out;
+      display: block; /* Make the links fill their containers */
+      width: 100%; /* Full width for easy tapping */
+      text-align: center; /* Center text inside links */
+      padding: 15px; /* Increase touch target size */
+      font-size: 18px; /* Adjust font size for readability */
     }
-}
+  }
+  
