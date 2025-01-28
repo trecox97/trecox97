@@ -19,9 +19,9 @@ h2 {
 }
 
 hr {
-    width: 80%; 
-    border:2px solid rgb(156, 38, 38, 0.8); 
-    margin: auto; 
+    width: 80%;
+    border: 2px solid rgb(156, 38, 38, 0.8);
+    margin: auto;
     border-radius: 10px;
 }
 
@@ -36,7 +36,8 @@ p {
     font-size: 16px;
     text-align: left;
     padding: 8px;
-    width: 90%; /* Make width responsive */
+    width: 90%;
+    /* Make width responsive */
     max-width: 600px;
     margin: 20px auto;
 }
@@ -72,28 +73,31 @@ img {
     margin-bottom: 6px;
 }
 
- 
+
 #playPauseBtn:hover {
     animation: change-background-color 1s infinite;
-  }
-  
-  @keyframes change-background-color {
+}
+
+@keyframes change-background-color {
     0% {
         background-color: #F28E42;
         color: #0064B0;
     }
+
     50% {
         background-color: #0064B0;
         color: #F28E42;
     }
+
     100% {
         background-color: #F28E42;
         color: #0064B0;
     }
-  }
+}
 
 /* Mobile-specific Styles */
 @media (max-width: 768px) {
+
     /* Adjust font sizes for smaller screens */
     h1 {
         font-size: 8vw;
@@ -109,7 +113,8 @@ img {
 
     .bio {
         font-size: 18px;
-        width: 90%; /* Full-width on mobile with padding */
+        width: 90%;
+        /* Full-width on mobile with padding */
     }
 
     #playPauseBtn {
@@ -118,11 +123,13 @@ img {
     }
 
     img {
-        width: 70%; /* Larger image on mobile */
+        width: 70%;
+        /* Larger image on mobile */
     }
 
     hr {
-        width: 90%; /* Make hr responsive on mobile */
+        width: 90%;
+        /* Make hr responsive on mobile */
     }
 }
 
@@ -151,6 +158,7 @@ img {
     }
 
     img {
-        width: 80%; /* Make image larger on very small screens */
+        width: 80%;
+        /* Make image larger on very small screens */
     }
 }

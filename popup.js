@@ -55,7 +55,7 @@ document.addEventListener('mousemove', (e) => {
 // Add event listeners to flags
 const flags = document.querySelectorAll('.flag');
 flags.forEach(flag => {
-    flag.addEventListener('mouseenter', function(event) {
+    flag.addEventListener('mouseenter', function (event) {
         const countryName = event.target.getAttribute('data-country'); // Get the country name
         showPopup(countryName, cursorX, cursorY); // Show popup near cursor
     });
@@ -65,7 +65,7 @@ flags.forEach(flag => {
 // Add event listeners to states (SVG paths)
 const states = document.querySelectorAll('.state');
 states.forEach(state => {
-    state.addEventListener('mouseenter', function(event) {
+    state.addEventListener('mouseenter', function (event) {
         const stateName = event.target.getAttribute('title'); // Get the state name
         showPopup(stateName, cursorX, cursorY); // Show popup near cursor
     });

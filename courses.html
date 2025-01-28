@@ -20,247 +20,318 @@
 
 <body>
 
-   <header>
-    <ul class="h">
-       <li class="h"><a href="./index.html">Who?</a></li>
-       <li class="h"><a href="./peacecorps.html">Peace Corps</a></li>
-       <li class="h"><a href="./locations.html">Locations</a></li>
-       <li class="h"><a href="./skiing.html">Skiing</a></li>
-       <li class="h"><a href="./books.html">Books</a></li>
-       <li class="h"><a href="./random.html">Random</a></li>
-    </ul>
- </header>
+    <header>
+        <ul class="h">
+            <li class="h"><a href="./index.html">Who?</a></li>
+            <li class="h"><a href="./peacecorps.html">Peace Corps</a></li>
+            <li class="h"><a href="./locations.html">Locations</a></li>
+            <li class="h"><a href="./skiing.html">Skiing</a></li>
+            <li class="h"><a href="./books.html">Books</a></li>
+            <li class="h"><a href="./random.html">Random</a></li>
+        </ul>
+    </header>
 
- <script>
-    document.addEventListener("DOMContentLoaded", function () {
-       const header = document.querySelector("header");
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const header = document.querySelector("header");
 
-       window.addEventListener("scroll", () => {
-          if (window.scrollY > 10) {
-             header.classList.add("scrolled");
-          } else {
-             header.classList.remove("scrolled");
-          }
-       });
-    });
- </script>
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 10) {
+                    header.classList.add("scrolled");
+                } else {
+                    header.classList.remove("scrolled");
+                }
+            });
+        });
+    </script>
 
-<div id="main">
-    <div class="section">
-        <h1>Cox's College Courses:</h1>
-        <button id="playPauseBtn">Play</button>
+    <div id="main">
+        <div class="section">
+            <h1>Cox's College Courses:</h1>
+            <button id="playPauseBtn">Play</button>
 
-        <script src="PlayPause.js"></script>
-        <div class="chunk">
-            <br>
-            <hr>
-            <h2>Fall 2018</h2>
-            <p><strong>CS 161</strong> (Computer Security) | Introduction to computer security. Cryptography, including
-                encryption, authentication, hash functions, cryptographic protocols, and applications. Operating system
-                security, access control. Network security, firewalls, viruses, and worms. Software security, defensive
-                programming, and language-based security. Case studies from real-world systems. </p>
-            <p><strong>CS 186</strong> (Introduction to Database Systems) | Access methods and file systems to
-                facilitate data access. Hierarchical, network, relational, and object-oriented data models. Query
-                languages for models. Embedding query languages in programming languages. Database services including
-                protection, integrity control, and alternative views of data. High-level interfaces including
-                application generators, browsers, and report writers. Introduction to transaction processing. Database
-                system implementation to be done as term project.
-            <p><strong>LS C30T</strong> (Drugs and the Brain) | The history, chemical nature, botanical origins, and
-                effects on the human brain and behavior of drugs such as stimulants, depressants, psychedelics,
-                analgesics, antidepressants, antipsychotics, steroids, and other psychoactive substances of both natural
-                and synthetic origin. The necessary biological, chemical, and psychological background material for
-                understanding the content of this course will be contained within the course itself.
-            <p><strong>CS C100</strong> (Principles & Techniques of Data Science) | In this course, students will
-                explore the data science lifecycle, including question formulation, data collection and cleaning,
-                exploratory data analysis and visualization, statistical inference and prediction​, and
-                decision-making.​ This class will focus on quantitative critical thinking​ and key principles and
-                techniques needed to carry out this cycle. These include languages for transforming, querying and
-                analyzing data; algorithms for machine learning methods including regression, classification and
-                clustering; principles behind creating informative data visualizations; statistical concepts of
-                measurement error and prediction; and techniques for scalable data processing.
-
+            <script src="PlayPause.js"></script>
+            <div class="chunk">
+                <br>
                 <hr>
-            <h2>Spring 2018</h2>
-            <p><strong>CS 170</strong> (Efficient Algorithms and Intractable Problems) | Concept and basic techniques in
-                the design and analysis of algorithms; models of computation; lower bounds; algorithms for optimum
-                search trees, balanced trees and UNION-FIND algorithms; numerical and algebraic algorithms;
-                combinatorial algorithms. Turing machines, how to count steps, deterministic and nondeterministic Turing
-                machines, NP-completeness. Unsolvable and intractable problems.
-            <p><strong>CS 188</strong> (Introduction to Artificial Intelligence) | Ideas and techniques underlying the
-                design of intelligent computer systems. Topics include search, game playing, knowledge representation,
-                inference, planning, reasoning under uncertainty, machine learning, robotics, perception, and language
-                understanding.
-            <p><strong>Slavic 134C</strong> (Dostoevsky) | In this course, we will read Dostoevsky's major works, Notes
-                from Underground, Crime and Punishment, The Brothers Karamazov, focusing on concerns literature shares
-                with psychology, philosophy and ethics. Analyzing aspects of literary form (character, plot, genre,
-                narrative, intertextuality, symbolism), we will discuss how Dostoevsky’s novels explore the workings of
-                the human mind, the drama of interpersonal intimacy, conceptions of self, the relationship between self
-                and other, the choice between faith and nonbelief, the idea of transgression, crime, justice, and
-                redemption, and more.
-                Dostoevsky's novels are not only profound examinations of the human condition: they are also exciting,
-                nasty, ironic and often funny, and in this class students enjoy reading books.
-            <p><strong>UGBA 106</strong> (Marketing) | The evolution of markets and marketing; market structure;
-                marketing cost and efficiency; public and private regulation; the development of marketing programs
-                including decisions involving products, price, promotional distribution.
+                <h2>Fall 2018</h2>
+                <p><strong>CS 161</strong> (Computer Security) | Introduction to computer security. Cryptography,
+                    including
+                    encryption, authentication, hash functions, cryptographic protocols, and applications. Operating
+                    system
+                    security, access control. Network security, firewalls, viruses, and worms. Software security,
+                    defensive
+                    programming, and language-based security. Case studies from real-world systems. </p>
+                <p><strong>CS 186</strong> (Introduction to Database Systems) | Access methods and file systems to
+                    facilitate data access. Hierarchical, network, relational, and object-oriented data models. Query
+                    languages for models. Embedding query languages in programming languages. Database services
+                    including
+                    protection, integrity control, and alternative views of data. High-level interfaces including
+                    application generators, browsers, and report writers. Introduction to transaction processing.
+                    Database
+                    system implementation to be done as term project.
+                <p><strong>LS C30T</strong> (Drugs and the Brain) | The history, chemical nature, botanical origins, and
+                    effects on the human brain and behavior of drugs such as stimulants, depressants, psychedelics,
+                    analgesics, antidepressants, antipsychotics, steroids, and other psychoactive substances of both
+                    natural
+                    and synthetic origin. The necessary biological, chemical, and psychological background material for
+                    understanding the content of this course will be contained within the course itself.
+                <p><strong>CS C100</strong> (Principles & Techniques of Data Science) | In this course, students will
+                    explore the data science lifecycle, including question formulation, data collection and cleaning,
+                    exploratory data analysis and visualization, statistical inference and prediction​, and
+                    decision-making.​ This class will focus on quantitative critical thinking​ and key principles and
+                    techniques needed to carry out this cycle. These include languages for transforming, querying and
+                    analyzing data; algorithms for machine learning methods including regression, classification and
+                    clustering; principles behind creating informative data visualizations; statistical concepts of
+                    measurement error and prediction; and techniques for scalable data processing.
 
-                <hr>
-            <h2>Fall 2017</h2>
-            <p><strong>CS 61C</strong> (Great Ideas of Computer Architecture (Machine Structures)) | The internal
-                organization and operation of digital computers. Machine architecture, support for high-level languages
-                (logic, arithmetic, instruction sequencing) and operating systems (I/O, interrupts, memory management,
-                process switching). Elements of computer logic design. Tradeoffs involved in fundamental architectural
-                design decisions.
-            <p><strong>EE 16A</strong> (Foundations of Signals, Dynamical Systems, and Information Processing) | This
-                course offers an introduction to signals, systems, optimization, controls, and machine learning, all
-                grounded in linear algebraic techniques. After a brief review of linear algebra, students will delve
-                into topics such as signal processing, linear systems, feedback control, optimization methods, and
-                foundational machine learning algorithms. Emphasizing practical applications, the course prepares EECS
-                majors for advanced study by connecting mathematical concepts to real-world engineering problems.
-            <p><strong>Engin 120</strong> (Principles of Engineering Economics) | Economic analysis for engineering
-                decision making: Capital flows, effect of time and interest rate. Different methods of evaluation of
-                alternatives. Minimum-cost life and replacement analysis. Depreciation and taxes. Uncertainty;
-                preference under risk; decision analysis. Capital sources and their effects. Economic studies.
-            <p><strong>History 162A</strong> (Europe and the World: Wars, Empires, Nations 1648-1914) | This upper
-                division course looks at the rise and fall of the European great powers from the Peace of Westphalia,
-                traditionally perceived as the beginning of the modern states system, to the coming of the First World
-                War, an era of state and empire building. Economic and technological trends are naturally part of the
-                story as well as cultural, social, and political forces. At the same time, the course highlights the
-                decisive influence of the shakers and movers--kings, emperors, and generals.
+                    <hr>
+                <h2>Spring 2018</h2>
+                <p><strong>CS 170</strong> (Efficient Algorithms and Intractable Problems) | Concept and basic
+                    techniques in
+                    the design and analysis of algorithms; models of computation; lower bounds; algorithms for optimum
+                    search trees, balanced trees and UNION-FIND algorithms; numerical and algebraic algorithms;
+                    combinatorial algorithms. Turing machines, how to count steps, deterministic and nondeterministic
+                    Turing
+                    machines, NP-completeness. Unsolvable and intractable problems.
+                <p><strong>CS 188</strong> (Introduction to Artificial Intelligence) | Ideas and techniques underlying
+                    the
+                    design of intelligent computer systems. Topics include search, game playing, knowledge
+                    representation,
+                    inference, planning, reasoning under uncertainty, machine learning, robotics, perception, and
+                    language
+                    understanding.
+                <p><strong>Slavic 134C</strong> (Dostoevsky) | In this course, we will read Dostoevsky's major works,
+                    Notes
+                    from Underground, Crime and Punishment, The Brothers Karamazov, focusing on concerns literature
+                    shares
+                    with psychology, philosophy and ethics. Analyzing aspects of literary form (character, plot, genre,
+                    narrative, intertextuality, symbolism), we will discuss how Dostoevsky’s novels explore the workings
+                    of
+                    the human mind, the drama of interpersonal intimacy, conceptions of self, the relationship between
+                    self
+                    and other, the choice between faith and nonbelief, the idea of transgression, crime, justice, and
+                    redemption, and more.
+                    Dostoevsky's novels are not only profound examinations of the human condition: they are also
+                    exciting,
+                    nasty, ironic and often funny, and in this class students enjoy reading books.
+                <p><strong>UGBA 106</strong> (Marketing) | The evolution of markets and marketing; market structure;
+                    marketing cost and efficiency; public and private regulation; the development of marketing programs
+                    including decisions involving products, price, promotional distribution.
 
-                <hr>
-            <h2>Spring 2017</h2>
-            <p><strong>Math 54</strong> (Linear Algebra & Differential Equations) | Basic linear algebra; matrix
-                arithmetic and determinants. Vector spaces; inner product spaces. Eigenvalues and eigenvectors; linear
-                transformations, symmetric matrices. Linear ordinary differential equations (ODE); systems of linear
-                ODE. Fourier series.
-            <p><strong>Stat 134C</strong> (Concepts of Probability) | An introduction to probability, emphasizing
-                concepts and applications. Conditional expectation, independence, laws of large numbers. Discrete and
-                continuous random variables. Central limit theorem. Selected topics such as the Poisson process, Markov
-                chains, characteristic functions.
-            <p><strong>Econ 101A</strong> (Economic Theory--Micro) | This course introduces students to the main tools
-                and concepts of microeconomics. These tools and concepts will serve as a foundation for many upper level
-                economics courses. Topics covered include consumer theory, producer theory, equilibrium in a competitive
-                market, monopoly, general equilibrium, game theory, and asymmetric information. Topics covered are
-                similar to those in 100A, but this course uses calculus more intensively and is intended for students
-                with a strong mathematical background.
-            <p><strong>ESPM 114</strong> (Wildlife Ecology) | Introduction to wildlife ecology and its relationship to
-                management programs. Includes population, community, and ecosystem levels of organization, followed by
-                selected case studies.
+                    <hr>
+                <h2>Fall 2017</h2>
+                <p><strong>CS 61C</strong> (Great Ideas of Computer Architecture (Machine Structures)) | The internal
+                    organization and operation of digital computers. Machine architecture, support for high-level
+                    languages
+                    (logic, arithmetic, instruction sequencing) and operating systems (I/O, interrupts, memory
+                    management,
+                    process switching). Elements of computer logic design. Tradeoffs involved in fundamental
+                    architectural
+                    design decisions.
+                <p><strong>EE 16A</strong> (Foundations of Signals, Dynamical Systems, and Information Processing) |
+                    This
+                    course offers an introduction to signals, systems, optimization, controls, and machine learning, all
+                    grounded in linear algebraic techniques. After a brief review of linear algebra, students will delve
+                    into topics such as signal processing, linear systems, feedback control, optimization methods, and
+                    foundational machine learning algorithms. Emphasizing practical applications, the course prepares
+                    EECS
+                    majors for advanced study by connecting mathematical concepts to real-world engineering problems.
+                <p><strong>Engin 120</strong> (Principles of Engineering Economics) | Economic analysis for engineering
+                    decision making: Capital flows, effect of time and interest rate. Different methods of evaluation of
+                    alternatives. Minimum-cost life and replacement analysis. Depreciation and taxes. Uncertainty;
+                    preference under risk; decision analysis. Capital sources and their effects. Economic studies.
+                <p><strong>History 162A</strong> (Europe and the World: Wars, Empires, Nations 1648-1914) | This upper
+                    division course looks at the rise and fall of the European great powers from the Peace of
+                    Westphalia,
+                    traditionally perceived as the beginning of the modern states system, to the coming of the First
+                    World
+                    War, an era of state and empire building. Economic and technological trends are naturally part of
+                    the
+                    story as well as cultural, social, and political forces. At the same time, the course highlights the
+                    decisive influence of the shakers and movers--kings, emperors, and generals.
 
-                <hr>
-            <h2>Fall 2016</h2>
-            <p><strong>CS 61B</strong> (Data Structures) | Fundamental dynamic data structures, including linear lists,
-                queues, trees, and other linked structures; arrays strings, and hash tables. Storage management.
-                Elementary principles of software engineering. Abstract data types. Algorithms for sorting and
-                searching. Introduction to the Java programming language.
-            <p><strong>CS 70</strong> (Discrete Mathematics and Probability Theory) | Logic, infinity, and induction;
-                applications include undecidability and stable marriage problem. Modular arithmetic and GCDs;
-                applications include primality testing and cryptography. Polynomials; examples include error correcting
-                codes and interpolation. Probability including sample spaces, independence, random variables, law of
-                large numbers; examples include load balancing, existence arguments, Bayesian inference.
-            <p><strong>Econ 100B</strong> (Economic Analysis--Macro) | This course introduces students to the main
-                approaches economists use to describe how the economy works at the aggregate level. Topics covered
-                include economic growth, business cycles, the determinants of aggregate employment, unemployment, and
-                inflation, and the effects of monetary and fiscal policy. This course makes use of calculus. Topics
-                covered are similar to those in 101B.
-            <p><strong>English R1B</strong> ("One Fine Day": Diurnal Narratives of the 20th Century) | Some of the most
-                powerful stories we tell are constrained within the temporal limits of a single day. This course
-                embraces "the day" as a significant unit of narrative time, exploring diurnal fictions as vital sites of
-                personal reflection, dull routine, social change, self-identity, anticipation, and surprise. Focusing on
-                the textures and sensations of everyday life (as well as their disruption), the theoretical basis of the
-                course will lie in some canonical studies of time, consciousness, and the everyday, such as the writings
-                of Hannah Arendt, Susan Sontag, Maurice Merleau-Ponty, and Michel de Certeau. Fictional texts will
-                include excerpts from James Joyce's Ulysses, novels by Virginia Woolf, Aleksandr Solzhenitsyn,
-                Christopher Isherwood, and Nicholson Baker, the poetry of T.S. Eliot and Frank O'Hara, short stories by
-                Raymond Carver and John Updike, the drama of Harold Pinter, and films like Cat on a Hot Tin Roof, Roman
-                Holiday, The Rocky Horror Picture Show, Goundhog Day, Jeanne Dielman, Ferris Bueller's Day Off, and The
-                Hours.
+                    <hr>
+                <h2>Spring 2017</h2>
+                <p><strong>Math 54</strong> (Linear Algebra & Differential Equations) | Basic linear algebra; matrix
+                    arithmetic and determinants. Vector spaces; inner product spaces. Eigenvalues and eigenvectors;
+                    linear
+                    transformations, symmetric matrices. Linear ordinary differential equations (ODE); systems of linear
+                    ODE. Fourier series.
+                <p><strong>Stat 134C</strong> (Concepts of Probability) | An introduction to probability, emphasizing
+                    concepts and applications. Conditional expectation, independence, laws of large numbers. Discrete
+                    and
+                    continuous random variables. Central limit theorem. Selected topics such as the Poisson process,
+                    Markov
+                    chains, characteristic functions.
+                <p><strong>Econ 101A</strong> (Economic Theory--Micro) | This course introduces students to the main
+                    tools
+                    and concepts of microeconomics. These tools and concepts will serve as a foundation for many upper
+                    level
+                    economics courses. Topics covered include consumer theory, producer theory, equilibrium in a
+                    competitive
+                    market, monopoly, general equilibrium, game theory, and asymmetric information. Topics covered are
+                    similar to those in 100A, but this course uses calculus more intensively and is intended for
+                    students
+                    with a strong mathematical background.
+                <p><strong>ESPM 114</strong> (Wildlife Ecology) | Introduction to wildlife ecology and its relationship
+                    to
+                    management programs. Includes population, community, and ecosystem levels of organization, followed
+                    by
+                    selected case studies.
 
-                <hr>
-            <h2>Summer 2016</h2>
-            <p><strong>Dutch 177</strong> (The Amsterdam-Brussels Connection: The Art, History, and Literature of the
-                Netherlands and Flanders) | A Berkeley summer abroad course. With the 17th-century "Golden Age" as its
-                starting point, the course traces the important cultural developments in Holland and Belgium (Flanders)
-                up to the present. The interdisciplinary curriculum provides a clear picture of these two contrasting
-                monarchies. The historical, cultural, and linguistic relationship is a constant focus of the course. The
-                literature (documentary and fiction) concentrates on the Holocaust in the Low Countries. Students will
-                engage with their subject matter not only in daily lectures, but also as eyewitnesses through regular
-                field trips to museums and historical sites in Amsterdam, The Hague, Haarlem, Delft, Antwerp, Bruges,
-                Ghent, Brussels, and other cities. Visits to the Royal Palace in Amsterdam, the House of
-                Representatives, an interactive criminal trial, attendance at the International Court of Arbitration in
-                The Hague, and the European Parliament in Brussels are included in the course.
+                    <hr>
+                <h2>Fall 2016</h2>
+                <p><strong>CS 61B</strong> (Data Structures) | Fundamental dynamic data structures, including linear
+                    lists,
+                    queues, trees, and other linked structures; arrays strings, and hash tables. Storage management.
+                    Elementary principles of software engineering. Abstract data types. Algorithms for sorting and
+                    searching. Introduction to the Java programming language.
+                <p><strong>CS 70</strong> (Discrete Mathematics and Probability Theory) | Logic, infinity, and
+                    induction;
+                    applications include undecidability and stable marriage problem. Modular arithmetic and GCDs;
+                    applications include primality testing and cryptography. Polynomials; examples include error
+                    correcting
+                    codes and interpolation. Probability including sample spaces, independence, random variables, law of
+                    large numbers; examples include load balancing, existence arguments, Bayesian inference.
+                <p><strong>Econ 100B</strong> (Economic Analysis--Macro) | This course introduces students to the main
+                    approaches economists use to describe how the economy works at the aggregate level. Topics covered
+                    include economic growth, business cycles, the determinants of aggregate employment, unemployment,
+                    and
+                    inflation, and the effects of monetary and fiscal policy. This course makes use of calculus. Topics
+                    covered are similar to those in 101B.
+                <p><strong>English R1B</strong> ("One Fine Day": Diurnal Narratives of the 20th Century) | Some of the
+                    most
+                    powerful stories we tell are constrained within the temporal limits of a single day. This course
+                    embraces "the day" as a significant unit of narrative time, exploring diurnal fictions as vital
+                    sites of
+                    personal reflection, dull routine, social change, self-identity, anticipation, and surprise.
+                    Focusing on
+                    the textures and sensations of everyday life (as well as their disruption), the theoretical basis of
+                    the
+                    course will lie in some canonical studies of time, consciousness, and the everyday, such as the
+                    writings
+                    of Hannah Arendt, Susan Sontag, Maurice Merleau-Ponty, and Michel de Certeau. Fictional texts will
+                    include excerpts from James Joyce's Ulysses, novels by Virginia Woolf, Aleksandr Solzhenitsyn,
+                    Christopher Isherwood, and Nicholson Baker, the poetry of T.S. Eliot and Frank O'Hara, short stories
+                    by
+                    Raymond Carver and John Updike, the drama of Harold Pinter, and films like Cat on a Hot Tin Roof,
+                    Roman
+                    Holiday, The Rocky Horror Picture Show, Goundhog Day, Jeanne Dielman, Ferris Bueller's Day Off, and
+                    The
+                    Hours.
 
-                <hr>
-            <h2>Spring 2016</h2>
-            <p><strong>Econ 2</strong> (Introduction to Economics--Lecture Format) | Econ 2 provides an overview of the
-                field of economics. It covers both microeconomics, the study of consumer choice, firm behavior, and
-                market interaction, and macroeconomics, the study of economic growth, unemployment, and inflation. Econ
-                2 has longer lectures than Econ 1. Econ 2 covers topics in greater depth with more connection with
-                current economic research. The required material includes both the standard textbook material as well as
-                more technical academic papers from the current economic literature. It is particularly suited for
-                intended economics majors.
-            <p><strong>Anthro 3AC</strong> (Introduction to Social/Cultural Anthropology) | The structure and dynamics
-                of human cultures and social institutions from a comparative perspective with special attention to
-                American cultures and their roots. Case studies will illustrate the principles presented in the course.
-            <p><strong>Classics 24</strong> (The Iliad) | Freshman seminar on the Iliad. Read the Iliad by Homer in its
-                entirety.
-            <p><strong>English 117S</strong> (Shakespeare) | Lectures on Shakespeare and reading of his best works.
-            <p><strong>UGBA 10</strong> (Principles of Business) | This team-taught course provides an introduction to
-                the study of the modern business enterprise. It consists of four modules, the order of which may vary
-                from semester to semester, and an online business simulation that runs during most of the semester. The
-                four modules cover: Finance & Accounting, Marketing, Operations & Sustainability, and Leadership. In
-                addition to lectures and the simulation, students attend discussion section each week.
+                    <hr>
+                <h2>Summer 2016</h2>
+                <p><strong>Dutch 177</strong> (The Amsterdam-Brussels Connection: The Art, History, and Literature of
+                    the
+                    Netherlands and Flanders) | A Berkeley summer abroad course. With the 17th-century "Golden Age" as
+                    its
+                    starting point, the course traces the important cultural developments in Holland and Belgium
+                    (Flanders)
+                    up to the present. The interdisciplinary curriculum provides a clear picture of these two
+                    contrasting
+                    monarchies. The historical, cultural, and linguistic relationship is a constant focus of the course.
+                    The
+                    literature (documentary and fiction) concentrates on the Holocaust in the Low Countries. Students
+                    will
+                    engage with their subject matter not only in daily lectures, but also as eyewitnesses through
+                    regular
+                    field trips to museums and historical sites in Amsterdam, The Hague, Haarlem, Delft, Antwerp,
+                    Bruges,
+                    Ghent, Brussels, and other cities. Visits to the Royal Palace in Amsterdam, the House of
+                    Representatives, an interactive criminal trial, attendance at the International Court of Arbitration
+                    in
+                    The Hague, and the European Parliament in Brussels are included in the course.
 
-                <hr>
-            <h2>Fall 2015</h2>
-            <p><strong>CS 61A</strong> (The Structure and Interpretation of Computer Programs) | An introduction to
-                programming and computer science focused on abstraction techniques as means to manage program
-                complexity. Techniques include procedural abstraction; control abstraction using recursion, higher-order
-                functions, generators, and streams; data abstraction using interfaces, objects, classes, and generic
-                operators; and language abstraction using interpreters and macros. The course exposes students to
-                programming paradigms, including functional, object-oriented, and declarative approaches. It includes an
-                introduction to asymptotic analysis of algorithms. There are several significant programming projects.
-            <p><strong>Math 53</strong> (Multivariable Calculus) | Parametric equations and polar coordinates. Vectors
-                in 2- and 3-dimensional Euclidean spaces. Partial derivatives. Multiple integrals. Vector calculus.
-                Theorems of Green, Gauss, and Stokes.
-            <p><strong>UGBA C5</strong> (Introduction to Entrepreneurship) | This course is designed for freshmen and
-                sophomores who wish to know about entrepreneurship, its importance to our society, and its role in
-                bringing new ideas to market. Students will understand the entrepreneurial business process and how they
-                might become involved in those processes in their future careers--in whatever direction those careers
-                might lead. This class will explore the structure and framework of entrepreneurial endeavors--both
-                inside and outside the business world. The course will answer questions such as: What is
-                entrepreneurship? What is opportunity recognition and selection? How can you create and define
-                competitive advantage? How can you think about people in the entrepreneurial context? How can you garner
-                support (financial and other) for an entrepreneurial venture? What do you do when nothing works as
-                planned? And, how do you focus on doing right and doing well?
-            <p><strong>English R1A</strong> (The Ick Factor) |
+                    <hr>
+                <h2>Spring 2016</h2>
+                <p><strong>Econ 2</strong> (Introduction to Economics--Lecture Format) | Econ 2 provides an overview of
+                    the
+                    field of economics. It covers both microeconomics, the study of consumer choice, firm behavior, and
+                    market interaction, and macroeconomics, the study of economic growth, unemployment, and inflation.
+                    Econ
+                    2 has longer lectures than Econ 1. Econ 2 covers topics in greater depth with more connection with
+                    current economic research. The required material includes both the standard textbook material as
+                    well as
+                    more technical academic papers from the current economic literature. It is particularly suited for
+                    intended economics majors.
+                <p><strong>Anthro 3AC</strong> (Introduction to Social/Cultural Anthropology) | The structure and
+                    dynamics
+                    of human cultures and social institutions from a comparative perspective with special attention to
+                    American cultures and their roots. Case studies will illustrate the principles presented in the
+                    course.
+                <p><strong>Classics 24</strong> (The Iliad) | Freshman seminar on the Iliad. Read the Iliad by Homer in
+                    its
+                    entirety.
+                <p><strong>English 117S</strong> (Shakespeare) | Lectures on Shakespeare and reading of his best works.
+                <p><strong>UGBA 10</strong> (Principles of Business) | This team-taught course provides an introduction
+                    to
+                    the study of the modern business enterprise. It consists of four modules, the order of which may
+                    vary
+                    from semester to semester, and an online business simulation that runs during most of the semester.
+                    The
+                    four modules cover: Finance & Accounting, Marketing, Operations & Sustainability, and Leadership. In
+                    addition to lectures and the simulation, students attend discussion section each week.
+
+                    <hr>
+                <h2>Fall 2015</h2>
+                <p><strong>CS 61A</strong> (The Structure and Interpretation of Computer Programs) | An introduction to
+                    programming and computer science focused on abstraction techniques as means to manage program
+                    complexity. Techniques include procedural abstraction; control abstraction using recursion,
+                    higher-order
+                    functions, generators, and streams; data abstraction using interfaces, objects, classes, and generic
+                    operators; and language abstraction using interpreters and macros. The course exposes students to
+                    programming paradigms, including functional, object-oriented, and declarative approaches. It
+                    includes an
+                    introduction to asymptotic analysis of algorithms. There are several significant programming
+                    projects.
+                <p><strong>Math 53</strong> (Multivariable Calculus) | Parametric equations and polar coordinates.
+                    Vectors
+                    in 2- and 3-dimensional Euclidean spaces. Partial derivatives. Multiple integrals. Vector calculus.
+                    Theorems of Green, Gauss, and Stokes.
+                <p><strong>UGBA C5</strong> (Introduction to Entrepreneurship) | This course is designed for freshmen
+                    and
+                    sophomores who wish to know about entrepreneurship, its importance to our society, and its role in
+                    bringing new ideas to market. Students will understand the entrepreneurial business process and how
+                    they
+                    might become involved in those processes in their future careers--in whatever direction those
+                    careers
+                    might lead. This class will explore the structure and framework of entrepreneurial endeavors--both
+                    inside and outside the business world. The course will answer questions such as: What is
+                    entrepreneurship? What is opportunity recognition and selection? How can you create and define
+                    competitive advantage? How can you think about people in the entrepreneurial context? How can you
+                    garner
+                    support (financial and other) for an entrepreneurial venture? What do you do when nothing works as
+                    planned? And, how do you focus on doing right and doing well?
+                <p><strong>English R1A</strong> (The Ick Factor) |
+            </div>
         </div>
     </div>
-</div>
 
-<div id="footer-container" style="text-align: center;"></div>
+    <div id="footer-container" style="text-align: center;"></div>
 
-<script>
-    // Wait for the DOM to be fully loaded
-    document.addEventListener('DOMContentLoaded', () => {
-      // Function to load external HTML content into a specific container
-      const loadContent = (url, containerId) => {
-        return fetch(url)
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById(containerId).innerHTML = data;
-          })
-          .catch(error => {
-            console.error('Error loading content:', error);
-          });
-      };
+    <script>
+        // Wait for the DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            // Function to load external HTML content into a specific container
+            const loadContent = (url, containerId) => {
+                return fetch(url)
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById(containerId).innerHTML = data;
+                    })
+                    .catch(error => {
+                        console.error('Error loading content:', error);
+                    });
+            };
 
-      // Load the footer
-      Promise.all([
-        loadContent('footer.html', 'footer-container')
-      ])
-    });
-  </script>
+            // Load the footer
+            Promise.all([
+                loadContent('footer.html', 'footer-container')
+            ])
+        });
+    </script>
 
 </body>
 

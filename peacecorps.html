@@ -30,11 +30,11 @@
          <li class="h"><a href="./random.html">Random</a></li>
       </ul>
    </header>
-  
+
    <script>
       document.addEventListener("DOMContentLoaded", function () {
          const header = document.querySelector("header");
-  
+
          window.addEventListener("scroll", () => {
             if (window.scrollY > 10) {
                header.classList.add("scrolled");
@@ -54,8 +54,9 @@
       <br>
       <script src="PlayPause.js"></script>
       <div class="content">
-         <ul class = "newsletters">
-            <li class="top"><h3>Click the link to download a pdf</h3>
+         <ul class="newsletters">
+            <li class="top">
+               <h3>Click the link to download a pdf</h3>
             </li>
             <li class="item"><a href="Newsletters/Newsletterno.9.pdf" download="Newsletterno.9.pdf">Newsletter no.9</a>
             </li>
@@ -73,7 +74,8 @@
             </li>
             <li class="item"><a href="Newsletters/Newsletterno.2.pdf" download="Newsletterno.2.pdf">Newsletter no.2</a>
             </li>
-            <li class="bottom"><a href="Newsletters/Newsletterno.1.pdf" download="Newsletterno.1.pdf">Newsletter no.1</a></li>
+            <li class="bottom"><a href="Newsletters/Newsletterno.1.pdf" download="Newsletterno.1.pdf">Newsletter
+                  no.1</a></li>
          </ul>
       </div>
       <br>
@@ -83,24 +85,24 @@
    <script>
       // Wait for the DOM to be fully loaded
       document.addEventListener('DOMContentLoaded', () => {
-        // Function to load external HTML content into a specific container
-        const loadContent = (url, containerId) => {
-          return fetch(url)
-            .then(response => response.text())
-            .then(data => {
-              document.getElementById(containerId).innerHTML = data;
-            })
-            .catch(error => {
-              console.error('Error loading content:', error);
-            });
-        };
-  
-        // Load the footer
-        Promise.all([
-          loadContent('footer.html', 'footer-container')
-        ])
+         // Function to load external HTML content into a specific container
+         const loadContent = (url, containerId) => {
+            return fetch(url)
+               .then(response => response.text())
+               .then(data => {
+                  document.getElementById(containerId).innerHTML = data;
+               })
+               .catch(error => {
+                  console.error('Error loading content:', error);
+               });
+         };
+
+         // Load the footer
+         Promise.all([
+            loadContent('footer.html', 'footer-container')
+         ])
       });
-    </script>
+   </script>
 </body>
 
 </html>
