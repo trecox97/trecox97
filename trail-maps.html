@@ -10,10 +10,12 @@
     <link rel="stylesheet" type="text/css" href="./footer.css">
     <link rel="stylesheet" type="text/css" href="./trail-maps.css">
     <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
 </head>
 
 <body>
-    <header>
+    <header style="position:static;">
         <ul class="h">
             <li class="h"><a href="./index.html">Who?</a></li>
             <li class="h"><a href="./peacecorps.html">Peace Corps</a></li>
@@ -24,12 +26,24 @@
         </ul>
     </header>
 
+
+    <header id="SecondaryNav">
+        <ul class="h">
+            <li class="h"><a href="#Northeast">Northeast</a></li>
+            <li class="h"><a href="#California/Tahoe">California/Tahoe</a></li>
+            <li class="h"><a href="#Utah">Utah</a></li>
+            <li class="h"><a href="#Idaho/Wyoming">Idaho + Wyoming</a></li>
+            <li class="h"><a href="#Canada">Canada</a></li>
+            <li class="h"><a href="#Japan">Japan</a></li>
+        </ul>
+    </header>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const header = document.querySelector("header");
+            const header = document.getElementById("SecondaryNav");
 
             window.addEventListener("scroll", () => {
-                if (window.scrollY > 10) {
+                if (window.scrollY > 45) {
                     header.classList.add("scrolled");
                 } else {
                     header.classList.remove("scrolled");
@@ -39,20 +53,75 @@
     </script>
 
     <div class="main">
-        <h3>Palisades</h3>
-<img src="TrailMaps/palisadesmapmain2324.jpg">
-<h3>Alpine</h3>
 
-<img src="TrailMaps/alpine-front-side-trail.jpg">
-<h3>Alpine Backside</h3>
-
-<img src="TrailMaps/alpine-back-side-trail.jpg">
-<h3>Baldy</h3>
-
-<img src="TrailMaps/SV_Baldy_24-25_edit.jpg">
-<h3>Dollar</h3>
-
-<img src="TrailMaps/SV_Dollar_24-25.png">
+        <div id="Northeast">
+            <br><br>
+            <hr>
+            <h1>Northeast</h1>
+            <img src="TrailMaps/Palisades.jpg" alt="Palisades">
+            <img src="TrailMaps/Palisades.jpg" alt="Palisades">
+            <img src="TrailMaps/Palisades.jpg" alt="Palisades">
+            <img src="TrailMaps/Palisades.jpg" alt="Palisades">
+        </div>
+        <div id="California/Tahoe">
+            <br><br>
+            <hr>
+            <h1>California/Tahoe</h1>
+            <div id="Palisades-Tahoe">
+            <h2>Palisades Tahoe</h2>
+            <img src="TrailMaps/Palisades.jpg">
+            </div>
+            <h2>Alpine Meadows Frontside</h2>
+            <img src="TrailMaps/Alpine-Meadows-Frontside.jpg">
+            <h2>Alpine Meadows Backside</h2>
+            <img src="TrailMaps/Alpine-Meadows-Backside.jpg">
+            <h2>Mammoth</h2>
+            <img src="TrailMaps/Mammoth.jpg">
+            <h2>Diamond Peak</h2>
+            <img src="TrailMaps/Diamond-Peak.jpg">
+            <h2>Sugar Bowl</h2>
+            <img src="TrailMaps/SugarBowl.jpg">
+        </div>
+        <div id="Utah">
+            <br><br>
+            <hr>
+            <h1>Utah</h1>
+            <h2>Snowbird Frontside</h2>
+            <img src="TrailMaps/Snowbird-Frontside.jpg">
+            <h2>Snowbird Backside</h2>
+            <img src="TrailMaps/Snowbird-Backside.jpg">
+            <h2>Alta</h2>
+            <img src="TrailMaps/Alta.jpg">
+            <h2>Deer Valley</h2>
+            <img src="TrailMaps/Deer-Valley.jpg">
+            <h2>Park City</h2>
+            <img src="TrailMaps/ParkCity.jpg">
+            <h2>Brighton</h2>
+            <img src="TrailMaps/Brighton.jpg">
+            <h2>Solitude</h2>
+            <img src="TrailMaps/Solitude.jpg">
+        </div>
+        <div id="Idaho/Wyoming">
+            <br><br>
+            <hr>
+            <h1>Idaho + Wyoming</h1>
+            <h2>Sun Valley: Baldy</h2>
+            <img src="TrailMaps/Sun-Valley-Baldy.jpg">
+            <h2>Sun Valley: Dollar</h2>
+            <img src="TrailMaps/Sun-Valley-Dollar.png">
+            <h2>Jackson Hole</h2>
+            <img src="TrailMaps/Jackson-hole.jpeg">
+        </div>
+        <div id="Canada">
+            <br><br>
+            <hr>
+            <h1>Canada</h1>
+        </div>
+        <div id="Japan">
+            <br><br>
+            <hr>
+            <h1>Japan</h1>
+        </div>
 
     </div>
 
@@ -78,6 +147,8 @@
             ])
         });
     </script>
+
+
 
 </body>
 
