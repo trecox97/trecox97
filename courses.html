@@ -19,7 +19,31 @@
 </head>
 
 <body>
-    <div id="header-container"></div>
+
+   <header>
+    <ul class="h">
+       <li class="h"><a href="./index.html">Who?</a></li>
+       <li class="h"><a href="./peacecorps.html">🕊️Peace Corps🕊️</a></li>
+       <li class="h"><a href="./locations.html">Locations</a></li>
+       <li class="h"><a href="./skiing.html">Skiing</a></li>
+       <li class="h"><a href="./books.html">Books</a></li>
+       <li class="h"><a href="./random.html">Random</a></li>
+    </ul>
+ </header>
+
+ <script>
+    document.addEventListener("DOMContentLoaded", function () {
+       const header = document.querySelector("header");
+
+       window.addEventListener("scroll", () => {
+          if (window.scrollY > 10) {
+             header.classList.add("scrolled");
+          } else {
+             header.classList.remove("scrolled");
+          }
+       });
+    });
+ </script>
 
 <div id="main">
     <div class="section">
@@ -232,15 +256,10 @@
           });
       };
 
-      // Load the header and footer
+      // Load the footer
       Promise.all([
-        loadContent('header.html', 'header-container'),
         loadContent('footer.html', 'footer-container')
       ])
-      .then(() => {
-        // Once content is loaded, make the page visible
-        document.body.style.visibility = 'visible';
-      });
     });
   </script>
 

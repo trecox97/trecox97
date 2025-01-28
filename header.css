@@ -4,7 +4,6 @@
     top: 0;
     z-index: 1000;
     background-color: rgba(156, 38, 38, 0.8); /* Default red background */
-    padding: 10px 0; /* Spacing around the <ul> */
     text-align: center;
     transition: border-radius 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
     border-radius: 20px; /* Default border-radius */
@@ -18,7 +17,7 @@
     border-radius: 0; /* Remove border-radius when scrolled */
     background-color: rgba(139, 0, 0, 1); /* Darker red background when scrolled */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow when scrolled */
-    margin: 0;
+    margin: auto;
     border-radius: 0px 0px 20px 20px;
   }
   
@@ -31,6 +30,7 @@
     justify-content: center;    
     overflow: hidden;
     position: relative;
+    border-radius: inherit;
   }
   
   /* List item styles */
@@ -38,22 +38,28 @@
     display: block;
     margin: 0;
     padding: 0;
+    overflow: hidden;
   }
-  
   /* Link styles */
   li.h a {
     text-decoration: none;
     display: block;
     color: #E0FFFF; /* Light cyan text */
-    padding: 0px 20px 0px 20px;
+    padding: 10px 20px;
     transition: color 1s ease, background-color 1s ease;
     box-sizing: border-box; /* Include padding and borders in the element's size */
   }
   
   li.h a:hover {
     background-color: #25303b; /* Blue background on hover */
-    color: white; /* White text on hover */
+    color: #0064B0; /* White text on hover */
     transition: color 0s;
+    border-radius: inherit; /* Inherit border-radius from parent */
+  }
+
+  #current {
+    background-color: #25303b; /* Blue background on hover */
+    color: #0064B0;
   }
   
   /* --- Mobile-Specific Styles --- */
@@ -62,31 +68,33 @@
     header {
       position: static; /* No sticky behavior on mobile */
       border-radius: 0; /* Flatten header for better alignment */
-      margin: 0; /* Remove extra margin */
-      padding: 10px; /* Maintain padding */
+      margin: auto; /* Remove extra margin */
       text-align: center; /* Ensure text stays centered */
+      border-radius: 20px;
+      width: 80%;
     }
   
     /* Make navigation vertical for better fit */
     ul.h {
       flex-direction: column; /* Stack items vertically */
       align-items: center; /* Center-align items */
-      gap: 10px; /* Reduce space between items */
+      overflow: hidden;
     }
   
     /* List item adjustments */
     li.h {
       display: block; /* Make items full-width */
       width: 100%; /* Full width for touch-friendly navigation */
+      overflow: hidden;
     }
   
-    /* Link adjustments for mobile */
-    li.h a {
-      display: block; /* Make the links fill their containers */
-      width: 100%; /* Full width for easy tapping */
-      text-align: center; /* Center text inside links */
-      padding: 15px; /* Increase touch target size */
-      font-size: 18px; /* Adjust font size for readability */
-    }
+  /* Link adjustments for mobile */
+  li.h a {
+    display: block; /* Make the links fill their containers */
+    width: 100%; /* Full width for easy tapping */
+    text-align: center; /* Center text inside links */
+    padding: 15px; /* Increase touch target size */
+    font-size: 18px; /* Adjust font size for readability */
+    border-radius: 0; /* Remove individual border-radius on mobile */
   }
-  
+  }
