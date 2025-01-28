@@ -7,12 +7,10 @@ ul.h {
     background-color: rgba(156, 38, 38, 0.8); /* Default red background */
     display: flex;
     justify-content: center;
-    align-items: center;
-    top: 0;
     position: sticky; /* Make it sticky */
+    top: 0px;
     border-radius: 100px;
     transition: background-color 0.5s, color 0.5s, border-radius 0.5s, margin 0.1s;
-    z-index: 10; /* Keep the header above other elements */
 }
 
 /* Sticky header's default state (Red) */
@@ -30,6 +28,8 @@ ul.h.scrolled {
 li.h {
     margin: 0;
     vertical-align: middle;
+    transition: padding 0.3s ease; /* Smooth transition effect */
+
 }
 
 /* Styling links inside the list items */
@@ -38,11 +38,6 @@ li.h a {
     padding: 25px; /* Added padding for better touch targets */
     text-decoration: none;
     transition: color 1s, background-color 1s;
-}
-
-/* Visited links */
-li.h a:visited {
-    color: #E0FFFF;
 }
 
 /* Hover effect for links */
