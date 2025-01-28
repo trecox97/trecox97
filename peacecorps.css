@@ -54,7 +54,7 @@ h3 {
 
 .bottom:hover {
     border-radius: 0 0 20px 20px;
-    background-color: rgb(37, 48, 59, .8);
+    background-color: #25303bcc;
 }
 
 #playPauseBtn {
