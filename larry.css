@@ -9,7 +9,9 @@ body {
 /* Mobile-Specific Adjustments */
 @media (max-width: 768px) {
     body {
-        background-size: contain; /* Ensure background image fits within screen on mobile */
-        background-position: center center; /* Center background image on smaller screens */
+        background-size: contain;
+        /* Ensure background image fits within screen on mobile */
+        background-position: center center;
+        /* Center background image on smaller screens */
     }
 }

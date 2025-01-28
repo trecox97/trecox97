@@ -1,5 +1,6 @@
 a {
-    color: #0064B0; /* Inherit the color from the parent element */
+    color: #0064B0;
+    /* Inherit the color from the parent element */
 }
 
 a:hover {
@@ -11,15 +12,16 @@ a:hover {
     border-radius: 20px;
     justify-content: center;
     margin: auto;
-	color: #E0FFFF;
-	width: 400px;
-	border: none;
-	text-align: center;
-	outline: none;
+    color: #E0FFFF;
+    width: 400px;
+    border: none;
+    text-align: center;
+    outline: none;
     align-items: center;
 }
 
-.item, .bottom {
+.item,
+.bottom {
     margin: auto;
     text-align: center;
     padding: 10px;
@@ -39,12 +41,12 @@ ul.newsletters {
 }
 
 .top {
-border-radius: 20px 20px 0 0;
-padding-top: 4px;
-margin: auto;
-text-align: center;
-margin-left: auto;
-margin-right: auto;
+    border-radius: 20px 20px 0 0;
+    padding-top: 4px;
+    margin: auto;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h3 {
@@ -64,24 +66,32 @@ h3 {
 
 /* Mobile-specific Styles */
 @media (max-width: 740px) {
+
     /* Content Styling */
     .content {
-        width: 90%; /* Allow content to take up more space on small screens */
-        max-width: 350px; /* Set a maximum width for readability */
+        width: 90%;
+        /* Allow content to take up more space on small screens */
+        max-width: 350px;
+        /* Set a maximum width for readability */
     }
 
     /* Adjust font size for smaller screens */
-    .item, .top, .bottom {
-        font-size: 5vw; /* Use a relative font size for mobile devices */
+    .item,
+    .top,
+    .bottom {
+        font-size: 5vw;
+        /* Use a relative font size for mobile devices */
     }
 
     h3 {
-        font-size: 5vw; /* Use a relative font size for mobile devices */
+        font-size: 5vw;
+        /* Use a relative font size for mobile devices */
 
     }
-    
+
     /* Responsive hover effects for items */
-    .item:hover, .bottom:hover {
+    .item:hover,
+    .bottom:hover {
         background-color: rgb(37, 48, 59, .8);
     }
 

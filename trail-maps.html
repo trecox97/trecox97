@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Trail Maps</title>
+    <link rel="stylesheet" type="text/css" href="./header.css">
+    <link rel="stylesheet" type="text/css" href="./main.css">
+    <link rel="stylesheet" type="text/css" href="./footer.css">
+    <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <ul class="h">
+            <li class="h"><a href="./index.html">Who?</a></li>
+            <li class="h"><a href="./peacecorps.html">Peace Corps</a></li>
+            <li class="h"><a href="./locations.html">Locations</a></li>
+            <li class="h"><a href="./skiing.html" id="current">Skiing</a></li>
+            <li class="h"><a href="./books.html">Books</a></li>
+            <li class="h"><a href="./random.html">Random</a></li>
+        </ul>
+    </header>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const header = document.querySelector("header");
+
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 10) {
+                    header.classList.add("scrolled");
+                } else {
+                    header.classList.remove("scrolled");
+                }
+            });
+        });
+    </script>
+
+    <div class="main">
+
+    </div>
+
+    <div id="footer-container"></div>
+    <script>
+        // Wait for the DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            // Function to load external HTML content into a specific container
+            const loadContent = (url, containerId) => {
+                return fetch(url)
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById(containerId).innerHTML = data;
+                    })
+                    .catch(error => {
+                        console.error('Error loading content:', error);
+                    });
+            };
+
+            // Load the footer
+            Promise.all([
+                loadContent('footer.html', 'footer-container')
+            ])
+        });
+    </script>
+
+</body>
+
+</html>

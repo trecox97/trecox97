@@ -17,7 +17,6 @@
 /* Image Styles */
 .ween {
     width: 150px;
-    /* Resize image to be more mobile-friendly */
     height: auto;
     /* Maintain aspect ratio */
     border-radius: 50%;
@@ -27,6 +26,7 @@
 
 /* Button Styles */
 #playPauseBtn {
+    margin-top: 10px;
     background-color: #83C491;
     color: aliceblue;
 }
@@ -35,7 +35,8 @@
     background-color: #83C491;
     color: #E0FFFF;
     cursor: pointer;
-    width: 400px; /* Default width for larger screens */
+    width: 400px;
+    /* Default width for larger screens */
     border: none;
     text-align: center;
     outline: none;
@@ -46,7 +47,8 @@
 }
 
 /* Active and Hover State for Collapsible */
-.active, .collapsible:hover {
+.active,
+.collapsible:hover {
     background-color: #0064B0;
 }
 
@@ -70,11 +72,15 @@
     transition: max-height 0.2s ease-out;
     background-color: #98D4E2;
     color: #25303B;
-    width: 400px; /* Default width */
+    width: 400px;
+    /* Default width */
     text-align: right;
-    display: flex;              /* Enables Flexbox */
-    justify-content: center;    /* Centers content horizontally */
-    height: auto;               /* Allow content height to grow with content */
+    display: flex;
+    /* Enables Flexbox */
+    justify-content: center;
+    /* Centers content horizontally */
+    height: auto;
+    /* Allow content height to grow with content */
 }
 
 /* Paragraph Style */
@@ -87,19 +93,26 @@
 /* Mobile Specific Adjustments (For screens less than 768px) */
 @media (max-width: 768px) {
     .collapsible {
-        width: 80%;               /* Use full width on small screens */
-        font-size: 6vw;          /* Slightly smaller text */
-        padding: 15px;            /* Adjust padding for mobile */
+        width: 80%;
+        /* Use full width on small screens */
+        font-size: 6vw;
+        /* Slightly smaller text */
+        padding: 15px;
+        /* Adjust padding for mobile */
     }
 
     .content {
-        width: 80%;               /* Make content width responsive */
-        text-align: center;       /* Center text inside content */
+        width: 80%;
+        /* Make content width responsive */
+        text-align: center;
+        /* Center text inside content */
     }
 
     .content p {
-        font-size: 17px;          /* Slightly smaller font on mobile */
-        text-align: center;       /* Center text inside paragraph */
+        font-size: 17px;
+        /* Slightly smaller font on mobile */
+        text-align: center;
+        /* Center text inside paragraph */
     }
 
     .ween {
@@ -110,13 +123,17 @@
 /* Extra Mobile Adjustments for very small screens (max-width: 480px) */
 @media (max-width: 480px) {
     .collapsible {
-        font-size: 9vw;          /* Smaller text size */
-        padding: 12px;            /* Less padding for very small screens */
+        font-size: 9vw;
+        /* Smaller text size */
+        padding: 12px;
+        /* Less padding for very small screens */
     }
 
     .content p {
-        font-size: 16px;          /* Further decrease font size */
-        line-height: 1.4;         /* Adjust line height for readability */
+        font-size: 16px;
+        /* Further decrease font size */
+        line-height: 1.4;
+        /* Adjust line height for readability */
     }
 
     .ween {

@@ -13,30 +13,30 @@
 </head>
 
 <body>
-  <header>
-    <ul class="h">
-       <li class="h"><a href="./index.html">Who?</a></li>
-       <li class="h"><a href="./peacecorps.html">Peace Corps</a></li>
-       <li class="h"><a href="./locations.html">Locations</a></li>
-       <li class="h"><a href="./skiing.html">Skiing</a></li>
-       <li class="h"><a href="./books.html" id="current">Books</a></li>
-       <li class="h"><a href="./random.html">Random</a></li>
-    </ul>
- </header>
+   <header>
+      <ul class="h">
+         <li class="h"><a href="./index.html">Who?</a></li>
+         <li class="h"><a href="./peacecorps.html">Peace Corps</a></li>
+         <li class="h"><a href="./locations.html">Locations</a></li>
+         <li class="h"><a href="./skiing.html">Skiing</a></li>
+         <li class="h"><a href="./books.html" id="current">Books</a></li>
+         <li class="h"><a href="./random.html">Random</a></li>
+      </ul>
+   </header>
 
- <script>
-    document.addEventListener("DOMContentLoaded", function () {
-       const header = document.querySelector("header");
+   <script>
+      document.addEventListener("DOMContentLoaded", function () {
+         const header = document.querySelector("header");
 
-       window.addEventListener("scroll", () => {
-          if (window.scrollY > 10) {
-             header.classList.add("scrolled");
-          } else {
-             header.classList.remove("scrolled");
-          }
-       });
-    });
- </script>
+         window.addEventListener("scroll", () => {
+            if (window.scrollY > 10) {
+               header.classList.add("scrolled");
+            } else {
+               header.classList.remove("scrolled");
+            }
+         });
+      });
+   </script>
    <div class="main">
       <h1>Some of My Favorite Books</h1>
       <div class="container">
@@ -135,26 +135,26 @@
    <div id="footer-container"></div>
 
    <script>
-    // Wait for the DOM to be fully loaded
-    document.addEventListener('DOMContentLoaded', () => {
-      // Function to load external HTML content into a specific container
-      const loadContent = (url, containerId) => {
-        return fetch(url)
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById(containerId).innerHTML = data;
-          })
-          .catch(error => {
-            console.error('Error loading content:', error);
-          });
-      };
+      // Wait for the DOM to be fully loaded
+      document.addEventListener('DOMContentLoaded', () => {
+         // Function to load external HTML content into a specific container
+         const loadContent = (url, containerId) => {
+            return fetch(url)
+               .then(response => response.text())
+               .then(data => {
+                  document.getElementById(containerId).innerHTML = data;
+               })
+               .catch(error => {
+                  console.error('Error loading content:', error);
+               });
+         };
 
-      // Load the header and footer
-      Promise.all([
-        loadContent('footer.html', 'footer-container')
-      ])
-    });
-  </script>
+         // Load the header and footer
+         Promise.all([
+            loadContent('footer.html', 'footer-container')
+         ])
+      });
+   </script>
 
 </body>
 

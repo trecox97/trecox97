@@ -8,8 +8,10 @@ svg {
     color: #bebebe;
     display: block;
     margin: auto;
-    max-width: 900px; /* Adjust to make the SVG responsive */
-    height: auto; /* Ensure the aspect ratio is maintained */
+    max-width: 900px;
+    /* Adjust to make the SVG responsive */
+    height: auto;
+    /* Ensure the aspect ratio is maintained */
 }
 
 /* Path Styling for SVG */
@@ -34,25 +36,96 @@ a.state:visited {
 }
 
 /* States for Specific Elements */
-#UT, #CA, #NV, #AZ, #ID, #MT, #WY, #ND, #SD, #MN, #WI, #MI, #IL, #TX, #MO, #IN, #OH, #NY, #PA, #VT, #NH, #MA, #ME, #NJ, #CT, #RI, #DE, #MD, #VA, #NC, #SC, #GA, #FL, #TN, #WV, #KY {
+#UT,
+#CA,
+#NV,
+#AZ,
+#ID,
+#MT,
+#WY,
+#ND,
+#SD,
+#MN,
+#WI,
+#MI,
+#IL,
+#TX,
+#MO,
+#IN,
+#OH,
+#NY,
+#PA,
+#VT,
+#NH,
+#MA,
+#ME,
+#NJ,
+#CT,
+#RI,
+#DE,
+#MD,
+#VA,
+#NC,
+#SC,
+#GA,
+#FL,
+#TN,
+#WV,
+#KY {
     color: #00814F;
 }
 
-#UT:hover, #NV:hover, #AZ:hover, #MT:hover, #WY:hover, #ND:hover, #SD:hover, #MN:hover, #WI:hover, #MI:hover, #IL:hover, #TX:hover, #MO:hover, #IN:hover, #OH:hover, #PA:hover, #VT:hover, #NH:hover, #MA:hover, #ME:hover, #NJ:hover, #CT:hover, #RI:hover, #DE:hover, #MD:hover, #VA:hover, #NC:hover, #SC:hover, #GA:hover, #FL:hover, #TN:hover, #WV:hover, #KY:hover {
+#UT:hover,
+#NV:hover,
+#AZ:hover,
+#MT:hover,
+#WY:hover,
+#ND:hover,
+#SD:hover,
+#MN:hover,
+#WI:hover,
+#MI:hover,
+#IL:hover,
+#TX:hover,
+#MO:hover,
+#IN:hover,
+#OH:hover,
+#PA:hover,
+#VT:hover,
+#NH:hover,
+#MA:hover,
+#ME:hover,
+#NJ:hover,
+#CT:hover,
+#RI:hover,
+#DE:hover,
+#MD:hover,
+#VA:hover,
+#NC:hover,
+#SC:hover,
+#GA:hover,
+#FL:hover,
+#TN:hover,
+#WV:hover,
+#KY:hover {
     color: rgb(0, 198, 79);
 }
 
 /* Hover for Specific States */
-#NY:hover, #CA:hover, #ID:hover {
+#NY:hover,
+#CA:hover,
+#ID:hover {
     color: rgb(126, 255, 39);
 }
+
 /* Flag Styling */
 a.flag {
     position: relative;
     text-decoration: none;
 }
 
-.flags-container, .states-container {
+.flags-container,
+.states-container {
     display: flex;
     gap: 15px;
     margin: 20px;
@@ -62,7 +135,7 @@ a.flag {
 .popup {
     display: none;
     position: absolute;
-    background-color:rgb(37, 48, 59, 0.7);
+    background-color: rgb(37, 48, 59, 0.7);
     color: aliceblue;
     padding-left: 10px;
     padding-right: 10px;
@@ -77,41 +150,49 @@ a.flag {
 
     /* Adjusting SVG size for smaller screens */
     svg {
-        max-width: 100%; /* Ensure it fills container width */
-        height: auto; /* Maintain aspect ratio */
+        max-width: 100%;
+        /* Ensure it fills container width */
+        height: auto;
+        /* Maintain aspect ratio */
     }
 
     /* Adjust Font Sizes for h1 and Paragraph */
     h1 {
-        font-size: 7vw; /* Larger font size for smaller screens */
+        font-size: 7vw;
+        /* Larger font size for smaller screens */
     }
 
     /* Flag adjustments */
     .flag {
-        padding: 8px; /* Slightly smaller padding */
+        padding: 8px;
+        /* Slightly smaller padding */
     }
 
     /* Popup Styling on Mobile */
     .popup {
-        font-size: 3vw; /* Adjust the font size of the popup */
+        font-size: 3vw;
+        /* Adjust the font size of the popup */
     }
 
     /* Adjust the visibility and layout of the popup */
     .popup-trigger {
-        font-size: 5vw; /* Make trigger font size more mobile-friendly */
+        font-size: 5vw;
+        /* Make trigger font size more mobile-friendly */
     }
 }
 
 /* Extra Small Screen Adjustments (up to 480px) */
 @media (max-width: 480px) {
-    
+
     /* Further adjust font sizes */
     h1 {
-        font-size: 8vw; /* Large enough for small screens */
+        font-size: 8vw;
+        /* Large enough for small screens */
     }
 
     .flag {
-        padding: 6px; /* Reduce padding for small screens */
+        padding: 6px;
+        /* Reduce padding for small screens */
     }
 
     /* Popup and trigger font sizes */
@@ -121,6 +202,7 @@ a.flag {
     }
 
     .popup-trigger {
-        font-size: 6vw; /* Larger font for easy interaction */
+        font-size: 6vw;
+        /* Larger font for easy interaction */
     }
 }
