@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const trailMaps = document.getElementById("map");
+    const trailMaps = document.getElementById("header-change");
     const originalHeader = document.querySelector("header");
     const secondaryHeader = document.createElement("header");
 
