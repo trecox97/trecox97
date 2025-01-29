@@ -14,27 +14,8 @@
   padding: 16px;
 }
 
-.gun-hole {
-  opacity: 0;
-  /* Make the image invisible initially */
-  transition: opacity 1s;
-  /* Smooth transition for opacity */
-  display: inline-block;
-}
-
-#bang {
-  background-color: rgb(156, 38, 38, 0.7);
-  color: aliceblue;
-  border-radius: 20px;
-  font-size: 20px;
-  padding: 8px;
-  font-family: "Comic Sans MS", "Comic Sans";
-  margin-top: 10px;
-  cursor: pointer;
-}
-
-#bang:hover {
-  animation: change-background-color 1s infinite;
+h1 {
+  color: #FF5733;
 }
 
 @keyframes change-background-color {

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Random Section</title>
+    <link rel="stylesheet" type="text/css" href="./main.css">
+    <link rel="stylesheet" type="text/css" href="./header.css">
+    <link rel="stylesheet" type="text/css" href="./footer.css">
+    <link rel="stylesheet" type="text/css" href="./gun-range.css">
+
+    <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <ul class="h">
+            <li class="h"><a href=#>Welcome to the Hideen Lazer Range</a></li>
+            <li class="h"><a href="./random.html">TAKE ME BACK!</a></li>
+        </ul>
+    </header>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const header = document.querySelector("header");
+
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 10) {
+                    header.classList.add("scrolled");
+                } else {
+                    header.classList.remove("scrolled");
+                }
+            });
+        });
+    </script>
+
+    <div id="main">
+
+            <button id="bang" onclick="playGunshot()">Bang</button>
+            <div id="canvas">
+
+                <div id="content">
+            <img id="gunshotImage" src="Images/gunshot.png" style="display:none;" />
+            <audio id="gunshotAudio" src="Songs/Gunshot.mp3" preload="auto"></audio>
+        </div>
+
+            <script src="GunshotPlay.js"></script>
+
+
+        </div>
+        <script>
+            document.getElementById("canvas").addEventListener("click", function (event) {
+                const gunshot = document.createElement("div");
+                gunshot.classList.add("gunshot");
+                gunshot.style.left = `${event.clientX - 25}px`;
+                gunshot.style.top = `${event.clientY - 25}px`;
+                document.getElementById("canvas").appendChild(gunshot);
+
+                const audio = new Audio("Songs/laser-shot.mp3");
+                audio.play();
+
+                setTimeout(() => {
+                    gunshot.remove();
+                }, 5000);
+            });
+        </script>
+
+
+
+    </div>
+
+    <div id="footer-container"></div>
+
+    <script>
+        // Wait for the DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            // Function to load external HTML content into a specific container
+            const loadContent = (url, containerId) => {
+                return fetch(url)
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById(containerId).innerHTML = data;
+                    })
+                    .catch(error => {
+                        console.error('Error loading content:', error);
+                    });
+            };
+
+            // Load the and footer
+            Promise.all([
+                loadContent('footer.html', 'footer-container')
+            ])
+        });
+    </script>
+
+</body>
+
+</html>
