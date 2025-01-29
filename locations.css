@@ -163,6 +163,10 @@ a.flag {
     height: auto;
 }
 
+#playPauseBtn {
+    margin-top: 10px;
+}
+
 /* Media Query for Mobile Devices (up to 768px) */
 @media (max-width: 768px) {
 
