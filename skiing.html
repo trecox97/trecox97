@@ -35,25 +35,27 @@
       </ul>
    </header>
 
-   <div>
-      <button id="playPauseBtn">Play</button>
-   </div>
-
-   <script>
-      document.addEventListener("DOMContentLoaded", function () {
-         const header = document.querySelector("header");
-
-         window.addEventListener("scroll", () => {
-            if (window.scrollY > 10) {
-               header.classList.add("scrolled");
-            } else {
-               header.classList.remove("scrolled");
-            }
-         });
-      });
-   </script>
    <div class="main">
 
+      <h1>Places I've shredded the GNAR</h1>
+      <div>
+         <button id="playPauseBtn">Play</button>
+      </div>
+      <hr>
+   
+      <script>
+         document.addEventListener("DOMContentLoaded", function () {
+            const header = document.querySelector("header");
+   
+            window.addEventListener("scroll", () => {
+               if (window.scrollY > 10) {
+                  header.classList.add("scrolled");
+               } else {
+                  header.classList.remove("scrolled");
+               }
+            });
+         });
+      </script>
       <h1>Mountains Skied: 26</h1>
 
       <button class="collapsible" style="border-radius: 20px 20px 0px 0px">🇺🇸Northeast🇺🇸</button>
