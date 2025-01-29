@@ -145,6 +145,24 @@ a.flag {
     pointer-events: none;
 }
 
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    text-align: center;
+    padding: 3px;
+}
+
+.cover {
+    margin: auto;
+    padding-bottom: 16px;
+    display: block;
+    max-width: 600px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+}
+
 /* Media Query for Mobile Devices (up to 768px) */
 @media (max-width: 768px) {
 
@@ -179,6 +197,12 @@ a.flag {
         font-size: 5vw;
         /* Make trigger font size more mobile-friendly */
     }
+    .cover {
+        max-width: 100%;
+        /* Ensure image is responsive and fits the screen */
+        max-height: 250px;
+        /* Reduce image height on smaller screens */
+    }
 }
 
 /* Extra Small Screen Adjustments (up to 480px) */
@@ -204,5 +228,13 @@ a.flag {
     .popup-trigger {
         font-size: 6vw;
         /* Larger font for easy interaction */
+    }
+    .cover {
+        max-height: 200px;
+        /* Further reduce image height */
+    }
+
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 }
