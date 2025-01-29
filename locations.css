@@ -35,6 +35,68 @@ a.state:visited {
     color: #bebebe;
 }
 
+a:hover {
+    color: #0064B0;
+}
+
+.national-parks {
+    background-color: #9c2626cc;
+    border-radius: 20px;
+    justify-content: center;
+    margin: auto;
+    width: 400px;
+    border: none;
+    text-align: center;
+    outline: none;
+    align-items: center;
+}
+
+ul.national-park-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: auto;
+}
+
+.park-item {
+    margin: auto;
+    text-align: center;
+    padding: 2px;
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    color:antiquewhite;
+}
+
+.park-item:hover {
+    background-color: rgb(37, 48, 59, .8);
+}
+
+.top,.bottom {
+    border-radius: 20px 20px 0 0;
+    margin: auto;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.top {
+    padding-top: 4px;
+}
+
+.bottom {
+    padding-bottom: 4px;;
+}
+
+h3 {
+    font-size: 20px;
+    color: aliceblue;
+}
+
+.bottom:hover {
+    border-radius: 0 0 20px 20px;
+    background-color: #25303bcc;
+}
+
 /* States for Specific Elements */
 #UT,
 #CA,
@@ -118,10 +180,14 @@ a.state:visited {
     color: rgb(126, 255, 39);
 }
 
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
 /* Flag Styling */
 a.flag {
     position: relative;
-    text-decoration: none;
 }
 
 .flags-container,
