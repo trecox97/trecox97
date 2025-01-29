@@ -3,6 +3,10 @@ h1 {
     color: aliceblue;
 }
 
+#top-header{
+    font-size: 4.7vw;
+}
+
 /* SVG Styles */
 svg {
     color: #bebebe;
@@ -245,7 +249,7 @@ a.flag {
     }
 
     /* Adjust Font Sizes for h1 and Paragraph */
-    h1 {
+    h1, #top-header {
         font-size: 7vw;
         /* Larger font size for smaller screens */
     }
@@ -279,7 +283,7 @@ a.flag {
 @media (max-width: 480px) {
 
     /* Further adjust font sizes */
-    h1 {
+    h1, #top-header {
         font-size: 8vw;
         /* Large enough for small screens */
     }
