@@ -1,130 +1,61 @@
-#main {
+/* Full-screen canvas for gunshot effect */
+#canvas {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgb(89, 41, 41); /* Optional: Gives a shooting range effect */
+    border-radius: 100px;
+    margin: 15px auto;
     cursor: crosshair;
 }
 
-#canvas {
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-}
-
+/* Gunshot (bullet hole) effect */
 .gunshot {
     position: absolute;
-    width: 50px;
-    height: 50px;
-    background: url('Images/gunshot.png') no-repeat center center;
-    background-size: cover;
-    pointer-events: none;
+    width: 90px;
+    height: 90px;
+    pointer-events: none; /* Prevents interfering with clicks */
+    background-size: contain;
+    animation: fadeOut 5s linear forwards;
 }
 
-.art {
-    border-radius: 100px;
-    font-size: 16px;
-    padding: 4px;
-    width: 95%;
-    /* Make width responsive */
-    height: 95%;
-    margin: 10px auto;
-    transition: padding .5s ease-in-out;
-    box-sizing: border-box;
-  }
-  
-  .art:hover {
-    padding: 16px;
-  }
-  
-  .gun-hole {
-    opacity: 0;
-    /* Make the image invisible initially */
-    transition: opacity 1s;
-    /* Smooth transition for opacity */
-    display: inline-block;
-  }
-  
-  #bang {
-    background-color: rgb(156, 38, 38, 0.7);
+#gunType {
+    background-color: rgba(156, 38, 38, 0.8);
     color: aliceblue;
     border-radius: 20px;
     font-size: 20px;
-    padding: 8px;
-    font-family: "Comic Sans MS", "Comic Sans";
-    margin-top: 10px;
-    cursor: pointer;
-  }
-  
-  #bang:hover {
-    animation: change-background-color 1s infinite;
-  }
-  
-  @keyframes change-background-color {
+    font-family: "Comic Sans MS", "Comic Sans", "Futura";
+    text-align: center;
+margin: 10px;
+padding:4px;
+}
+
+/* Fade out effect for gunshot */
+@keyframes fadeOut {
     0% {
-      background-color: rgb(156, 38, 38, 0.7);
-      color: aliceblue;
+        opacity: 1;
     }
-  
-    50% {
-      background-color: black;
-      color: red;
-    }
-  
     100% {
-      background-color: rgb(156, 38, 38, 0.7);
-      color: aliceblue;
+        opacity: 0;
     }
-  }
-  
-  .matrix {
-    position: fixed;
-    /* Fix the matrix effect to the background */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    /* Make sure it's behind all other content */
-  }
-  
-  .content {
+}
+
+/* Laser effect customization */
+.laser-shot {
+    background: url('Images/gunshot.png') no-repeat center center;
+}
+
+/* Regular gunshot effect */
+.regular-shot {
+    background: url('Images/gunshot.png') no-repeat center center;
+}
+
+/* Ensures other content stays visible */
+.content {
     position: relative;
-    /* Keep your content above the matrix rain */
     z-index: 1;
-    /* Ensure content is above the matrix */
     color: #fff;
-    /* Text color for visibility */
     text-align: center;
     margin-top: 50px;
-  }
-
-  
-  #logo {
-    animation: spin-right 7s linear infinite;
-    border-radius: 200px;
-  }
-  
-  @keyframes spin-right {
-    0% {
-      transform: rotate(0deg);
-    }
-  
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
-  
-  #logo2 {
-    animation: spin-left 6s linear infinite;
-    border-radius: 200px;
-  
-  }
-  
-  @keyframes spin-left {
-    0% {
-      transform: rotate(0deg);
-    }
-  
-    100% {
-      transform: rotate(-360deg);
-    }
-  }
+}

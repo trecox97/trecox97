@@ -4,7 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title>Random Section</title>
+    <title>Hidden Laser Range</title>
     <link rel="stylesheet" type="text/css" href="./main.css">
     <link rel="stylesheet" type="text/css" href="./header.css">
     <link rel="stylesheet" type="text/css" href="./footer.css">
@@ -16,7 +16,7 @@
 <body>
     <header>
         <ul class="h">
-            <li class="h"><a href=#>Welcome to the Hideen Lazer Range</a></li>
+            <li class="h"><a href="#">Welcome to the Hidden Laser Range</a></li>
             <li class="h"><a href="./random.html">TAKE ME BACK!</a></li>
         </ul>
     </header>
@@ -36,61 +36,83 @@
     </script>
 
     <div id="main">
+        <label for="gunType">
+            <h2>Select Gunshot Type:
 
-            <button id="bang" onclick="playGunshot()">Bang</button>
-            <div id="canvas">
+        </label>
 
-                <div id="content">
-            <img id="gunshotImage" src="Images/gunshot.png" style="display:none;" />
-            <audio id="gunshotAudio" src="Songs/Gunshot.mp3" preload="auto"></audio>
+        <select id="gunType">
+            <option value="gun">Regular Gunshot</option>
+            <option value="laser">Laser Gunshot</option>
+
+        </select>
+
+        <div id="canvas">
+            <div id="content">
+                <img id="gunshotImage" src="Images/gunshot.png" style="display:none;" />
+                <audio id="gunshotAudio" src="Songs/Gunshot.mp3" preload="auto"></audio>
+                <audio id="laserAudio" src="Songs/laser-shot.mp3" preload="auto"></audio>
+            </div>
         </div>
+    </div>
 
-            <script src="GunshotPlay.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const canvas = document.getElementById("canvas");
+            const gunTypeSelector = document.getElementById("gunType");
 
-
-        </div>
-        <script>
-            document.getElementById("canvas").addEventListener("click", function (event) {
+            function createGunshot(x, y) {
                 const gunshot = document.createElement("div");
                 gunshot.classList.add("gunshot");
-                gunshot.style.left = `${event.clientX - 25}px`;
-                gunshot.style.top = `${event.clientY - 25}px`;
-                document.getElementById("canvas").appendChild(gunshot);
 
-                const audio = new Audio("Songs/laser-shot.mp3");
-                audio.play();
+                // Convert the cursor position to be relative to the viewport
+                const rect = canvas.getBoundingClientRect();
+                const offsetX = x - rect.left;
+                const offsetY = y - rect.top;
 
-                setTimeout(() => {
-                    gunshot.remove();
-                }, 5000);
+                // Ensure gunshot is centered on the cursor
+                gunshot.style.position = "absolute";
+                gunshot.style.left = `${offsetX - 44}px`;  // Adjust to center
+                gunshot.style.top = `${offsetY - 44}px`;   // Adjust to center
+
+                // Determine gunshot type
+                const selectedGunType = gunTypeSelector.value;
+
+                if (selectedGunType === "laser") {
+                    gunshot.style.background = "url('Images/gunshot.png') no-repeat center";
+                    gunshot.style.backgroundSize = "contain";
+                    document.getElementById("laserAudio").play();
+                } else {
+                    gunshot.style.background = "url('Images/gunshot.png') no-repeat center";
+                    gunshot.style.backgroundSize = "contain";
+                    document.getElementById("gunshotAudio").play();
+                }
+
+                canvas.appendChild(gunshot);
+
+                // Remove after 5 seconds
+                setTimeout(() => gunshot.remove(), 5000);
+            }
+
+            // Click anywhere inside canvas to create gunshot
+            canvas.addEventListener("click", (event) => {
+                // Pass the cursor coordinates relative to the viewport
+                createGunshot(event.clientX, event.clientY);
             });
-        </script>
-
-
-
-    </div>
+        });
+    </script>
 
     <div id="footer-container"></div>
 
     <script>
-        // Wait for the DOM to be fully loaded
+        // Load footer dynamically
         document.addEventListener('DOMContentLoaded', () => {
-            // Function to load external HTML content into a specific container
-            const loadContent = (url, containerId) => {
-                return fetch(url)
-                    .then(response => response.text())
-                    .then(data => {
-                        document.getElementById(containerId).innerHTML = data;
-                    })
-                    .catch(error => {
-                        console.error('Error loading content:', error);
-                    });
-            };
-
-            // Load the and footer
-            Promise.all([
-                loadContent('footer.html', 'footer-container')
-            ])
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading footer:', error));
         });
     </script>
 
