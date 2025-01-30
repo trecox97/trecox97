@@ -4,33 +4,49 @@ html {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden;
     /* Prevent scrolling */
-    background-color: none;
 }
 
 body {
-    background-color: black;;
+    background-color: black;
+    cursor: crosshair;
 }
 
 canvas {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: -1;
     /* Send canvas to the back */
 }
 
-header,
 footer {
     position: relative;
     z-index: 10;
     /* Ensure header and footer are on top */
 }
 
-/* Optional: You can tweak the appearance of header and footer */
-header {
-    background-color: rgba(0, 0, 0, 0.7);
-    /* Transparent background for the header */
-    color: white;
+
+/* Add gunshot hole style */
+.gunshot-hole {
+    position: absolute;
+    width: 30px;
+    /* Size of the hole */
+    height: 30px;
+    background: url('Images/gunshot.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+@keyframes gunshotAnim {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
 }

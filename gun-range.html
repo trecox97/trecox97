@@ -12,11 +12,47 @@
 
     <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
 
-    <audio id="my_audio" src="Songs/The Doors - The End (original).mp3" loop="loop"></audio>
+    <!-- Gunshot sound -->
+    <audio id="gunshot-sound" src="Songs/Gunshot.mp3" preload="auto"></audio>
+    <!-- Laser sound -->
+    <audio id="laser-sound" src="Songs/laser-shot.mp3" preload="auto"></audio>
+    <audio id="my_audio" src="Songs/theEndTrim.mp3" loop="loop"></audio>
+
     <script>
         window.onload = function () {
             document.getElementById("my_audio").play();
         }
+
+        let currentShotType = 'gunshot'; // Default shot type
+
+        // Function to change shot type
+        function changeShotType(event) {
+            currentShotType = event.target.value;
+        }
+
+        // Function to create gunshot effect
+        function createGunshotEffect(event) {
+            const shotEffect = document.createElement("div");
+            shotEffect.classList.add(currentShotType === 'gunshot' ? "gunshot-hole" : "laser-effect");
+
+            shotEffect.style.left = `${event.clientX - 15}px`; // Position hole based on cursor (adjust size with '- 15')
+            shotEffect.style.top = `${event.clientY - 15}px`;  // Position hole based on cursor (adjust size with '- 15')
+
+            document.body.appendChild(shotEffect);
+
+            // Play respective sound
+            const sound = currentShotType === 'gunshot' ? document.getElementById("gunshot-sound") : document.getElementById("laser-sound");
+            sound.currentTime = 0; // Restart the sound
+            sound.play();
+
+            // Remove effect after animation (300ms for gunshot, adjust for laser if needed)
+            setTimeout(() => {
+                shotEffect.remove();
+            }, 3000);
+        }
+
+        // Add event listener for mouse click
+        document.addEventListener("click", createGunshotEffect);
     </script>
 </head>
 
@@ -47,7 +83,27 @@
         });
     </script>
 
+
+<button id="playPauseBtn">Play</button>
+
+<script src="PlayPause.js"></script>
+
+    <!-- Shot type selector -->
+    <div>
+        <label for="shot-type">Select Shot Type:</label>
+        <select id="shot-type" onchange="changeShotType(event)">
+            <option value="gunshot">Gunshot</option>
+            <option value="laser">Laser Shot</option>
+        </select>
+    </div>
+
     <h1>test</h1>
+    <img src="Images/badMan-removebg-preview.png">
+    <img src="Images/bullseye.png">
+    <img src="Images/dummy1.png">
+    <img src="Images/dummy2.png">
+
+
 
     <div id="footer-container"></div>
 
