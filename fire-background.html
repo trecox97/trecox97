@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden Laser Range</title>
+    <link rel="stylesheet" type="text/css" href="./main.css">
+    <link rel="stylesheet" type="text/css" href="./header.css">
+    <link rel="stylesheet" type="text/css" href="./footer.css">
+    <link rel="stylesheet" type="text/css" href="./gun-range.css">
+    <audio id="my_audio" src="Songs/theEndTrim.mp3" loop="loop"></audio>
+    <script>
+        window.onload = function () {
+            document.getElementById("my_audio").play();
+        }
+    </script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: black;
+        }
+        #fireCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="fireCanvas"></canvas>
+    <header>
+        <ul class="h">
+            <li class="h"><a href="#">Welcome to the Hidden Laser Range</a></li>
+            <li class="h"><a href="./random.html">TAKE ME BACK!</a></li>
+        </ul>
+    </header>
+    <button id="playPauseBtn">Play</button>
+    <script src="PlayPause.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const header = document.querySelector("header");
+
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 10) {
+                    header.classList.add("scrolled");
+                } else {
+                    header.classList.remove("scrolled");
+                }
+            });
+        });
+    </script>
+    <script>
+        const canvas = document.getElementById("fireCanvas");
+        const ctx = canvas.getContext("2d");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const fireParticles = [];
+        const numberOfParticles = 200;
+
+        class FireParticle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = canvas.height;
+                this.size = Math.random() * 8 + 2;
+                this.speedY = Math.random() * 3 + 2;
+                this.speedX = (Math.random() - 0.5) * 2;
+                this.opacity = Math.random() * 0.5 + 0.5;
+                this.color = `rgba(${Math.random() * 255}, ${Math.random() * 50}, 0, ${this.opacity})`;
+            }
+            update() {
+                this.y -= this.speedY;
+                this.x += this.speedX;
+                this.opacity -= 0.01;
+                if (this.y < 0) {
+                    this.x = Math.random() * canvas.width;
+                    this.y = canvas.height;
+                    this.opacity = Math.random() * 0.5 + 0.5;
+                }
+            }
+            draw() {
+                ctx.fillStyle = this.color;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function init() {
+            for (let i = 0; i < numberOfParticles; i++) {
+                fireParticles.push(new FireParticle());
+            }
+        }
+
+        function animate() {
+            ctx.fillStyle = "rgba(0, 0, 0, 0.2)";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            fireParticles.forEach(particle => {
+                particle.update();
+                particle.draw();
+            });
+            requestAnimationFrame(animate);
+        }
+
+        init();
+        animate();
+    </script>
+    <div id="footer-container"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        });
+    </script>
+</body>
+</html>
