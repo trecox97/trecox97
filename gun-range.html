@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hidden Laser Range</title>
     <link rel="stylesheet" type="text/css" href="./main.css">
     <link rel="stylesheet" type="text/css" href="./header.css">
@@ -11,15 +11,51 @@
     <link rel="stylesheet" type="text/css" href="./gun-range.css">
 
     <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+
+    <audio id="my_audio" src="Songs/The Doors - The End (original).mp3" loop="loop"></audio>
+    <script>
+        window.onload = function () {
+            document.getElementById("my_audio").play();
+        }
+    </script>
 </head>
 
 <body>
+    <!-- Header Section -->
     <header>
         <ul class="h">
             <li class="h"><a href="#">Welcome to the Hidden Laser Range</a></li>
             <li class="h"><a href="./random.html">TAKE ME BACK!</a></li>
         </ul>
     </header>
+
+    <!-- Ember Canvas (background) -->
+    <canvas id="emberCanvas"></canvas>
+    <script src="embers.js"></script>
+    
+    <!-- Main Content Section -->
+    <div id="main">
+        <!-- Play/Pause Button -->
+        <button id="playPauseBtn">Play</button>
+
+        <!-- Gunshot Type Dropdown -->
+        <label for="gunType">
+            <h2>Select Gunshot Type:</h2>
+        </label>
+        <select id="gunType">
+            <option value="gun">Regular Gunshot</option>
+            <option value="laser">Laser Gunshot</option>
+        </select>
+
+        <!-- Content for Gunshot Display -->
+        <div id="canvas">
+            <div id="content">
+                <img id="gunshotImage" src="Images/gunshot.png" style="display:none;" />
+                <audio id="gunshotAudio" src="Songs/Gunshot.mp3" preload="auto"></audio>
+                <audio id="laserAudio" src="Songs/laser-shot.mp3" preload="auto"></audio>
+            </div>
+        </div>
+    </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -31,73 +67,6 @@
                 } else {
                     header.classList.remove("scrolled");
                 }
-            });
-        });
-    </script>
-
-    <div id="main">
-        <label for="gunType">
-            <h2>Select Gunshot Type:
-
-        </label>
-
-        <select id="gunType">
-            <option value="gun">Regular Gunshot</option>
-            <option value="laser">Laser Gunshot</option>
-
-        </select>
-
-        <div id="canvas">
-            <div id="content">
-                <img id="gunshotImage" src="Images/gunshot.png" style="display:none;" />
-                <audio id="gunshotAudio" src="Songs/Gunshot.mp3" preload="auto"></audio>
-                <audio id="laserAudio" src="Songs/laser-shot.mp3" preload="auto"></audio>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const canvas = document.getElementById("canvas");
-            const gunTypeSelector = document.getElementById("gunType");
-
-            function createGunshot(x, y) {
-                const gunshot = document.createElement("div");
-                gunshot.classList.add("gunshot");
-
-                // Convert the cursor position to be relative to the viewport
-                const rect = canvas.getBoundingClientRect();
-                const offsetX = x - rect.left;
-                const offsetY = y - rect.top;
-
-                // Ensure gunshot is centered on the cursor
-                gunshot.style.position = "absolute";
-                gunshot.style.left = `${offsetX - 44}px`;  // Adjust to center
-                gunshot.style.top = `${offsetY - 44}px`;   // Adjust to center
-
-                // Determine gunshot type
-                const selectedGunType = gunTypeSelector.value;
-
-                if (selectedGunType === "laser") {
-                    gunshot.style.background = "url('Images/gunshot.png') no-repeat center";
-                    gunshot.style.backgroundSize = "contain";
-                    document.getElementById("laserAudio").play();
-                } else {
-                    gunshot.style.background = "url('Images/gunshot.png') no-repeat center";
-                    gunshot.style.backgroundSize = "contain";
-                    document.getElementById("gunshotAudio").play();
-                }
-
-                canvas.appendChild(gunshot);
-
-                // Remove after 5 seconds
-                setTimeout(() => gunshot.remove(), 5000);
-            }
-
-            // Click anywhere inside canvas to create gunshot
-            canvas.addEventListener("click", (event) => {
-                // Pass the cursor coordinates relative to the viewport
-                createGunshot(event.clientX, event.clientY);
             });
         });
     </script>
@@ -115,7 +84,6 @@
                 .catch(error => console.error('Error loading footer:', error));
         });
     </script>
-
 </body>
 
 </html>
