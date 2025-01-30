@@ -30,26 +30,30 @@
             currentShotType = event.target.value;
         }
 
-        // Function to create gunshot effect
         function createGunshotEffect(event) {
             const shotEffect = document.createElement("div");
-            shotEffect.classList.add(currentShotType === 'gunshot' ? "gunshot-hole" : "laser-effect");
+            shotEffect.classList.add(currentShotType === 'gunshot' ? "gunshot-hole" : "gunshot-hole");
 
-            shotEffect.style.left = `${event.clientX - 15}px`; // Position hole based on cursor (adjust size with '- 15')
-            shotEffect.style.top = `${event.clientY - 15}px`;  // Position hole based on cursor (adjust size with '- 15')
+            // Position based on document, so it moves with scroll
+            shotEffect.style.position = "absolute";
+            shotEffect.style.left = `${event.pageX - 15}px`;
+            shotEffect.style.top = `${event.pageY - 15}px`;
+            shotEffect.style.zIndex = "9999"; // Ensure it appears over images
 
             document.body.appendChild(shotEffect);
 
             // Play respective sound
             const sound = currentShotType === 'gunshot' ? document.getElementById("gunshot-sound") : document.getElementById("laser-sound");
-            sound.currentTime = 0; // Restart the sound
+            sound.currentTime = 0;
             sound.play();
 
-            // Remove effect after animation (300ms for gunshot, adjust for laser if needed)
+            // Remove effect after animation
             setTimeout(() => {
                 shotEffect.remove();
             }, 3000);
         }
+
+
 
         // Add event listener for mouse click
         document.addEventListener("click", createGunshotEffect);
@@ -84,9 +88,9 @@
     </script>
 
 
-<button id="playPauseBtn">Play</button>
+    <button id="playPauseBtn">Play</button>
 
-<script src="PlayPause.js"></script>
+    <script src="PlayPause.js"></script>
 
     <!-- Shot type selector -->
     <div>
