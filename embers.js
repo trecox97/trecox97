@@ -1,6 +1,5 @@
-// Create a canvas element for the ember effect
-const canvas = document.createElement('canvas');
-document.body.appendChild(canvas);
+// Get the canvas element directly from the DOM
+const canvas = document.getElementById('emberCanvas');
 const ctx = canvas.getContext('2d');
 
 // Set canvas size to fill the screen
