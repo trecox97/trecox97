@@ -32,12 +32,12 @@
 
         function createGunshotEffect(event) {
             const shotEffect = document.createElement("div");
-            shotEffect.classList.add(currentShotType === 'gunshot' ? "gunshot-hole" : "gunshot-hole");
+            shotEffect.classList.add(currentShotType === 'gunshot' ? "gunshot-hole" : "lasershot-hole");
 
             // Position based on document, so it moves with scroll
             shotEffect.style.position = "absolute";
-            shotEffect.style.left = `${event.pageX - 15}px`;
-            shotEffect.style.top = `${event.pageY - 15}px`;
+            shotEffect.style.left = `${event.pageX - 20}px`;
+            shotEffect.style.top = `${event.pageY - 20}px`;
             shotEffect.style.zIndex = "9999"; // Ensure it appears over images
 
             document.body.appendChild(shotEffect);
@@ -50,10 +50,8 @@
             // Remove effect after animation
             setTimeout(() => {
                 shotEffect.remove();
-            }, 3000);
+            }, 10000);
         }
-
-
 
         // Add event listener for mouse click
         document.addEventListener("click", createGunshotEffect);
@@ -106,6 +104,7 @@
     <img src="Images/bullseye.png">
     <img src="Images/dummy1.png">
     <img src="Images/dummy2.png">
+    <div id="blank"></div>
 
 
 

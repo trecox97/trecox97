@@ -20,33 +20,81 @@ canvas {
     /* Send canvas to the back */
 }
 
+#blank {
+    height: 1000px;
+}
+
 footer {
     position: relative;
     z-index: 10;
     /* Ensure header and footer are on top */
 }
 
+#shot-type {
+    background-color: #9c2626b3;
+    color: aliceblue;
+    padding: 5px;
+    border-radius: 20px;
+    font-family: "Comic Sans MS", "Comic Sans";
+    cursor: pointer;
+}
+
+#playPauseBtn {
+    margin: 4px auto;
+}
+
+#playPauseBtn:hover {
+    animation: change-background-color 1s infinite;
+}
+
+@keyframes change-background-color {
+    0% {
+        background-color: #9c2626b3;
+        color: aliceblue;
+    }
+
+    50% {
+        background-color: black;
+        color: red;
+    }
+
+    100% {
+        background-color: #9c2626b3;
+        color: aliceblue;
+    }
+}
 
 /* Add gunshot hole style */
 .gunshot-hole {
     position: absolute;
-    width: 30px;
+    width: 40px;
     /* Size of the hole */
-    height: 30px;
+    height: 40px;
     background: url('Images/gunshot.png') no-repeat center center;
     background-size: cover;
     border-radius: 50%;
     pointer-events: none;
+    animation: gunshotAnim 10s;
+}
+
+.lasershot-hole {
+    position: absolute;
+    width: 30px;
+    /* Size of the hole */
+    height: 30px;
+    background: url('Images/laser-hole.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: gunshotAnim 10s;
 }
 
 @keyframes gunshotAnim {
     0% {
-        transform: scale(1);
         opacity: 1;
     }
 
     100% {
-        transform: scale(0);
         opacity: 0;
     }
 }
