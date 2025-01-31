@@ -33,6 +33,10 @@ a:hover {
     margin: 10px;
 }
 
+.trail-map {
+    max-height: 1200px;
+}
+
 /* Button Styles */
 #playPauseBtn {
     margin-top: 10px;
