@@ -36,8 +36,8 @@
 
             // Position based on document, so it moves with scroll
             shotEffect.style.position = "absolute";
-            shotEffect.style.left = `${event.pageX - 20}px`;
-            shotEffect.style.top = `${event.pageY - 20}px`;
+            shotEffect.style.left = `${event.pageX - 10}px`;
+            shotEffect.style.top = `${event.pageY - 10}px`;
             shotEffect.style.zIndex = "9999"; // Ensure it appears over images
 
             document.body.appendChild(shotEffect);

@@ -35,10 +35,6 @@ a.state:hover {
     transition: color 0s;
 }
 
-a.state:visited {
-    color: #bebebe;
-}
-
 a:hover {
     color: #0064B0;
 }

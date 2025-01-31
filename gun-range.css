@@ -67,9 +67,9 @@ footer {
 /* Add gunshot hole style */
 .gunshot-hole {
     position: absolute;
-    width: 40px;
+    width: 15px;
     /* Size of the hole */
-    height: 40px;
+    height: 15px;
     background: url('Images/gunshot.png') no-repeat center center;
     background-size: cover;
     border-radius: 50%;
@@ -79,9 +79,9 @@ footer {
 
 .lasershot-hole {
     position: absolute;
-    width: 30px;
+    width: 20px;
     /* Size of the hole */
-    height: 30px;
+    height: 20px;
     background: url('Images/laser-hole.png') no-repeat center center;
     background-size: cover;
     border-radius: 50%;
