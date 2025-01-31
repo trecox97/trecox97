@@ -216,7 +216,7 @@ a.flag {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     text-align: center;
-    padding: 3px;
+    padding: 5px;
 }
 
 .cover {

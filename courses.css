@@ -12,6 +12,7 @@ h2 {
 }
 
 hr {
+    text-align: left;
     max-width: 820px;
 }
 
