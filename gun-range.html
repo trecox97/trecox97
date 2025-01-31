@@ -105,22 +105,12 @@
     <img src="Images/dummy1.png">
     <img src="Images/dummy2.png">
     <div id="blank"></div>
-
+„
 
 
     <div id="footer-container"></div>
+    <script src="LoadFooter.js"></script>
 
-    <script>
-        // Load footer dynamically
-        document.addEventListener('DOMContentLoaded', () => {
-            fetch('footer.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('footer-container').innerHTML = data;
-                })
-                .catch(error => console.error('Error loading footer:', error));
-        });
-    </script>
 </body>
 
 </html>
