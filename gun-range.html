@@ -59,32 +59,12 @@
 </head>
 
 <body>
-    <!-- Header Section -->
-    <header>
-        <ul class="h">
-            <li class="h"><a href="#">Welcome to the Hidden Laser Range</a></li>
-            <li class="h"><a href="./random.html">TAKE ME BACK!</a></li>
-        </ul>
-    </header>
+   <header id="header"></header>
+   <script src="loadHeader.js"></script>
 
     <!-- Ember Canvas (background) -->
     <canvas id="emberCanvas"></canvas>
-    <script src="embers.js"></script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const header = document.querySelector("header");
-
-            window.addEventListener("scroll", () => {
-                if (window.scrollY > 10) {
-                    header.classList.add("scrolled");
-                } else {
-                    header.classList.remove("scrolled");
-                }
-            });
-        });
-    </script>
-
+    <script src="ember-background.js"></script>
 
     <button id="playPauseBtn">Play</button>
 
