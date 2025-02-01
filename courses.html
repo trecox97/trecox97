@@ -19,31 +19,8 @@
 </head>
 
 <body>
-
-    <header>
-        <ul class="h">
-            <li class="h"><a href="./index.html">Who?</a></li>
-            <li class="h"><a href="./peacecorps.html">Peace Corps</a></li>
-            <li class="h"><a href="./locations.html">Locations</a></li>
-            <li class="h"><a href="./skiing.html">Skiing</a></li>
-            <li class="h"><a href="./books.html">Books</a></li>
-            <li class="h"><a href="./random.html">Random</a></li>
-        </ul>
-    </header>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const header = document.querySelector("header");
-
-            window.addEventListener("scroll", () => {
-                if (window.scrollY > 10) {
-                    header.classList.add("scrolled");
-                } else {
-                    header.classList.remove("scrolled");
-                }
-            });
-        });
-    </script>
+    <header id="header"></header>
+    <script src="loadHeader.js"></script>
 
     <div id="main">
         <div class="section">

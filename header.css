@@ -8,14 +8,17 @@
    text-align: center;
    transition: border-radius 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
    border-radius: 20px;
-   /* Default border-radius */
    box-shadow: none;
    margin: 5px;
+ }
 
+ #header-container {
+  position: sticky;
  }
 
  /* Header styling when scrolled */
  header.scrolled {
+  position: sticky;
    border-radius: 0;
    /* Remove border-radius when scrolled */
    background-color: rgba(139, 0, 0, 1);
@@ -89,6 +92,10 @@
      /* Ensure text stays centered */
      border-radius: 20px;
      width: 80%;
+   }
+
+   header.scrolled {
+    position: static;
    }
 
    /* Make navigation vertical for better fit */
