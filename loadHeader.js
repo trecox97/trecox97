@@ -8,7 +8,7 @@ fetch('header.html')
     })
     .catch(error => console.error('Error loading the header:', error));
 
-// Function to highlight the current page link
+// Function to highlight the current page link add special function to peacecorps page.
 function highlightCurrentPage() {
     const currentPage = window.location.pathname.split('/').pop();
     const links = document.querySelectorAll('.h a');
@@ -16,6 +16,9 @@ function highlightCurrentPage() {
     links.forEach(link => {
         if (link.getAttribute('href') === currentPage) {
             link.id = 'current'; // Add the 'current' id to the link
+        }
+        if (currentPage === 'peacecorps.html') {
+            
         }
     });
 }
