@@ -1,4 +1,8 @@
 /* Global Styles */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #F3A4B4;
     font-family: "Comic Sans MS", "Comic Sans", "Futura";
@@ -55,11 +59,80 @@ p {
 }
 
 img {
+    width: 100%;
+}
+
+img#audi {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
 }
+
+.collapsible {
+    background-color: #83C491;
+    color: #E0FFFF;
+    cursor: pointer;
+    width: 600px;
+    /* Default width for larger screens */
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: "papyrus";
+}
+
+/* Active and Hover State for Collapsible */
+.active,
+.collapsible:hover {
+    background-color: #0064B0;
+}
+
+.collapsible:after {
+    content: '\002B';
+    color: #E0FFFF;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+/* Content Style */
+.content {
+    width: 600px;
+    margin: auto;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #98D4E2;
+    color: #25303B;
+    /* Default width */
+    text-align: left;
+    display: flex;
+    /* Enables Flexbox */
+    justify-content: center;
+    /* Centers content horizontally */
+    height: auto;
+    /* Allow content height to grow with content */
+}
+
+/* Paragraph Style */
+.content p {
+    font-size: 15px;
+    margin: 0;
+    line-height: 1.5;
+    text-align: left;
+}
+
+a:hover {
+    color: #25303B;
+}
+
 
 /* Play/Pause Button */
 #playPauseBtn {
@@ -130,6 +203,20 @@ img {
     hr {
         width: 90%;
         /* Make hr responsive on mobile */
+    }
+
+    .collapsible {
+        width: 100%;
+        /* Use full width on small screens */
+        font-size: 6vw;
+        /* Slightly smaller text */
+        padding: 8px;
+        /* Adjust padding for mobile */
+    }
+
+    .content {
+        width: 100%;
+        /* Make content width responsive */
     }
 }
 
