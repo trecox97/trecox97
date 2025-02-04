@@ -3,6 +3,10 @@
      text-shadow: 3px 3px white, 6px 6px #00FFFF;
  }
 
+ h2 {
+    font-size: 5vw;
+ }
+
  .container {
      display: grid;
      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

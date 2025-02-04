@@ -17,8 +17,17 @@ function highlightCurrentPage() {
         if (link.getAttribute('href') === currentPage) {
             link.id = 'current'; // Add the 'current' id to the link
         }
-        if (currentPage === 'peacecorps.html') {
-            
+        if (currentPage === 'peacecorps.html' && link.getAttribute('href') === 'peacecorps.html') {
+            link.innerHTML = '🕊️Peace Corps🕊️'; // Change the text content
+        }
+        if (currentPage === 'locations.html' && link.getAttribute('href') === 'locations.html') {
+            link.innerHTML = '📍Locations📍'; // Change the text content
+        }
+        if (currentPage === 'skiing.html' && link.getAttribute('href') === 'skiing.html') {
+            link.innerHTML = '⛷️Skiing⛷️'; // Change the text content
+        }
+        if (currentPage === 'books.html' && link.getAttribute('href') === 'books.html') {
+            link.innerHTML = '📖Books📖'; // Change the text content
         }
     });
 }
