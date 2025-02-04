@@ -16,7 +16,6 @@
          document.getElementById("my_audio").play();
       }
    </script>
-
 </head>
 
 <body>
@@ -32,7 +31,16 @@
       <button id="playPauseBtn">Play</button>
       <script src="PlayPause.js"></script>
       <br>
-      <img id="teaching" src="Images/Teaching.JPG">
+      <ul class="peacecorps-pictures">
+         <li class="picture">
+            <div id="photo-description-container">
+               <img src="Images/Teaching.JPG">
+               <div id="description">
+                  Teaching GCF and LCM
+               </div>
+            </div>
+         </li>
+      </ul>
       <br>
       <ul class="newsletters">
          <li class="top">
@@ -60,19 +68,30 @@
 
       <ul class="peacecorps-pictures">
          <li class="picture">
-            <img src="Images/Priest-Blessing-New-Lab.jpeg">
+            <div id="photo-description-container">
+               <img src="Images/Priest-Blessing-New-Lab.jpeg">
+               <div id="description">
+                  New Computer Lab
+               </div>
+            </div>
          </li>
          <li class="picture">
-            <img src="Images/NewComputerLab.jpeg">
+            <div id="photo-description-container">
+               <img src="Images/NewComputerLab.jpeg">
+               <div id="description">
+                  Blessing the Lab
+               </div>
+            </div>
          </li>
       </ul>
+   </div>
 
-   </div>
    <div id="disclaimer">
-      <p>
-         Must insert Peace Corps Disclaimer here!
-      </p>
+      DISCLAIMER: The content of this website is mine
+      alone and does not necessarily reflect the views of the U.S. Government, the Peace Corps, or
+      the [insert host country name] Government.
    </div>
+
    <div id="footer-container"></div>
    <script src="LoadFooter.js"></script>
 </body>
