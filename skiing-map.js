@@ -81,3 +81,9 @@ L.marker([40.5889114, -111.6382857]).addTo(map)
 
 L.marker([40.5810312, -111.6569523]).addTo(map)
     .bindPopup('Snowbird');
+
+L.marker([42.7209428, 140.9147967]).addTo(map)
+    .bindPopup('Rusutsu');
+
+L.marker([42.8716608, 140.6623438]).addTo(map)
+    .bindPopup('Niseko United');
