@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="./main.css">
     <link rel="stylesheet" type="text/css" href="./header.css">
     <link rel="stylesheet" type="text/css" href="./footer.css">
-    <link rel="stylesheet" type="text/css" href="./gun-range.css">
+    <link rel="stylesheet" type="text/css" href="./laser-range.css">
 
     <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
 
@@ -23,7 +23,7 @@
             document.getElementById("my_audio").play();
         }
 
-        let currentShotType = 'gunshot'; // Default shot type
+        let currentShotType = 'laser'; // Default shot type
 
         // Function to change shot type
         function changeShotType(event) {
@@ -74,19 +74,18 @@
     <div>
         <label for="shot-type">Select Shot Type:</label>
         <select id="shot-type" onchange="changeShotType(event)">
-            <option value="gunshot">Gunshot</option>
             <option value="laser">Laser Shot</option>
+            <option value="gunshot">Gunshot</option>
         </select>
     </div>
 
-    <h1>TEST</h1>
-    <img src="Images/badMan.png">
-    <img src="Images/bullseye.png">
+    <h1>Messing with chatGPT coding.</h1>
     <img src="Images/dummy1.png">
+    <img src="Images/bullseye.png">
     <img src="Images/dummy2.png">
-    <div id="blank"></div>
-„
+    <img src="Images/badMan.png">
 
+    <div id="blank"></div>
 
     <div id="footer-container"></div>
     <script src="LoadFooter.js"></script>

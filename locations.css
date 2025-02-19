@@ -18,6 +18,14 @@ svg {
     /* Ensure the aspect ratio is maintained */
 }
 
+.Addresses {
+    background-color: #9c2626cc;
+    border-radius: 20px;
+    width: 400px;
+    margin: auto;
+
+}
+
 /* Path Styling for SVG */
 path {
     fill: currentColor;
