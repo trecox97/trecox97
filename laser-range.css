@@ -20,6 +20,10 @@ canvas {
     /* Send canvas to the back */
 }
 
+h1 {
+    color: aliceblue;
+}
+
 #blank {
     height: 1000px;
 }
@@ -74,7 +78,7 @@ footer {
     background-size: cover;
     border-radius: 50%;
     pointer-events: none;
-    animation: gunshotAnim 10s;
+    animation: gunshotAnim 20s;
 }
 
 .lasershot-hole {
@@ -86,7 +90,7 @@ footer {
     background-size: cover;
     border-radius: 50%;
     pointer-events: none;
-    animation: gunshotAnim 10s;
+    animation: gunshotAnim 20s;
 }
 
 @keyframes gunshotAnim {
