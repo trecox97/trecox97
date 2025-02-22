@@ -20,6 +20,11 @@ canvas {
     /* Send canvas to the back */
 }
 
+.target {
+    max-height: 700px;
+    width: auto;
+}
+
 h1 {
     color: aliceblue;
 }

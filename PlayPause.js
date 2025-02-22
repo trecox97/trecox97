@@ -24,12 +24,6 @@ function togglePlayPause() {
 // Add click event listener to the button
 playPauseBtn.addEventListener("click", togglePlayPause);
 
-// Optionally, auto-play the song when the page loads
-window.onload = function () {
-   audio.play();
-   updateButtonText();  // Set the button text to "Pause" when the song starts playing
-};
-
 // Ensure button text reflects the correct state when the audio is manually paused
 audio.addEventListener('pause', updateButtonText);
 audio.addEventListener('play', updateButtonText);
