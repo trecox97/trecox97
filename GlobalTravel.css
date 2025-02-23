@@ -1,0 +1,5 @@
+#globeViz {
+    overflow: hidden; /* Prevent any unwanted scrollbars */
+    padding: 0 40px; /* Adds 20px padding to both left and right */
+    margin: auto;
+}
