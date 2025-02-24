@@ -17,24 +17,47 @@ const globe = new Globe(globeContainer)
   .arcDashGap(() => Math.random() * (maxDashGap - minDashGap) + minDashGap)
   .arcDashAnimateTime([2500])
   .arcStroke([".5px"]);
-//  .arcDashLength(() => Math.random() * (maxDashLength - minDashLength) + minDashLength)
-
 
 // Function to update the globe size on window resize
 function resizeGlobe() {
-  globeContainer.style.width = window.innerWidth - 120 + "px";
-  globeContainer.style.height = window.innerHeight + "px";
-  globe.width([window.innerWidth - 120]);
-  globe.height([window.innerHeight]);
+  // Get the size of the globe container
+  const containerRect = globeContainer.getBoundingClientRect();
+  
+  // Set the globe container's width and height from the actual container size
+  globeContainer.style.width = containerRect.width + "px";
+  globeContainer.style.height = containerRect.height + "px";
+
+  // Update the globe's width and height based on the container's dimensions
+  globe.width(containerRect.width); // Remove array brackets to use a single value
+  globe.height(containerRect.height); // Remove array brackets to use a single value
+}
+
+// Function to change the size of the globe container itself on window resize
+function resizeGlobeContainer() {
+  // Get the new window size
+  const windowWidth = window.innerWidth;
+  const windowHeight = window.innerHeight;
+
+  // Optionally, apply some rules to adjust the container size
+  // For example, you can set the container to take 80% of the window width and height
+  globeContainer.style.width = (windowWidth) + 'px'; // 80% of window width
+  globeContainer.style.height = (windowHeight * 0.85) + 'px'; // 60% of window height
+
+  // Call resizeGlobe to adjust the globe size after the container has resized
+  resizeGlobe();
 }
 
 // Auto-rotate
 globe.controls().autoRotate = true;
-globe.controls().autoRotateSpeed = .5;
+globe.controls().autoRotateSpeed = 0.5;
 
-//Starting point of view
+// Starting point of view
 globe.pointOfView({ lat: 22, lng: 25, altitude: 2.5 });
 
 // Resize on window load and resize event
-window.addEventListener('resize', resizeGlobe);
-resizeGlobe(); // Initial resize
+window.addEventListener('resize', () => {
+  resizeGlobeContainer();
+  resizeGlobe();
+});
+resizeGlobeContainer(); // Initial resize and update of the container size
+resizeGlobe(); // Initial resize of the globe
