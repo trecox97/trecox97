@@ -430,7 +430,7 @@ const globe = new Globe(globeContainer)
   .arcDashGap(() => Math.random() * (maxDashGap - minDashGap) + minDashGap)
   .arcDashAnimateTime([2500])
   .arcStroke([".5px"]);
-  //  .arcDashLength(() => Math.random() * (maxDashLength - minDashLength) + minDashLength)
+//  .arcDashLength(() => Math.random() * (maxDashLength - minDashLength) + minDashLength)
 
 
 // Function to update the globe size on window resize
@@ -441,12 +441,12 @@ function resizeGlobe() {
   globe.height([window.innerHeight]);
 }
 
-    // Auto-rotate
-    globe.controls().autoRotate = true;
-    globe.controls().autoRotateSpeed = .5;
+// Auto-rotate
+globe.controls().autoRotate = true;
+globe.controls().autoRotateSpeed = .5;
 
-    //Starting point of view
-    globe.pointOfView({lat: 22, lng: 25, altitude: 2.5 });
+//Starting point of view
+globe.pointOfView({ lat: 22, lng: 25, altitude: 2.5 });
 
 // Resize on window load and resize event
 window.addEventListener('resize', resizeGlobe);

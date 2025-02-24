@@ -6,7 +6,13 @@
   <link rel="stylesheet" type="text/css" href="./header.css">
   <link rel="stylesheet" type="text/css" href="./footer.css">
   <link rel="stylesheet" type="text/css" href="./GlobalTravel.css">
-
+  <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+  <audio id="my_audio" src="Songs/PlanetEarth.mp3"></audio>
+  <script>
+    window.onload = function () {
+      document.getElementById("my_audio").play();
+    }
+  </script>
   <script src="//unpkg.com/globe.gl"></script>
   <!--<script src="../../dist/globe.gl.js"></script>-->
 </head>
@@ -16,6 +22,10 @@
   <script src="loadHeader.js"></script>
   <h2>These arcs show my international travels and moves.</h2>
   <h2>(It's a work in progress)</h2>
+  <div>
+    <button id="playPauseBtn">Play</button>
+  </div>
+  <script src="PlayPause.js"></script>
 
   <div id="globeViz"></div>
   <script src="createTravelGlobe.js"></script>
