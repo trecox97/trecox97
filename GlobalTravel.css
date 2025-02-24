@@ -1,15 +1,96 @@
 #globeViz {
     overflow: hidden;
-    padding: 0 60px;
     margin: auto;
 }
 
-#arcSelector {
-    background-color: #9c2626b3;
-    color: aliceblue;
-    font-family: "Comic Sans MS", "Comic Sans", "Futura";
-    border-radius: 20px;
-    padding: 10px;
-    margin: 10px;
+/* Content Style */
+.collapsible {
+    background-color: #83C491;
+    border-radius: 20px 0 0 20px;
+    color: #E0FFFF;
     cursor: pointer;
+    width: 400px;
+    /* Adjust width as needed */
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: "papyrus";
+    transition: border-radius 0.2s ease-out;
+}
+
+.collapsible.active {
+    border-radius: 20px 0 0 0;
+}
+
+/* Active and Hover State for Collapsible */
+.active,
+.collapsible:hover {
+    background-color: #0064B0;
+}
+
+.collapsible:after {
+    content: '\002B';
+    color: #E0FFFF;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+/* Content Style */
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    color: #25303B;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    width: 400px;
+}
+
+/* List Style */
+.content ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    margin: 0;
+}
+
+.content ul li {
+    padding: 8px;
+    cursor: pointer;
+    background-color: #f0f8ff;
+    text-align: center;
+}
+
+.content ul li:hover {
+    background-color: #ddd;
+}
+
+/* Ensure the 'selected' class has higher priority than hover */
+.content ul li.selected {
+    background-color: #9c2626d9; /* Choose your highlight color */
+    color: aliceblue; /* Text color when highlighted */
+}
+
+/* To prevent hover from interfering when the item is selected */
+.content ul li.selected:hover {
+    background-color: #9c2626d9; /* Keep the same color when hovering over a selected item */
+}
+
+/* Paragraph Style */
+.content p {
+    font-size: 15px;
+    margin: 0;
+    line-height: 1.5;
+    text-align: left;
 }

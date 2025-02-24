@@ -27,41 +27,70 @@
   </div>
   <script src="PlayPause.js"></script>
 
-  <select id="arcSelector"></select>
+  <div class="container">
+    <div class="dropdown">
+      <button class="collapsible">Select Dataset</button>
+      <div class="content">
+        <ul id="arcList"></ul>
+      </div>
+    </div>
+    <div id="globeViz"></div>
+  </div>
 
   <script src="defineArcDataSets.js"></script>
-  <script>
-    // Define all datasets  
+
+  <script>// Define all datasets  
     const datasets = {
-    "All Travels & Moves": [...arcs2008IrelandTrip, ...arcs2016StudyAbroad, ...arcs2018EuroTrip, ...arcs2021MexicoTrip, 
-                 ...arcs2022EuroTrip, ...arcs2025SkiTrips, ...arcsPeaceCorpsTravels, ...arcsUSAMoves],
-    "USA Moves": arcsUSAMoves,
-    "2025 Ski Trips": arcs2025SkiTrips,
-    "2022-2024 Peace Corps Travels": arcsPeaceCorpsTravels,
-    "2021 & 2022 Euro Trips": arcs2022EuroTrip,
-    "2021 Mexico Trip": arcs2021MexicoTrip,
-    "2018 Euro Trip": arcs2018EuroTrip,
-    "2016 Study Abroad": arcs2016StudyAbroad,
-    "2008 Ireland Trip": arcs2008IrelandTrip
-  };
-  
- // Populate dropdown dynamically and set allArcs as default
- const selector = document.getElementById('arcSelector');
-  Object.keys(datasets).forEach(dataset => {
-    const option = document.createElement('option');
-    option.value = dataset;
-    option.textContent = dataset;
-    selector.appendChild(option);
-  });
-  
-    // Event listener for dataset change
-    selector.addEventListener('change', function(event) {
-      const selectedDataset = event.target.value;
-      globe.arcsData(datasets[selectedDataset]);
+      "All Travels & Moves": [...arcs2008IrelandTrip, ...arcs2016StudyAbroad, ...arcs2018EuroTrip, ...arcs2021MexicoTrip, 
+                   ...arcs2022EuroTrip, ...arcs2025SkiTrips, ...arcsPeaceCorpsTravels, ...arcsUSAMoves],
+      "USA Moves": arcsUSAMoves,
+      "2025 Ski Trips": arcs2025SkiTrips,
+      "2022-2024 Peace Corps Travels": arcsPeaceCorpsTravels,
+      "2021 & 2022 Euro Trips": arcs2022EuroTrip,
+      "2021 Mexico Trip": arcs2021MexicoTrip,
+      "2018 Euro Trip": arcs2018EuroTrip,
+      "2016 Study Abroad": arcs2016StudyAbroad,
+      "2008 Ireland Trip": arcs2008IrelandTrip
+    };
+    
+    // Populate list dynamically and set allArcs as default
+    const list = document.getElementById('arcList');
+    Object.keys(datasets).forEach(dataset => {
+      const listItem = document.createElement('li');
+      listItem.textContent = dataset;
+      listItem.addEventListener('click', function() {
+        // Remove the 'selected' class from any previously selected <li>
+        const selectedItems = list.querySelectorAll('.selected');
+        selectedItems.forEach(item => item.classList.remove('selected'));
+    
+        // Add the 'selected' class to the clicked <li>
+        listItem.classList.add('selected');
+    
+        // Load the data for the clicked item
+        globe.arcsData(datasets[dataset]);
+      });
+      list.appendChild(listItem);
     });
+    
+    // After appending all list items, change the border radius of the last <li>
+    const lastListItem = list.lastElementChild;
+    if (lastListItem) {
+      lastListItem.style.borderRadius = "0 0 0 20px"; // Set your desired border radius value here
+    }
+    
+    // Collapsible button functionality
+    const coll = document.querySelector('.collapsible');
+    const content = document.querySelector('.content');
+    coll.addEventListener('click', function() {
+      this.classList.toggle('active');
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + 180 + "px";
+      }
+    });    
   </script>
-  
-  <div id="globeViz"></div>
+
   <script src="createTravelGlobe.js"></script>
 
   <div id="footer-container"></div>
