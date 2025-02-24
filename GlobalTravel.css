@@ -94,3 +94,25 @@
     line-height: 1.5;
     text-align: left;
 }
+
+.container {
+    display: flex;
+    flex-direction: row; /* Stack items on top of each other by default */
+}
+
+@media (max-width: 768px) { /* Adjust for mobile view */
+    .container {
+        flex-direction: column; /* Place items next to each other */
+        justify-content: center;
+        align-items: center;
+    }
+    .collapsible {
+        border-radius: 20px;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto; /* Centers the element horizontally */
+    }
+    .collapsible.active {
+        border-radius: 20px 20px 0 0;
+    }
+}
