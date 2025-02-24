@@ -187,9 +187,16 @@ const arcsUSAMoves = [
     {
       startLat: 35.682839, // Tokyo
       startLng: 139.759455,
-      endLat: 40.7128,  // New York
+      endLat: 47.6062,     // Seattle
+      endLng: -122.3321,
+      color: ["red", "grey"]
+    },
+    {
+      startLat: 47.6062,   // Seattle
+      startLng: -122.3321,
+      endLat: 40.7128,     // New York
       endLng: -74.0060,
-      color: ["red", "orange"]
+      color: ["grey", "orange"]
     }
   ];
   

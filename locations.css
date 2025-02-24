@@ -136,7 +136,8 @@ h3 {
 #FL,
 #TN,
 #WV,
-#KY {
+#KY,
+#WA {
     color: #00814F;
 }
 
@@ -172,7 +173,8 @@ h3 {
 #FL:hover,
 #TN:hover,
 #WV:hover,
-#KY:hover {
+#KY:hover,
+#WA:hover {
     color: rgb(0, 198, 79);
 }
 

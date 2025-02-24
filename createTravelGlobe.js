@@ -39,9 +39,8 @@ function resizeGlobeContainer() {
   const windowHeight = window.innerHeight;
 
   // Optionally, apply some rules to adjust the container size
-  // For example, you can set the container to take 80% of the window width and height
-  globeContainer.style.width = (windowWidth) + 'px'; // 80% of window width
-  globeContainer.style.height = (windowHeight * 0.85) + 'px'; // 60% of window height
+  globeContainer.style.width = (windowWidth) + 'px';
+  globeContainer.style.height = (windowHeight * 0.85) + 'px'; 
 
   // Call resizeGlobe to adjust the globe size after the container has resized
   resizeGlobe();
