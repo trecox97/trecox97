@@ -3,3 +3,13 @@
     padding: 0 60px;
     margin: auto;
 }
+
+#arcSelector {
+    background-color: #9c2626b3;
+    color: aliceblue;
+    font-family: "Comic Sans MS", "Comic Sans", "Futura";
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}

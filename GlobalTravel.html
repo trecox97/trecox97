@@ -27,6 +27,40 @@
   </div>
   <script src="PlayPause.js"></script>
 
+  <select id="arcSelector"></select>
+
+  <script src="defineArcDataSets.js"></script>
+  <script>
+    // Define all datasets  
+    const datasets = {
+    "All Travels & Moves": [...arcs2008IrelandTrip, ...arcs2016StudyAbroad, ...arcs2018EuroTrip, ...arcs2021MexicoTrip, 
+                 ...arcs2022EuroTrip, ...arcs2025SkiTrips, ...arcsPeaceCorpsTravels, ...arcsUSAMoves],
+    "USA Moves": arcsUSAMoves,
+    "2025 Ski Trips": arcs2025SkiTrips,
+    "2022-2024 Peace Corps Travels": arcsPeaceCorpsTravels,
+    "2021 & 2022 Euro Trips": arcs2022EuroTrip,
+    "2021 Mexico Trip": arcs2021MexicoTrip,
+    "2018 Euro Trip": arcs2018EuroTrip,
+    "2016 Study Abroad": arcs2016StudyAbroad,
+    "2008 Ireland Trip": arcs2008IrelandTrip
+  };
+  
+ // Populate dropdown dynamically and set allArcs as default
+ const selector = document.getElementById('arcSelector');
+  Object.keys(datasets).forEach(dataset => {
+    const option = document.createElement('option');
+    option.value = dataset;
+    option.textContent = dataset;
+    selector.appendChild(option);
+  });
+  
+    // Event listener for dataset change
+    selector.addEventListener('change', function(event) {
+      const selectedDataset = event.target.value;
+      globe.arcsData(datasets[selectedDataset]);
+    });
+  </script>
+  
   <div id="globeViz"></div>
   <script src="createTravelGlobe.js"></script>
 
