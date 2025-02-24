@@ -41,8 +41,8 @@
 
   <script>// Define all datasets  
     const datasets = {
-      "All Travels & Moves": [...arcs2008IrelandTrip, ...arcs2016StudyAbroad, ...arcs2018EuroTrip, ...arcs2021MexicoTrip, 
-                   ...arcs2022EuroTrip, ...arcs2025SkiTrips, ...arcsPeaceCorpsTravels, ...arcsUSAMoves],
+      "All Travels & Moves": [...arcs2008IrelandTrip, ...arcs2016StudyAbroad, ...arcs2018EuroTrip, ...arcs2021MexicoTrip,
+      ...arcs2022EuroTrip, ...arcs2025SkiTrips, ...arcsPeaceCorpsTravels, ...arcsUSAMoves],
       "USA Moves": arcsUSAMoves,
       "2025 Ski Trips": arcs2025SkiTrips,
       "2022-2024 Peace Corps Travels": arcsPeaceCorpsTravels,
@@ -52,36 +52,49 @@
       "2016 Study Abroad": arcs2016StudyAbroad,
       "2008 Ireland Trip": arcs2008IrelandTrip
     };
-    
+
     // Populate list dynamically and set allArcs as default
     const list = document.getElementById('arcList');
     Object.keys(datasets).forEach(dataset => {
       const listItem = document.createElement('li');
       listItem.textContent = dataset;
-      listItem.addEventListener('click', function() {
+      listItem.addEventListener('click', function () {
         // Remove the 'selected' class from any previously selected <li>
         const selectedItems = list.querySelectorAll('.selected');
         selectedItems.forEach(item => item.classList.remove('selected'));
-    
+
         // Add the 'selected' class to the clicked <li>
         listItem.classList.add('selected');
-    
+
         // Load the data for the clicked item
         globe.arcsData(datasets[dataset]);
       });
       list.appendChild(listItem);
     });
-    
-    // After appending all list items, change the border radius of the last <li>
-    const lastListItem = list.lastElementChild;
-    if (lastListItem) {
-      lastListItem.style.borderRadius = "0 0 0 20px"; // Set your desired border radius value here
+
+    // Function to update the border radius based on screen width
+    function updateBorderRadius() {
+      const lastListItem = list.lastElementChild;
+      if (!lastListItem) return;
+
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        lastListItem.style.borderRadius = "0 0 20px 20px"; // Mobile behavior
+      } else {
+        lastListItem.style.borderRadius = "0 0 0 20px"; // Default behavior
+      }
     }
-    
+
+    // Run on initial load
+    updateBorderRadius();
+
+    // Add an event listener to update on window resize
+    window.addEventListener("resize", updateBorderRadius);
+
+
     // Collapsible button functionality
     const coll = document.querySelector('.collapsible');
     const content = document.querySelector('.content');
-    coll.addEventListener('click', function() {
+    coll.addEventListener('click', function () {
       this.classList.toggle('active');
       if (content.style.maxHeight) {
         content.style.maxHeight = null;
