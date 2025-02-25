@@ -16,16 +16,16 @@ const arcsUSAMoves = [
     {
       startLat: 43.6975, // Sun Valley
       startLng: -114.3514,
-      endLat: 37.8715,  // Berkeley
-      endLng: -122.2730,
-      color: ["white", "gold"]
+      endLat: 38.18797,  // Pinecrest
+      endLng: -120.0083704,
+      color: ["white", "blue"]
     },
     {
-      startLat: 40.7128,  // New York
-      startLng: -74.0060,
+      startLat: 38.18797, // Pinecrest
+      startLng: -120.0083704,
       endLat: 40.7608,  // Salt Lake City
       endLng: -111.8910,
-      color: ["orange", "aliceblue"]
+      color: ["blue", "aliceblue"]
     },
     {
       startLat: 40.7608,  // Salt Lake City
@@ -35,32 +35,11 @@ const arcsUSAMoves = [
       color: ["aliceblue", "white"]
     },
     {
-      startLat: 43.6975,  // Sun Valley
-      startLng: -114.3514,
-      endLat: 40.7608,  // Salt Lake City
-      endLng: -111.8910,
-      color: ["white", "aliceblue"]
-    },
-    {
-      startLat: 40.7608,  // Salt Lake City
-      startLng: -111.8910,
-      endLat: 37.8715,  // Berkeley
-      endLng: -122.2730,
-      color: ["aliceblue", "gold"]
-    },
-    {
-      startLat: 37.8715,  // Berkeley
-      startLng: -122.2730,
-      endLat: 40.7608,  // Salt Lake City
-      endLng: -111.8910,
-      color: ["gold", "aliceblue"]
-    },
-    {
-      startLat: 37.8715,  // Berkeley
-      startLng: -122.2730,
+      startLat: 38.18797, // Pinecrest
+      startLng: -120.0083704,
       endLat: 40.7128,  // New York
       endLng: -74.0060,
-      color: ["gold", "orange"]
+      color: ["blue", "orange"]
     }
   ];
   
