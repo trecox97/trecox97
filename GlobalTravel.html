@@ -59,8 +59,8 @@
       const listItem = document.createElement('li');
       listItem.textContent = dataset;
       if (dataset === "All Travels & Moves") {
-    listItem.classList.add('selected');
-  }
+        listItem.classList.add('selected');
+      }
       listItem.addEventListener('click', function () {
         // Remove the 'selected' class from any previously selected <li>
         const selectedItems = list.querySelectorAll('.selected');
@@ -92,7 +92,6 @@
 
     // Add an event listener to update on window resize
     window.addEventListener("resize", updateBorderRadius);
-
 
     // Collapsible button functionality
     const coll = document.querySelector('.collapsible');
