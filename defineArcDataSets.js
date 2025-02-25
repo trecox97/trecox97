@@ -77,28 +77,28 @@ const arcsPeaceCorpsTravels = [
     startLng: 36.817223,
     endLat: -4.0435,  // Mombasa
     endLng: 39.6682,
-    color: ["green", "green"]
+    color: ["green", "white"]
   },
   {
     startLat: -4.0435,  // Mombasa
     startLng: 39.6682,
     endLat: -1.286389,  // Nairobi
     endLng: 36.817223,
-    color: ["green", "green"]
+    color: ["white", "green"]
   },
   {
     startLat: -1.286389,  // Nairobi
     startLng: 36.817223,
     endLat: -0.0917,  // Kisumu
     endLng: 34.7679,
-    color: ["green", "green"]
+    color: ["green", "red"]
   },
   {
     startLat: -0.0917,  // Kisumu
     startLng: 34.7679,
     endLat: -1.286389,  // Nairobi
     endLng: 36.817223,
-    color: ["green", "green"]
+    color: ["red", "green"]
   },
   {
     startLat: 40.7128, // New York
@@ -140,7 +140,7 @@ const arcsPeaceCorpsTravels = [
     startLng: 38.74,
     endLat: 13.7563,  // Bangkok
     endLng: 100.5018,
-    color: ["yellow", "blue"]
+    color: ["yellow", "white", "blue"]
   },
   {
     startLat: 13.7563, // Bangkok
@@ -237,7 +237,7 @@ const arcs2022EuroTrip = [
     startLng: 12.5683,
     endLat: 52.3676,  // Amsterdam
     endLng: 4.9041,
-    color: ["red", "orange"]
+    color: ["red", "white", "orange"]
   },
   {
     startLat: 52.3676, // Amsterdam
@@ -265,22 +265,22 @@ const arcs2022EuroTrip = [
     startLng: 2.3522,
     endLat: 37.8882,  // Cordoba
     endLng: -4.7794,
-    color: ["blue", "red"]
+    color: ["blue", "white", "yellow"]
   },
   {
-    startLat: 37.8882,  // Córdoba
+    startLat: 37.8882,  // Cordoba
     startLng: -4.7794,
     endLat: 40.4168,    // Madrid
     endLng: -3.7038,
-    color: ["red", "red"]
+    color: ["yellow", "red"]
   },
   {
     startLat: 40.4168,  // Madrid
     startLng: -3.7038,
     endLat: 48.8566,    // Paris
     endLng: 2.3522,
-    color: ["red", "blue"]
-  },
+    color: ["red", "white", "blue"]
+  }, 
   {
     startLat: 48.8566,  // Paris
     startLng: 2.3522,
@@ -296,7 +296,7 @@ const arcs2008IrelandTrip = [
     startLng: -74.0060,
     endLat: 53.3498,  // Dublin
     endLng: -6.2603,
-    color: ["orange", "green"]
+    color: ["orange", "white", "green"]
   },
   {
     startLat: 53.3498,  // Dublin
@@ -317,7 +317,7 @@ const arcs2008IrelandTrip = [
     startLng: -6.2603,
     endLat: 40.7128,  // New York
     endLng: -74.0060,
-    color: ["green", "orange"]
+    color: ["green", "white", "orange"]
   }
 ];
 
@@ -348,7 +348,7 @@ const arcs2018EuroTrip = [
     startLng: 8.5417,
     endLat: 48.8566,  // Paris
     endLng: 2.3522,
-    color: ["red", "blue"]
+    color: ["red", "white", "blue"]
   },
   {
     startLat: 48.8566, // Paris
@@ -386,14 +386,14 @@ const arcs2016StudyAbroad = [
     startLng: 4.3517,
     endLat: 48.8566,  // Paris
     endLng: 2.3522,
-    color: ["yellow", "blue"]
+    color: ["red", "white", "blue"]
   },
   {
     startLat: 48.8566, // Paris
     startLng: 2.3522,
     endLat: 50.8503,  // Brussels
     endLng: 4.3517,
-    color: ["blue", "yellow"]
+    color: ["blue", "white", "red"]
   },
   {
     startLat: 50.8503, // Brussels
@@ -438,14 +438,14 @@ const arcs2025SkiTrips = [
     startLng: -71.2082,
     endLat: 40.7128,  // New York
     endLng: -74.0060,
-    color: ["blue", "orange"]
+    color: ["blue", "white", "orange"]
   },
   {
     startLat: 40.7128, // New York
     startLng: -74.0060,
     endLat: 46.8139,  // Quebec City
     endLng: -71.2082,
-    color: ["orange", "blue"]
+    color: ["orange", "white", "blue"]
   }
 ];
 
