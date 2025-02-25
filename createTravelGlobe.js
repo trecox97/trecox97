@@ -10,7 +10,7 @@ const minDashGap = 0.1;
 const maxDashGap = 0.5;
 
 const cityLabels = [
-  { lat: 40.7128, lng: -74.0060, name: "New York" },
+  { lat: 40.7128, lng: -74.0060, name: "New York City" },
   { lat: 35.6895, lng: 139.6917, name: "Tokyo" },
   { lat: 48.8566, lng: 2.3522, name: "Paris" },
   { lat: -1.2864, lng: 36.8172, name: "Nairobi" },
@@ -42,7 +42,8 @@ const cityLabels = [
   { lat: -6.1659, lng: 39.2026, name: "Zanzibar" },
   { lat: 43.0618, lng: 141.3545, name: "Sapporo" },
   //{ lat: 33.5904, lng: 130.4017, name: "Fukuoka" },
-  { lat: 34.3853, lng: 132.4553, name: "Hiroshima" }
+  { lat: 34.3853, lng: 132.4553, name: "Hiroshima" },
+  //{ lat: 50.8503, lng: 4.3517, name: "Brussels" }
 ];
 
 const globe = new Globe(globeContainer)
