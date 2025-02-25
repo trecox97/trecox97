@@ -1,6 +1,7 @@
 #globeViz {
     overflow: hidden;
     margin: auto;
+    border-radius: 0 20px 20px 20px;
 }
 
 /* Content Style */
@@ -124,5 +125,8 @@
     }
     .dropdown {
         margin-bottom: 8px;
+    }
+    #globeViz {
+        border-radius: 20px;
     }
 }
