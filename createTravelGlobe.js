@@ -48,7 +48,7 @@ function resizeGlobeContainer() {
 
 // Auto-rotate
 globe.controls().autoRotate = true;
-globe.controls().autoRotateSpeed = 0.5;
+globe.controls().autoRotateSpeed = 0.35;
 
 // Starting point of view
 globe.pointOfView({ lat: 22, lng: 25, altitude: 2.5 });

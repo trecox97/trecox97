@@ -5,9 +5,9 @@
 
 /* Content Style */
 .collapsible {
-    background-color: #83C491;
+    background-color: #9c2626b3; /* Choose your highlight color */
     border-radius: 20px 0 0 20px;
-    color: #E0FFFF;
+    color: aliceblue;
     cursor: pointer;
     width: 400px;
     /* Adjust width as needed */
@@ -23,6 +23,10 @@
 
 .collapsible.active {
     border-radius: 20px 0 0 0;
+}
+
+.container {
+    margin-bottom: 10px;
 }
 
 /* Active and Hover State for Collapsible */
@@ -78,13 +82,13 @@
 
 /* Ensure the 'selected' class has higher priority than hover */
 .content ul li.selected {
-    background-color: #9c2626d9; /* Choose your highlight color */
+    background-color: #9c2626b3; /* Choose your highlight color */
     color: aliceblue; /* Text color when highlighted */
 }
 
 /* To prevent hover from interfering when the item is selected */
 .content ul li.selected:hover {
-    background-color: #9c2626d9; /* Keep the same color when hovering over a selected item */
+    background-color: #9c2626b3; /* Keep the same color when hovering over a selected item */
 }
 
 /* Paragraph Style */
@@ -100,7 +104,7 @@
     flex-direction: row; /* Stack items on top of each other by default */
 }
 
-@media (max-width: 768px) { /* Adjust for mobile view */
+@media (max-width: 740px) { /* Adjust for mobile view */
     .container {
         flex-direction: column; /* Place items next to each other */
         justify-content: center;
@@ -114,5 +118,11 @@
     }
     .collapsible.active {
         border-radius: 20px 20px 0 0;
+    }
+    body {
+        margin: 0px;
+    }
+    .dropdown {
+        margin-bottom: 8px;
     }
 }
