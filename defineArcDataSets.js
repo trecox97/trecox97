@@ -453,108 +453,94 @@ const allArcs = [...arcs2008IrelandTrip, ...arcs2016StudyAbroad, ...arcs2018Euro
 
 
 const defaultCityLabels = [
-  { lat: 40.7128, lng: -74.0060, name: "New York City" },
-  { lat: 35.6895, lng: 139.6917, name: "Tokyo" },
-  { lat: 48.8566, lng: 2.3522, name: "Paris" },
-  { lat: -1.2864, lng: 36.8172, name: "Nairobi" },
-  { lat: 37.8715, lng: -122.2730, name: "Berkeley" },
-  { lat: 22.3193, lng: 114.1694, name: "Hong Kong" },
-  { lat: 40.4168, lng: -3.7038, name: "Madrid" },
-  { lat: 41.9028, lng: 12.4964, name: "Rome" },
-  //{ lat: 51.5074, lng: -0.1278, name: "London" },
-  { lat: 53.3498, lng: -6.2603, name: "Dublin" },
-  { lat: 55.6761, lng: 12.5683, name: "Copenhagen" },
-  { lat: 47.3769, lng: 8.5417, name: "Zurich" },
-  { lat: 47.6062, lng: -122.3321, name: "Seattle" },
-  { lat: 43.6970, lng: -114.3514, name: "Sun Valley" },
-  { lat: 40.7608, lng: -111.8910, name: "Salt Lake City" },
-  { lat: 13.7563, lng: 100.5018, name: "Bangkok" },
-  { lat: 20.6534, lng: -105.2253, name: "Puerto Vallarta" },
-  //{ lat: 38.1904, lng: -119.9827, name: "Pinecrest" },
-  { lat: 46.8139, lng: -71.2082, name: "Quebec City" },
-  //{ lat: 39.6953, lng: 3.0176, name: "Mallorca" },
-  //{ lat: 43.2965, lng: 5.3698, name: "Marseille" },
-  //{ lat: 37.8882, lng: -4.7794, name: "Cordoba" },
-  { lat: 52.3676, lng: 4.9041, name: "Amsterdam" },
-  //{ lat: 49.6117, lng: 6.1319, name: "Luxembourg" },
-  //{ lat: 54.5973, lng: -5.9301, name: "Belfast" },
-  //{ lat: 43.7696, lng: 11.2558, name: "Florence" },
-  { lat: 9.1450, lng: 40.4897, name: "Addis Ababa" },
-  //{ lat: -0.1022, lng: 34.7617, name: "Kisumu" },
-  //{ lat: -4.0435, lng: 39.6682, name: "Mombasa" },
-  { lat: -6.1659, lng: 39.2026, name: "Zanzibar" },
-  { lat: 43.0618, lng: 141.3545, name: "Sapporo" },
-  //{ lat: 33.5904, lng: 130.4017, name: "Fukuoka" },
-  { lat: 34.3853, lng: 132.4553, name: "Hiroshima" },
-  //{ lat: 50.8503, lng: 4.3517, name: "Brussels" }
+  { lat: 40.7128, lng: -74.0060, name: "New York City", size: 1.2 },
+  { lat: 35.6895, lng: 139.6917, name: "Tokyo", size: 1.2 },
+  { lat: 48.8566, lng: 2.3522, name: "Paris", size: 1.2 },
+  { lat: -1.2864, lng: 36.8172, name: "Nairobi", size: 1.2 },
+  { lat: 37.8715, lng: -122.2730, name: "Berkeley/Pinecrest", size: 1.2 },
+  { lat: 22.3193, lng: 114.1694, name: "Hong Kong", size: 1.2 },
+  { lat: 40.4168, lng: -3.7038, name: "Madrid", size: 1.2 },
+  { lat: 41.9028, lng: 12.4964, name: "Rome", size: 1.2 },
+  { lat: 53.3498, lng: -6.2603, name: "Dublin", size: 1.2 },
+  { lat: 55.6761, lng: 12.5683, name: "Copenhagen", size: 1.2 },
+  { lat: 47.3769, lng: 8.5417, name: "Zurich", size: 1.2 },
+  { lat: 47.6062, lng: -122.3321, name: "Seattle", size: 1.2 },
+  { lat: 43.6970, lng: -114.3514, name: "Sun Valley", size: 1.2 },
+  { lat: 40.7608, lng: -111.8910, name: "Salt Lake City", size: 1.2 },
+  { lat: 13.7563, lng: 100.5018, name: "Bangkok", size: 1.2 },
+  { lat: 20.6534, lng: -105.2253, name: "Puerto Vallarta", size: 1.2 },
+  { lat: 46.8139, lng: -71.2082, name: "Québec City", size: 1.2 },
+  { lat: 52.3676, lng: 4.9041, name: "Amsterdam", size: 1.2 },
+  { lat: 9.03, lng: 38.74, name: "Addis Ababa", size: 1.2 },
+  { lat: -6.1659, lng: 39.2026, name: "Zanzibar", size: 1.2 },
+  { lat: 43.0618, lng: 141.3545, name: "Sapporo", size: 1.2 },
+  { lat: 34.3853, lng: 132.4553, name: "Hiroshima", size: 1 },
 ];
 
 const usCities = [
-  { lat: 40.7128, lng: -74.0060, name: "New York City" },
-  { lat: 43.6970, lng: -114.3514, name: "Sun Valley" },
-  { lat: 40.7608, lng: -111.8910, name: "Salt Lake City" },
-  { lat: 37.8715, lng: -122.2730, name: "Berkeley" },
-  { lat: 38.18797, lng: -120.0083704, name: "Pinecrest" }
+  { lat: 40.7128, lng: -74.0060, name: "New York City", size: 1.2 },
+  { lat: 43.6970, lng: -114.3514, name: "Sun Valley", size: 1.2 },
+  { lat: 40.7608, lng: -111.8910, name: "Salt Lake City", size: 1.2 },
+  { lat: 37.8715, lng: -122.2730, name: "Berkeley/Pinecrest", size: 1.2 }
 ];
 
 const peaceCorpsCities = [
-  { lat: 40.7128, lng: -74.0060, name: "New York City" },
-  { lat: 35.6895, lng: 139.6917, name: "Tokyo" },
-  { lat: -1.2864, lng: 36.8172, name: "Nairobi" },
-  { lat: 22.3193, lng: 114.1694, name: "Hong Kong" },
-  { lat: 51.5074, lng: -0.1278, name: "London" },
-  { lat: 47.6062, lng: -122.3321, name: "Seattle" },
-  { lat: 13.7563, lng: 100.5018, name: "Bangkok" },
-  { lat: 9.1450, lng: 40.4897, name: "Addis Ababa" },
-  { lat: -0.1022, lng: 34.7617, name: "Kisumu" },
-  { lat: -4.0435, lng: 39.6682, name: "Mombasa" },
-  { lat: -6.1659, lng: 39.2026, name: "Zanzibar" },
-  { lat: 33.5904, lng: 130.4017, name: "Fukuoka" },
-  { lat: 34.3853, lng: 132.4553, name: "Hiroshima" },
+  { lat: 40.7128, lng: -74.0060, name: "New York City", size: 1.2 },
+  { lat: 35.6895, lng: 139.6917, name: "Tokyo", size: 1.2 },
+  { lat: -1.2864, lng: 36.8172, name: "Nairobi", size: 1.2 },
+  { lat: 22.3193, lng: 114.1694, name: "Hong Kong", size: 1.2 },
+  { lat: 51.5074, lng: -0.1278, name: "London", size: 1.2 },
+  { lat: 47.6062, lng: -122.3321, name: "Seattle", size: 1.2 },
+  { lat: 13.7563, lng: 100.5018, name: "Bangkok", size: 1.2 },
+  { lat: 9.03, lng: 38.74, name: "Addis Ababa", size: 1.2 },
+  { lat: -0.1022, lng: 34.7617, name: "Kisumu", size: .8 },
+  { lat: -4.0435, lng: 39.6682, name: "Mombasa", size: 1.2 },
+  { lat: -6.1659, lng: 39.2026, name: "Zanzibar", size: 1.2 },
+  { lat: 33.5904, lng: 130.4017, name: "Fukuoka", size: .6 },
+  { lat: 34.3853, lng: 132.4553, name: "Hiroshima", size: .6},
 ];
 
 const skiTripCities = [
-  { lat: 40.7128, lng: -74.0060, name: "New York City" },
-  { lat: 46.8139, lng: -71.2082, name: "Quebec City" },
-  { lat: 35.6895, lng: 139.6917, name: "Tokyo" },
-  { lat: 43.0618, lng: 141.3545, name: "Sapporo" }
+  { lat: 40.7128, lng: -74.0060, name: "New York City", size: 1.2 },
+  { lat: 46.8139, lng: -71.2082, name: "Québec City", size: 1.2 },
+  { lat: 35.6895, lng: 139.6917, name: "Tokyo", size: 1.2 },
+  { lat: 43.0618, lng: 141.3545, name: "Sapporo", size: 1.2 }
 ];
 
 const euroTrip2022Cities = [
-  { lat: 40.7128, lng: -74.0060, name: "New York City" },
-  { lat: 48.8566, lng: 2.3522, name: "Paris" },
-  { lat: 40.4168, lng: -3.7038, name: "Madrid" },
-  { lat: 55.6761, lng: 12.5683, name: "Copenhagen" },
-  { lat: 39.6953, lng: 3.0176, name: "Mallorca" },
-  { lat: 43.2965, lng: 5.3698, name: "Marseille" },
-  { lat: 37.8882, lng: -4.7794, name: "Cordoba" },
-  { lat: 52.3676, lng: 4.9041, name: "Amsterdam" },
-  { lat: 50.8503, lng: 4.3517, name: "Brussels" }
+  { lat: 40.7128, lng: -74.0060, name: "New York City", size: 1.2 },
+  { lat: 48.8566, lng: 2.3522, name: "Paris", size: 1.2 },
+  { lat: 40.4168, lng: -3.7038, name: "Madrid", size: 1.1 },
+  { lat: 55.6761, lng: 12.5683, name: "Copenhagen", size: 1.2 },
+  { lat: 39.6953, lng: 3.0176, name: "Mallorca", size: 1 },
+  { lat: 43.2965, lng: 5.3698, name: "Marseille", size: 1.2 },
+  { lat: 37.8882, lng: -4.7794, name: "Córdoba", size: 1 },
+  { lat: 52.3676, lng: 4.9041, name: "Amsterdam", size: 1.2 }
 ];
 
 const mexicoTripCities = [
-  { lat: 40.7608, lng: -111.8910, name: "Salt Lake City" },
-  { lat: 20.6534, lng: -105.2253, name: "Puerto Vallarta" },
+  { lat: 40.7608, lng: -111.8910, name: "Salt Lake City", size: 1.2 },
+  { lat: 20.6534, lng: -105.2253, name: "Puerto Vallarta", size: 1.2 }
 ];
 
 const euroTrip2018Cities = [
-  { lat: 40.7128, lng: -74.0060, name: "New York City" },
-  { lat: 48.8566, lng: 2.3522, name: "Paris" },
-  { lat: 41.9028, lng: 12.4964, name: "Rome" },
-  { lat: 47.3769, lng: 8.5417, name: "Zurich" },
-  { lat: 43.7696, lng: 11.2558, name: "Florence" },
+  { lat: 40.7128, lng: -74.0060, name: "New York City", size: 1.2 },
+  { lat: 48.8566, lng: 2.3522, name: "Paris", size: 1.2 },
+  { lat: 41.9028, lng: 12.4964, name: "Rome", size: 1.2 },
+  { lat: 47.3769, lng: 8.5417, name: "Zurich", size: 1.2 },
+  { lat: 43.7696, lng: 11.2558, name: "Florence", size: 1.2 }
 ];
 
 const studyAbroadCities = [
-    { lat: 40.7128, lng: -74.0060, name: "New York City" },
-    { lat: 52.3676, lng: 4.9041, name: "Amsterdam" },
-    { lat: 49.6117, lng: 6.1319, name: "Luxembourg" },
-    { lat: 50.8503, lng: 4.3517, name: "Brussels" },
-    { lat: 48.8566, lng: 2.3522, name: "Paris" }
+  { lat: 40.7128, lng: -74.0060, name: "New York City", size: 1.2 },
+  { lat: 52.3676, lng: 4.9041, name: "Amsterdam", size: 1 },
+  { lat: 49.6117, lng: 6.1319, name: "Luxembourg", size: .7 },
+  { lat: 50.8503, lng: 4.3517, name: "Brussels", size: .8 },
+  { lat: 48.8566, lng: 2.3522, name: "Paris", size: .9 }
 ];
 
 const irelandTripCities = [
-  { lat: 40.7128, lng: -74.0060, name: "New York City" },
-  { lat: 53.3498, lng: -6.2603, name: "Dublin" },
-  { lat: 54.5973, lng: -5.9301, name: "Belfast" }
+  { lat: 40.7128, lng: -74.0060, name: "New York City", size: 1.2 },
+  { lat: 53.3498, lng: -6.2603, name: "Dublin", size: .9 },
+  { lat: 54.5973, lng: -5.9301, name: "Belfast", size: .9 }
 ];

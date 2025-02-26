@@ -26,10 +26,6 @@
     border-radius: 20px 0 0 0;
 }
 
-.container {
-    margin-bottom: 10px;
-}
-
 /* Active and Hover State for Collapsible */
 .active,
 .collapsible:hover {
@@ -103,7 +99,12 @@
 .container {
     display: flex;
     flex-direction: row; /* Stack items on top of each other by default */
+    margin-bottom: 10px;
 }
+
+#arcList li:last-child {
+    border-radius: 0 0 0 20px;
+  }
 
 @media (max-width: 740px) { /* Adjust for mobile view */
     .container {
@@ -129,4 +130,7 @@
     #globeViz {
         border-radius: 20px;
     }
+    #arcList li:last-child {
+        border-radius: 0 0 20px 20px;
+      }
 }
