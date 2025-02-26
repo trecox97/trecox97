@@ -21,7 +21,7 @@ const globe = new Globe(globeContainer)
   .labelLat(d => d.lat)
   .labelLng(d => d.lng)
   .labelText(d => d.name)
-  .labelSize(1.2)
+  .labelSize(d => d.size)
   .labelColor(() => 'white') // You can customize this
   .labelResolution(2); // Improves text rendering quality
 

@@ -9,9 +9,9 @@
   <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
   <audio id="my_audio" src="Songs/PlanetEarth.mp3"></audio>
   <script>
-    window.onload = function () {
-      document.getElementById("my_audio").play();
-    }
+    //window.onload = function () {
+    //  document.getElementById("my_audio").play();
+    //}
   </script>
   <script src="//unpkg.com/globe.gl"></script>
   <!--<script src="../../dist/globe.gl.js"></script>-->
@@ -21,7 +21,6 @@
   <header id="header"></header>
   <script src="loadHeader.js"></script>
   <h2>These arcs show my international travels and moves.</h2>
-  <h2>(It's a work in progress)</h2>
   <div>
     <button id="playPauseBtn">Play</button>
   </div>
@@ -39,58 +38,36 @@
 
   <script src="defineArcDataSets.js"></script>
 
-  <script>// Define all datasets  
-    const datasets = {
-      "All Travels & Moves": allArcs,
-      "USA Moves": arcsUSAMoves,
-      "2025 Ski Trips": arcs2025SkiTrips,
-      "2022-2024 Peace Corps Travels": arcsPeaceCorpsTravels,
-      "2021 & 2022 Euro Trips": arcs2022EuroTrip,
-      "2021 Mexico Trip": arcs2021MexicoTrip,
-      "2018 Euro Trip": arcs2018EuroTrip,
-      "2016 Study Abroad": arcs2016StudyAbroad,
-      "2008 Ireland Trip": arcs2008IrelandTrip,
-    };
+  <script>
+      const list = document.getElementById('arcList');
 
-    // Populate list dynamically.
-    const list = document.getElementById('arcList');
-    Object.keys(datasets).forEach(dataset => {
-      const listItem = document.createElement('li');
-      listItem.textContent = dataset;
-      if (dataset === "All Travels & Moves") {
-        listItem.classList.add('selected');
-      }
-      listItem.addEventListener('click', function () {
-        // Remove the 'selected' class from any previously selected <li>
-        const selectedItems = list.querySelectorAll('.selected');
-        selectedItems.forEach(item => item.classList.remove('selected'));
+      const datasets = {
+        "All Travels & Moves": { arcs: allArcs, labels: defaultCityLabels },
+        "USA Moves": { arcs: arcsUSAMoves, labels: usCities },
+        "2025 Ski Trips": { arcs: arcs2025SkiTrips, labels: skiTripCities },
+        "2022-2024 Peace Corps Travels": { arcs: arcsPeaceCorpsTravels, labels: peaceCorpsCities },
+        "2021 & 2022 Euro Trips": { arcs: arcs2022EuroTrip, labels: euroTrip2022Cities },
+        "2021 Mexico Trip": { arcs: arcs2021MexicoTrip, labels: mexicoTripCities },
+        "2018 Euro Trip": { arcs: arcs2018EuroTrip, labels: euroTrip2018Cities },
+        "2016 Study Abroad": { arcs: arcs2016StudyAbroad, labels: studyAbroadCities },
+        "2008 Ireland Trip": { arcs: arcs2008IrelandTrip, labels: irelandTripCities }
+      };
 
-        // Add the 'selected' class to the clicked <li>
-        listItem.classList.add('selected');
+      Object.keys(datasets).forEach(dataset => {
+        const listItem = document.createElement('li');
+        listItem.textContent = dataset;
+        if (dataset === "All Travels & Moves") {
+          listItem.classList.add('selected');
+        }
 
-        // Load the data for the clicked item
-        globe.arcsData(datasets[dataset]);
+        listItem.addEventListener('click', function () {
+          list.querySelectorAll('.selected').forEach(item => item.classList.remove('selected'));
+          listItem.classList.add('selected');
+          globe.arcsData(datasets[dataset].arcs).labelsData(datasets[dataset].labels);
+        });
+
+        list.appendChild(listItem);
       });
-      list.appendChild(listItem);
-    });
-
-    // Function to update the border radius based on screen width
-    function updateBorderRadius() {
-      const lastListItem = list.lastElementChild;
-      if (!lastListItem) return;
-
-      if (window.matchMedia("(max-width: 740px)").matches) {
-        lastListItem.style.borderRadius = "0 0 20px 20px"; // Mobile behavior
-      } else {
-        lastListItem.style.borderRadius = "0 0 0 20px"; // Default behavior
-      }
-    }
-
-    // Run on initial load
-    updateBorderRadius();
-
-    // Add an event listener to update on window resize
-    window.addEventListener("resize", updateBorderRadius);
 
     // Collapsible button functionality
     const coll = document.querySelector('.collapsible');
@@ -102,8 +79,9 @@
       } else {
         content.style.maxHeight = content.scrollHeight + 180 + "px";
       }
-    });    
+    });
   </script>
+
 
   <script src="createTravelGlobe.js"></script>
 
