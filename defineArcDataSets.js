@@ -470,11 +470,11 @@ const defaultCityLabels = [
   { lat: 13.7563, lng: 100.5018, name: "Bangkok", size: 1.2 },
   { lat: 20.6534, lng: -105.2253, name: "Puerto Vallarta", size: 1.2 },
   { lat: 46.8139, lng: -71.2082, name: "Quebec City", size: 1.2 },
-  { lat: 52.3676, lng: 4.9041, name: "Amsterdam", size: 1.2 },
   { lat: 9.03, lng: 38.74, name: "Addis Ababa", size: 1.2 },
   { lat: -6.1659, lng: 39.2026, name: "Zanzibar", size: 1.2 },
   { lat: 43.0618, lng: 141.3545, name: "Sapporo", size: 1.2 },
   { lat: 34.3853, lng: 132.4553, name: "Hiroshima", size: 1 },
+  { lat: 51.5074, lng: -0.1278, name: "London", size: 1.2 }
 ];
 
 const usCities = [
@@ -497,7 +497,7 @@ const peaceCorpsCities = [
   { lat: -4.0435, lng: 39.6682, name: "Mombasa", size: .8 },
   { lat: -6.1659, lng: 39.2026, name: "Zanzibar", size: 1.2 },
   { lat: 33.5904, lng: 130.4017, name: "Fukuoka", size: .6 },
-  { lat: 34.3853, lng: 132.4553, name: "Hiroshima", size: .6},
+  { lat: 34.3853, lng: 132.4553, name: "Hiroshima", size: .6}
 ];
 
 const skiTripCities = [
