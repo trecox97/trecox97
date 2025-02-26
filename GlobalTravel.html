@@ -39,36 +39,81 @@
   <script src="defineArcDataSets.js"></script>
 
   <script>
-      const list = document.getElementById('arcList');
+  const list = document.getElementById('arcList');
 
-      const datasets = {
-        "All Travels & Moves": { arcs: allArcs, labels: defaultCityLabels },
-        "USA Moves": { arcs: arcsUSAMoves, labels: usCities },
-        "2025 Ski Trips": { arcs: arcs2025SkiTrips, labels: skiTripCities },
-        "2022-2024 Peace Corps Travels": { arcs: arcsPeaceCorpsTravels, labels: peaceCorpsCities },
-        "2021 & 2022 Euro Trips": { arcs: arcs2022EuroTrip, labels: euroTrip2022Cities },
-        "2021 Mexico Trip": { arcs: arcs2021MexicoTrip, labels: mexicoTripCities },
-        "2018 Euro Trip": { arcs: arcs2018EuroTrip, labels: euroTrip2018Cities },
-        "2016 Study Abroad": { arcs: arcs2016StudyAbroad, labels: studyAbroadCities },
-        "2008 Ireland Trip": { arcs: arcs2008IrelandTrip, labels: irelandTripCities }
-      };
-
-      Object.keys(datasets).forEach(dataset => {
-        const listItem = document.createElement('li');
-        listItem.textContent = dataset;
-        if (dataset === "All Travels & Moves") {
-          listItem.classList.add('selected');
+    // Define dataset with view (lat, lng) for each
+    const datasets = {
+      "All Travels & Moves": { 
+        arcs: allArcs, 
+        labels: defaultCityLabels,
+        view: { lat: 40.7128, lng: -74.0060,  altitude: 2 } // New York Coords
+      },
+      "USA Moves": { 
+        arcs: arcsUSAMoves, 
+        labels: usCities,
+        view: { lat: 39.8283, lng: -98.5795, altitude: 1.5 } // Central USA
+      },
+      "2025 Ski Trips": { 
+        arcs: arcs2025SkiTrips, 
+        labels: skiTripCities,
+        view: { lat: 40.7128, lng: -74.0060, altitude: 2.5} // New York Coords
+      },
+      "2022-2024 Peace Corps Travels": { 
+        arcs: arcsPeaceCorpsTravels, 
+        labels: peaceCorpsCities,
+        view: { lat: -1.2864, lng: 36.8172, altitude: 1.5 } // Nairobi
+      },
+      "2021 & 2022 Euro Trips": { 
+        arcs: arcs2022EuroTrip, 
+        labels: euroTrip2022Cities,
+        view: { lat: 48.8566, lng: 2.3522, altitude: .75 } // Paris
+      },
+      "2021 Mexico Trip": { 
+        arcs: arcs2021MexicoTrip, 
+        labels: mexicoTripCities,
+        view: { lat: 23.6345, lng: -102.5528, altitude: 1.5 } // Mexico)
+      },
+      "2018 Euro Trip": { 
+        arcs: arcs2018EuroTrip, 
+        labels: euroTrip2018Cities,
+        view: { lat: 47.3769, lng: 8.5417, altitude: .75 } // Zurich
+      },
+      "2016 Study Abroad": { 
+        arcs: arcs2016StudyAbroad, 
+        labels: studyAbroadCities,
+        view: { lat: 50.8503, lng: 4.3517, altitude: .5 } // Brussels
+      },
+      "2008 Ireland Trip": { 
+        arcs: arcs2008IrelandTrip, 
+        labels: irelandTripCities,
+        view: { lat: 50, lng: -20, altitude: 1 } // Between Ireland and New York
+      }
+    };
+    
+    Object.keys(datasets).forEach(dataset => {
+      const listItem = document.createElement('li');
+      listItem.textContent = dataset;
+      if (dataset === "All Travels & Moves") {
+        listItem.classList.add('selected');
+      }
+    
+      listItem.addEventListener('click', function () {
+        list.querySelectorAll('.selected').forEach(item => item.classList.remove('selected'));
+        listItem.classList.add('selected');
+    
+        // Update the arcs and labels on the globe
+        globe.arcsData(datasets[dataset].arcs).labelsData(datasets[dataset].labels);
+    
+        // Animate the globe to the specified view coordinates for the selected dataset
+        const view = datasets[dataset].view;
+        if (view) {
+          globe.pointOfView({ lat: view.lat, lng: view.lng, altitude: view.altitude }, 3000); // Adjusts the globe's view smoothly over 3 seconds
         }
-
-        listItem.addEventListener('click', function () {
-          list.querySelectorAll('.selected').forEach(item => item.classList.remove('selected'));
-          listItem.classList.add('selected');
-          globe.arcsData(datasets[dataset].arcs).labelsData(datasets[dataset].labels);
-        });
-
-        list.appendChild(listItem);
       });
-
+    
+      list.appendChild(listItem);
+    });
+    
     // Collapsible button functionality
     const coll = document.querySelector('.collapsible');
     const content = document.querySelector('.content');
@@ -80,6 +125,7 @@
         content.style.maxHeight = content.scrollHeight + 180 + "px";
       }
     });
+    
   </script>
 
 

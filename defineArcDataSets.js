@@ -89,13 +89,13 @@ const arcsPeaceCorpsTravels = [
   {
     startLat: -1.286389,  // Nairobi
     startLng: 36.817223,
-    endLat: -0.0917,  // Kisumu
-    endLng: 34.7679,
+    endLat: -0.2833,  // Kakamega
+    endLng: 34.7500,
     color: ["green", "red"]
   },
   {
-    startLat: -0.0917,  // Kisumu
-    startLng: 34.7679,
+    startLat: -0.2833,  // Kakamega
+    startLng: 34.7500,
     endLat: -1.286389,  // Nairobi
     endLng: 36.817223,
     color: ["red", "green"]
@@ -469,7 +469,7 @@ const defaultCityLabels = [
   { lat: 40.7608, lng: -111.8910, name: "Salt Lake City", size: 1.2 },
   { lat: 13.7563, lng: 100.5018, name: "Bangkok", size: 1.2 },
   { lat: 20.6534, lng: -105.2253, name: "Puerto Vallarta", size: 1.2 },
-  { lat: 46.8139, lng: -71.2082, name: "Québec City", size: 1.2 },
+  { lat: 46.8139, lng: -71.2082, name: "Quebec City", size: 1.2 },
   { lat: 52.3676, lng: 4.9041, name: "Amsterdam", size: 1.2 },
   { lat: 9.03, lng: 38.74, name: "Addis Ababa", size: 1.2 },
   { lat: -6.1659, lng: 39.2026, name: "Zanzibar", size: 1.2 },
@@ -493,8 +493,8 @@ const peaceCorpsCities = [
   { lat: 47.6062, lng: -122.3321, name: "Seattle", size: 1.2 },
   { lat: 13.7563, lng: 100.5018, name: "Bangkok", size: 1.2 },
   { lat: 9.03, lng: 38.74, name: "Addis Ababa", size: 1.2 },
-  { lat: -0.1022, lng: 34.7617, name: "Kisumu", size: .8 },
-  { lat: -4.0435, lng: 39.6682, name: "Mombasa", size: 1.2 },
+  { lat: -0.2833, lng: 34.7500, name: "Kakamega", size: 0.8 },
+  { lat: -4.0435, lng: 39.6682, name: "Mombasa", size: .8 },
   { lat: -6.1659, lng: 39.2026, name: "Zanzibar", size: 1.2 },
   { lat: 33.5904, lng: 130.4017, name: "Fukuoka", size: .6 },
   { lat: 34.3853, lng: 132.4553, name: "Hiroshima", size: .6},
@@ -502,7 +502,7 @@ const peaceCorpsCities = [
 
 const skiTripCities = [
   { lat: 40.7128, lng: -74.0060, name: "New York City", size: 1.2 },
-  { lat: 46.8139, lng: -71.2082, name: "Québec City", size: 1.2 },
+  { lat: 46.8139, lng: -71.2082, name: "Quebec City", size: 1.2 },
   { lat: 35.6895, lng: 139.6917, name: "Tokyo", size: 1.2 },
   { lat: 43.0618, lng: 141.3545, name: "Sapporo", size: 1.2 }
 ];
@@ -514,7 +514,7 @@ const euroTrip2022Cities = [
   { lat: 55.6761, lng: 12.5683, name: "Copenhagen", size: 1.2 },
   { lat: 39.6953, lng: 3.0176, name: "Mallorca", size: 1 },
   { lat: 43.2965, lng: 5.3698, name: "Marseille", size: 1.2 },
-  { lat: 37.8882, lng: -4.7794, name: "Córdoba", size: 1 },
+  { lat: 37.8882, lng: -4.7794, name: "Cordoba", size: 1 },
   { lat: 52.3676, lng: 4.9041, name: "Amsterdam", size: 1.2 }
 ];
 
