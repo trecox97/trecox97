@@ -10,7 +10,8 @@ const minDashGap = 0.1;
 const maxDashGap = 0.5;
 
 const globe = new Globe(globeContainer)
-  .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
+  .globeImageUrl('Images/earth-night.jpg')
+  .backgroundImageUrl('Images/night-sky.png')
   .arcsData(arcsData)
   .arcColor('color')
   .arcDashLength(() => Math.random() * (maxDashLength - minDashLength) + minDashLength)
@@ -22,8 +23,8 @@ const globe = new Globe(globeContainer)
   .labelLng(d => d.lng)
   .labelText(d => d.name)
   .labelSize(d => d.size)
-  .labelColor(() => 'white') // You can customize this
-  .labelResolution(2); // Improves text rendering quality
+  .labelColor(() => 'white')
+  .labelResolution(3); // Improves text rendering quality
 
 // Function to update the globe size on window resize
 function resizeGlobe() {
@@ -55,7 +56,7 @@ function resizeGlobeContainer() {
 
 // Auto-rotate
 globe.controls().autoRotate = true;
-globe.controls().autoRotateSpeed = 0.35;
+globe.controls().autoRotateSpeed = 0.2;
 
 // Starting point of view
 globe.pointOfView({ lat: 22, lng: 25, altitude: 2.5 });
