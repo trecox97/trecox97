@@ -4,6 +4,15 @@
     border-radius: 0 20px 20px 20px;
 }
 
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+a:hover {
+    color: #0064B0;
+}
+
 /* Content Style */
 .collapsible {
     background-color: #9c2626b3; /* Choose your highlight color */
