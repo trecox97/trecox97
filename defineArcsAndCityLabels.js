@@ -131,13 +131,14 @@ const arcsPeaceCorpsTravels = [
   {
     startLat: -1.286389, // Nairobi
     startLng: 36.817223,
-    endLat: 9.03,  // Addis Ababa
-    endLng: 38.74,
+    endLat: 9.0192,  // Addis Ababa
+    endLng: 38.7524,
     color: ["green", "yellow"]
   },
+
   {
-    startLat: 9.03, // Addis Ababa
-    startLng: 38.74,
+    startLat: 9.0192, // Addis Ababa
+    startLng: 38.7524,
     endLat: 13.7563,  // Bangkok
     endLng: 100.5018,
     color: ["yellow", "white", "blue"]
@@ -197,13 +198,13 @@ const arcs2021MexicoTrip = [
   {
     startLat: 40.7608, // Salt Lake City
     startLng: -111.8910,
-    endLat: 20.6534,  // Puerto Vallarta
-    endLng: -105.2253,
+    endLat: 20.8689,  // Sayulita
+    endLng: -105.4408,
     color: ["red", "white", "green"]
   },
   {
-    startLat: 20.6534, // Puerto Vallarta
-    startLng: -105.2253,
+    startLat: 20.8689, // Sayulita
+    startLng: -105.4408,
     endLat: 40.7608,  // Salt Lake City
     endLng: -111.8910,
     color: ["green", "white", "red"]
@@ -452,7 +453,7 @@ const arcs2025SkiTrips = [
 const allArcs = [...arcs2008IrelandTrip, ...arcs2016StudyAbroad, ...arcs2018EuroTrip, ...arcs2021MexicoTrip, ...arcs2022EuroTrip, ...arcs2025SkiTrips, ...arcsPeaceCorpsTravels, ...arcsUSAMoves];
 
 
-const defaultCityLabels = [
+const labelsDefaultCities = [
   { lat: 40.7128, lng: -74.0060, name: "New York City", size: 1.2 },
   { lat: 35.6895, lng: 139.6917, name: "Tokyo", size: 1.2 },
   { lat: 48.8566, lng: 2.3522, name: "Paris", size: 1.2 },
@@ -468,23 +469,23 @@ const defaultCityLabels = [
   { lat: 43.6970, lng: -114.3514, name: "Sun Valley", size: 1.2 },
   { lat: 40.7608, lng: -111.8910, name: "Salt Lake City", size: 1.2 },
   { lat: 13.7563, lng: 100.5018, name: "Bangkok", size: 1.2 },
-  { lat: 20.6534, lng: -105.2253, name: "Puerto Vallarta", size: 1.2 },
+  { lat: 20.8689, lng: -105.4408, name: "Sayulita", size: 1.2 },
   { lat: 46.8139, lng: -71.2082, name: "Quebec City", size: 1.2 },
-  { lat: 9.03, lng: 38.74, name: "Addis Ababa", size: 1.2 },
+  { lat: 9.0192, lng: 38.7524, name: "Addis Ababa", size: 1.2 },
   { lat: -6.1659, lng: 39.2026, name: "Zanzibar", size: 1.2 },
   { lat: 43.0618, lng: 141.3545, name: "Sapporo", size: 1.2 },
   { lat: 34.3853, lng: 132.4553, name: "Hiroshima", size: 1 },
   { lat: 51.5074, lng: -0.1278, name: "London", size: 1.2 }
 ];
 
-const usCities = [
+const labelsUSACities = [
   { lat: 40.7128, lng: -74.0060, name: "New York City", size: 1.2 },
   { lat: 43.6970, lng: -114.3514, name: "Sun Valley", size: 1.2 },
   { lat: 40.7608, lng: -111.8910, name: "Salt Lake City", size: 1.2 },
   { lat: 37.8715, lng: -122.2730, name: "Berkeley/Pinecrest", size: 1.2 }
 ];
 
-const peaceCorpsCities = [
+const labelsPeaceCorpsCities = [
   { lat: 40.7128, lng: -74.0060, name: "New York City", size: 1.2 },
   { lat: 35.6895, lng: 139.6917, name: "Tokyo", size: 1.2 },
   { lat: -1.2864, lng: 36.8172, name: "Nairobi", size: 1.2 },
@@ -492,22 +493,22 @@ const peaceCorpsCities = [
   { lat: 51.5074, lng: -0.1278, name: "London", size: 1.2 },
   { lat: 47.6062, lng: -122.3321, name: "Seattle", size: 1.2 },
   { lat: 13.7563, lng: 100.5018, name: "Bangkok", size: 1.2 },
-  { lat: 9.03, lng: 38.74, name: "Addis Ababa", size: 1.2 },
-  { lat: -0.2833, lng: 34.7500, name: "Kakamega", size: 0.8 },
+  { lat: 9.0192, lng: 38.7524, name: "Addis Ababa", size: 1.2 },
+  { lat: -0.2833, lng: 34.7500, name: "Kakamega", size: .8 },
   { lat: -4.0435, lng: 39.6682, name: "Mombasa", size: .8 },
   { lat: -6.1659, lng: 39.2026, name: "Zanzibar", size: 1.2 },
   { lat: 33.5904, lng: 130.4017, name: "Fukuoka", size: .6 },
   { lat: 34.3853, lng: 132.4553, name: "Hiroshima", size: .6}
 ];
 
-const skiTripCities = [
+const labelsSkiTrips2025Cities = [
   { lat: 40.7128, lng: -74.0060, name: "New York City", size: 1.2 },
   { lat: 46.8139, lng: -71.2082, name: "Quebec City", size: 1.2 },
   { lat: 35.6895, lng: 139.6917, name: "Tokyo", size: 1.2 },
   { lat: 43.0618, lng: 141.3545, name: "Sapporo", size: 1.2 }
 ];
 
-const euroTrip2022Cities = [
+const labelsEuroTrip2022Cities = [
   { lat: 40.7128, lng: -74.0060, name: "New York City", size: 1.2 },
   { lat: 48.8566, lng: 2.3522, name: "Paris", size: 1.2 },
   { lat: 40.4168, lng: -3.7038, name: "Madrid", size: 1.1 },
@@ -518,12 +519,12 @@ const euroTrip2022Cities = [
   { lat: 52.3676, lng: 4.9041, name: "Amsterdam", size: 1.2 }
 ];
 
-const mexicoTripCities = [
+const labelsMexicoTripCities = [
   { lat: 40.7608, lng: -111.8910, name: "Salt Lake City", size: 1.2 },
-  { lat: 20.6534, lng: -105.2253, name: "Puerto Vallarta", size: 1.2 }
+  { lat: 20.8689, lng: -105.4408, name: "Sayulita", size: 1.2 }
 ];
 
-const euroTrip2018Cities = [
+const labelsEuroTrip2018Cities = [
   { lat: 40.7128, lng: -74.0060, name: "New York City", size: 1.2 },
   { lat: 48.8566, lng: 2.3522, name: "Paris", size: 1.2 },
   { lat: 41.9028, lng: 12.4964, name: "Rome", size: 1.2 },
@@ -531,7 +532,7 @@ const euroTrip2018Cities = [
   { lat: 43.7696, lng: 11.2558, name: "Florence", size: 1.2 }
 ];
 
-const studyAbroadCities = [
+const labelsStudyAbroad2016Cities = [
   { lat: 40.7128, lng: -74.0060, name: "New York City", size: 1.2 },
   { lat: 52.3676, lng: 4.9041, name: "Amsterdam", size: 1 },
   { lat: 49.6117, lng: 6.1319, name: "Luxembourg", size: .7 },
@@ -539,7 +540,7 @@ const studyAbroadCities = [
   { lat: 48.8566, lng: 2.3522, name: "Paris", size: .9 }
 ];
 
-const irelandTripCities = [
+const labelsIrelandTrip2006Cities = [
   { lat: 40.7128, lng: -74.0060, name: "New York City", size: 1.2 },
   { lat: 53.3498, lng: -6.2603, name: "Dublin", size: .9 },
   { lat: 54.5973, lng: -5.9301, name: "Belfast", size: .9 }

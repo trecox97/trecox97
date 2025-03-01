@@ -1,14 +1,15 @@
 // Default dataset
 let arcsData = allArcs;
+let labelData = labelsDefaultCities;
 
 const globeContainer = document.getElementById('globeViz');
 
-// Create the Globe instance
 const minDashLength = 0.4;
 const maxDashLength = 1;
 const minDashGap = 0.1;
 const maxDashGap = 0.5;
 
+// Create the Globe instance
 const globe = new Globe(globeContainer)
   .globeImageUrl('Images/earth-night.jpg')
   .backgroundImageUrl('Images/night-sky.png')
@@ -18,13 +19,20 @@ const globe = new Globe(globeContainer)
   .arcDashGap(() => Math.random() * (maxDashGap - minDashGap) + minDashGap)
   .arcDashAnimateTime([2500])
   .arcStroke([".5px"])
-  .labelsData(defaultCityLabels)
+  .labelsData(labelData)
   .labelLat(d => d.lat)
   .labelLng(d => d.lng)
   .labelText(d => d.name)
   .labelSize(d => d.size)
   .labelColor(() => 'white')
   .labelResolution(3); // Improves text rendering quality
+
+// Auto-rotate
+globe.controls().autoRotate = true;
+globe.controls().autoRotateSpeed = 0.2;
+
+// Starting point of view
+globe.pointOfView({ lat: 22, lng: 25, altitude: 2.5 });
 
 // Function to update the globe size on window resize
 function resizeGlobe() {
@@ -54,17 +62,10 @@ function resizeGlobeContainer() {
   resizeGlobe();
 }
 
-// Auto-rotate
-globe.controls().autoRotate = true;
-globe.controls().autoRotateSpeed = 0.2;
-
-// Starting point of view
-globe.pointOfView({ lat: 22, lng: 25, altitude: 2.5 });
-
 // Resize on window load and resize event
 window.addEventListener('resize', () => {
   resizeGlobeContainer();
-  resizeGlobe();
+  resizeGlobe();// Might be able to get rid of resizeGlobe() because resizeGlobeContainer() already calls this function
 });
 resizeGlobeContainer(); // Initial resize and update of the container size
 resizeGlobe(); // Initial resize of the globe
