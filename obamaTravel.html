@@ -1,0 +1,121 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Trevor Cox's Website</title>
+    <link rel="stylesheet" type="text/css" href="./main.css">
+    <link rel="stylesheet" type="text/css" href="./header.css">
+    <link rel="stylesheet" type="text/css" href="./footer.css">
+    <link rel="stylesheet" type="text/css" href="./GlobalTravel.css">
+    <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+    <script src="//unpkg.com/globe.gl"></script>
+      <!--<script src="../../dist/globe.gl.js"></script>-->
+  </head>
+  
+  <body>
+    <header id="header"></header>
+    <script src="loadHeader.js"></script>
+    <h2>These arcs show Barack Obama's Presidental Travels</h2>
+  
+    <div class="container">
+      <div class="dropdown">
+        <button class="collapsible">Select Dataset</button>
+        <div class="content">
+          <ul id="arcList"></ul>
+        </div>
+      </div>
+      <div id="globeViz"></div>
+    </div>
+  
+    <script src="defineObamaPresidentTravelData.js"></script>
+  
+    <script>
+      const list = document.getElementById('arcList');
+  
+      // Define datasets to populate arcList with view (lat, lng) for each
+      const datasets = {
+        "All Cities": {
+          labels: labelsDefaultCities
+        },
+        "2009 Trips": {
+          arcs: arcs2009,
+          labels: cities2009
+        },
+        "2010 Trips": {
+          arcs: arcs2010,
+          labels: cities2010
+        },
+        "2011 Trips": {
+          arcs: arcs2011,
+          labels: cities2011
+        },
+        "2012 Trips": {
+          arcs: arcs2012,
+          labels: cities2012
+        },
+        "2013 Trips": {
+          arcs: arcs2013,
+          labels: cities2013
+        },
+        "2014 Trips": {
+          arcs: arcs2014,
+          labels: cities2014
+        },
+        "2015 Trips": {
+          arcs: arcs2015,
+          labels: cities2015
+        },
+        "2016 Trips": {
+          arcs: arcs2016,
+          labels: cities2016
+        }
+      };
+  
+      //Dynamically populate arcList menu
+      Object.keys(datasets).forEach(dataset => {
+        const listItem = document.createElement('li');
+        listItem.textContent = dataset;
+        if (dataset === "All Cities") {
+          listItem.classList.add('selected');
+        }
+  
+        //Changes style of selected li and removes style from previously selected li
+        listItem.addEventListener('click', function () {
+          list.querySelectorAll('.selected').forEach(item => item.classList.remove('selected'));
+          listItem.classList.add('selected');
+  
+          // Update the arcs and labels on the globe
+          globe.arcsData(datasets[dataset].arcs).labelsData(datasets[dataset].labels);
+  
+          // Animate the globe to the specified view coordinates for the selected dataset
+          globe.pointOfView({ lat: 38.9072, lng:  -77.0369, altitude: 1.75 }, 3000); // Adjusts the globe's view to Washington, DC smoothly over 3 seconds
+        });
+        list.appendChild(listItem);
+      });
+  
+      // Collapsible button functionality
+      const coll = document.querySelector('.collapsible');
+      const content = document.querySelector('.content');
+      coll.addEventListener('click', function () {
+        this.classList.toggle('active');
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + 180 + "px";
+        }
+      });
+
+    </script>
+
+    <script src="createTravelGlobe.js"></script>
+
+    <script>
+        //Script to set arc color and city label size
+        globe.arcColor(["white", "white"]);
+        globe.labelSize(0.7);
+    </script>
+
+    <h2>Back to my <a href="GlobalTravel.html">Globe!</a></h2>
+
+    <div id="footer-container"></div>
+    <script src="LoadFooter.js"></script>
+  </body>
