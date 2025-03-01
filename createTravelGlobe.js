@@ -49,7 +49,7 @@ function resizeGlobe() {
 }
 
 // Function to change the size of the globe container itself on window resize
-function resizeGlobeContainer() {
+function resizeGlobeContainerAndGlobe() {
   // Get the new window size
   const windowWidth = window.innerWidth;
   const windowHeight = window.innerHeight;
@@ -64,8 +64,7 @@ function resizeGlobeContainer() {
 
 // Resize on window load and resize event
 window.addEventListener('resize', () => {
-  resizeGlobeContainer();
-  resizeGlobe();// Might be able to get rid of resizeGlobe() because resizeGlobeContainer() already calls this function
+  resizeGlobeContainerAndGlobe();
 });
-resizeGlobeContainer(); // Initial resize and update of the container size
-resizeGlobe(); // Initial resize of the globe
+
+resizeGlobeContainerAndGlobe(); // Initial resize and update of the container size
