@@ -6,42 +6,48 @@
     <link rel="stylesheet" type="text/css" href="./header.css">
     <link rel="stylesheet" type="text/css" href="./footer.css">
     <link rel="stylesheet" type="text/css" href="./GlobalTravel.css">
+    <link rel="stylesheet" type="text/css" href="./presidentialTravel.css">
     <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
     <script src="//unpkg.com/globe.gl"></script>
-      <!--<script src="../../dist/globe.gl.js"></script>-->
+    <!--<script src="../../dist/globe.gl.js"></script>-->
 </head>
 
 <body>
     <header id="header"></header>
     <script src="loadHeader.js"></script>
     <h2>Here you can select Presidents and Travel Years</h2>
-    <ul class="h">
-        <li class="h" data-president="FDR">FDR</li>
-        <li class="h" data-president="Truman">Truman</li>
-        <li class="h" data-president="Eisenhower">Eisenhower</li>
-        <li class="h" data-president="JFK">JFK</li>
-        <li class="h" data-president="LBJ">LBJ</li>
-        <li class="h" data-president="Nixon">Nixon</li>
-        <li class="h" data-president="Ford">Ford</li>
-        <li class="h" data-president="Carter">Carter</li>
-        <li class="h" data-president="Reagan">Reagan</li>
-        <li class="h" data-president="Bush Sr.">Bush Sr.</li>
-        <li class="h" data-president="Clinton">Clinton</li>
-        <li class="h" data-president="Bush Jr.">Bush Jr.</li>
-        <li class="h" data-president="Obama">Obama</li>
-        <li class="h" data-president="Trump">Trump</li>
-        <li class="h" data-president="Biden">Biden</li>
-    </ul>
 
     <div class="container">
-        <div class="dropdown">
-            <button class="collapsible">Select Year</button>
-            <div class="content">
-                <ul id="arcList"></ul>
-            </div>
+        <div class="presidential-selector">
+            <ul class="h">
+                <li class="h" data-president="FDR">FDR</li>
+                <li class="h" data-president="Truman">Truman</li>
+                <li class="h" data-president="Eisenhower">Eisenhower</li>
+                <li class="h" data-president="JFK">JFK</li>
+                <li class="h" data-president="LBJ">LBJ</li>
+                <li class="h" data-president="Nixon">Nixon</li>
+                <li class="h" data-president="Ford">Ford</li>
+                <li class="h" data-president="Carter">Carter</li>
+                <li class="h" data-president="Reagan">Reagan</li>
+                <li class="h" data-president="Bush Sr.">Bush Sr.</li>
+                <li class="h" data-president="Clinton">Clinton</li>
+                <li class="h" data-president="Bush Jr.">Bush Jr.</li>
+                <li class="h" data-president="Obama">Obama</li>
+                <li class="h" data-president="Trump">Trump</li>
+                <li class="h" data-president="Biden">Biden</li>
+            </ul>
         </div>
-        <div id="globeViz"></div>
+        <div class="content-wrapper">
+            <div class="dropdown">
+                <button class="collapsible">Select Year</button>
+                <div class="content">
+                    <ul id="arcList"></ul>
+                </div>
+            </div>
+            <div id="globeViz"></div>
+        </div>
     </div>
+
 
     <script type="module">
         let datasets, allArcs, labelsDefaultCities;
@@ -76,6 +82,11 @@
                     labelsDefaultCities = module.labelsDefaultCities;
                 } else if (president === 'Nixon') {
                     const module = await import('./PresidentialTravelsDataStructures/define_nixon_travels.js');
+                    datasets = module.datasets;
+                    allArcs = module.allArcs;
+                    labelsDefaultCities = module.labelsDefaultCities;
+                } else if (president === 'Ford') {
+                    const module = await import('./PresidentialTravelsDataStructures/define_ford_travels.js');
                     datasets = module.datasets;
                     allArcs = module.allArcs;
                     labelsDefaultCities = module.labelsDefaultCities;
