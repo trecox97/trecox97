@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+.presidential-travel {
+    width: 100%; /* Make the title span the full width */
+    text-align: center; /* Center the text */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.dropdown {
+    flex: 1; /* Allow it to take available space */
+    width: 400px; /* Limit width if necessary */
+}
+
+#globeViz {
+    flex: 3; /* Make it take up more space than the dropdown */
+}
