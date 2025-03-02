@@ -1318,8 +1318,6 @@ const arcs2016 = [
       },
 ];
 
-const allArcs = [];
-
 const cities2009 = [
 { lat: 38.9072, lng: -77.0369, name: "Washington, DC"}, 
 { lat: 45.4215, lng: -75.6992, name: "Ottawa"}, 
@@ -1516,4 +1514,45 @@ const cities2016 = [
 { lat: -12.0464, lng: -77.0428, name: "Lima"}
 ];
 
-const labelsDefaultCities = [...cities2009, ...cities2010, ...cities2011, ...cities2012, ...cities2013, ...cities2014, ...cities2015, ...cities2016];
+export const labelsDefaultCities = [...cities2009, ...cities2010, ...cities2011, ...cities2012, ...cities2013, ...cities2014, ...cities2015, ...cities2016];
+
+export const allArcs = [];
+
+      // Define datasets to populate arcList
+export const datasets = {
+        "All Cities": {
+          labels: labelsDefaultCities
+        },
+        "2009 Trips": {
+          arcs: arcs2009,
+          labels: cities2009
+        },
+        "2010 Trips": {
+          arcs: arcs2010,
+          labels: cities2010
+        },
+        "2011 Trips": {
+          arcs: arcs2011,
+          labels: cities2011
+        },
+        "2012 Trips": {
+          arcs: arcs2012,
+          labels: cities2012
+        },
+        "2013 Trips": {
+          arcs: arcs2013,
+          labels: cities2013
+        },
+        "2014 Trips": {
+          arcs: arcs2014,
+          labels: cities2014
+        },
+        "2015 Trips": {
+          arcs: arcs2015,
+          labels: cities2015
+        },
+        "2016 Trips": {
+          arcs: arcs2016,
+          labels: cities2016
+        }
+      };
