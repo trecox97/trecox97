@@ -25,7 +25,7 @@ h2 {
 
 hr {
     width: 80%;
-    border: 2px solid rgb(156, 38, 38, 0.8);
+    border: 2px solid #9c2626cc;
     margin: auto;
     border-radius: 10px;
 }
@@ -85,7 +85,7 @@ a:hover {
 
 /* Play/Pause Button */
 #playPauseBtn {
-    background-color: #9c2626b3;
+    background-color: rgba(156, 38, 38, 0.702);
     color: aliceblue;
     font-family: "Comic Sans MS", "Comic Sans";
     padding: 10px;

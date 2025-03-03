@@ -176,7 +176,7 @@ const cities1966 = [
   { lat: 45.1267035, lng: -67.0713173, name: "Chamcook" },
   { lat: 9.6928384, lng: 126.0774192, name: "Corregidor" },
   { lat: 14.5904492, lng: 120.9803621, name: "Manila" },
-  { lat: 19.4326296, lng: -99.1331785, name: "D.F." },
+  { lat: 19.4326296, lng: -99.1331785, name: "Mexico City" },
   { lat: 37.5666791, lng: 126.9782914, name: "Seoul" },
   { lat: -35.2975906, lng: 149.1012676, name: "Canberra" },
   { lat: 44.8938472, lng: -66.9193702, name: "Campobello Island" },

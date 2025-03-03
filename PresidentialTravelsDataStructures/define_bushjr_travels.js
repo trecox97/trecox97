@@ -846,12 +846,12 @@ const arcs2005 = [
   {
     startLat: -37.9976168, // Mar del Plata, Argentina
     startLng: -57.5482079,
-    endLat: -10.3333333,  // Brasília, Brazil
-    endLng: -53.2
+    endLat: -15.7801,  // Brasília, Brazil
+    endLng: -47.9292
   },
   {
-    startLat: -10.3333333, // Brasília, Brazil
-    startLng: -53.2,
+    startLat: -15.7801, // Brasília, Brazil
+    startLng: -47.9292,
     endLat: 8.9714493,  // Panama City, Panama
     endLng: -79.5341802
   },
@@ -923,7 +923,7 @@ const cities2005 = [
   { lat: 40.190632, lng: 116.412144, name: "Beijing" },
   { lat: 56.9493977, lng: 24.1051846, name: "Riga" },
   { lat: 8.9714493, lng: -79.5341802, name: "Panama City" },
-  { lat: -10.3333333, lng: -53.2, name: "Brasília" },
+  { lat: -15.7801, lng: -47.9292, name: "Brasília" },
   { lat: -37.9976168, lng: -57.5482079, name: "Mar del Plata" },
   { lat: 47.9184676, lng: 106.9177016, name: "Ulaanbaatar" },
   { lat: 41.9021569, lng: 12.4537105, name: "St. Peter's Basilica" },

@@ -15,7 +15,7 @@ a:hover {
 
 /* Content Style */
 .collapsible {
-    background-color: #9c2626b3; /* Choose your highlight color */
+    background-color: rgba(156, 38, 38, 0.8); /* Choose your highlight color */
     border-radius: 20px 0 0 20px;
     color: aliceblue;
     cursor: pointer;

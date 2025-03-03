@@ -517,12 +517,12 @@ const arcs1996 = [
   {
     startLat: 38.9072, // Washington, DC, USA
     startLng: -77.0369,
-    endLat: 36.5,  // Cheju Island, South Korea
-    endLng: 127.75
+    endLat: 33.3545878,  // Cheju Island, South Korea
+    endLng: 126.505905
   },
   {
-    startLat: 36.5, // Cheju Island, South Korea
-    startLng: 127.75,
+    startLat: 33.3545878, // Cheju Island, South Korea
+    startLng: 126.505905,
     endLat: 35.6768601,  // Tokyo, Japan
     endLng: 139.7638947
   },
@@ -626,7 +626,7 @@ const cities1996 = [
   { lat: 35.6768601, lng: 139.7638947, name: "Tokyo" },
   { lat: 45.7578137, lng: 4.8320114, name: "Lyon" },
   { lat: 38.9072, lng: -77.0369, name: "Washington, DC" },
-  { lat: 36.5, lng: 127.75, name: "Cheju Island" },
+  { lat: 33.3545878, lng: 126.505905, name: "Jeju Island" },
   { lat: -33.8698439, lng: 151.2082848, name: "Sydney" },
   { lat: -16.4845983, lng: 145.4636294, name: "Port Douglas" },
   { lat: 59.938732, lng: 30.316229, name: "Saint Petersburg" },
@@ -760,12 +760,12 @@ const arcs1997 = [
   {
     startLat: 10.5060934, // Caracas, Venezuela
     startLng: -66.9146008,
-    endLat: -10.3333333,  // Brasília, Brazil
-    endLng: -53.2
+    endLat: -15.7975717,  // Brasília
+    endLng: -47.8951985
   },
   {
-    startLat: -10.3333333, // Brasília, Brazil
-    startLng: -53.2,
+    startLat: -15.7975717, // Brasília
+    startLng: -47.8951985,
     endLat: -23.5506507,  // São Paulo, Brazil
     endLng: -46.6333824
   },
@@ -848,7 +848,7 @@ const cities1997 = [
   { lat: 19.4326296, lng: -99.1331785, name: "Mexico City" },
   { lat: 40.4167047, lng: -3.7035825, name: "Madrid" },
   { lat: 60.1674881, lng: 24.9427473, name: "Helsinki" },
-  { lat: -10.3333333, lng: -53.2, name: "Brasília" },
+  { lat: -15.7975717, lng: -47.8951985, name: "Brasília" },
   { lat: 51.5074456, lng: -0.1277653, name: "London" },
   { lat: 39.61362, lng: 3.02004, name: "Palma de Majorca" },
   { lat: 43.8519774, lng: 18.3866868, name: "Sarajevo" },
@@ -930,12 +930,12 @@ const arcs1998 = [
   {
     startLat: -24.6581357, // Gaborone, Botswana
     startLng: 25.9088474,
-    endLat: -22.0,  // Kasame, Botswana
-    endLng: 24.0
+    endLat: -17.8117526,  // Kasame, Botswana
+    endLng: 25.132088
   },
   {
-    startLat: -22.0, // Kasame, Botswana
-    startLng: 24.0,
+    startLat: -17.8117526, // Kasame, Botswana
+    startLng: 25.132088,
     endLat: 14.693425,  // Dakar, Senegal
     endLng: -17.447938
   },
@@ -1171,7 +1171,7 @@ const cities1998 = [
   { lat: 37.1499376, lng: 127.0774625, name: "Osan" },
   { lat: 54.5992486, lng: -7.3029907, name: "Omagh" },
   { lat: -33.4377756, lng: -70.6504502, name: "Santiago" },
-  { lat: -22.0, lng: 24.0, name: "Kasame" },
+  { lat: -17.8117526, lng: 25.132088, name: "Kasane" },
   { lat: 0.3522143, lng: 32.7516369, name: "Mukono Town" },
   { lat: 51.5074456, lng: -0.1277653, name: "London" },
   { lat: 0.3780733, lng: 32.5596158, name: "Kisowera" },

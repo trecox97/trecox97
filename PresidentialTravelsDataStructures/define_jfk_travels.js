@@ -82,17 +82,11 @@ const arcs1962 = [
   {
     startLat: 38.9072, // Washington, DC, USA
     startLng: -77.0369,
-    endLat: 23.6585116,  // Mexico, Mexico
-    endLng: -102.0077097
-  },
-  {
-    startLat: 23.6585116, // Mexico, Mexico
-    startLng: -102.0077097,
-    endLat: 19.4326296,  // D.F., Mexico
+    endLat: 19.4326296,  // Mexico City, Mexico
     endLng: -99.1331785
   },
   {
-    startLat: 19.4326296, // D.F., Mexico
+    startLat: 19.4326296, // Mexico City, Mexico
     startLng: -99.1331785,
     endLat: 38.9072,  // Washington, DC, USA
     endLng: -77.0369
@@ -113,8 +107,7 @@ const arcs1962 = [
 
 const cities1962 = [
   { lat: 38.9072, lng: -77.0369, name: "Washington, DC" },
-  { lat: 23.6585116, lng: -102.0077097, name: "Mexico" },
-  { lat: 19.4326296, lng: -99.1331785, name: "D.F." },
+  { lat: 19.4326296, lng: -99.1331785, name: "Mexico City" },
   { lat: 25.0782266, lng: -77.3383438, name: "Nassau" },
 ];
 

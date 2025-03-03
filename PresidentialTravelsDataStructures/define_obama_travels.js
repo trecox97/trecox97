@@ -477,12 +477,12 @@ const arcs2011 = [
   {
     startLat: 38.9072, // Washington, DC, USA
     startLng: -77.0369,
-    endLat: -10.3333333,  // Brasília, Brazil
-    endLng: -53.2
+    endLat: -15.7975717,  // Brasília
+    endLng: -47.8951985
   },
   {
-    startLat: -10.3333333, // Brasília, Brazil
-    startLng: -53.2,
+    startLat: -15.7975717, // Brasília
+    startLng: -47.8951985,
     endLat: -22.9110137,  // Rio de Janeiro, Brazil
     endLng: -43.2093727
   },
@@ -591,7 +591,7 @@ const cities2011 = [
   { lat: -22.9110137, lng: -43.2093727, name: "Rio de Janeiro" },
   { lat: -8.2271303, lng: 115.1919203, name: "Bali" },
   { lat: 38.9072, lng: -77.0369, name: "Washington, DC" },
-  { lat: -10.3333333, lng: -53.2, name: "Brasília" },
+  { lat: 15.7975717, lng: -47.8951985, name: "Brasília" },
   { lat: -33.4377756, lng: -70.6504502, name: "Santiago" },
   { lat: 52.8797107, lng: -7.9589322, name: "Moneygall" },
   { lat: -12.46044, lng: 130.8410469, name: "Darwin" },
