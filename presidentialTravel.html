@@ -35,9 +35,9 @@
                 <li class="pres-nav-item" data-president="Ford">Ford</li>
                 <li class="pres-nav-item" data-president="Carter">Carter</li>
                 <li class="pres-nav-item" data-president="Reagan">Reagan</li>
-                <li class="pres-nav-item" data-president="Bush Sr.">Bush Sr.</li>
+                <li class="pres-nav-item" data-president="H.W.Bush">H.W.Bush</li>
                 <li class="pres-nav-item" data-president="Clinton">Clinton</li>
-                <li class="pres-nav-item" data-president="Bush Jr.">Bush Jr.</li>
+                <li class="pres-nav-item" data-president="Bush">Bush</li>
                 <li class="pres-nav-item" data-president="Obama">Obama</li>
                 <li class="pres-nav-item" data-president="Trump">Trump</li>
                 <li class="pres-nav-item" data-president="Biden">Biden</li>
@@ -47,7 +47,10 @@
             <div class="dropdown">
                 <button class="collapsible">Select Year</button>
                 <div class="content">
-                    <ul id="arcList"></ul>
+                    <ul id="arcList">
+
+                <li>Select a President first</li>
+                    </ul>
                 </div>
             </div>
             <div id="globeViz"></div>
@@ -136,7 +139,7 @@
                     datasets = module.datasets;
                     allArcs = module.allArcs;
                     labelsDefaultCities = module.labelsDefaultCities;
-                } else if (president === 'Bush Sr.') {
+                } else if (president === 'H.W.Bush') {
                     const module = await import('./PresidentialTravelsDataStructures/define_bushsr_travels.js');
                     datasets = module.datasets;
                     allArcs = module.allArcs;
@@ -146,7 +149,7 @@
                     datasets = module.datasets;
                     allArcs = module.allArcs;
                     labelsDefaultCities = module.labelsDefaultCities;
-                } else if (president === 'Bush Jr.') {
+                } else if (president === 'Bush') {
                     const module = await import('./PresidentialTravelsDataStructures/define_bushjr_travels.js');
                     datasets = module.datasets;
                     allArcs = module.allArcs;
@@ -233,7 +236,7 @@
 
                 // Open the collapsible content (set maxHeight) after closing it, to simulate reopening
                 coll.classList.add('active');
-                content.style.maxHeight = content.scrollHeight + 270 + "px";
+                content.style.maxHeight = content.scrollHeight + 456 + "px";
             });
         });
 
@@ -245,7 +248,7 @@
             if (content.style.maxHeight) {
                 content.style.maxHeight = null; // Close the menu if it's open
             } else {
-                content.style.maxHeight = content.scrollHeight + 270 + "px"; // Open the menu if it's closed
+                content.style.maxHeight = content.scrollHeight + 456 + "px"; // Open the menu if it's closed
             }
         });
     </script>
