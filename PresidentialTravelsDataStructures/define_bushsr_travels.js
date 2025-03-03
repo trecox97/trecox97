@@ -550,7 +550,7 @@ const cities1991 = [
   { lat: 39.9207759, lng: 32.8540497, name: "Ankara" },
 ];
 
-const arcs1993 = [
+const arcs1992 = [
   {
     startLat: 38.9072, // Washington, DC, USA
     startLng: -77.0369,
@@ -685,7 +685,7 @@ const arcs1993 = [
   },
 ];
 
-const cities1993 = [
+const cities1992 = [
   { lat: 2.0349312, lng: 45.3419183, name: "Mogadishu" },
   { lat: 3.119951, lng: 43.644462, name: "Baidoa" },
   { lat: -22.9110137, lng: -43.2093727, name: "Rio de Janeiro" },
@@ -707,7 +707,7 @@ const cities1993 = [
   { lat: 34.5094067, lng: 135.792955, name: "Kashihara" },
 ];
 
-export const labelsDefaultCities = [...cities1989, ...cities1990, ...cities1991, ...cities1993];
+export const labelsDefaultCities = [...cities1989, ...cities1990, ...cities1991, ...cities1992];
 
 export const allArcs = [];
 
@@ -727,8 +727,8 @@ export const datasets = {
     arcs: arcs1991,
     labels: cities1991
   },
-  "1993 Trips": {
-    arcs: arcs1993,
-    labels: cities1993
+  "1992 Trips": {
+    arcs: arcs1992,
+    labels: cities1992
   },
 };

@@ -94,8 +94,8 @@ def transform_csv_to_js(input_csv, output_js):
     print("✅ JavaScript file has been created.")
 
 # Input and output file names
-input_csv = 'biden_travels_with_coords.csv'  # Replace with your CSV file path
-output_js = 'define_biden_travels.js'  # Output JavaScript file
+input_csv = 'wilson_travels_with_coords.csv'  # Replace with your CSV file path
+output_js = 'define_wilson_travels.js'  # Output JavaScript file
 
 # Call the function
 transform_csv_to_js(input_csv, output_js)
