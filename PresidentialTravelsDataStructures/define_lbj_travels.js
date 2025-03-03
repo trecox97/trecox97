@@ -22,17 +22,11 @@ const arcs1966 = [
   {
     startLat: 38.9072, // Washington, DC, USA
     startLng: -77.0369,
-    endLat: 23.6585116,  // Mexico, Mexico
-    endLng: -102.0077097
-  },
-  {
-    startLat: 23.6585116, // Mexico, Mexico
-    startLng: -102.0077097,
-    endLat: 19.4326296,  // D.F., Mexico
+    endLat: 19.4326296,  // Mexico City
     endLng: -99.1331785
   },
   {
-    startLat: 19.4326296, // D.F., Mexico
+    startLat: 19.4326296, // Mexico City
     startLng: -99.1331785,
     endLat: 38.9072,  // Washington, DC, USA
     endLng: -77.0369
@@ -169,7 +163,6 @@ const cities1966 = [
   { lat: 14.1775648, lng: 121.2214303, name: "Los Baños" },
   { lat: -33.8698439, lng: 151.2082848, name: "Sydney" },
   { lat: 13.7524938, lng: 100.4935089, name: "Bangkok" },
-  { lat: 23.6585116, lng: -102.0077097, name: "Mexico" },
   { lat: -41.2887953, lng: 174.7772114, name: "Wellington" },
   { lat: 11.0, lng: 107.0, name: "Cam Ranh Bay" },
   { lat: -27.4689682, lng: 153.0234991, name: "Brisbane" },

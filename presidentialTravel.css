@@ -59,7 +59,7 @@
 .pres-nav-item {
     text-align: center;
     cursor: pointer;
-    flex: 1 1 12.5%; /* Allow items to grow and shrink, but ensure they don't shrink too much */
+    flex: 1 1 14%; /* Allow items to grow and shrink, but ensure they don't shrink too much */
     min-width: 50px; /* Ensure each item has a minimum width */
     padding: 10px; /* Optional: Add padding for better touch targets */
     box-sizing: border-box; /* Ensure padding is included in the width calculation */
@@ -76,13 +76,38 @@
 }
 
 /* Optional: Media query to make adjustments on smaller screens */
-@media (max-width: 600px) {
+@media (max-width: 740px) {
     .pres-nav-item {
-        flex: 1 1 20%; /* Allow items to grow and shrink, but ensure they don't shrink too much */
+        flex: 1 1 10%; /* Allow items to grow and shrink, but ensure they don't shrink too much */
         min-width: 70px; /* Ensure items remain legible even on smaller screens */
+        font-size: 14px;
     }
-    
     .content-wrapper {
         flex-direction: column; /* Stack items on top of each other */
+    }
+
+    .presidential-selector {
+        width: 95%;
+    }
+
+    .collapsible {
+        width: 100%; /* Ensure the content takes up the full width */
+        border-radius: 0 0 20px 20px;
+    }
+    .dropdown {
+        width: 95%; /* Ensure the dropdown takes up the full width */
+        padding-bottom: 10px;
+        margin: auto;
+    }
+    .content {
+        width: 90%;
+        margin: auto;
+    }
+    .collapsible.active {
+        border-radius: 0 0 20px 20px;;
+    }
+
+    #globeViz {
+        border-radius: 20px;
     }
 }

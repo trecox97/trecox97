@@ -465,12 +465,18 @@ const arcs1943 = [
   {
     startLat: 38.9072, // Washington, DC, USA
     startLng: -77.0369,
-    endLat: 60.10867,  // Quebec CityOttawa, Canada
-    endLng: -113.64258
+    endLat: 46.8137431,  // Quebec City
+    endLng: -71.2084061
   },
   {
-    startLat: 60.10867, // Quebec CityOttawa, Canada
-    startLng: -113.64258,
+    startLat: 46.8137431, // Quebec City
+    startLng: -71.2084061,
+    endLat: 45.2529, // Ottawa
+    endLng: -75.4142
+  },
+  {
+    startLat: 45.2529, // Ottawa, Canada
+    startLng: -75.4142,
     endLat: 38.9072,  // Washington, DC, USA
     endLng: -77.0369
   },
@@ -549,7 +555,8 @@ const cities1943 = [
   { lat: 25.6802019, lng: -100.315258, name: "Monterrey" },
   { lat: 14.693425, lng: -17.447938, name: "Dakar" },
   { lat: 33.5945144, lng: -7.6200284, name: "Casablanca" },
-  { lat: 60.10867, lng: -113.64258, name: "Quebec City" },
+  { lat: 46.8137431, lng: -71.2084061, name: "Quebec City" },
+  { lat: 45.2529, lng: -75.4142, name: "Ottawa" },
   { lat: 35.8989979, lng: 14.5136607, name: "Valletta" },
 ];
 

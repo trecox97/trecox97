@@ -15,11 +15,17 @@
 <body>
     <header id="header"></header>
     <script src="loadHeader.js"></script>
-    <h2>Here you can select Presidents and their Travel Years</h2>
+    <h2>Here you can select Presidents and their international trips by year</h2>
 
     <div class="container">
         <div class="presidential-selector">
             <ul class="h" id="pres-nav">
+                <li class="pres-nav-item" data-president="Teddy">Teddy</li>
+                <li class="pres-nav-item" data-president="Taft">Taft</li>
+                <li class="pres-nav-item" data-president="Wilson">Wilson</li>
+                <li class="pres-nav-item" data-president="Harding">Harding</li>
+                <li class="pres-nav-item" data-president="Coolidge">Coolidge</li>
+                <li class="pres-nav-item" data-president="Hoover">Hoover</li>
                 <li class="pres-nav-item" data-president="FDR">FDR</li>
                 <li class="pres-nav-item" data-president="Truman">Truman</li>
                 <li class="pres-nav-item" data-president="Eisenhower">Eisenhower</li>
@@ -171,49 +177,47 @@
             });
         }
 
-// Add event listeners to each president <li> to load their respective data
-    document.querySelectorAll('.pres-nav-item').forEach(item => {
-    item.addEventListener('click', function () {
-        // Remove the 'selected' class from all items
-        document.querySelectorAll('.pres-nav-item').forEach(i => i.classList.remove('selected'));
+        // Add event listeners to each president <li> to load their respective data
+        document.querySelectorAll('.pres-nav-item').forEach(item => {
+            item.addEventListener('click', function () {
+                // Remove the 'selected' class from all items
+                document.querySelectorAll('.pres-nav-item').forEach(i => i.classList.remove('selected'));
 
-        // Add the 'selected' class to the clicked item
-        this.classList.add('selected');
+                // Add the 'selected' class to the clicked item
+                this.classList.add('selected');
 
-        // Get the president's name and load the dataset
-        const president = this.getAttribute('data-president');
-        loadDataset(president);  // Load dataset based on the selected president
+                // Get the president's name and load the dataset
+                const president = this.getAttribute('data-president');
+                loadDataset(president);  // Load dataset based on the selected president
 
-        // Get the collapsible button and content
+                // Get the collapsible button and content
+                const coll = document.querySelector('.collapsible');
+                const content = document.querySelector('.content');
+
+                // Check if the collapsible content is already open
+                if (coll.classList.contains('active')) {
+                    // If it's open, close it first
+                    coll.classList.remove('active');
+                    content.style.maxHeight = null;
+                }
+
+                // Open the collapsible content (set maxHeight) after closing it, to simulate reopening
+                coll.classList.add('active');
+                content.style.maxHeight = content.scrollHeight + 270 + "px";
+            });
+        });
+
+        // Collapsible button functionality for the dropdown
         const coll = document.querySelector('.collapsible');
         const content = document.querySelector('.content');
-
-        // Check if the collapsible content is already open
-        if (coll.classList.contains('active')) {
-            // If it's open, close it first
-            coll.classList.remove('active');
-            content.style.maxHeight = null;
-        }
-
-        // Open the collapsible content (set maxHeight) after closing it, to simulate reopening
-        coll.classList.add('active');
-        content.style.maxHeight = content.scrollHeight + 270 + "px";
-    });
-});
-
-// Collapsible button functionality for the dropdown
-const coll = document.querySelector('.collapsible');
-const content = document.querySelector('.content');
-coll.addEventListener('click', function () {
-    this.classList.toggle('active');
-    if (content.style.maxHeight) {
-        content.style.maxHeight = null; // Close the menu if it's open
-    } else {
-        content.style.maxHeight = content.scrollHeight + 270 + "px"; // Open the menu if it's closed
-    }
-});
-
-
+        coll.addEventListener('click', function () {
+            this.classList.toggle('active');
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null; // Close the menu if it's open
+            } else {
+                content.style.maxHeight = content.scrollHeight + 270 + "px"; // Open the menu if it's closed
+            }
+        });
     </script>
 
     <script src="createPresidentialTravelGlobe.js"></script>
