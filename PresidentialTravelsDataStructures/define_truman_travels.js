@@ -113,11 +113,11 @@ export const datasets = {
   "All Cities": {
     labels: labelsDefaultCities
   },
-  "1945 Trips": {
+  "1945 Trip": {
     arcs: arcs1945,
     labels: cities1945
   },
-  "1946 Trips": {
+  "1946 Trip": {
     arcs: arcs1946,
     labels: cities1946
   },

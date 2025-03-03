@@ -478,7 +478,7 @@ export const datasets = {
   "All Cities": {
     labels: labelsDefaultCities
   },
-  "1952 Trips": {
+  "1952 Trip": {
     arcs: arcs1952,
     labels: cities1952
   },
@@ -486,11 +486,11 @@ export const datasets = {
     arcs: arcs1953,
     labels: cities1953
   },
-  "1955 Trips": {
+  "1955 Trip": {
     arcs: arcs1955,
     labels: cities1955
   },
-  "1956 Trips": {
+  "1956 Trip": {
     arcs: arcs1956,
     labels: cities1956
   },
@@ -498,7 +498,7 @@ export const datasets = {
     arcs: arcs1957,
     labels: cities1957
   },
-  "1958 Trips": {
+  "1958 Trip": {
     arcs: arcs1958,
     labels: cities1958
   },
