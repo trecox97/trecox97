@@ -19,12 +19,12 @@
 
 <body>
   <header id="header"></header>
-  <script src="loadHeader.js"></script>
+  <script src="Utils/loadHeader.js"></script>
   <h2>These arcs show my international travels and domestic moves.</h2>
   <div>
     <button id="playPauseBtn">Play</button>
   </div>
-  <script src="PlayPause.js"></script>
+  <script src="Utils/PlayPause.js"></script>
 
   <div class="container">
     <div class="dropdown">
@@ -36,7 +36,7 @@
     <div id="globeViz"></div>
   </div>
 
-  <script src="defineArcsAndCityLabels.js"></script>
+  <script src="Utils/defineArcsAndCityLabels.js"></script>
 
   <script>
     const list = document.getElementById('arcList');
@@ -129,10 +129,18 @@
 
   </script>
 
-  <script src="createTravelGlobe.js"></script>
+  <script src="Utils/createDefaultGlobe.js"></script>
+  <script>
+    //Setting Custom Defaults and arc specific colors for my travel globe.
+    let arcsData = allArcs;
+    let labelData = labelsDefaultCities;
+    globe.arcsData(arcsData)
+      .labelsData(labelData)
+      .arcColor('color');
+  </script>
 
   <h2>Here's a <a href="presidentialTravel.html">Globe</a> that shows Presidential trips.</h2>
 
   <div id="footer-container"></div>
-  <script src="LoadFooter.js"></script>
+  <script src="Utils/loadFooter.js"></script>
 </body>

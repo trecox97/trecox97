@@ -1,7 +1,3 @@
-// Default dataset
-//let arcsData = allArcs;
-//let labelData = labelsDefaultCities;
-
 const globeContainer = document.getElementById('globeViz');
 
 const minDashLength = 0.4;
@@ -13,13 +9,11 @@ const maxDashGap = 0.5;
 const globe = new Globe(globeContainer)
     .globeImageUrl('Images/earth-night.jpg')
     .backgroundImageUrl('Images/night-sky.png')
-    //.arcsData(arcsData)
     .arcColor(["white", "white"])
     .arcDashLength(() => Math.random() * (maxDashLength - minDashLength) + minDashLength)
     .arcDashGap(() => Math.random() * (maxDashGap - minDashGap) + minDashGap)
     .arcDashAnimateTime([2500])
     .arcStroke([".5px"])
-    //.labelsData(labelData)
     .labelLat(d => d.lat)
     .labelLng(d => d.lng)
     .labelText(d => d.name)
@@ -57,10 +51,10 @@ function resizeGlobeContainerAndGlobe() {
     // Optionally, apply some rules to adjust the container size
     if (windowWidth < 740) {
         globeContainer.style.width = (windowWidth * 0.9) + 'px';
-        globeContainer.style.height = (windowHeight * 0.6) + 'px';
+        globeContainer.style.height = (windowHeight * 0.75) + 'px';
     } else {
         globeContainer.style.width = (windowWidth) + 'px';
-        globeContainer.style.height = (windowHeight * 0.75) + 'px';
+        globeContainer.style.height = (windowHeight * 0.8) + 'px';
     }
 
     // Call resizeGlobe to adjust the globe size after the container has resized
