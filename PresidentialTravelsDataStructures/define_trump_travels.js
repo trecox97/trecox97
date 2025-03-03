@@ -183,12 +183,12 @@ const arcs2018 = [
   {
     startLat: 52.4760892, // Quebec, Canada
     startLng: -71.8258668,
-    endLat: 39.0,  // Crete Naval Base, Greece
-    endLng: 22.0
+    endLat: 35.49625,  // Crete Naval Base, Greece
+    endLng: 24.147639
   },
   {
-    startLat: 39.0, // Crete Naval Base, Greece
-    startLng: 22.0,
+    startLat: 35.49625, // Crete Naval Base, Greece
+    startLng: 24.147639,
     endLat: 1.28967,  // Central Area, Singapore
     endLng: 103.85007
   },
@@ -285,12 +285,12 @@ const arcs2018 = [
   {
     startLat: 38.9072, // Washington, DC, USA
     startLng: -77.0369,
-    endLat: 33.0,  // Al Asad Air Base, Iraq
-    endLng: 44.0
+    endLat: 33.8,  // Al Asad Air Base, Iraq
+    endLng: 42.433333
   },
   {
-    startLat: 33.0, // Al Asad Air Base, Iraq
-    startLng: 44.0,
+    startLat: 33.8, // Al Asad Air Base, Iraq
+    startLng: 42.433333,
     endLat: 49.441426,  // Ramstein Air Base, Germany
     endLng: 7.6012401
   },
@@ -304,9 +304,9 @@ const arcs2018 = [
 
 const cities2018 = [
   { lat: 51.8533018, lng: -2.2275661, name: "Chequers" },
-  { lat: 33.0, lng: 44.0, name: "Al Asad Air Base" },
+  { lat: 33.8, lng: 42.433333, name: "Al Asad Air Base" },
   { lat: 50.8465573, lng: 4.351697, name: "Brussels" },
-  { lat: 55.3167617, lng: -4.8313213, name: "Turnberry (golf course)" },
+  { lat: 55.3167617, lng: -4.8313213, name: "Turnberry" },
   { lat: 38.9072, lng: -77.0369, name: "Washington, DC" },
   { lat: -34.6083696, lng: -58.4440583, name: "Buenos Aires" },
   { lat: 52.4760892, lng: -71.8258668, name: "Quebec" },
@@ -319,7 +319,7 @@ const cities2018 = [
   { lat: 55.299818, lng: -4.6459884, name: "South Ayrshire" },
   { lat: 46.796198, lng: 9.8236892, name: "Davos" },
   { lat: 60.1674881, lng: 24.9427473, name: "Helsinki" },
-  { lat: 39.0, lng: 22.0, name: "Crete Naval Base" },
+  { lat: 35.49625, lng: 24.147639, name: "Crete Naval Base" },
   { lat: 51.8419448, lng: -1.3626293, name: "Blenheim Palace" },
   { lat: 51.4837886, lng: -0.6040419, name: "Windsor Castle" },
 ];
@@ -436,12 +436,12 @@ const arcs2019 = [
   {
     startLat: 38.2336866, // Korean Demilitarized Zone, South Korea
     startLng: 127.0087307,
-    endLat: 40.0,  // Joint Security Area, North Korea
-    endLng: 127.0
+    endLat: 37.9556392,  // Joint Security Area, North Korea
+    endLng: 126.6763028
   },
   {
-    startLat: 40.0, // Joint Security Area, North Korea
-    startLng: 127.0,
+    startLat: 37.9556392, // Joint Security Area, North Korea
+    startLng: 126.6763028,
     endLat: 38.9072,  // Washington, DC, USA
     endLng: -77.0369
   },
@@ -493,7 +493,7 @@ const cities2019 = [
   { lat: 49.7492373, lng: 0.452349, name: "Colleville" },
   { lat: 43.4832523, lng: -1.5592776, name: "Biarritz" },
   { lat: 34.6937569, lng: 135.5014539, name: "Osaka" },
-  { lat: 40.0, lng: 127.0, name: "Joint Security Area" },
+  { lat: 37.9556392, lng: 126.6763028, name: "Joint Security Area, DPRK" },
   { lat: 50.800031, lng: -1.0906023, name: "Portsmouth" },
   { lat: 35.6768601, lng: 139.7638947, name: "Tokyo" },
   { lat: 34.9390767, lng: 69.2764727, name: "Bagram Airfield" },

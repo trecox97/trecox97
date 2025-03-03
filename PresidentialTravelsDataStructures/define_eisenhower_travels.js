@@ -345,12 +345,12 @@ const arcs1960 = [
   {
     startLat: 38.9072, // Washington, DC, USA
     startLng: -77.0369,
-    endLat: -10.3333333,  // Brasília, Brazil
-    endLng: -53.2
+    endLat: -15.7997504,  // Brasília, Brazil
+    endLng: -47.8952314
   },
   {
-    startLat: -10.3333333, // Brasília, Brazil
-    startLng: -53.2,
+    startLat: -15.7997504, // Brasília, Brazil
+    startLng: -47.8952314,
     endLat: -22.9110137,  // Rio de Janeiro, Brazil
     endLng: -43.2093727
   },
@@ -465,7 +465,7 @@ const cities1960 = [
   { lat: -34.6083696, lng: -58.4440583, name: "Buenos Aires" },
   { lat: 38.9072, lng: -77.0369, name: "Washington, DC" },
   { lat: 48.8588897, lng: 2.320041, name: "Paris" },
-  { lat: -10.3333333, lng: -53.2, name: "Brasília" },
+  { lat: -15.7997504, lng: -47.8952314, name: "Brasília" },
   { lat: 37.5666791, lng: 126.9782914, name: "Seoul" },
   { lat: -41.1334781, lng: -71.3101474, name: "San Carlos de Bariloche" },
 ];

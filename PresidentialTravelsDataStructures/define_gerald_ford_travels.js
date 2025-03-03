@@ -38,12 +38,12 @@ const arcs1974 = [
   {
     startLat: 37.5666791, // Seoul, South Korea
     startLng: 126.9782914,
-    endLat: 60.0,  // Vladivostok, Soviet Union
-    endLng: 98.0
-  },
-  {
-    startLat: 60.0, // Vladivostok, Soviet Union
-    startLng: 98.0,
+    endLat: 43.1195,  // Vladivostok, Russia
+    endLng: 131.8855
+},
+{
+    startLat: 43.1195, // Vladivostok, Russia
+    startLng: 131.8855,
     endLat: 38.9072,  // Washington, DC, USA
     endLng: -77.0369
   },
@@ -72,7 +72,7 @@ const cities1974 = [
   { lat: 31.3285057, lng: -110.9450472, name: "Nogales" },
   { lat: 35.0115754, lng: 135.7681441, name: "Kyoto" },
   { lat: 30.6268798, lng: -110.9614533, name: "Magdalena de Kino" },
-  { lat: 60.0, lng: 98.0, name: "Vladivostok" },
+  { lat:  43.1195, lng: 131.8855, name: "Vladivostok" },
   { lat: 37.5666791, lng: 126.9782914, name: "Seoul" },
   { lat: 14.6027962, lng: -61.0676724, name: "Fort-de-France" },
   { lat: 35.6768601, lng: 139.7638947, name: "Tokyo" },

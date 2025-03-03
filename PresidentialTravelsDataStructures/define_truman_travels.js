@@ -63,12 +63,6 @@ const arcs1947 = [
   {
     startLat: 38.9072, // Washington, DC, USA
     startLng: -77.0369,
-    endLat: 23.6585116,  // Mexico, Mexico
-    endLng: -102.0077097
-  },
-  {
-    startLat: 23.6585116, // Mexico, Mexico
-    startLng: -102.0077097,
     endLat: 19.4326296,  // D.F., Mexico
     endLng: -99.1331785
   },
@@ -106,8 +100,7 @@ const arcs1947 = [
 
 const cities1947 = [
   { lat: 38.9072, lng: -77.0369, name: "Washington, DC" },
-  { lat: 23.6585116, lng: -102.0077097, name: "Mexico" },
-  { lat: 19.4326296, lng: -99.1331785, name: "D.F." },
+  { lat: 19.4326296, lng: -99.1331785, name: "Mexico City" },
   { lat: -22.9110137, lng: -43.2093727, name: "Rio de Janeiro" },
   { lat: 45.4208777, lng: -75.6901106, name: "Ottawa" },
 ];

@@ -138,12 +138,12 @@ const arcs1982 = [
   {
     startLat: 38.9072, // Washington, DC, USA
     startLng: -77.0369,
-    endLat: -10.3333333,  // Brasília, Brazil
-    endLng: -53.2
+    endLat: -15.7975717,  // Brasília
+    endLng: -47.8951985
   },
   {
-    startLat: -10.3333333, // Brasília, Brazil
-    startLng: -53.2,
+    startLat: -15.7975717, // Brasília
+    startLng: -47.8951985,
     endLat: -23.5506507,  // São Paulo, Brazil
     endLng: -46.6333824
   },
@@ -188,7 +188,7 @@ const cities1982 = [
   { lat: 41.8933203, lng: 12.4829321, name: "Rome" },
   { lat: 51.5074456, lng: -0.1277653, name: "London" },
   { lat: 4.711011, lng: -74.0720917, name: "Bogota" },
-  { lat: -10.3333333, lng: -53.2, name: "Brasília" },
+  { lat: -15.7975717, lng: -47.8951985, name: "Brasília" },
   { lat: 52.5601976, lng: 12.9823712, name: "West Berlin" },
   { lat: 50.7842863, lng: 7.2605602, name: "Bonn" },
 ];
@@ -362,12 +362,12 @@ const arcs1985 = [
   {
     startLat: 49.96794, // Bitburg, West Germany
     startLng: 6.52734,
-    endLat: 51.5,  // Hambach Castle, West Germany
-    endLng: 10.5
+    endLat: 49.3249971,  // Hambach Castle, West Germany
+    endLng: 8.1154489
   },
   {
-    startLat: 51.5, // Hambach Castle, West Germany
-    startLng: 10.5,
+    startLat: 49.3249971, // Hambach Castle, West Germany
+    startLng: 8.1154489,
     endLat: 40.4167047,  // Madrid, Spain
     endLng: -3.7035825
   },
@@ -417,7 +417,7 @@ const cities1985 = [
   { lat: 49.96794, lng: 6.52734, name: "Bitburg" },
   { lat: 50.8465573, lng: 4.351697, name: "Brussels" },
   { lat: 52.75869, lng: 9.90657, name: "Bergen-Belsen" },
-  { lat: 51.5, lng: 10.5, name: "Hambach Castle" },
+  { lat: 49.3249971, lng: 8.1154489, name: "Hambach Castle" },
   { lat: 46.2017559, lng: 6.1466014, name: "Geneva" },
   { lat: 48.584614, lng: 7.7507127, name: "Strasbourg" },
   { lat: 50.7842863, lng: 7.2605602, name: "Bonn" },

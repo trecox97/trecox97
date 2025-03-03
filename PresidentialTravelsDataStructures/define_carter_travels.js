@@ -32,12 +32,12 @@ const arcs1977 = [
   {
     startLat: 52.22977, // Warsaw, Polish People's Republic
     startLng: 21.01178,
-    endLat: 32.0,  // Tehran, Imperial State of Iran
-    endLng: 53.0
+    endLat: 35.689198,  // Tehran, Imperial State of Iran
+    endLng: 51.388973
   },
   {
-    startLat: 32.0, // Tehran, Imperial State of Iran
-    startLng: 53.0,
+    startLat: 35.689198, // Tehran, Imperial State of Iran
+    startLng: 51.388973,
     endLat: 38.9072,  // Washington, DC, USA
     endLng: -77.0369
   },
@@ -45,7 +45,7 @@ const arcs1977 = [
 
 const cities1977 = [
   { lat: 54.9738474, lng: -1.6131572, name: "Newcastle" },
-  { lat: 32.0, lng: 53.0, name: "Tehran" },
+  { lat: 35.689198, lng: 51.388973, name: "Tehran" },
   { lat: 46.2017559, lng: 6.1466014, name: "Geneva" },
   { lat: 38.9072, lng: -77.0369, name: "Washington, DC" },
   { lat: 52.22977, lng: 21.01178, name: "Warsaw" },
@@ -122,12 +122,18 @@ const arcs1978 = [
   {
     startLat: 10.5060934, // Caracas, Venezuela
     startLng: -66.9146008,
-    endLat: -10.0,  // BrasíliaRio de Janeiro, Brazil
-    endLng: -55.0
+    endLat: -15.7975717,  // Brasília
+    endLng: -47.8951985
   },
   {
-    startLat: -10.0, // BrasíliaRio de Janeiro, Brazil
-    startLng: -55.0,
+    startLat: -15.7975717, // Brasília
+    startLng: -47.8951985,
+    endLat: -22.906847,  // Rio de Janeiro, Brazil
+    endLng: -43.172897
+  },
+  {
+    startLat: -22.906847, // Rio de Janeiro, Brazil
+    startLng: -43.172897,
     endLat: 6.4550575,  // Lagos, Nigeria
     endLng: 3.3941795
   },
@@ -195,9 +201,10 @@ const arcs1978 = [
 
 const cities1978 = [
   { lat: 50.1050925, lng: 8.5859703, name: "Frankfurt" },
-  { lat: -10.0, lng: -55.0, name: "BrasíliaRio de Janeiro" },
+  { lat: -22.906847, lng: -43.172897, name: "Rio de Janeiro" },
+  { lat: -15.7975717, lng: -47.8951985, name: "Brasília" },
   { lat: 50.05617, lng: 8.30283, name: "Wiesbaden-Erbenheim" },
-  { lat: 26.30473, lng: 74.73364, name: "Daulatpur Nasirabad[4]" },
+  { lat: 26.30473, lng: 74.73364, name: "Daulatpur Nasirabad" },
   { lat: 49.2764624, lng: -0.7024738, name: "Bayeux" },
   { lat: 48.8588897, lng: 2.320041, name: "Paris" },
   { lat: 6.4550575, lng: 3.3941795, name: "Lagos" },

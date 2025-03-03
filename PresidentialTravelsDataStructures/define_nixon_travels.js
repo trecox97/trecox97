@@ -14,12 +14,18 @@ const arcs1969 = [
   {
     startLat: 51.5074456, // London, United Kingdom
     startLng: -0.1277653,
-    endLat: 51.5,  // West BerlinBonn, West Germany
-    endLng: 10.5
+    endLat: 52.5170732,  // West Berlin
+    endLng: 13.3939997
   },
   {
-    startLat: 51.5, // West BerlinBonn, West Germany
-    startLng: 10.5,
+    startLat: 52.5170732, // West Berlin
+    startLng: 13.3939997,
+    endLat: 50.7329346,  // Bonn
+    endLng: 7.0829622
+  },
+  {
+    startLat: 50.7329346, // Bonn
+    startLng: 7.0829622,
     endLat: 41.8933203,  // Rome, Italy
     endLng: 12.4829321
   },
@@ -132,7 +138,8 @@ const cities1969 = [
   { lat: 10.8103017, lng: 106.7576966, name: "Saigon" },
   { lat: 13.7524938, lng: 100.4935089, name: "Bangkok" },
   { lat: 41.9032459, lng: 12.4551867, name: "Apostolic Palace" },
-  { lat: 51.5, lng: 10.5, name: "West BerlinBonn" },
+  { lat: 50.7329346, lng: 7.0829622, name: "Bonn" },
+  { lat: 52.5170732, lng: 13.3939997, name: "West Berlin" },
 ];
 
 const arcs1970 = [
@@ -316,24 +323,24 @@ const arcs1972 = [
   {
     startLat: 47.7981346, // Salzburg, Austria
     startLng: 13.0464806,
-    endLat: 60.0,  // Moscow, Soviet Union
-    endLng: 98.0
-  },
-  {
-    startLat: 60.0, // Moscow, Soviet Union
-    startLng: 98.0,
-    endLat: 60.0,  // Leningrad, Soviet Union
-    endLng: 98.0
-  },
-  {
-    startLat: 60.0, // Leningrad, Soviet Union
-    startLng: 98.0,
-    endLat: 60.0,  // Kyiv, Soviet Union
-    endLng: 98.0
-  },
-  {
-    startLat: 60.0, // Kyiv, Soviet Union
-    startLng: 98.0,
+    endLat: 55.7558,  // Moscow, Russia
+    endLng: 37.6173
+},
+{
+    startLat: 55.7558, // Moscow, Russia
+    startLng: 37.6173,
+    endLat: 59.9343,  // Leningrad
+    endLng: 30.3351
+},
+{
+    startLat: 59.9343, // Leningrad
+    startLng: 30.3351,
+    endLat: 50.4501,  // Kiev
+    endLng: 30.5247
+},
+{
+    startLat: 50.4501, // Kiev
+    startLng: 30.5247,
     endLat: 35.6892523,  // Tehran, Iran
     endLng: 51.3896004
   },
@@ -353,13 +360,13 @@ const arcs1972 = [
 
 const cities1972 = [
   { lat: 47.7981346, lng: 13.0464806, name: "Salzburg" },
-  { lat: 60.0, lng: 98.0, name: "Kyiv" },
+  { lat: 50.4501, lng: 30.5247, name: "Kiev" },
   { lat: 35.6892523, lng: 51.3896004, name: "Tehran" },
   { lat: 52.2319581, lng: 21.0067249, name: "Warsaw" },
   { lat: 45.4208777, lng: -75.6901106, name: "Ottawa" },
-  { lat: 60.0, lng: 98.0, name: "Leningrad" },
+  { lat: 59.9343, lng: 30.3351, name: "Leningrad" },
   { lat: 40.190632, lng: 116.412144, name: "Beijing" },
-  { lat: 60.0, lng: 98.0, name: "Moscow" },
+  { lat: 55.7558, lng: 37.6173, name: "Moscow" },
   { lat: 38.9072, lng: -77.0369, name: "Washington, DC" },
   { lat: 30.2489634, lng: 120.2052342, name: "Hangzhou" },
   { lat: 31.2312707, lng: 121.4700152, name: "Shanghai" },
@@ -467,24 +474,24 @@ const arcs1974 = [
   {
     startLat: 50.8465573, // Brussels, Belgium
     startLng: 4.351697,
-    endLat: 60.0,  // Moscow, Soviet Union
-    endLng: 98.0
-  },
-  {
-    startLat: 60.0, // Moscow, Soviet Union
-    startLng: 98.0,
-    endLat: 60.0,  // Minsk, Soviet Union
-    endLng: 98.0
-  },
-  {
-    startLat: 60.0, // Minsk, Soviet Union
-    startLng: 98.0,
-    endLat: 60.0,  // Oreanda, Soviet Union
-    endLng: 98.0
-  },
-  {
-    startLat: 60.0, // Oreanda, Soviet Union
-    startLng: 98.0,
+    endLat: 55.7558,  // Moscow, Russia
+    endLng: 37.6173
+},
+{
+    startLat: 55.7558, // Moscow, Russia
+    startLng: 37.6173,
+    endLat: 53.9,  // Minsk, Belarus (formerly Soviet Union)
+    endLng: 27.5667
+},
+{
+    startLat: 53.9, // Minsk, Belarus (formerly Soviet Union)
+    startLng: 27.5667,
+    endLat: 44.5121,  // Oreanda, Crimea, Ukraine (formerly Soviet Union)
+    endLng: 34.1419
+},
+{
+    startLat: 44.5121, // Oreanda, Crimea, Ukraine (formerly Soviet Union)
+    startLng: 34.1419,
     endLat: 38.9072,  // Washington, DC, USA
     endLng: -77.0369
   },
@@ -496,15 +503,15 @@ const cities1974 = [
   { lat: 31.1991806, lng: 29.8951716, name: "Alexandria" },
   { lat: 32.0852997, lng: 34.7818064, name: "Tel Aviv" },
   { lat: 50.8465573, lng: 4.351697, name: "Brussels" },
-  { lat: 60.0, lng: 98.0, name: "Minsk" },
+  { lat: 53.9, lng: 27.5667, name: "Minsk" },
   { lat: 30.0443879, lng: 31.2357257, name: "Cairo" },
   { lat: 48.8588897, lng: 2.320041, name: "Paris" },
-  { lat: 60.0, lng: 98.0, name: "Moscow" },
+  { lat: 55.7558, lng: 37.6173, name: "Moscow" },
   { lat: 31.9515694, lng: 35.9239625, name: "Amman" },
   { lat: 38.9072, lng: -77.0369, name: "Washington, DC" },
   { lat: 38.7647784, lng: -27.0863748, name: "Lajes Field" },
   { lat: 31.7788242, lng: 35.2257626, name: "Jerusalem" },
-  { lat: 60.0, lng: 98.0, name: "Oreanda" },
+  { lat: 44.5121, lng: 34.1419, name: "Oreanda" },
   { lat: 21.5504432, lng: 39.1742363, name: "Jedda" },
 ];
 

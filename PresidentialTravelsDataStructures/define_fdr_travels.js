@@ -2,11 +2,11 @@ const arcs1933 = [
   {
     startLat: 38.9072, // Washington, DC, USA
     startLng: -77.0369,
-    endLat: 24.7736546,  // , The Bahamas
+    endLat: 24.7736546,  // The Bahamas
     endLng: -78.0000547
   },
   {
-    startLat: 24.7736546, // , The Bahamas
+    startLat: 24.7736546, // The Bahamas
     startLng: -78.0000547,
     endLat: 38.9072,  // Washington, DC, USA
     endLng: -77.0369
@@ -28,7 +28,7 @@ const arcs1933 = [
 const cities1933 = [
   { lat: 44.8938472, lng: -66.9193702, name: "Campobello Island" },
   { lat: 38.9072, lng: -77.0369, name: "Washington, DC" },
-  { lat: 24.7736546, lng: -78.0000547, name: "" },
+  { lat: 24.7736546, lng: -78.0000547, name: "The Bahamas" },
 ];
 
 const arcs1934 = [
@@ -77,7 +77,7 @@ const arcs1934 = [
 ];
 
 const cities1934 = [
-  { lat: 26.6731215, lng: -77.2982965, name: "Gun Cay.[251]" },
+  { lat: 26.6731215, lng: -77.2982965, name: "Gun Cay" },
   { lat: 38.9072, lng: -77.0369, name: "Washington, DC" },
   { lat: 26.5288141, lng: -76.967492, name: "Elbow Cay" },
   { lat: 19.7595236, lng: -72.2008068, name: "Cap Haitien" },
@@ -132,7 +132,7 @@ const cities1935 = [
   { lat: 38.9072, lng: -77.0369, name: "Washington, DC" },
   { lat: 8.9495435, lng: -79.5529019, name: "Balboa" },
   { lat: 22.3798045, lng: -77.5867118, name: "Lobos Cay" },
-  { lat: 22.894, lng: -74.036739, name: "Crooked Island[251]" },
+  { lat: 22.894, lng: -74.036739, name: "Crooked Island" },
   { lat: 25.53333, lng: -79.28333, name: "Cat Cays" },
   { lat: 21.0741312, lng: -73.3129702, name: "Great Inagua Island" },
 ];
@@ -335,11 +335,11 @@ const arcs1940 = [
   {
     startLat: 17.9712148, // Kingston, Jamaica
     startLng: -76.7928128,
-    endLat: 13.8250489,  // , Saint Lucia
+    endLat: 13.8250489,  // Saint Lucia
     endLng: -60.975036
   },
   {
-    startLat: 13.8250489, // , Saint Lucia
+    startLat: 13.8250489, // Saint Lucia
     startLng: -60.975036,
     endLat: 14.5997077,  // Fort Saint Louis, Martinique
     endLng: -61.0663293
@@ -347,12 +347,12 @@ const arcs1940 = [
   {
     startLat: 14.5997077, // Fort Saint Louis, Martinique
     startLng: -61.0663293,
-    endLat: -16.66667,  // Antigua, British Leeward Islands
-    endLng: -151.5
+    endLat: 17.0762941,  // Antigua, British Leeward Islands
+    endLng: -61.8215385
   },
   {
-    startLat: -16.66667, // Antigua, British Leeward Islands
-    startLng: -151.5,
+    startLat: 17.0762941, // Antigua, British Leeward Islands
+    startLng: -61.8215385,
     endLat: 25.04082,  // EleutheraIsland, The Bahamas
     endLng: -77.37122
   },
@@ -367,12 +367,12 @@ const arcs1940 = [
 const cities1940 = [
   { lat: 38.9072, lng: -77.0369, name: "Washington, DC" },
   { lat: 8.9495435, lng: -79.5529019, name: "Balboa" },
-  { lat: -16.66667, lng: -151.5, name: "Antigua" },
+  { lat: 17.0762941, lng: -61.8215385, name: "Antigua" },
   { lat: 25.04082, lng: -77.37122, name: "EleutheraIsland" },
   { lat: 17.9712148, lng: -76.7928128, name: "Kingston" },
   { lat: 14.5997077, lng: -61.0663293, name: "Fort Saint Louis" },
   { lat: 9.2578758, lng: -79.9071872, name: "Cristóbal" },
-  { lat: 13.8250489, lng: -60.975036, name: "" },
+  { lat: 13.8250489, lng: -60.975036, name: "Saint Lucia" },
 ];
 
 const arcs1941 = [
@@ -477,12 +477,12 @@ const arcs1943 = [
   {
     startLat: 38.9072, // Washington, DC, USA
     startLng: -77.0369,
-    endLat: 28.0,  // Oran, French Algeria
-    endLng: 3.0
+    endLat: 35.6915596,  // Oran, French Algeria
+    endLng:  -0.6600127
   },
   {
-    startLat: 28.0, // Oran, French Algeria
-    startLng: 3.0,
+    startLat: 35.6915596, // Oran, French Algeria
+    startLng:  -0.6600127,
     endLat: 33.8439408,  // Tunis, Tunisia
     endLng: 9.400138
   },
@@ -535,12 +535,11 @@ const arcs1943 = [
     endLng: -77.0369
   },
 ];
-
 const cities1943 = [
   { lat: 38.9072, lng: -77.0369, name: "Washington, DC" },
   { lat: 13.45535, lng: -16.575646, name: "Bathurst" },
   { lat: 37.6828513, lng: 12.7955336, name: "Castelvetrano" },
-  { lat: 28.0, lng: 3.0, name: "Oran" },
+  { lat: 35.6915596, lng: -0.6600127, name: "Oran" },
   { lat: 6.328034, lng: -10.797788, name: "Monrovia" },
   { lat: 35.6892523, lng: 51.3896004, name: "Tehran" },
   { lat: 10.6572678, lng: -61.5180173, name: "Port of Spain" },
@@ -550,7 +549,7 @@ const cities1943 = [
   { lat: 25.6802019, lng: -100.315258, name: "Monterrey" },
   { lat: 14.693425, lng: -17.447938, name: "Dakar" },
   { lat: 33.5945144, lng: -7.6200284, name: "Casablanca" },
-  { lat: 60.10867, lng: -113.64258, name: "Quebec CityOttawa" },
+  { lat: 60.10867, lng: -113.64258, name: "Quebec City" },
   { lat: 35.8989979, lng: 14.5136607, name: "Valletta" },
 ];
 
@@ -608,12 +607,12 @@ const arcs1945 = [
   {
     startLat: 31.1991806, // Alexandria, Egypt
     startLng: 29.8951716,
-    endLat: 28.0,  // Algiers, French Algeria
-    endLng: 3.0
+    endLat: 36.7324845,  // Algiers, French Algeria
+    endLng: 3.0826525
   },
   {
-    startLat: 28.0, // Algiers, French Algeria
-    startLng: 3.0,
+    startLat: 36.7324845, // Algiers, French Algeria
+    startLng: 3.0826525,
     endLat: 38.9072,  // Washington, DC, USA
     endLng: -77.0369
   },
@@ -621,7 +620,7 @@ const arcs1945 = [
 
 const cities1945 = [
   { lat: 38.9072, lng: -77.0369, name: "Washington, DC" },
-  { lat: 28.0, lng: 3.0, name: "Algiers" },
+  { lat: 36.7324845, lng: 3.0826525, name: "Algiers" },
   { lat: 44.423953, lng: 34.0547074, name: "Yalta" },
   { lat: 30.6052767, lng: 32.3331003, name: "Suez Canal" },
   { lat: 35.8929838, lng: 14.5052716, name: "Floriana" },

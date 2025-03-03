@@ -110,12 +110,12 @@ const arcs1989 = [
   {
     startLat: 48.8588897, // Paris, France
     startLng: 2.320041,
-    endLat: 52.25,  // The HagueLeiden, Netherlands
-    endLng: 5.75
+    endLat: 52.0799838,  // The Hague, Netherlands
+    endLng: 4.3113461
   },
   {
-    startLat: 52.25, // The HagueLeiden, Netherlands
-    startLng: 5.75,
+    startLat: 52.0799838, // The Hague, Netherlands
+    startLng: 4.3113461,
     endLat: 38.9072,  // Washington, DC, USA
     endLng: -77.0369
   },
@@ -195,7 +195,7 @@ const cities1989 = [
   { lat: 9.9325427, lng: -84.0795782, name: "San José" },
   { lat: 41.8933203, lng: 12.4829321, name: "Rome" },
   { lat: 47.4978789, lng: 19.0402383, name: "Budapest" },
-  { lat: 52.25, lng: 5.75, name: "The HagueLeiden" },
+  { lat: 52.0799838, lng: 4.3113461, name: "The Hague" },
   { lat: 48.8588897, lng: 2.320041, name: "Paris" },
   { lat: 54.3482907, lng: 18.6540233, name: "Gdańsk" },
 ];
@@ -330,12 +330,12 @@ const arcs1990 = [
   {
     startLat: 38.9072, // Washington, DC, USA
     startLng: -77.0369,
-    endLat: -10.3333333,  // Brasília, Brazil
-    endLng: -53.2
+    endLat: -15.7801,  // Brasília, Brazil
+    endLng: -47.9292
   },
   {
-    startLat: -10.3333333, // Brasília, Brazil
-    startLng: -53.2,
+    startLat: -15.7801, // Brasília, Brazil
+    startLng: -47.9292,
     endLat: -34.9058916,  // Montevideo, Uruguay
     endLng: -56.1913095
   },
@@ -368,7 +368,7 @@ const arcs1990 = [
 const cities1990 = [
   { lat: 43.6534817, lng: -79.3839347, name: "Toronto" },
   { lat: 49.3165553, lng: 8.433615, name: "Speyer" },
-  { lat: -10.3333333, lng: -53.2, name: "Brasília" },
+  { lat: -15.7801, lng: -47.9292, name: "Brasília" },
   { lat: 30.0443879, lng: 31.2357257, name: "Cairo" },
   { lat: 21.5504432, lng: 39.1742363, name: "Jeddah" },
   { lat: 10.4265566, lng: -75.5441671, name: "Cartagena" },
@@ -476,18 +476,18 @@ const arcs1991 = [
   {
     startLat: 38.9072, // Washington, DC, USA
     startLng: -77.0369,
-    endLat: 60.0,  // Moscow, Soviet Union
-    endLng: 98.0
-  },
-  {
-    startLat: 60.0, // Moscow, Soviet Union
-    startLng: 98.0,
-    endLat: 60.0,  // Kiev, Soviet Union
-    endLng: 98.0
-  },
-  {
-    startLat: 60.0, // Kiev, Soviet Union
-    startLng: 98.0,
+    endLat: 55.7558,  // Moscow, Russia
+    endLng: 37.6173
+},
+{
+    startLat: 55.7558, // Moscow, Russia
+    startLng: 37.6173,
+    endLat: 50.4501,  // Kiev, Ukraine
+    endLng: 30.5247
+},
+{
+    startLat: 50.4501, // Kiev, Ukraine
+    startLng: 30.5247,
     endLat: 38.9072,  // Washington, DC, USA
     endLng: -77.0369
   },
@@ -532,11 +532,11 @@ const arcs1991 = [
 const cities1991 = [
   { lat: 41.9032459, lng: 12.4551867, name: "Apostolic Palace" },
   { lat: 43.6534817, lng: -79.3839347, name: "Toronto" },
-  { lat: 60.0, lng: 98.0, name: "Moscow" },
+  { lat: 55.7558, lng: 37.6173, name: "Moscow" },
   { lat: 45.4208777, lng: -75.6901106, name: "Ottawa" },
   { lat: 38.9072, lng: -77.0369, name: "Washington, DC" },
   { lat: 51.5074456, lng: -0.1277653, name: "London" },
-  { lat: 60.0, lng: 98.0, name: "Kiev" },
+  { lat: 50.4501, lng: 30.5247, name: "Kiev" },
   { lat: 14.6027962, lng: -61.0676724, name: "Fort-de-France" },
   { lat: 41.8933203, lng: 12.4829321, name: "Rome" },
   { lat: 40.4167047, lng: -3.7035825, name: "Madrid" },
@@ -668,12 +668,6 @@ const arcs1993 = [
   {
     startLat: 3.119951, // Baidoa, Somalia
     startLng: 43.644462,
-    endLat: 6.0,  // Baledogle, Somalia
-    endLng: 48.0
-  },
-  {
-    startLat: 6.0, // Baledogle, Somalia
-    startLng: 48.0,
     endLat: 55.625578,  // Moscow, Russia
     endLng: 37.6063916
   },
@@ -696,7 +690,6 @@ const cities1993 = [
   { lat: 3.119951, lng: 43.644462, name: "Baidoa" },
   { lat: -22.9110137, lng: -43.2093727, name: "Rio de Janeiro" },
   { lat: 52.2319581, lng: 21.0067249, name: "Warsaw" },
-  { lat: 6.0, lng: 48.0, name: "Baledogle" },
   { lat: 38.9072, lng: -77.0369, name: "Washington, DC" },
   { lat: 24.638916, lng: 46.7160104, name: "Riyadh" },
   { lat: 1.2899175, lng: 103.8519072, name: "Singapore" },

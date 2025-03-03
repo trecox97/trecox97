@@ -2,18 +2,19 @@
     display: flex;
     flex-direction: column; /* Stack children vertically */
     align-items: center; /* Center content horizontally */
+    justify-content: space-between;
 }
 
 .presidential-travel {
-    width: 100%; /* Make the title span the full width */
-    text-align: center; /* Center the text */
+    text-align: center; 
     font-size: 24px;
     font-weight: bold;
 }
 
-.content-wrapper {
+.presidential-selector, .content-wrapper {
     display: flex;
-    justify-content: space-between;
+    flex: 1;
+    justify-content: center;
     width: 100%;
 }
 
@@ -24,4 +25,64 @@
 
 #globeViz {
     flex: 3; /* Make it take up more space than the dropdown */
+    border-radius: 0 0 20px 20px;
+}
+
+/* Content Style */
+.collapsible {
+    border-radius: 0 0 0 20px;
+}
+
+.collapsible.active {
+    border-radius: 0;;
+}
+
+#pres-nav{
+    display: flex;
+    justify-content: space-evenly; /* Evenly spaces the items across the container */
+    list-style: none; /* Removes the default list styling */
+    padding: 0; /* Removes the default padding */
+    margin: 0; /* Removes the default margin */
+    background-color: rgba(156, 38, 38, 0.8);
+    border-radius: 20px 20px 0 0;
+}
+
+.presidential-selector ul {
+    display: flex; /* Use flexbox to distribute the list items */
+    flex-direction: row; /* Keep the items in a single row */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+    width: 100%; /* Ensure the ul takes up the full width of the parent container */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.pres-nav-item {
+    text-align: center;
+    cursor: pointer;
+    flex: 1 1 12.5%; /* Allow items to grow and shrink, but ensure they don't shrink too much */
+    min-width: 50px; /* Ensure each item has a minimum width */
+    padding: 10px; /* Optional: Add padding for better touch targets */
+    box-sizing: border-box; /* Ensure padding is included in the width calculation */
+}
+
+.pres-nav-item:hover {
+    background-color: #0064B0;
+}
+
+/* Style for selected item */
+.pres-nav-item.selected {
+    background-color: #0064B0;
+    color: aliceblue;  /* Change text color if necessary */
+}
+
+/* Optional: Media query to make adjustments on smaller screens */
+@media (max-width: 600px) {
+    .pres-nav-item {
+        flex: 1 1 20%; /* Allow items to grow and shrink, but ensure they don't shrink too much */
+        min-width: 70px; /* Ensure items remain legible even on smaller screens */
+    }
+    
+    .content-wrapper {
+        flex-direction: column; /* Stack items on top of each other */
+    }
 }

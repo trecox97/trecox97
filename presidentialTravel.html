@@ -15,26 +15,26 @@
 <body>
     <header id="header"></header>
     <script src="loadHeader.js"></script>
-    <h2>Here you can select Presidents and Travel Years</h2>
+    <h2>Here you can select Presidents and their Travel Years</h2>
 
     <div class="container">
         <div class="presidential-selector">
-            <ul class="h">
-                <li class="h" data-president="FDR">FDR</li>
-                <li class="h" data-president="Truman">Truman</li>
-                <li class="h" data-president="Eisenhower">Eisenhower</li>
-                <li class="h" data-president="JFK">JFK</li>
-                <li class="h" data-president="LBJ">LBJ</li>
-                <li class="h" data-president="Nixon">Nixon</li>
-                <li class="h" data-president="Ford">Ford</li>
-                <li class="h" data-president="Carter">Carter</li>
-                <li class="h" data-president="Reagan">Reagan</li>
-                <li class="h" data-president="Bush Sr.">Bush Sr.</li>
-                <li class="h" data-president="Clinton">Clinton</li>
-                <li class="h" data-president="Bush Jr.">Bush Jr.</li>
-                <li class="h" data-president="Obama">Obama</li>
-                <li class="h" data-president="Trump">Trump</li>
-                <li class="h" data-president="Biden">Biden</li>
+            <ul class="h" id="pres-nav">
+                <li class="pres-nav-item" data-president="FDR">FDR</li>
+                <li class="pres-nav-item" data-president="Truman">Truman</li>
+                <li class="pres-nav-item" data-president="Eisenhower">Eisenhower</li>
+                <li class="pres-nav-item" data-president="JFK">JFK</li>
+                <li class="pres-nav-item" data-president="LBJ">LBJ</li>
+                <li class="pres-nav-item" data-president="Nixon">Nixon</li>
+                <li class="pres-nav-item" data-president="Ford">Ford</li>
+                <li class="pres-nav-item" data-president="Carter">Carter</li>
+                <li class="pres-nav-item" data-president="Reagan">Reagan</li>
+                <li class="pres-nav-item" data-president="Bush Sr.">Bush Sr.</li>
+                <li class="pres-nav-item" data-president="Clinton">Clinton</li>
+                <li class="pres-nav-item" data-president="Bush Jr.">Bush Jr.</li>
+                <li class="pres-nav-item" data-president="Obama">Obama</li>
+                <li class="pres-nav-item" data-president="Trump">Trump</li>
+                <li class="pres-nav-item" data-president="Biden">Biden</li>
             </ul>
         </div>
         <div class="content-wrapper">
@@ -135,6 +135,9 @@
                 }
                 console.log(datasets); // You can see the loaded datasets in the console
                 updateArcList();
+                globe.labelsData(labelsDefaultCities);
+                globe.arcsData(allArcs);
+                globe.pointOfView({ lat: 38.9072, lng: -77.0369, altitude: 2 }, 3000); // Adjusts the globe's view smoothly over 3 seconds to DC
             } catch (error) {
                 console.error(`Error loading data for ${president}: `, error);
             }
@@ -168,25 +171,49 @@
             });
         }
 
-        // Add event listeners to each president <li> to load their respective data
-        document.querySelectorAll('.h').forEach(item => {
-            item.addEventListener('click', function () {
-                const president = this.getAttribute('data-president');
-                loadDataset(president);  // Load dataset based on the selected president
-            });
-        });
+// Add event listeners to each president <li> to load their respective data
+    document.querySelectorAll('.pres-nav-item').forEach(item => {
+    item.addEventListener('click', function () {
+        // Remove the 'selected' class from all items
+        document.querySelectorAll('.pres-nav-item').forEach(i => i.classList.remove('selected'));
 
-        // Collapsible button functionality for the dropdown
+        // Add the 'selected' class to the clicked item
+        this.classList.add('selected');
+
+        // Get the president's name and load the dataset
+        const president = this.getAttribute('data-president');
+        loadDataset(president);  // Load dataset based on the selected president
+
+        // Get the collapsible button and content
         const coll = document.querySelector('.collapsible');
         const content = document.querySelector('.content');
-        coll.addEventListener('click', function () {
-            this.classList.toggle('active');
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-            } else {
-                content.style.maxHeight = content.scrollHeight + 180 + "px";
-            }
-        });
+
+        // Check if the collapsible content is already open
+        if (coll.classList.contains('active')) {
+            // If it's open, close it first
+            coll.classList.remove('active');
+            content.style.maxHeight = null;
+        }
+
+        // Open the collapsible content (set maxHeight) after closing it, to simulate reopening
+        coll.classList.add('active');
+        content.style.maxHeight = content.scrollHeight + 270 + "px";
+    });
+});
+
+// Collapsible button functionality for the dropdown
+const coll = document.querySelector('.collapsible');
+const content = document.querySelector('.content');
+coll.addEventListener('click', function () {
+    this.classList.toggle('active');
+    if (content.style.maxHeight) {
+        content.style.maxHeight = null; // Close the menu if it's open
+    } else {
+        content.style.maxHeight = content.scrollHeight + 270 + "px"; // Open the menu if it's closed
+    }
+});
+
+
     </script>
 
     <script src="createPresidentialTravelGlobe.js"></script>
