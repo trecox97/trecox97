@@ -5,7 +5,7 @@ from geopy.geocoders import OpenCage
 import re
 
 # OpenCage API Key (Replace with your own key)
-OPENCAGE_API_KEY = "6621a95db11e4602856993de21381fb9"
+OPENCAGE_API_KEY = ""
 geolocator = OpenCage(OPENCAGE_API_KEY)
 
 # Function to get latitude and longitude from OpenCage API

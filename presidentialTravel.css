@@ -4,12 +4,15 @@ header.scrolled {
 
 .container {
     display: flex;
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center content horizontally */
+    flex-direction: column;
+    /* Stack children vertically */
+    align-items: center;
+    /* Center content horizontally */
     justify-content: space-between;
 }
 
-.presidential-selector, .content-wrapper {
+.presidential-selector,
+.content-wrapper {
     display: flex;
     flex: 1;
     justify-content: center;
@@ -17,12 +20,15 @@ header.scrolled {
 }
 
 .dropdown {
-    flex: 1; /* Allow it to take available space */
-    width: 400px; /* Limit width if necessary */
+    flex: 1;
+    /* Allow it to take available space */
+    width: 400px;
+    /* Limit width if necessary */
 }
 
 #globeViz {
-    flex: 3; /* Make it take up more space than the dropdown */
+    flex: 3;
+    /* Make it take up more space than the dropdown */
     border-radius: 0 0 20px 20px;
 }
 
@@ -35,27 +41,36 @@ header.scrolled {
     border-radius: 0;
 }
 
-#pres-nav{
+#pres-nav {
     display: flex;
-    justify-content: space-evenly; /* Evenly spaces the items across the container */
+    justify-content: space-evenly;
+    /* Evenly spaces the items across the container */
     background-color: rgba(156, 38, 38, 0.8);
     border-radius: 20px 20px 0 0;
 }
 
 .presidential-selector ul {
-    display: flex; /* Use flexbox to distribute the list items */
-    flex-direction: row; /* Keep the items in a single row */
-    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
-    width: 100%; /* Ensure the ul takes up the full width of the parent container */
+    display: flex;
+    /* Use flexbox to distribute the list items */
+    flex-direction: row;
+    /* Keep the items in a single row */
+    flex-wrap: wrap;
+    /* Allow items to wrap to the next line if necessary */
+    width: 100%;
+    /* Ensure the ul takes up the full width of the parent container */
 }
 
 .pres-nav-item {
     text-align: center;
     cursor: pointer;
-    flex: 1 1 14%; /* Allow items to grow and shrink, but ensure they don't shrink too much */
-    min-width: 50px; /* Ensure each item has a minimum width */
-    padding: 10px; /* Optional: Add padding for better touch targets */
-    box-sizing: border-box; /* Ensure padding is included in the width calculation */
+    flex: 1 1 14%;
+    /* Allow items to grow and shrink, but ensure they don't shrink too much */
+    min-width: 50px;
+    /* Ensure each item has a minimum width */
+    padding: 10px;
+    /* Optional: Add padding for better touch targets */
+    box-sizing: border-box;
+    /* Ensure padding is included in the width calculation */
 }
 
 .pres-nav-item:hover {
@@ -65,7 +80,8 @@ header.scrolled {
 /* Style for selected item */
 .pres-nav-item.selected {
     background-color: #0064B0;
-    color: aliceblue;  /* Change text color if necessary */
+    color: aliceblue;
+    /* Change text color if necessary */
 }
 
 /* Optional: Media query to make adjustments on larger screens */
@@ -78,32 +94,45 @@ header.scrolled {
 /*Media query to make adjustments on smaller screens */
 @media (max-width: 740px) {
     .pres-nav-item {
-        flex: 1 1 11%; /* Allow items to grow and shrink, but ensure they don't shrink too much */
-        min-width: 70px; /* Ensure items remain legible even on smaller screens */
+        flex: 1 1 11%;
+        /* Allow items to grow and shrink, but ensure they don't shrink too much */
+        min-width: 70px;
+        /* Ensure items remain legible even on smaller screens */
         font-size: 14px;
     }
+
     .content-wrapper {
-        flex-direction: column; /* Stack items on top of each other */
+        flex-direction: column;
+        /* Stack items on top of each other */
     }
+
     .presidential-selector {
         width: 95%;
     }
+
     .collapsible {
-        width: 100%; /* Ensure the content takes up the full width */
+        width: 100%;
+        /* Ensure the content takes up the full width */
         border-radius: 0 0 20px 20px;
     }
+
     .dropdown {
-        width: 95%; /* Ensure the dropdown takes up the full width */
+        width: 95%;
+        /* Ensure the dropdown takes up the full width */
         padding-bottom: 10px;
         margin: auto;
     }
+
     .content {
         width: 90%;
         margin: auto;
     }
+
     .collapsible.active {
-        border-radius: 0 0 20px 20px;;
+        border-radius: 0 0 20px 20px;
+        ;
     }
+
     #globeViz {
         border-radius: 20px;
     }
