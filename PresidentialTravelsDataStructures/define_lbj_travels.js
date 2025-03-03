@@ -359,7 +359,7 @@ export const datasets = {
   "All Cities": {
     labels: labelsDefaultCities
   },
-  "1964 Trips": {
+  "1964 Trip": {
     arcs: arcs1964,
     labels: cities1964
   },
@@ -371,7 +371,7 @@ export const datasets = {
     arcs: arcs1967,
     labels: cities1967
   },
-  "1968 Trips": {
+  "1968 Trip": {
     arcs: arcs1968,
     labels: cities1968
   },

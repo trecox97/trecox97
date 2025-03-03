@@ -61,7 +61,37 @@
         // Function to dynamically import the dataset based on the selected president
         async function loadDataset(president) {
             try {
-                if (president === 'FDR') {
+                if (president === 'Teddy') {
+                    const module = await import('./PresidentialTravelsDataStructures/define_teddy_travels.js');
+                    datasets = module.datasets;
+                    allArcs = module.allArcs;
+                    labelsDefaultCities = module.labelsDefaultCities;
+                } else if (president === 'Taft') {
+                    const module = await import('./PresidentialTravelsDataStructures/define_taft_travels.js');
+                    datasets = module.datasets;
+                    allArcs = module.allArcs;
+                    labelsDefaultCities = module.labelsDefaultCities;
+                } else if (president === 'Wilson') {
+                    const module = await import('./PresidentialTravelsDataStructures/define_wilson_travels.js');
+                    datasets = module.datasets;
+                    allArcs = module.allArcs;
+                    labelsDefaultCities = module.labelsDefaultCities;
+                } else if (president === 'Harding') {
+                    const module = await import('./PresidentialTravelsDataStructures/define_harding_travels.js');
+                    datasets = module.datasets;
+                    allArcs = module.allArcs;
+                    labelsDefaultCities = module.labelsDefaultCities;
+                } else if (president === 'Coolidge') {
+                    const module = await import('./PresidentialTravelsDataStructures/define_coolidge_travels.js');
+                    datasets = module.datasets;
+                    allArcs = module.allArcs;
+                    labelsDefaultCities = module.labelsDefaultCities;
+                } else if (president === 'Hoover') {
+                    const module = await import('./PresidentialTravelsDataStructures/define_hoover_travels.js');
+                    datasets = module.datasets;
+                    allArcs = module.allArcs;
+                    labelsDefaultCities = module.labelsDefaultCities;
+                } else if (president === 'FDR') {
                     const module = await import('./PresidentialTravelsDataStructures/define_fdr_travels.js');
                     datasets = module.datasets;
                     allArcs = module.allArcs;
