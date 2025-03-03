@@ -60,7 +60,7 @@ function resizeGlobeContainerAndGlobe() {
         globeContainer.style.height = (windowHeight * 0.6) + 'px';
     } else {
         globeContainer.style.width = (windowWidth) + 'px';
-        globeContainer.style.height = (windowHeight * 0.8) + 'px';
+        globeContainer.style.height = (windowHeight * 0.75) + 'px';
     }
 
     // Call resizeGlobe to adjust the globe size after the container has resized
