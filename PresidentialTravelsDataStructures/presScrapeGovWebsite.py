@@ -3,10 +3,19 @@ from bs4 import BeautifulSoup
 import csv
 from geopy.geocoders import OpenCage
 import re
+import os
+from dotenv import load_dotenv
+from pathlib import Path
 
-# OpenCage API Key (Replace with your own key)
-OPENCAGE_API_KEY = ""
-geolocator = OpenCage(OPENCAGE_API_KEY)
+# Specify the path to your .env file
+dotenv_path = Path('../.env')
+
+# Load the environment variables from the .env file
+load_dotenv(dotenv_path=dotenv_path)
+
+# Access the API key using os.getenv()
+api_key = os.getenv("OPENCAGE_API_KEY")
+geolocator = OpenCage(api_key)
 
 # Function to get latitude and longitude from OpenCage API
 def get_coordinates(city, country):

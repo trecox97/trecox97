@@ -545,3 +545,51 @@ const labelsIrelandTrip2006Cities = [
   { lat: 53.3498, lng: -6.2603, name: "Dublin", size: .9 },
   { lat: 54.5973, lng: -5.9301, name: "Belfast", size: .9 }
 ];
+
+const datasets = {
+  "All Travels & Moves": {
+    arcs: allArcs,
+    labels: labelsDefaultCities,
+    view: { lat: 40.7128, lng: -74.0060, altitude: 2 } // New York Coords
+  },
+  "USA Moves": {
+    arcs: arcsUSAMoves,
+    labels: labelsUSACities,
+    view: { lat: 39.8283, lng: -98.5795, altitude: 1.5 } // Central USA
+  },
+  "2025 Ski Trips": {
+    arcs: arcs2025SkiTrips,
+    labels: labelsSkiTrips2025Cities,
+    view: { lat: 40.7128, lng: -74.0060, altitude: 2.5 } // New York Coords
+  },
+  "2022-2024 Peace Corps Travels": {
+    arcs: arcsPeaceCorpsTravels,
+    labels: labelsPeaceCorpsCities,
+    view: { lat: -1.2864, lng: 36.8172, altitude: 1.5 } // Nairobi
+  },
+  "2021 & 2022 Euro Trips": {
+    arcs: arcs2022EuroTrip,
+    labels: labelsEuroTrip2022Cities,
+    view: { lat: 48.8566, lng: 2.3522, altitude: .75 } // Paris
+  },
+  "2021 Mexico Trip": {
+    arcs: arcs2021MexicoTrip,
+    labels: labelsMexicoTripCities,
+    view: { lat: 23.6345, lng: -102.5528, altitude: 1.5 } // Mexico
+  },
+  "2018 Euro Trip": {
+    arcs: arcs2018EuroTrip,
+    labels: labelsEuroTrip2018Cities,
+    view: { lat: 47.3769, lng: 8.5417, altitude: .75 } // Zurich
+  },
+  "2016 Study Abroad": {
+    arcs: arcs2016StudyAbroad,
+    labels: labelsStudyAbroad2016Cities,
+    view: { lat: 50.8503, lng: 4.3517, altitude: .5 } // Brussels
+  },
+  "2008 Ireland Trip": {
+    arcs: arcs2008IrelandTrip,
+    labels: labelsIrelandTrip2006Cities,
+    view: { lat: 50, lng: -20, altitude: 1 } // Between Ireland and New York
+  }
+};
