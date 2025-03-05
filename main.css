@@ -6,7 +6,7 @@ html {
 
 body {
     background-color: #F3A4B4;
-    font-family: "Comic Sans MS", "Comic Sans", "Futura";
+    font-family: "Geneva";
     text-align: center;
     color: aliceblue;
     cursor: default;
@@ -87,7 +87,6 @@ a:hover {
 #playPauseBtn {
     background-color: rgba(156, 38, 38, 0.702);
     color: aliceblue;
-    font-family: "Comic Sans MS", "Comic Sans";
     padding: 10px;
     font-size: 15px;
     border-radius: 10px;
