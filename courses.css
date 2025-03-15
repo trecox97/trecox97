@@ -27,6 +27,11 @@
     margin-left: 5px;
 }
 
+strong {
+    text-decoration: underline;
+    font-weight: 900px;
+}
+
 .active:after {
     content: "\2212";
 }
