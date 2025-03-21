@@ -11,18 +11,18 @@ The website consists of several sections:
 - **Locations** - Various places I've lived, worked, and traveled to.
 - **Skiing** - A collecdtion of the mountains I've skied.
 - **Books** - A collection of books and Shakespeare plays I've read.
-- **Random** - Miscellaneous content.
+- **Presidential Travels** - An interactive globe to visualize all presidents international trips.
 
 ## Features
-- **Globe Visualizer:** - An interactive globe that displays the international trips of all the presidents. 
+- **Globe Visualizer:** - Linked to from the locations page. This globe shows my international trips. 
 
 ## Technologies Used
 - **HTML/CSS/JavaScript** - For structure, styling, and interactivity.
-- **Python** - To scrape datat from wikipedia for the presidential travel globe.
+- **Python** - To scrape data from the internet for the presidential travel globe.
 - **Cloudflare** - For custom domain hosting. 
 
 ## Acknowledgments
-This site is a mix of my own coding efforts, assistance from ChatGPT, and code from my friend Frank’s personal website.
+This site is a mix of my own coding efforts, assistance from ChatGPT, and code from my friend Frank’s website.
 
 ## Future Plans
 I plan to continue improving the site, experimenting with new features, and documenting more of my work and experiences. Stay tuned!
