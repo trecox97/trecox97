@@ -28,7 +28,7 @@
    <script src="Utils/loadHeader.js"></script>
 
    <div class="main">
-      <h1>Mountains Skied: 28</h1>
+      <h1 id="mountain-count">Mountains Skied: 0</h1>
       <div>
          <button id="playPauseBtn">Play</button>
       </div>
@@ -111,6 +111,18 @@
             </tr>
          </table>
       </div>
+
+      <script>
+         // Function to count <a> tags and update the "Mountains Skied" counter
+         function updateMountainCount() {
+            const totalMountains = document.querySelectorAll('.main a').length;
+            document.getElementById('mountain-count').textContent = `Mountains Skied: ${totalMountains}`;
+         }
+      
+         // Call the function to update the count on page load
+         updateMountainCount();
+      </script>
+
       <br>
       <script src="Utils/collapsible-menu.js"></script>
 
