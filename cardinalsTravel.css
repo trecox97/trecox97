@@ -1,0 +1,102 @@
+#globeViz {
+    overflow: hidden;
+    border-radius: 20px;
+    margin: 0 auto; /* Centers it horizontally */
+    max-width: 90%
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+a:hover {
+    color: #0064B0;
+}
+
+/* Content Style */
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    color: #25303B;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    width: 400px;
+}
+
+/* List Style */
+.content ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    margin: 0;
+}
+
+.content ul li {
+    padding: 8px;
+    cursor: pointer;
+    background-color: #f0f8ff;
+    text-align: center;
+}
+
+.content ul li:hover {
+    background-color: #ddd;
+}
+
+/* Ensure the 'selected' class has higher priority than hover */
+.content ul li.selected {
+    background-color: #9c2626b3; /* Choose your highlight color */
+    color: aliceblue; /* Text color when highlighted */
+}
+
+/* To prevent hover from interfering when the item is selected */
+.content ul li.selected:hover {
+    background-color: #9c2626b3; /* Keep the same color when hovering over a selected item */
+}
+
+/* Paragraph Style */
+.content p {
+    font-size: 15px;
+    margin: 0;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.container {
+    display: flex;
+    flex-direction: row; /* Stack items on top of each other by default */
+    margin-bottom: 10px;
+}
+
+@media (max-width: 740px) { /* Adjust for mobile view */
+    .container {
+        flex-direction: column; /* Place items next to each other */
+        justify-content: center;
+        align-items: center;
+    }
+    .collapsible {
+        border-radius: 20px;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto; /* Centers the element horizontally */
+    }
+    .collapsible.active {
+        border-radius: 20px 20px 0 0;
+    }
+    body {
+        margin: 0px;
+    }
+    .dropdown {
+        margin-bottom: 8px;
+    }
+    #globeViz {
+        border-radius: 20px;
+    }
+    #arcList li:last-child {
+        border-radius: 0 0 20px 20px;
+      }
+}
