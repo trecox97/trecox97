@@ -5,6 +5,10 @@
     max-width: 90%
 }
 
+p {
+    color: #25303B;
+}
+
 a {
     text-decoration: none;
     color: aliceblue;
