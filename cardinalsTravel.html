@@ -1,0 +1,64 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Trevor Cox's Website</title>
+    <link rel="stylesheet" type="text/css" href="./main.css">
+    <link rel="stylesheet" type="text/css" href="./header.css">
+    <link rel="stylesheet" type="text/css" href="./footer.css">
+    <link rel="stylesheet" type="text/css" href="./cardinalsTravel.css">
+    <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+    <audio id="my_audio" src="Songs/Seal_the_Room.mp3"></audio>
+    <script>
+      window.onload = function () {
+        document.getElementById("my_audio").play();
+      }
+    </script>
+    <script src="//unpkg.com/globe.gl"></script>
+    <!--<script src="../../dist/globe.gl.js"></script>-->
+  </head>
+  
+  <body>
+    <header id="header"></header>
+    <script src="Utils/loadHeader.js"></script>
+    <div>
+      <button id="playPauseBtn">Play</button>
+    </div>
+    <h2>Conclave 2025</h2>
+    <script src="Utils/PlayPause.js"></script>
+    <div id="globeViz"></div>
+
+    <!--<div id="globe-container">
+    <div id="globeViz"></div>
+    </div>
+  -->
+
+    <script src="Utils/cardinals.js"></script>
+
+
+    <script src="Utils/createDefaultGlobe.js"></script>
+    <script>
+      //Setting Custom Defaults and arc specific colors for my travel globe.
+      let arcsData = cardinalTravels;
+      let labelData = cardinalCities;
+      globe.arcsData(arcsData)
+        .labelsData(labelData)
+        .arcColor(["white", "red"])
+        .arcDashAnimateTime([2500])
+        .arcStroke([".4px"])
+        .arcDashInitialGap(() => Math.random())
+        .arcLabel(d => d.label)
+        .arcDashAnimateTime(d => d.distance)
+        .arcDashAnimateTime(d => {
+            const effectiveDistance = d.distance < 2000 ? 2500 : d.distance;
+            return effectiveDistance;
+        })
+        .arcDashLength(0.1)
+        .arcDashGap(1)
+        ;
+        globe.controls().autoRotateSpeed = 0;
+
+    </script>
+    <br>  
+    <div id="footer-container"></div>
+    <script src="Utils/loadFooter.js"></script>
+  </body>
