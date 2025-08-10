@@ -57,6 +57,65 @@ const arcsUSAMoves = [
   }
 ];
 
+const arcsAlaskaTrip = [
+  {
+    startLat: 49.2827, // Vancouver
+    startLng: -123.1207,
+    endLat: 55.3422,  // Ketchikan
+    endLng: -131.6461,
+    color: ["red", "pink"]
+  },
+  {
+    startLat: 55.3422, // Ketchikan
+    startLng: -131.6461,
+    endLat: 58.3019,  // Juneau
+    endLng: -134.4197,
+    color: ["pink", "green"]
+  },
+  {
+    startLat: 58.3019, // Juneau
+    startLng: -134.4197,
+    endLat: 59.4583,  // Skagway
+    endLng: -135.3139,
+    color: ["green", "black"]
+  },
+  {
+    startLat: 59.4583, // Skagway
+    startLng: -135.3139,
+    endLat: 60.1806,  // Carcross
+    endLng: -134.7001,
+    color: ["black", "white"]
+  },
+  {
+    startLat: 60.1806, // Carcross
+    startLng: -134.7001,
+    endLat: 58.6658,  // Glacier Bay National Park
+    endLng: -136.9002,
+    color: ["white", "lightblue"]
+  },
+  {
+    startLat: 58.6658, // Glacier Bay National Park
+    startLng: -136.9002,
+    endLat: 61.2126,  // College Fjord
+    endLng: -147.6530,
+    color: ["lightblue", "lightblue"]
+  },
+  {
+    startLat: 61.2126, // College Fjord
+    startLng: -147.6530,
+    endLat: 61.2181,  // Anchorage
+    endLng: -149.9003,
+    color: ["lightblue", "blue"]
+  },
+  {
+    startLat: 61.2181, // Anchorage
+    startLng: -149.9003,
+    endLat: 47.6062,  // Seattle
+    endLng: -122.3321,
+    color: ["blue", "grey"]
+  }
+];
+
 const arcsPeaceCorpsTravels = [
   {
     startLat: 40.7128, // New York
@@ -450,7 +509,7 @@ const arcs2025SkiTrips = [
   }
 ];
 
-const allArcs = [...arcs2008IrelandTrip, ...arcs2016StudyAbroad, ...arcs2018EuroTrip, ...arcs2021MexicoTrip, ...arcs2022EuroTrip, ...arcs2025SkiTrips, ...arcsPeaceCorpsTravels, ...arcsUSAMoves];
+const allArcs = [...arcs2008IrelandTrip, ...arcs2016StudyAbroad, ...arcs2018EuroTrip, ...arcs2021MexicoTrip, ...arcs2022EuroTrip, ...arcs2025SkiTrips, ...arcsPeaceCorpsTravels, ...arcsUSAMoves, ...arcsAlaskaTrip];
 
 
 const labelsDefaultCities = [
@@ -465,7 +524,7 @@ const labelsDefaultCities = [
   { lat: 53.3498, lng: -6.2603, name: "Dublin", size: 1.2 },
   { lat: 55.6761, lng: 12.5683, name: "Copenhagen", size: 1.2 },
   { lat: 47.3769, lng: 8.5417, name: "Zurich", size: 1.2 },
-  { lat: 47.6062, lng: -122.3321, name: "Seattle", size: 1.2 },
+  { lat: 49.2827, lng: -123.1207, name: "Vancouver", size: 1.2 },
   { lat: 43.6970, lng: -114.3514, name: "Sun Valley", size: 1.2 },
   { lat: 40.7608, lng: -111.8910, name: "Salt Lake City", size: 1.2 },
   { lat: 13.7563, lng: 100.5018, name: "Bangkok", size: 1.2 },
@@ -475,7 +534,9 @@ const labelsDefaultCities = [
   { lat: -6.1659, lng: 39.2026, name: "Zanzibar", size: 1.2 },
   { lat: 43.0618, lng: 141.3545, name: "Sapporo", size: 1.2 },
   { lat: 34.3853, lng: 132.4553, name: "Hiroshima", size: 1 },
-  { lat: 51.5074, lng: -0.1278, name: "London", size: 1.2 }
+  { lat: 51.5074, lng: -0.1278, name: "London", size: 1.2 },
+  { lat: 61.2181, lng: -149.9003, name: "Anchorage", size: 1.2 },
+  { lat: 60.1806, lng: -134.7001, name: "Carcross", size: 1 }
 ];
 
 const labelsUSACities = [
@@ -483,6 +544,16 @@ const labelsUSACities = [
   { lat: 43.6970, lng: -114.3514, name: "Sun Valley", size: 1.2 },
   { lat: 40.7608, lng: -111.8910, name: "Salt Lake City", size: 1.2 },
   { lat: 37.8715, lng: -122.2730, name: "Berkeley/Pinecrest", size: 1.2 }
+];
+
+const labelsAlaskaCruiseCities = [
+  { lat: 49.2827, lng: -123.1207, name: "Vancouver", size: 1.2 },
+  { lat: 55.3422, lng: -131.6461, name: "Ketchikan", size: 1.2 },
+  { lat: 58.3019, lng: -134.4197, name: "Juneau", size: 1.2 },
+  { lat: 59.4583, lng: -135.3139, name: "Skagway", size: 1.2 },
+  { lat: 60.1806, lng: -134.7001, name: "Carcross", size: 1 },
+  { lat: 61.2126, lng: -147.6530, name: "College Fjord", size: 1.2 },
+  { lat: 47.6062, lng: -122.3321, name: "Seattle", size: 1.2 }
 ];
 
 const labelsPeaceCorpsCities = [
@@ -556,6 +627,11 @@ const datasets = {
     arcs: arcsUSAMoves,
     labels: labelsUSACities,
     view: { lat: 39.8283, lng: -98.5795, altitude: 1.5 } // Central USA
+  },
+  "2025 Alaska Cruise": {
+    arcs: arcsAlaskaTrip,
+    labels: labelsAlaskaCruiseCities,
+    view: { lat: 55.3422, lng: -131.6461, altitude: 1.2 }
   },
   "2025 Ski Trips": {
     arcs: arcs2025SkiTrips,
