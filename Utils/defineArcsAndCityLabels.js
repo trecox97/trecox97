@@ -57,6 +57,79 @@ const arcsUSAMoves = [
   }
 ];
 
+const arcs2025RoadTrip = [
+  {
+    startLat: 38.1888, // Pinecrest, CA
+    startLng: -119.8821,
+    endLat: 39.5296, // Reno, NV
+    endLng: -119.8138,
+    color: ["blue", "white"]
+  },
+  {
+    startLat: 39.5296, // Reno, NV
+    startLng: -119.8138,
+    endLat: 40.6461, // Park City, UT
+    endLng: -111.4980,
+    color: ["blue", "white"]
+  },
+  {
+    startLat: 40.6461, // Park City, UT
+    startLng: -111.4980,
+    endLat: 39.6654, // Red Rocks, CO
+    endLng: -105.2057,
+    color: ["blue", "white"]
+  },
+  {
+    startLat: 39.6654, // Red Rocks, CO
+    startLng: -105.2057,
+    endLat: 41.1403, // North Platte, NE
+    endLng: -100.7601,
+    color: ["blue", "white"]
+  },
+  {
+    startLat: 41.1403, // North Platte, NE
+    startLng: -100.7601,
+    endLat: 39.0997, // Kansas City, MO
+    endLng: -94.5786,
+    color: ["blue", "white"]
+  },
+  {
+    startLat: 39.0997, // Kansas City, MO
+    startLng: -94.5786,
+    endLat: 38.6270, // St. Louis, MO
+    endLng: -90.1994,
+    color: ["blue", "white"]
+  },
+  {
+    startLat: 38.6270, // St. Louis, MO
+    startLng: -90.1994,
+    endLat: 39.9612, // Columbus, OH
+    endLng: -82.9988,
+    color: ["blue", "white"]
+  },
+  {
+    startLat: 39.9612, // Columbus, OH
+    startLng: -82.9988,
+    endLat: 40.4406, // Pittsburgh, PA
+    endLng: -79.9959,
+    color: ["blue", "white"]
+  },
+  {
+    startLat: 40.4406, // Pittsburgh, PA
+    startLng: -79.9959,
+    endLat: 41.0037, // East Stroudsburg, PA
+    endLng: -75.1820,
+    color: ["blue", "white"]
+  },
+  {
+    startLat: 41.0037, // East Stroudsburg, PA
+    startLng: -75.1820,
+    endLat: 40.8137, // Greenvale, NY
+    endLng: -73.6266,
+    color: ["blue", "white"]
+  }
+];
+
 const arcsAlaskaTrip = [
   {
     startLat: 49.2827, // Vancouver
@@ -509,7 +582,7 @@ const arcs2025SkiTrips = [
   }
 ];
 
-const allArcs = [...arcs2008IrelandTrip, ...arcs2016StudyAbroad, ...arcs2018EuroTrip, ...arcs2021MexicoTrip, ...arcs2022EuroTrip, ...arcs2025SkiTrips, ...arcsPeaceCorpsTravels, ...arcsUSAMoves, ...arcsAlaskaTrip];
+const allArcs = [...arcs2008IrelandTrip, ...arcs2016StudyAbroad, ...arcs2018EuroTrip, ...arcs2021MexicoTrip, ...arcs2022EuroTrip, ...arcs2025SkiTrips, ...arcsPeaceCorpsTravels, ...arcsUSAMoves, ...arcsAlaskaTrip, ...arcs2025RoadTrip];
 
 
 const labelsDefaultCities = [
@@ -544,6 +617,19 @@ const labelsUSACities = [
   { lat: 43.6970, lng: -114.3514, name: "Sun Valley", size: 1.2 },
   { lat: 40.7608, lng: -111.8910, name: "Salt Lake City", size: 1.2 },
   { lat: 37.8715, lng: -122.2730, name: "Berkeley/Pinecrest", size: 1.2 }
+];
+
+const labels2025RoadTripCities = [
+  { lat: 38.1888, lng: -119.8821, name: "Pinecrest", size: 1.2 },
+  { lat: 39.5296, lng: -119.8138, name: "Reno", size: 1.2 },
+  { lat: 40.6461, lng: -111.4980, name: "Park City", size: 1.2 },
+  { lat: 39.6654, lng: -105.2057, name: "Red Rocks", size: 1.2 },
+  { lat: 41.1403, lng: -100.7601, name: "North Platte", size: 1.2 },
+  { lat: 39.0997, lng: -94.5786, name: "Kansas City", size: 1.2 },
+  { lat: 38.6270, lng: -90.1994, name: "St. Louis", size: 1.2 },
+  { lat: 39.9612, lng: -82.9988, name: "Columbus", size: 1.2 },
+  { lat: 40.4406, lng: -79.9959, name: "Pittsburgh", size: 1.2 },
+  { lat: 41.0037, lng: -75.1820, name: "East Stroudsburg", size: 1.2 }
 ];
 
 const labelsAlaskaCruiseCities = [
@@ -627,6 +713,11 @@ const datasets = {
     arcs: arcsUSAMoves,
     labels: labelsUSACities,
     view: { lat: 39.8283, lng: -98.5795, altitude: 1.5 } // Central USA
+  },
+  "2025 Road Trip": {
+    arcs: arcs2025RoadTrip,
+    labels: labels2025RoadTripCities,
+    view: { lat: 38.1888, lng: -119.8821, altitude: 1.5 } // Pinecrest Coords
   },
   "2025 Alaska Cruise": {
     arcs: arcsAlaskaTrip,
