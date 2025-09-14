@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Trevor Cox's Courses</title>
+    <link rel="stylesheet" type="text/css" href="./main.css">
+    <link rel="stylesheet" type="text/css" href="./header.css">
+    <link rel="stylesheet" type="text/css" href="./footer.css">
+    <link rel="stylesheet" type="text/css" href="./mastersCourses.css">
+    <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+    <audio id="my_audio" src="Songs/faye-wong-dreams.mp3" loop="loop"></audio>
+</head>
+
+<body>
+    <header id="header"></header>
+    <script src="Utils/loadHeader.js"></script>
+
+    <div id="main">
+        <div class="section">
+            <h1>Graduate Courses</h1>
+                    <img src="Images/FordhamSeal.png" class="seal">
+            <a href="colleges.html">
+                <h3>Return to my Colleges</h3>
+            </a>
+            <div>
+                <button id="playPauseBtn">Play</button>
+            </div>
+            <script src="Utils/PlayPause.js"></script>
+            <br>
+
+            <button class="collapsible" style="border-radius: 20px 20px 0px 0px">📈Economics📉</button>
+            <div class="content">
+                <table class="table no-border">
+                    <tr>
+                        <td>
+                            <p class="v">
+                                Econ 6910: <a href="#Econ6910">Applied Econometrics</a>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="v">
+                                Econ 5500: <a href="#Econ5500">Financial Analysis</a>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <button class="collapsible">🏛️Political Science🤝</button>
+            <div class="content">
+                <table class="table no-border">
+                    <tr>
+                        <td>
+                            <p class="v">
+                                Posc 6530: <a href="#Posc6530">Political Economy of Development</a>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <button class="collapsible" style="border-radius: 0px 0px 20px 20px;">Electives</button>
+            <div class="content" style="border-radius: 0px 0px 20px 20px;">
+                <table class="table no-border">
+                    <tr>
+                        <td>
+                            <p class="v">
+                                IPED 6740: <a href="#IPED6740">Project Accounting</a>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="v">
+                                IPED 6750: <a href="#IPED6750">Project Design</a>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="v">
+                                IPED 6760: <a href="IPED6760">Project Proposal Development</a>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <script src="Utils/collapsible-menu.js"></script>
+
+            <div class="chunk">
+                <br>
+                <hr>
+                <div class="semester" id="Fall2025">
+                    <h2>Fall 2025</h2>
+                </div>
+                <div class="course" id="Econ6910">
+                    <p><strong>Econ 6910: Applied Econometrics</strong> | Basic techniques of econometric theory,
+                        including applications in consumer theory, theory of the firm, and in macroeconomics, as well as
+                        a review of statistical methods. Some computer work is assigned.
+                    </p>
+                </div>
+                <div class="course" id="Econ5500">
+                    <p><strong>Econ 5500: Financial Analysis</strong> | An examination of the pricing of financial
+                        instruments and the working of the markets for stocks, bonds, options, and futures contracts
+                    </p>
+                </div>
+                <div class="course" id="Posc6530">
+                    <p><strong>Posc 6530: Political Economy of Development</strong> | This course provides an
+                        introduction to the politics and comparative study of international development, both human and
+                        economic. A central question will help organize the course: why have some countries developed
+                        successfully, while others have not? Whereas much of Western Europe, North America and East Asia
+                        have experienced economic development, much of Africa has not. Latin America, Eastern Europe and
+                        Eurasia are hybrids, with both pockets of success and failure. While defining what success or
+                        failure may mean in light of globalization, our collective focus will be on how best to
+                        understand such differences.
+                    </p>
+                </div>
+                <div class="course" id="IPED6740">
+                    <p><strong>IPED 6740: Project Accounting</strong> | This course is a one-credit, four week review of basic accounting concepts used by project managers working for international relief and development organizations as well as for economic analysts in government and the private sector. Regular and complete accounting courses needed for business careers are offered in the Graduate School of Business.
+                    </p>
+                </div>
+                <div class="course" id="IPED6750">
+                    <p><strong>IPED 6750: Project Design</strong> | This course is intended to help students (a) understand the origins, purposes and logic of results-based project and program management, (b) know what its major tools are and how they can be used and abused, (c) understand the challenges that the social sector (especially health and education) in developing countries poses to result-based management, and (d) to understand recent trends in international development cooperation that affect project and program management.
+                    </p>
+                </div>
+                <div class="course" id="IPED6760">
+                    <p><strong>IPED 6760: Project Proposal Development</strong> | A practical course on the written and oral presentation of projects. Students preparing project proposals for Fulbrights and other prestigious awards may take the course at no course for zero credit.
+                    </p>
+                </div>
+
+                <hr>
+            </div>
+
+            <div id="footer-container"></div>
+            <script src="Utils/loadFooter.js"></script>
+
+</body>
+
+</html>
