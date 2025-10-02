@@ -8,7 +8,7 @@ fetch('header.html')
     })
     .catch(error => console.error('Error loading the header:', error));
 
-// Function to highlight the current page link add special function to peacecorps page.
+// Function to highlight the current page and add emojis.
 function highlightCurrentPage() {
     const currentPage = window.location.pathname.split('/').pop();
     const links = document.querySelectorAll('.h a');
@@ -19,6 +19,10 @@ function highlightCurrentPage() {
         }
         if (currentPage === 'peacecorps.html' && link.getAttribute('href') === 'peacecorps.html') {
             link.innerHTML = '🕊️Peace Corps🕊️'; // Change the text content
+        }
+        if ((currentPage === 'colleges.html' || currentPage === 'courses.html' || 
+            currentPage === 'mastersCourses.html') && link.getAttribute('href') === 'colleges.html') {
+            link.innerHTML = '📚Education📚'; // Change the text content
         }
         if (currentPage === 'locations.html' && link.getAttribute('href') === 'locations.html') {
             link.innerHTML = '📍Locations📍'; // Change the text content
