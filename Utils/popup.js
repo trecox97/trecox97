@@ -71,3 +71,13 @@ states.forEach(state => {
     });
     state.addEventListener('mouseleave', hidePopup); // Hide popup when mouse leaves the element
 });
+
+// Add event listeners to covers
+const covers = document.querySelectorAll('.cover');
+covers.forEach(cover => {
+    cover.addEventListener('mouseenter', function (event) {
+        const reviewName = event.target.getAttribute('review'); // Get the review
+        showPopup(reviewName, cursorX, cursorY); // Show popup near cursor
+    });
+    cover.addEventListener('mouseleave', hidePopup); // Hide popup when mouse leaves the element
+});

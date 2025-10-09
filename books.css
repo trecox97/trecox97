@@ -46,3 +46,18 @@
          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
      }
  }
+
+ /* Popup style */
+.popup {
+    display: none;
+    position: absolute;
+    background-color: rgb(37, 48, 59, 0.7);
+    color: aliceblue;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 1000;
+    pointer-events: none;
+    max-width: 300px;
+}
