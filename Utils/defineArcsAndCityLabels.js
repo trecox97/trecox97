@@ -57,6 +57,45 @@ const arcsUSAMoves = [
   }
 ];
 
+const arcs2026StudyTrip = [
+  {
+    startLat: 40.7128, // New York City
+    startLng: -74.0060,
+    endLat: 37.8044,   // Oakland
+    endLng: -122.2712,
+    color: ["orange", "green"]
+  },
+  {
+    startLat: 37.8044, // Oakland
+    startLng: -122.2712,
+    endLat: 25.05,     // Taipei
+    endLng: 121.53,
+    color: ["green", "blue"]
+  },
+  {
+    startLat: 25.05,   // Taipei
+    startLng: 121.53,
+    endLat: 14.5958,   // Manila
+    endLng: 120.9772,
+    color: ["blue", "yellow"]
+  },
+  {
+    startLat: 14.5958, // Manila
+    startLng: 120.9772,
+    endLat: 25.05,     // Taipei
+    endLng: 121.53,
+    color: ["yellow", "blue"]
+  },
+  {
+    startLat: 25.05,   // Taipei
+    startLng: 121.53,
+    endLat: 40.7128,   // New York City
+    endLng: -74.0060,
+    color: ["blue", "orange"]
+  }
+];
+
+
 const arcs2025RoadTrip = [
   {
     startLat: 38.1888, // Pinecrest, CA
@@ -582,7 +621,7 @@ const arcs2025SkiTrips = [
   }
 ];
 
-const allArcs = [...arcs2008IrelandTrip, ...arcs2016StudyAbroad, ...arcs2018EuroTrip, ...arcs2021MexicoTrip, ...arcs2022EuroTrip, ...arcs2025SkiTrips, ...arcsPeaceCorpsTravels, ...arcsUSAMoves, ...arcsAlaskaTrip, ...arcs2025RoadTrip];
+const allArcs = [...arcs2008IrelandTrip, ...arcs2016StudyAbroad, ...arcs2018EuroTrip, ...arcs2021MexicoTrip, ...arcs2022EuroTrip, ...arcs2025SkiTrips, ...arcsPeaceCorpsTravels, ...arcsUSAMoves, ...arcsAlaskaTrip, ...arcs2025RoadTrip, ...arcs2026StudyTrip];
 
 
 const labelsDefaultCities = [
@@ -609,7 +648,9 @@ const labelsDefaultCities = [
   { lat: 34.3853, lng: 132.4553, name: "Hiroshima", size: 1 },
   { lat: 51.5074, lng: -0.1278, name: "London", size: 1.2 },
   { lat: 61.2181, lng: -149.9003, name: "Anchorage", size: 1.2 },
-  { lat: 60.1806, lng: -134.7001, name: "Carcross", size: 1 }
+  { lat: 60.1806, lng: -134.7001, name: "Carcross", size: 1 },
+  { lat: 25.0330, lng: 121.5654, name: "Taipei", size: 1.2 },
+  { lat: 14.5995, lng: 120.9842, name: "Manila", size: 1.2 }
 ];
 
 const labelsUSACities = [
@@ -617,6 +658,13 @@ const labelsUSACities = [
   { lat: 43.6970, lng: -114.3514, name: "Sun Valley", size: 1.2 },
   { lat: 40.7608, lng: -111.8910, name: "Salt Lake City", size: 1.2 },
   { lat: 37.8715, lng: -122.2730, name: "Berkeley/Pinecrest", size: 1.2 }
+];
+
+const labels2026StudyTripCities = [
+  { lat: 40.7128, lng: -74.0060, name: "New York City", size: 1.2 },
+  { lat: 37.8044, lng: -122.2712, name: "Oakland", size: 1.2 },
+  { lat: 25.0330, lng: 121.5654, name: "Taipei", size: 1.2 },
+  { lat: 14.5995, lng: 120.9842, name: "Manila", size: 1.2 }
 ];
 
 const labels2025RoadTripCities = [
@@ -713,6 +761,11 @@ const datasets = {
     arcs: arcsUSAMoves,
     labels: labelsUSACities,
     view: { lat: 39.8283, lng: -98.5795, altitude: 1.5 } // Central USA
+  },
+  "2026 Study Trip": {
+    arcs: arcs2026StudyTrip,
+    labels: labels2026StudyTripCities,
+    view: { lat: 14.5958, lng: 120.9772, altitude: 2 } // Manila Coords
   },
   "2025 Road Trip": {
     arcs: arcs2025RoadTrip,
