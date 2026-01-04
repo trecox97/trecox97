@@ -765,7 +765,7 @@ const datasets = {
   "2026 Study Trip": {
     arcs: arcs2026StudyTrip,
     labels: labels2026StudyTripCities,
-    view: { lat: 14.5958, lng: 120.9772, altitude: 2 } // Manila Coords
+    view: { lat: 14.5958, lng: 120.9772, altitude: .75 } // Manila Coords
   },
   "2025 Road Trip": {
     arcs: arcs2025RoadTrip,
