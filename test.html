@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Clickable Political World Map</title>
+  <style>
+    body { margin: 0; background: #000; }
+    #globe { width: 100vw; height: 100vh; }
+  </style>
+</head>
+<body>
+<div id="globe"></div>
+
+<script src="https://unpkg.com/three"></script>
+<script src="https://unpkg.com/globe.gl"></script>
+<script src="https://unpkg.com/topojson-client"></script>
+
+<script>
+  const globe = Globe()(document.getElementById('globe'))
+    .globeImageUrl('//unpkg.com/three-globe/example/img/earth-dark.jpg')
+    .backgroundColor('#000')
+
+    // ---- DEFINE ARC SETTINGS ONCE ----
+    .arcColor(() => ['#00ffff', '#ff8800'])
+    .arcStroke(d => d.volume / 25)
+    .arcAltitudeAutoScale(0.5)
+    .arcDashLength(0.6)
+    .arcDashGap(4)
+    .arcDashAnimateTime(3000);
+
+  const US_COORDS = { lat: 38, lng: -97 };
+
+  const usExports = [
+    { endLat: 51.5,  endLng: -0.1,  volume: 80 },
+    { endLat: 52.5,  endLng: 13.4,  volume: 60 },
+    { endLat: 35.7,  endLng: 139.7, volume: 100 },
+    { endLat: 23.1,  endLng: 113.3, volume: 90 },
+    { endLat: -23.5, endLng: -46.6, volume: 40 }
+  ];
+
+  fetch('https://unpkg.com/world-atlas@2/countries-110m.json')
+    .then(res => res.json())
+    .then(worldData => {
+      const countries = topojson.feature(
+        worldData,
+        worldData.objects.countries
+      ).features;
+
+      globe
+        .polygonsData(countries)
+        .polygonCapColor(() => 'rgba(0, 100, 200, 0.7)')
+        .polygonSideColor(() => 'rgba(0, 0, 0, 0.2)')
+        .polygonStrokeColor(() => '#111')
+        .polygonAltitude(0.01)
+
+        .onPolygonHover(d =>
+          globe.polygonCapColor(p =>
+            p === d ? 'orange' : 'rgba(0, 100, 200, 0.7)'
+          )
+        )
+
+        .onPolygonClick(d => {
+          const isUS = d.id == 840; // allow number or string
+
+          if (isUS) {
+            globe.arcsData(
+              usExports.map(e => ({
+                startLat: US_COORDS.lat,
+                startLng: US_COORDS.lng,
+                endLat: e.endLat,
+                endLng: e.endLng,
+                volume: e.volume
+              }))
+            );
+          } else {
+            globe.arcsData([]);
+          }
+        });
+    });
+</script>
+</body>
+</html>
