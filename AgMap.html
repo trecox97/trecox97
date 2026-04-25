@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta charset="UTF-8">
+   <title>Trevor Cox's Website</title>
+   <link rel="stylesheet" type="text/css" href="./header.css">
+   <link rel="stylesheet" type="text/css" href="./footer.css">
+   <link rel="stylesheet" type="text/css" href="./agmap.css">
+   <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v8.2.0/ol.css">
+    <script src="https://cdn.jsdelivr.net/npm/ol@v8.2.0/dist/ol.js"></script>
+    <style>
+        #map {
+            width: 100%;
+            height: 600px;
+        }
+    </style>
+
+
+   <audio id="my_audio" src="Songs/Halo Theme Song Original.mp3" loop="loop"></audio>
+   <script>
+      //window.onload = function () {
+      //   document.getElementById("my_audio").play();
+      //}
+   </script>
+</head>
+
+<body>
+   <header id="header"></header>
+   <script src="Utils/loadHeader.js"></script>
+
+   <div class="main">
+    <div id="map"></div>
+    <script>
+        const map = new ol.Map({
+            target: 'map',
+            layers: [
+                new ol.layer.Tile({
+                    source: new ol.source.OSM()
+                })
+            ],
+            view: new ol.View({
+                center: ol.proj.fromLonLat([-95, 39]), // Center on US
+                zoom: 4
+            })
+        });
+
+        const vectorSource = new ol.source.Vector({
+            url: './congCombinedLandData.geojson',
+            format: new ol.format.GeoJSON()
+        });
+
+        const vectorLayer = new ol.layer.Vector({
+            source: vectorSource
+        });
+
+        map.addLayer(vectorLayer);
+    </script>
+
+<div id="tooltip" style="position: absolute; background: white; border: 1px solid black; padding: 5px; display: none; pointer-events: none;"></div>
+<script>
+const tooltip = document.getElementById('tooltip');
+let hoveredFeature = null;
+
+const tooltipObserver = new MutationObserver(() => {
+    if (!hoveredFeature || tooltip.style.display === 'none') return;
+
+    const photoUrl = hoveredFeature.get('PHOTOURL');
+let container = tooltip.querySelector('#photo-container');
+let img = container ? container.querySelector('img') : null;
+
+if (photoUrl && container) {
+    if (!img) {
+        img = document.createElement('img');
+        img.style.maxWidth = '220px';
+        img.style.maxHeight = '150px';
+        img.style.display = 'block';
+        container.appendChild(img);
+    }
+    img.src = photoUrl;
+    img.alt = 'District photo';
+} else if (img) {
+    img.remove();
+}
+});
+
+tooltipObserver.observe(tooltip, { childList: true, subtree: true });
+
+map.on('pointermove', function(evt) {
+    const feature = map.forEachFeatureAtPixel(evt.pixel, function(feature) {
+        return feature;
+    });
+
+    hoveredFeature = feature || null;
+
+    if (feature) {
+        const name = feature.get('NAMELSAD') || '';
+        const first = feature.get('FIRSTNAME') || '';
+        const last = feature.get('LASTNAME') || '';
+
+        const firstCrop = feature.get('First Crop') || '';
+        const firstValue = feature.get('First Value') || '';
+        const secondCrop = feature.get('Second Crop') || '';
+        const secondValue = feature.get('Second Value') || '';
+        const thirdCrop = feature.get('Third Crop') || '';
+        const thirdValue = feature.get('Third Value') || '';
+        const fourthCrop = feature.get('Fourth Crop') || '';
+        const fourthValue = feature.get('Fourth Value') || '';
+        const fifthCrop = feature.get('Fifth Crop') || '';
+        const fifthValue = feature.get('Fifth Value') || '';
+
+        tooltip.innerHTML = `
+    <div>
+        <!-- Top section (above photo) -->
+        <div style="margin-bottom: 6px;">
+            <strong>${name}</strong><br/>
+            ${first} ${last}
+        </div>
+
+        <!-- Bottom section (photo left, land use right) -->
+        <div style="display: flex; align-items: flex-start; gap: 10px;">
+            
+            <div id="photo-container"></div>
+
+            <div>
+                <strong>Land Use:</strong><br/>
+                1st ${firstCrop}: ${firstValue} acres<br/>
+                2nd ${secondCrop}: ${secondValue} acres<br/>
+                3rd ${thirdCrop}: ${thirdValue} acres<br/>
+                4th ${fourthCrop}: ${fourthValue} acres<br/>
+                5th ${fifthCrop}: ${fifthValue} acres
+            </div>
+
+        </div>
+    </div>
+`;
+
+        tooltip.style.display = 'block';
+        tooltip.style.left = (evt.pixel[0] + 10) + 'px';
+        tooltip.style.top = (evt.pixel[1] + 10) + 'px';
+    } else {
+        tooltip.style.display = 'none';
+    }
+});
+</script>
+   </div>
+
+
+<br>
+   <div id="footer-container"></div>
+   <script src="Utils/loadFooter.js"></script>
+
+</body>
+
+</html>

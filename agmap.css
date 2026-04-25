@@ -1,0 +1,47 @@
+body {
+    background-color: #F3A4B4;
+    font-family: "Geneva";
+    text-align: center;
+    color: aliceblue;
+    cursor: default;
+}
+
+
+/* Tooltip container */
+#tooltip {
+    position: absolute;
+    background: #ffffff;
+    color: #000000;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    text-align: left;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    pointer-events: none;
+    z-index: 1000;
+}
+
+/* Ensure text inside tooltip is readable */
+#tooltip strong {
+    color: #000;
+}
+
+/* Fix global img rule overriding tooltip images */
+#tooltip img {
+    width: auto;              /* overrides global img { width:100% } */
+    max-width: 220px;
+    max-height: 150px;
+    border-radius: 4px;
+}
+
+/* Layout tweaks */
+#tooltip div {
+    line-height: 1.4;
+}
+
+/* Optional: tighten spacing */
+#tooltip br {
+    line-height: 1.2;
+}
