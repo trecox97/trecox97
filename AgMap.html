@@ -17,15 +17,6 @@
             height: 600px;
         }
     </style>
-
-
-   <audio id="my_audio" src="Songs/Halo Theme Song Original.mp3" loop="loop"></audio>
-   <script>
-      //window.onload = function () {
-      //   document.getElementById("my_audio").play();
-      //}
-      //
-   </script>
 </head>
 
 <body>
@@ -33,6 +24,9 @@
    <script src="Utils/loadHeader.js"></script>
 
    <div class="main">
+    <h1>Agriculture Map Project 
+        Name: Kuvuna - to harvest
+    </h1>
     <div id="map"></div>
     <script>
         const map = new ol.Map({
@@ -102,16 +96,15 @@ map.on('pointermove', function(evt) {
         const last = feature.get('LASTNAME') || '';
 
         const firstCrop = feature.get('First Crop') || '';
-        const firstValue = feature.get('First Value') || '';
+        const firstValue = (feature.get('First Value') || 0).toLocaleString();
         const secondCrop = feature.get('Second Crop') || '';
-        const secondValue = feature.get('Second Value') || '';
+        const secondValue = (feature.get('Second Value') || 0).toLocaleString();
         const thirdCrop = feature.get('Third Crop') || '';
-        const thirdValue = feature.get('Third Value') || '';
+        const thirdValue = (feature.get('Third Value') || 0).toLocaleString();
         const fourthCrop = feature.get('Fourth Crop') || '';
-        const fourthValue = feature.get('Fourth Value') || '';
+        const fourthValue = (feature.get('Fourth Value') || 0).toLocaleString();
         const fifthCrop = feature.get('Fifth Crop') || '';
-        const fifthValue = feature.get('Fifth Value') || '';
-
+        const fifthValue = (feature.get('Fifth Value') || 0).toLocaleString();
         tooltip.innerHTML = `
     <div>
         <!-- Top section (above photo) -->
@@ -147,8 +140,64 @@ map.on('pointermove', function(evt) {
 });
 </script>
    </div>
+<hr>
+<h1>Kulima - to cultivate</h1>
+<h2>Select a Crop</h2>
 
+<select id="cropSelect">
+  <option value="Corn">Corn</option>
+  <option value="Cotton">Cotton</option>
+  <option value="Rice">Rice</option>
+  <option value="Soybeans">Soybeans</option>
+  <option value="Almonds">Almonds</option>
+</select>
 
+<div id="results"></div>
+
+<script>
+let data = [];
+
+// Load your JSON file
+fetch('congretionalCrops.json')
+  .then(response => response.json())
+  .then(json => {
+    data = json;
+    updateResults("Corn"); // default selection
+  })
+  .catch(err => console.error("Error loading JSON:", err));
+
+// Listen for dropdown change
+document.getElementById("cropSelect").addEventListener("change", function() {
+  updateResults(this.value);
+});
+
+function updateResults(crop) {
+  if (!data.length) return;
+
+  // Sort by selected crop (highest first)
+  let sorted = [...data].sort((a, b) => (parseFloat(b[crop]) || 0) - (parseFloat(a[crop]) || 0));
+
+  // Take top 5
+  let top5 = sorted.slice(0, 5);
+
+  let container = document.getElementById("results");
+  container.innerHTML = "";
+
+  top5.forEach(person => {
+    let div = document.createElement("div");
+
+    div.style.marginBottom = "20px";
+
+    div.innerHTML = `
+      <img src="${person.PHOTOURL}" width="100" alt="photo"/>
+      <p><strong>${person.FIRSTNAME} ${person.LASTNAME}</strong></p>
+      <p>${crop}: ${person[crop]}</p>
+    `;
+
+    container.appendChild(div);
+  });
+}
+</script>
 <br>
    <div id="footer-container"></div>
    <script src="Utils/loadFooter.js"></script>
