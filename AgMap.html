@@ -11,12 +11,6 @@
    <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v8.2.0/ol.css">
     <script src="https://cdn.jsdelivr.net/npm/ol@v8.2.0/dist/ol.js"></script>
-    <style>
-        #map {
-            width: 100%;
-            height: 600px;
-        }
-    </style>
 </head>
 
 <body>
@@ -55,93 +49,113 @@
 
         map.addLayer(vectorLayer);
     </script>
-
+<div id="info-panel">
+    <div id="info-content"></div>
+    <button id="close-btn">Close</button>
+</div>
 <div id="tooltip" style="position: absolute; background: white; border: 1px solid black; padding: 5px; display: none; pointer-events: none;"></div>
-<script>
-const tooltip = document.getElementById('tooltip');
-let hoveredFeature = null;
+<script>const infoPanel = document.getElementById('info-panel');
+const infoContent = document.getElementById('info-content');
+const closeBtn = document.getElementById('close-btn');
 
-const tooltipObserver = new MutationObserver(() => {
-    if (!hoveredFeature || tooltip.style.display === 'none') return;
+function formatFeature(feature) {
+    const name = feature.get('NAMELSAD') || '';
+    const first = feature.get('FIRSTNAME') || '';
+    const last = feature.get('LASTNAME') || '';
 
-    const photoUrl = hoveredFeature.get('PHOTOURL');
-let container = tooltip.querySelector('#photo-container');
-let img = container ? container.querySelector('img') : null;
+    const photoUrl = feature.get('PHOTOURL');
 
-if (photoUrl && container) {
-    if (!img) {
-        img = document.createElement('img');
-        img.style.maxWidth = '220px';
-        img.style.maxHeight = '150px';
-        img.style.display = 'block';
-        container.appendChild(img);
-    }
-    img.src = photoUrl;
-    img.alt = 'District photo';
-} else if (img) {
-    img.remove();
+    const firstCrop = feature.get('First Crop') || '';
+    const firstValue = (feature.get('First Value') || 0).toLocaleString();
+
+    const secondCrop = feature.get('Second Crop') || '';
+    const secondValue = (feature.get('Second Value') || 0).toLocaleString();
+
+    const thirdCrop = feature.get('Third Crop') || '';
+    const thirdValue = (feature.get('Third Value') || 0).toLocaleString();
+
+    const fourthCrop = feature.get('Fourth Crop') || '';
+    const fourthValue = (feature.get('Fourth Value') || 0).toLocaleString();
+
+    const fifthCrop = feature.get('Fifth Crop') || '';
+    const fifthValue = (feature.get('Fifth Value') || 0).toLocaleString();
+
+return `
+    <strong>${name}</strong><br/>
+    ${first} ${last}<br/><br/>
+
+<div style="
+    display: flex;
+    justify-content: center;   /* centers the whole block */
+    margin: 0 auto;
+">
+    <div style="
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+    ">
+        
+        ${photoUrl ? `
+            <img src="${photoUrl}" 
+                 alt="District photo"
+                 style="width: 120px; height: auto; border-radius: 4px;">
+        ` : ''}
+
+        <div style="font-size: 14px; text-align: left;">
+            <strong>Land Use:</strong><br/>
+            1st ${firstCrop}: ${firstValue} acres<br/>
+            2nd ${secondCrop}: ${secondValue} acres<br/>
+            3rd ${thirdCrop}: ${thirdValue} acres<br/>
+            4th ${fourthCrop}: ${fourthValue} acres<br/>
+            5th ${fifthCrop}: ${fifthValue} acres
+        </div>
+
+    </div>
+</div>
+`;
 }
-});
 
-tooltipObserver.observe(tooltip, { childList: true, subtree: true });
+function showPanel(feature) {
+    infoContent.innerHTML = formatFeature(feature);
+    infoPanel.classList.add('active');
+}
 
-map.on('pointermove', function(evt) {
-    const feature = map.forEachFeatureAtPixel(evt.pixel, function(feature) {
-        return feature;
+function hidePanel() {
+    infoPanel.classList.remove('active');
+}
+
+closeBtn.addEventListener('click', hidePanel);
+
+
+// ✅ MOBILE + DESKTOP TAP
+map.on('singleclick', function(evt) {
+    const feature = map.forEachFeatureAtPixel(evt.pixel, f => f, {
+        hitTolerance: 10
     });
 
-    hoveredFeature = feature || null;
+    if (feature) {
+        showPanel(feature);
+    } else {
+        hidePanel();
+    }
+});
+
+
+// ✅ OPTIONAL: DESKTOP HOVER (nice to keep)
+map.on('pointermove', function(evt) {
+    if (window.innerWidth < 768) return; // disable hover on mobile
+
+    const feature = map.forEachFeatureAtPixel(evt.pixel, f => f);
 
     if (feature) {
-        const name = feature.get('NAMELSAD') || '';
-        const first = feature.get('FIRSTNAME') || '';
-        const last = feature.get('LASTNAME') || '';
-
-        const firstCrop = feature.get('First Crop') || '';
-        const firstValue = (feature.get('First Value') || 0).toLocaleString();
-        const secondCrop = feature.get('Second Crop') || '';
-        const secondValue = (feature.get('Second Value') || 0).toLocaleString();
-        const thirdCrop = feature.get('Third Crop') || '';
-        const thirdValue = (feature.get('Third Value') || 0).toLocaleString();
-        const fourthCrop = feature.get('Fourth Crop') || '';
-        const fourthValue = (feature.get('Fourth Value') || 0).toLocaleString();
-        const fifthCrop = feature.get('Fifth Crop') || '';
-        const fifthValue = (feature.get('Fifth Value') || 0).toLocaleString();
-        tooltip.innerHTML = `
-    <div>
-        <!-- Top section (above photo) -->
-        <div style="margin-bottom: 6px;">
-            <strong>${name}</strong><br/>
-            ${first} ${last}
-        </div>
-
-        <!-- Bottom section (photo left, land use right) -->
-        <div style="display: flex; align-items: flex-start; gap: 10px;">
-            
-            <div id="photo-container"></div>
-
-            <div>
-                <strong>Land Use:</strong><br/>
-                1st ${firstCrop}: ${firstValue} acres<br/>
-                2nd ${secondCrop}: ${secondValue} acres<br/>
-                3rd ${thirdCrop}: ${thirdValue} acres<br/>
-                4th ${fourthCrop}: ${fourthValue} acres<br/>
-                5th ${fifthCrop}: ${fifthValue} acres
-            </div>
-
-        </div>
-    </div>
-`;
-
-        tooltip.style.display = 'block';
-        tooltip.style.left = (evt.pixel[0] + 10) + 'px';
-        tooltip.style.top = (evt.pixel[1] + 10) + 'px';
+        infoContent.innerHTML = formatFeature(feature);
+        infoPanel.classList.add('active');
     } else {
-        tooltip.style.display = 'none';
+        infoPanel.classList.remove('active');
     }
 });
 </script>
-   </div>
+</div>
 <br>
 <div class="breakline"></div>
 <h1>Kulima - to cultivate</h1>
