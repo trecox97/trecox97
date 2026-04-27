@@ -23,6 +23,8 @@
    <header id="header"></header>
    <script src="Utils/loadHeader.js"></script>
 
+   
+
    <div class="main">
     <h1>Agriculture Map Project 
         Name: Kuvuna - to harvest
@@ -140,22 +142,193 @@ map.on('pointermove', function(evt) {
 });
 </script>
    </div>
+<br>
 <hr>
 <h1>Kulima - to cultivate</h1>
 <h2>Select a Crop</h2>
 
 <select id="cropSelect">
-  <option value="Corn">Corn</option>
+  <option value="Corn">🌽 Corn</option>
   <option value="Cotton">Cotton</option>
-  <option value="Rice">Rice</option>
+  <option value="Rice">🍚 Rice</option>
+  <option value="Sorghum">Sorghum</option>
   <option value="Soybeans">Soybeans</option>
+  <option value="Sunflower">🌻 Sunflower</option>
+  <option value="Peanuts">🥜 Peanuts</option>
+  <option value="Tobacco">Tobacco</option>
+  <option value="Sweet Corn">🌽 Sweet Corn</option>
+  <option value="Pop or Orn Corn">🍿 Pop/Orn Corn</option>
+  <option value="Mint">🌿 Mint</option>
+  <option value="Barley">Barley</option>
+  <option value="Durum Wheat">Durum Wheat</option>
+  <option value="Spring Wheat">Spring Wheat</option>
+  <option value="Winter Wheat">Winter Wheat</option>
+  <option value="Other Small Grains">Other Small Grains</option>
+  <option value="Dbl Crop WinWht/Soybeans">Dbl Crop WinWht/Soybeans</option>
+  <option value="Rye">Rye</option>
+  <option value="Oats">Oats</option>
+  <option value="Millet">Millet</option>
+  <option value="Speltz">Speltz</option>
+  <option value="Canola">Canola</option>
+  <option value="Flaxseed">Flaxseed</option>
+  <option value="Safflower">Safflower</option>
+  <option value="Rape Seed">Rape Seed</option>
+  <option value="Mustard">Mustard</option>
+  <option value="Alfalfa">🌱 Alfalfa</option>
+  <option value="Other Hay/Non Alfalfa">Other Hay/Non Alfalfa</option>
+  <option value="Camelina">Camelina</option>
+  <option value="Buckwheat">Buckwheat</option>
+  <option value="Sugarbeets">Sugarbeets</option>
+  <option value="Dry Beans">🫘 Dry Beans</option>
+  <option value="Potatoes">🥔 Potatoes</option>
+  <option value="Other Crops">Other Crops</option>
+  <option value="Sugarcane">Sugarcane</option>
+  <option value="Sweet Potatoes">🍠 Sweet Potatoes</option>
+  <option value="Misc Vegs & Fruits">🍎 Misc Vegs & Fruits</option>
+  <option value="Watermelons">🍉 Watermelons</option>
+  <option value="Onions">🧅 Onions</option>
+  <option value="Cucumbers">🥒 Cucumbers</option>
+  <option value="Chick Peas">Chick Peas</option>
+  <option value="Lentils">Lentils</option>
+  <option value="Peas">Peas</option>
+  <option value="Tomatoes">🍅 Tomatoes</option>
+  <option value="Caneberries">Caneberries</option>
+  <option value="Hops">Hops</option>
+  <option value="Herbs">🌿 Herbs</option>
+  <option value="Clover/Wildflowers">🌼 Clover/Wildflowers</option>
+  <option value="Sod/Grass Seed">Sod/Grass Seed</option>
+  <option value="Switchgrass">Switchgrass</option>
+  <option value="Fallow/Idle Cropland">Fallow/Idle Cropland</option>
+  <option value="Cherries">🍒 Cherries</option>
+  <option value="Peaches">🍑 Peaches</option>
+  <option value="Apples">🍎 Apples</option>
+  <option value="Grapes">🍇 Grapes</option>
+  <option value="Christmas Trees">🎄 Christmas Trees</option>
+  <option value="Other Tree Crops">Other Tree Crops</option>
+  <option value="Citrus">🍊 Citrus</option>
+  <option value="Pecans">Pecans</option>
   <option value="Almonds">Almonds</option>
+  <option value="Walnuts">Walnuts</option>
+  <option value="Pears">🍐 Pears</option>
+  <option value="Aquaculture">🐟 Aquaculture</option>
+  <option value="Open Water">🌊 Open Water</option>
+  <option value="Perennial Ice/Snow">❄️ Ice/Snow</option>
+  <option value="Developed/Open Space">Developed/Open Space</option>
+  <option value="Developed/Low Intensity">Developed/Low Intensity</option>
+  <option value="Developed/Med Intensity">Developed/Med Intensity</option>
+  <option value="Developed/High Intensity">Developed/High Intensity</option>
+  <option value="Barren">Barren</option>
+  <option value="Deciduous Forest">🌳 Deciduous Forest</option>
+  <option value="Evergreen Forest">🌲 Evergreen Forest</option>
+  <option value="Mixed Forest">🌲 Mixed Forest</option>
+  <option value="Shrubland">Shrubland</option>
+  <option value="Grassland/Pasture">🌾 Grassland/Pasture</option>
+  <option value="Woody Wetlands">Woody Wetlands</option>
+  <option value="Herbaceous Wetlands">Herbaceous Wetlands</option>
+  <option value="Pistachios">Pistachios</option>
+  <option value="Triticale">Triticale</option>
+  <option value="Carrots">🥕 Carrots</option>
+  <option value="Asparagus">Asparagus</option>
+  <option value="Garlic">🧄 Garlic</option>
+  <option value="Cantaloupes">🍈 Cantaloupes</option>
+  <option value="Prunes">Prunes</option>
+  <option value="Olives">🫒 Olives</option>
+  <option value="Oranges">🍊 Oranges</option>
+  <option value="Honeydew Melons">🍈 Honeydew Melons</option>
+  <option value="Broccoli">🥦 Broccoli</option>
+  <option value="Avocados">🥑 Avocados</option>
+  <option value="Peppers">🌶️ Peppers</option>
+  <option value="Pomegranates">Pomegranates</option>
+  <option value="Nectarines">Nectarines</option>
+  <option value="Greens">🥬 Greens</option>
+  <option value="Plums">Plums</option>
+  <option value="Strawberries">🍓 Strawberries</option>
+  <option value="Squash">Squash</option>
+  <option value="Apricots">Apricots</option>
+  <option value="Vetch">Vetch</option>
+  <option value="Dbl Crop WinWht/Corn">Dbl Crop WinWht/Corn</option>
+  <option value="Dbl Crop Oats/Corn">Dbl Crop Oats/Corn</option>
+  <option value="Lettuce">🥬 Lettuce</option>
+  <option value="Dbl Crop Triticale/Corn">Dbl Crop Triticale/Corn</option>
+  <option value="Pumpkins">🎃 Pumpkins</option>
+  <option value="Dbl Crop Lettuce/Cantaloupe">Dbl Crop Lettuce/Cantaloupe</option>
+  <option value="Dbl Crop Lettuce/Cotton">Dbl Crop Lettuce/Cotton</option>
+  <option value="Dbl Crop WinWht/Sorghum">Dbl Crop WinWht/Sorghum</option>
+  <option value="Dbl Crop Barley/Corn">Dbl Crop Barley/Corn</option>
+  <option value="Dbl Crop WinWht/Cotton">Dbl Crop WinWht/Cotton</option>
+  <option value="Dbl Crop Soybeans/Cotton">Dbl Crop Soybeans/Cotton</option>
+  <option value="Dbl Crop Soybeans/Oats">Dbl Crop Soybeans/Oats</option>
+  <option value="Dbl Crop Corn/Soybeans">Dbl Crop Corn/Soybeans</option>
+  <option value="Blueberries">🫐 Blueberries</option>
+  <option value="Cabbage">🥬 Cabbage</option>
+  <option value="Cauliflower">Cauliflower</option>
+  <option value="Celery">Celery</option>
+  <option value="Radishes">Radishes</option>
+  <option value="Turnips">Turnips</option>
+  <option value="Eggplants">🍆 Eggplants</option>
+  <option value="Gourds">Gourds</option>
+  <option value="Cranberries">Cranberries</option>
+  <option value="Dbl Crop Barley/Soybeans">Dbl Crop Barley/Soybeans</option>
 </select>
+
+<br><br>
 
 <div id="results"></div>
 
 <script>
-let data = [];
+    const STATEFP_TO_NAME = {
+  "01": "Alabama",
+  "02": "Alaska",
+  "04": "Arizona",
+  "05": "Arkansas",
+  "06": "California",
+  "08": "Colorado",
+  "09": "Connecticut",
+  "10": "Delaware",
+  "11": "District of Columbia",
+  "12": "Florida",
+  "13": "Georgia",
+  "15": "Hawaii",
+  "16": "Idaho",
+  "17": "Illinois",
+  "18": "Indiana",
+  "19": "Iowa",
+  "20": "Kansas",
+  "21": "Kentucky",
+  "22": "Louisiana",
+  "23": "Maine",
+  "24": "Maryland",
+  "25": "Massachusetts",
+  "26": "Michigan",
+  "27": "Minnesota",
+  "28": "Mississippi",
+  "29": "Missouri",
+  "30": "Montana",
+  "31": "Nebraska",
+  "32": "Nevada",
+  "33": "New Hampshire",
+  "34": "New Jersey",
+  "35": "New Mexico",
+  "36": "New York",
+  "37": "North Carolina",
+  "38": "North Dakota",
+  "39": "Ohio",
+  "40": "Oklahoma",
+  "41": "Oregon",
+  "42": "Pennsylvania",
+  "44": "Rhode Island",
+  "45": "South Carolina",
+  "46": "South Dakota",
+  "47": "Tennessee",
+  "48": "Texas",
+  "49": "Utah",
+  "50": "Vermont",
+  "51": "Virginia",
+  "53": "Washington",
+  "54": "West Virginia",
+  "55": "Wisconsin",
+  "56": "Wyoming"
+};let data = [];
 
 // Load your JSON file
 fetch('congretionalCrops.json')
@@ -183,15 +356,21 @@ function updateResults(crop) {
   let container = document.getElementById("results");
   container.innerHTML = "";
 
-  top5.forEach(person => {
-    let div = document.createElement("div");
+  const ranks = ["First", "Second", "Third", "Fourth", "Fifth"];
 
+  top5.forEach((person, index) => {
+    let div = document.createElement("div");
     div.style.marginBottom = "20px";
 
+    let stateName = STATEFP_TO_NAME[String(person.STATEFP).padStart(2, "0")];
+
+    let title = `${person.FIRSTNAME} ${person.LASTNAME} of ${stateName}'s ${person.NAMELSAD}`;
+
     div.innerHTML = `
+      <p><strong>${ranks[index]}:</strong> ${title}</p>
       <img src="${person.PHOTOURL}" width="100" alt="photo"/>
-      <p><strong>${person.FIRSTNAME} ${person.LASTNAME}</strong></p>
-      <p>${crop}: ${person[crop]}</p>
+      <p>${person[crop].toLocaleString()} acres of ${crop}</p>
+      <hr>
     `;
 
     container.appendChild(div);
