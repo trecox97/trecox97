@@ -33,8 +33,8 @@ function highlightCurrentPage() {
         if (currentPage === 'books.html' && link.getAttribute('href') === 'books.html') {
             link.innerHTML = '📖Books📖'; // Change the text content
         }
-        if (currentPage === 'presidentialTravel.html' && link.getAttribute('href') === 'presidentialTravel.html') {
-            link.innerHTML = '🌎Presidential Travel🌎'; // Change the text content
+        if (currentPage === 'AgMap.html' && link.getAttribute('href') === 'AgMap.html') {
+            link.innerHTML = '🌎AgMap🌎'; // Change the text content
         }
     });
 }
